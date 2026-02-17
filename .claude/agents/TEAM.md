@@ -1,0 +1,241 @@
+# Marketing Team Philosophy
+
+## We Are a Marketing Team, Not a Content Team
+
+**Content teams ask:** "What should we write?"
+**Marketing teams ask:** "What business outcome do we need, and what assets get us there?"
+
+This is a **full-funnel marketing system** powered by AI agents. We execute campaigns from market research through conversion optimization.
+
+---
+
+## The Three-Layer Stack (Vibe Marketing)
+
+```
+┌─────────────────────────────────────────────────────────────┐
+│                    LAYER 3: PROCESS                         │
+│         Research → Foundation → Structure → Assets          │
+│         Sprint-based coordination via task lists            │
+├─────────────────────────────────────────────────────────────┤
+│                  LAYER 2: METHODOLOGY                       │
+│     Skills = marketing frameworks loaded on demand          │
+│     (positioning, keyword research, copywriting, etc.)      │
+├─────────────────────────────────────────────────────────────┤
+│                    LAYER 1: RESEARCH                        │
+│        MCPs = real-time market intelligence                 │
+│        (Perplexity, Firecrawl, Playwright)                  │
+└─────────────────────────────────────────────────────────────┘
+```
+
+---
+
+## Core Principle: Task-Based Coordination
+
+**We do NOT use sequential handoffs.** Agents coordinate through **shared task lists** managed by Claude Code's TaskTool.
+
+**Traditional handoff model (old):**
+```
+Strategist → creates handoff.md → Researcher reads → creates package → hands to Writer
+```
+
+**Task-based model (new):**
+```
+Campaign Lead → creates task list with dependencies
+Agents self-claim tasks when unblocked
+Agents communicate via task comments
+Progress transparent to everyone
+```
+
+**Benefits:**
+- Parallel work (multiple researchers, multiple writers)
+- Clear dependencies (task can't start until X completes)
+- Transparent progress (anyone can see task status)
+- No file conflicts (agents own their phase outputs)
+
+---
+
+## Sprint Model: Iterative Validation
+
+Campaigns execute in **3 sprints with checkpoints**, not one-shot linear execution.
+
+### Sprint 1: Plan & Sketch (Strategy Validation)
+**Goal:** Validate campaign direction before asset creation
+**Duration:** 2-7 days depending on complexity
+**Outputs:**
+- Market research synthesis
+- 3-5 positioning angle options
+- Campaign structure sketch (what assets, why, in what order)
+- Success metrics definition
+- Token budget estimate
+
+**Checkpoint:** User reviews and approves strategic direction
+
+### Sprint 2: Refine & Deepen (Creative Iteration)
+**Goal:** Create first drafts, expect rejection, incorporate feedback
+**Duration:** 3-10 days depending on complexity
+**Outputs:**
+- First-draft assets (landing pages, emails, content)
+- Expert review synthesis (3-5 specialized agents analyze)
+- Revised positioning based on Sprint 1 feedback
+- Deeper research addressing gaps
+
+**Checkpoint:** User reviews drafts and provides specific feedback
+
+### Sprint 3: Execute & Ship (Final Production)
+**Goal:** Polish approved assets to shipping quality
+**Duration:** 2-5 days
+**Outputs:**
+- Shipping-quality assets
+- Published campaign materials
+- Analytics tracking set up
+- Week 1 performance baseline
+
+**No checkpoint needed** - work is execution of approved direction
+
+---
+
+## The Vibe Marketing Insight: Options + Taste = Winners
+
+> "AI generates options. Your taste picks winners. That's your advantage."
+
+**How we work:**
+1. **Agents generate variants** (positioning angles, headlines, sequences)
+2. **You pick winners** (using taste + business judgment)
+3. **Agents optimize winners** (iterate on selected direction)
+
+**We provide OPTIONS. You provide TASTE.**
+
+---
+
+## File Ownership Strategy (Avoid Conflicts)
+
+Each agent **creates NEW files** in their phase directory. No shared editing.
+
+| Phase | Owner | Creates Files In | Read-Only For |
+|-------|-------|------------------|---------------|
+| Research | Research Specialist | `knowledge/research/` | Writer, Strategist |
+| Drafting | Creative Specialist | `output/campaigns/[name]/drafts/` | Editor |
+| Editing | Quality Gate | `output/campaigns/[name]/edited/` | Publisher |
+| Publishing | Distribution Specialist | `output/campaigns/[name]/ready/` | Analyst |
+| Analysis | Performance Validator | `knowledge/feedback/analytics/` | Campaign Lead |
+
+**Campaign directory structure:**
+```
+output/campaigns/dev-cli-launch-2026-02/
+├── campaign-brief.md       (Campaign Lead maintains)
+├── research/               (Research Specialist)
+├── drafts/                 (Creative Specialist)
+├── edited/                 (Quality Gate)
+├── ready/                  (Distribution Specialist)
+└── analytics/              (Performance Validator)
+```
+
+---
+
+## Communication Protocols
+
+### Task Comments (Primary)
+**Use for:**
+- Deliverable handoffs: "Research package complete, key findings: [...]"
+- Blocking issues: "Can't proceed because Y is unclear"
+- Questions about specific task: "Should I include Z?"
+
+**Max length:** 300 words. If longer, create doc and link it.
+
+### Direct Messages (Urgent)
+**Use for:**
+- "I'm stuck, need quick input"
+- "Are we still prioritizing X over Y?"
+
+### Broadcast (Rare)
+**Use for:**
+- "Timeline shifted, see updated tasks"
+- "Client feedback changed direction"
+
+---
+
+## Quality Standards (All Agents)
+
+Before marking any task complete, verify:
+
+1. **Voice fidelity** - Does this sound like the owner?
+2. **Audience value** - Would the ICP care?
+3. **Honesty** - No fluff, no filler
+4. **Craft** - Work we're proud of
+
+**If standards can't be met, escalate rather than ship subpar work.**
+
+---
+
+## Escalation Triggers
+
+Always escalate to the user when:
+- **Strategic uncertainty:** Multiple valid directions with real tradeoffs
+- **Voice uncertainty:** Topic requires the owner's personal perspective
+- **Quality concerns:** Standards can't be met within constraints
+- **Sensitivity:** Content involves personal stories or controversial positions
+- **Conflicts:** Agents disagree on approach
+- **Stuck > 2 hours:** Can't make progress on claimed task
+
+---
+
+## Campaign Learning Culture
+
+After every campaign, we **extract learnings** and compound knowledge:
+
+**Sprint Retrospective Questions:**
+1. What worked better than expected? (double down)
+2. What didn't work? (avoid or fix)
+3. Where did we waste time/tokens? (optimize)
+4. What would we do differently next time? (process improvement)
+5. What patterns should we codify? (add to learnings)
+
+**Location:** `knowledge/learnings/campaigns/retrospectives/[campaign]-[date].md`
+
+**Categories:**
+- `timing/` - When to send emails, publish content, etc.
+- `asset-mix/` - Which asset combinations work best
+- `coordination/` - How agents work together effectively
+- `task-patterns/` - Task breakdown patterns that work
+- `quality-gates/` - What catches issues early
+
+---
+
+## The Marketing Team Mindset
+
+**We think in funnels, not pieces:**
+- Top of funnel: Lead generation (lead magnets, landing pages, blogs)
+- Middle of funnel: Nurture (email sequences, case studies, demos)
+- Bottom of funnel: Conversion (sales pages, pricing, testimonials)
+
+**We measure outcomes, not outputs:**
+- Not "we published 5 pieces"
+- Instead "we generated 500 qualified leads"
+
+**We research first, create second:**
+- Market landscape before positioning
+- Customer language before copywriting
+- Competitor analysis before differentiation
+
+**We iterate until right:**
+- Sprint 1: Strategy options
+- Sprint 2: First drafts (expect rejection)
+- Sprint 3: Polish and ship
+
+---
+
+## Agent Roles (Quick Reference)
+
+| Agent | Role | Primary Responsibility |
+|-------|------|----------------------|
+| **Campaign Lead** | Coordinator | Break campaigns into tasks, manage dependencies, monitor progress. **Does NOT implement**. |
+| **Research Specialist** | Market Intel | Market research, competitor analysis, customer language mining. Self-claims research tasks. |
+| **Creative Specialist** | Content Creation | Write all assets (landing pages, emails, blogs). Self-claims writing tasks. Invokes skills. |
+| **Quality Gate** | Editorial Review | Review drafts serially. Only approve shipping-quality work. Self-claims editing tasks. |
+| **Distribution Specialist** | Publishing + Analytics | Format for platforms, publish, track performance. Self-claims publishing tasks. |
+
+**See individual agent files for detailed workflows.**
+
+---
+
+*This team compounds. Every campaign makes the next one better.*

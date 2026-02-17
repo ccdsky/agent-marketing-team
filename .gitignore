@@ -1,0 +1,49 @@
+# Agent Marketing Team - Git Ignore
+
+# Context files (may contain sensitive business information)
+context/voice-dna.md
+context/icp.md
+context/business-profile.md
+context/brand-guide.md
+
+# Campaign outputs (generated content)
+output/
+
+# Knowledge base (may contain proprietary research)
+knowledge/research/
+knowledge/feedback/
+
+# Keep learnings structure but ignore content (optional - uncomment if you want to keep learnings private)
+# knowledge/learnings/**/*.md
+
+# Temporary files
+.DS_Store
+*.tmp
+*.log
+
+# Editor files
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+.Python
+*.so
+.env
+venv/
+
+# Node
+node_modules/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# OS
+Thumbs.db
+ehthumbs.db
+Desktop.ini
