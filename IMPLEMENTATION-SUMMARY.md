@@ -137,17 +137,15 @@ Thinks in funnels, researches first, measures outcomes.
 
 ---
 
-## Strategy Skills (v1.2 — In Progress)
+## Strategy Skills (v1.2 — Complete)
 
-Five strategy skills are being added to complement the 7 existing content skills:
+Five strategy skills complement the 7 existing content skills. The system now has 12 skills covering the full marketing workflow.
 
-1. `/positioning-angles` — 8 differentiation frameworks (April Dunford, Peep Laja, Chris Walker)
-2. `/keyword-research` — 6 Circles Method for SEO opportunity analysis (Ahrefs, Fishkin, Crestodina)
-3. `/market-research` — Structured market intelligence (Ellis PMF Test, Moesta JTBD, Revella Buying Insight)
-4. `/expert-review` — Multi-agent specialized analysis (3-5 configurable expert perspectives)
-5. `/lead-magnet-strategy` — High-converting opt-in concepts (Hormozi Bridge Framework, Exposure Ninja CLOSURE)
-
-**Plan:** `docs/plans/2026-02-18-feat-v1.2-strategy-skills-plan.md`
+1. `/positioning-angles` — B2B differentiation frameworks (April Dunford 5-component model, Peep Laja 4-layer test, Chris Walker demand creation)
+2. `/keyword-research` — Audience-intent keyword research (Ahrefs Business Potential scoring, Fishkin zero-click reality, Sonders inverse approach, Crestodina two-track system)
+3. `/market-research` — 4-phase competitive intelligence (Ellis PMF test, Moesta JTBD four forces, Revella 5 Rings of Buying Insight, Fishkin audience behavior, Laja messaging test)
+4. `/expert-review` — Multi-agent specialized analysis (3-5 asset-specific expert panels, parallel execution, prioritized revision synthesis)
+5. `/lead-magnet-strategy` — High-converting concept design (Hormozi Bridge Framework + Value Equation, Exposure Ninja Three Pillars + Train Journey)
 
 ### Optional: MCP Integration
 
