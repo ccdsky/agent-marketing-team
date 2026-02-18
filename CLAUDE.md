@@ -108,12 +108,12 @@ You are part of an **AI-powered marketing team** that executes full-funnel campa
 - `/lead-magnet` — High-value opt-in content
 - `/repurpose` — Multi-platform adaptation
 
-**Marketing strategy** (to be created in v2.0):
-- `/positioning-angles` — 8 differentiation frameworks
-- `/keyword-research` — 6 Circles Method
-- `/market-research` — Deep market intelligence
-- `/expert-review` — Specialized agent review
-- `/lead-magnet-strategy` — High-converting opt-in concepts
+**Marketing strategy** (in `.claude/skills/`):
+- `/positioning-angles` — B2B differentiation frameworks
+- `/keyword-research` — Audience-intent keyword research
+- `/market-research` — Competitive intelligence
+- `/expert-review` — Multi-agent specialized analysis
+- `/lead-magnet-strategy` — Lead magnet concept design
 
 ---
 

@@ -221,10 +221,10 @@ Based on this research, I recommend:
 
 **Example:**
 ```
-# v1.1: Perplexity MCP not yet configured — use WebSearch instead
+# If Perplexity MCP is configured, use it for multi-source synthesis
+# Otherwise, fall back to WebSearch:
 WebSearch(query="developer CLI tools market 2026 key players trends")
 WebSearch(query="developer CLI tools market size growth emerging patterns")
-# v2.0: Perplexity MCP will enable richer multi-source synthesis
 ```
 
 ### Firecrawl MCP (Website Scraping)
@@ -236,12 +236,12 @@ WebSearch(query="developer CLI tools market size growth emerging patterns")
 
 **Example:**
 ```
-# v1.1: Firecrawl MCP not yet configured — use WebFetch instead
+# If Firecrawl MCP is configured, use it for bulk scraping
+# Otherwise, fall back to WebFetch:
 WebFetch(url="https://competitor1.com/product")
 WebFetch(url="https://competitor2.com/pricing")
 WebFetch(url="https://competitor3.com/features")
 # Extract: headlines, subheadlines, CTAs, pricing, feature lists from fetched content
-# v2.0: Firecrawl MCP will enable bulk scraping and structured extraction
 ```
 
 ### Playwright MCP (Screenshots & Visual Analysis)
@@ -253,11 +253,11 @@ WebFetch(url="https://competitor3.com/features")
 
 **Example:**
 ```
-# v1.1: Playwright MCP not yet configured — use WebFetch for page content instead
+# If Playwright MCP is configured, use it for screenshots and visual analysis
+# Otherwise, fall back to WebFetch for page content:
 WebFetch(url="https://competitor1.com/product")
 WebFetch(url="https://competitor2.com/pricing")
 # Note structural patterns and visual hierarchy from the fetched markup
-# v2.0: Playwright MCP will enable actual screenshots and visual analysis
 ```
 
 ---
@@ -400,15 +400,12 @@ Use the **Escalation Format** in `.claude/agents/TEAM.md`.
 
 ## Research Skill Integration
 
-**Note: `/keyword-research` and `/market-research` are v2.0 skills — not yet implemented.**
+**Strategy skills available:**
 
-Do not attempt to invoke them. Execute research using the inline methods described in the "Research Types and Methods" section above.
+- **Keyword research:** Read `.claude/skills/keyword-research/SKILL.md` for the 6 Circles Method framework
+- **Market research:** Read `.claude/skills/market-research/SKILL.md` for the structured market intelligence framework
 
-When those skills are available in a future version, they will provide:
-- **Keyword research:** 6 Circles Method for SEO opportunity analysis
-- **Market research:** Structured market intelligence framework for competitor analysis and positioning gaps
-
-Until then, use web search, Perplexity, and Firecrawl directly as described in your methods section.
+These skills define canonical research processes. Load the relevant SKILL.md before starting keyword or market research tasks.
 
 ---
 

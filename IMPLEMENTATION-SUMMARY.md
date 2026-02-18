@@ -10,7 +10,7 @@
 
 A complete AI-powered marketing team system that executes full-funnel campaigns from market research through conversion optimization.
 
-**Not a writing team—a marketing team.** Thinks in funnels, researches first, measures outcomes.
+Thinks in funnels, researches first, measures outcomes.
 
 ---
 
@@ -93,7 +93,7 @@ A complete AI-powered marketing team system that executes full-funnel campaigns 
 - Archive (published campaigns)
 
 ✅ **Documentation**
-- README.md (setup guide + PRD)
+- README.md (setup guide)
 - context/README.md (how to set up voice, ICP, business profile)
 - knowledge/README.md (how knowledge compounds)
 - IMPLEMENTATION-SUMMARY.md (this file)
@@ -137,42 +137,26 @@ A complete AI-powered marketing team system that executes full-funnel campaigns 
 
 ---
 
-## What's NOT Yet Built (Future v2.0)
+## Strategy Skills (v1.2 — In Progress)
 
-### Vibe Marketing Research Layer
+Five strategy skills are being added to complement the 7 existing content skills:
 
-**Not yet implemented:**
-1. `/positioning-angles` skill (8 differentiation frameworks)
-2. `/keyword-research` skill (6 Circles Method)
-3. `/market-research` skill (comprehensive market intelligence)
-4. `/expert-review` skill (task-based specialized agents)
-5. `/lead-magnet-strategy` skill (high-converting opt-in concepts)
+1. `/positioning-angles` — 8 differentiation frameworks (April Dunford, Peep Laja, Chris Walker)
+2. `/keyword-research` — 6 Circles Method for SEO opportunity analysis (Ahrefs, Fishkin, Crestodina)
+3. `/market-research` — Structured market intelligence (Ellis PMF Test, Moesta JTBD, Revella Buying Insight)
+4. `/expert-review` — Multi-agent specialized analysis (3-5 configurable expert perspectives)
+5. `/lead-magnet-strategy` — High-converting opt-in concepts (Hormozi Bridge Framework, Exposure Ninja CLOSURE)
 
-**Why not included in v1.0:**
-- Core infrastructure needed first (agents, coordination, sprints)
-- Skills require additional frameworks from Vibe Marketing Playbook
-- Can add incrementally after validating core system works
+**Plan:** `docs/plans/2026-02-18-feat-v1.2-strategy-skills-plan.md`
 
-**How to add in v2.0:**
-- Create skill files in `.claude/skills/[skill-name]/`
-- Follow skill creation patterns from existing skills
-- Reference Vibe Marketing Playbook for frameworks
+### Optional: MCP Integration
 
-### MCP Integration
+For deeper market research, configure MCPs in `~/.claude/mcp-config.json`:
+- **Perplexity MCP** — Multi-source market research synthesis
+- **Firecrawl MCP** — Scrape competitor websites at scale
+- **Playwright MCP** — Screenshot competitor pages for visual analysis
 
-**Not yet configured:**
-- Perplexity MCP (deep market research)
-- Firecrawl MCP (scrape competitor websites)
-- Playwright MCP (screenshot competitor pages)
-
-**Why not configured:**
-- Requires MCP server setup in Claude Code
-- Not required for basic campaign functionality
-- Can add when ready to do deep market research
-
-**How to add:**
-- Configure in `~/.claude/mcp-config.json`
-- Research Specialist agent already has MCP usage patterns documented
+Not required — agents fall back to WebSearch and WebFetch when MCPs aren't configured.
 
 ---
 
@@ -229,30 +213,12 @@ After context files are created:
 
 **Start small, validate system, then scale to complex campaigns.**
 
-### Optional Enhancements
+### Optional: Review the v1.2 Strategy Skills Plan
 
-**3. Copy Proven Skills from Writing System**
+If you want to understand the design rationale behind the strategy skills:
 
-If you have working content skills from another project:
-
-```bash
-# From your other project's skills directory:
-cd ~/path/to/other-project/.claude/skills/
-
-# Copy relevant skills to agent-marketing-team:
-cp -r landing-page/ ~/path/to/agent-marketing-team/.claude/skills/
-cp -r email-sequence/ ~/path/to/agent-marketing-team/.claude/skills/
-cp -r newsletter/ ~/path/to/agent-marketing-team/.claude/skills/
 ```
-
-**4. Migrate Learnings**
-
-If you have documented patterns in `my-writing-system`:
-
-```bash
-# Copy relevant learnings to new system
-cp my-writing-system/knowledge/learnings/*.md \
-   agent-marketing-team/knowledge/learnings/campaigns/
+docs/plans/2026-02-18-feat-v1.2-strategy-skills-plan.md
 ```
 
 ---
@@ -424,7 +390,7 @@ agent-marketing-team/
 │
 ├── .gitignore                       ✅ Privacy settings
 ├── CLAUDE.md                        ✅ Routing + instructions
-├── README.md                        ✅ Documentation + PRD
+├── README.md                        ✅ Documentation
 └── IMPLEMENTATION-SUMMARY.md        ✅ This file
 
 Legend:
@@ -460,7 +426,7 @@ Legend:
 
 ## Evolution Path
 
-### Current State: v1.1 (Wired and Ready)
+### Current State: v1.1 (Core Complete)
 ✅ Task-based coordination
 ✅ Sprint model with checkpoints
 ✅ 5 specialized agents
@@ -470,14 +436,13 @@ Legend:
 ✅ Sprint planning + retrospective workflows
 ✅ Lead gen, product launch, content sprint templates
 ✅ Directory scaffolding for all agent write targets
-✅ CLAUDE.md trimmed to 157 lines
 
-**Before first campaign:** Populate `context/voice-dna.md`, `context/icp.md`, `context/business-profile.md` via `writer:setup`.
+**Before first campaign:** Populate `context/voice-dna.md`, `context/icp.md`, `context/business-profile.md` via `/writer:setup`.
 
-### Future: v2.0 (Vibe Marketing Layer)
-- Add 5 marketing strategy skills
-- Integrate MCPs for market research
-- Full marketing intelligence capabilities
+### Next: v1.2 (Strategy Skills)
+- 5 strategy skill frameworks (positioning, keyword, market research, expert review, lead magnet strategy)
+- Thought-leader-informed methodologies (Hormozi, Dunford, Fishkin, Ellis, Moesta, and others)
+- Plan: `docs/plans/2026-02-18-feat-v1.2-strategy-skills-plan.md`
 
 ---
 
@@ -526,7 +491,7 @@ A complete AI-powered marketing team ready to execute full-funnel campaigns with
 **What happens next:**
 Every campaign makes the system better. Learnings compound. Quality improves. Execution gets faster.
 
-**This is v1.0. Ready to validate, ready to iterate, ready to compound.**
+**Core system complete. Strategy skills (v1.2) in progress. Ready to compound.**
 
 ---
 
