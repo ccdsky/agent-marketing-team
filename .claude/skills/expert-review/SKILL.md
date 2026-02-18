@@ -13,11 +13,13 @@ Invoke when: A Sprint 2 draft is complete and ready for multi-perspective review
 B2B marketing assets must satisfy multiple stakeholders — end user, manager, executive, procurement — and survive committee review. A single reviewer catches single-perspective issues. Multi-agent review catches cross-audience problems before they reach real buyers.
 
 **When NOT to use this skill:**
-- Sprint 1 sketches or outlines (too early — wait for full drafts)
+- Sprint 1 content sketches or copy outlines (too early for marketing copy — wait for full drafts)
 - Simple social posts or short-form content (overhead not worth it)
 - When the brief is still unclear (fix the brief first)
 
-**Timing:** Run after Creative Specialist produces a full draft. Expert review feeds revision guidance back to Creative Specialist before Quality Gate final approval.
+**Exception — Lead Magnet Strategy concept briefs:** These are Sprint 1 outputs but *are* ready for expert review. Use the "Lead Magnet Strategy" panel (Step 1, final entry), not the finished content panel. The concept brief panel evaluates strategic feasibility, not copy quality.
+
+**Timing:** For marketing copy (landing pages, emails, blog posts): run after Creative Specialist produces a full Sprint 2 draft. Expert review feeds revision guidance back before Quality Gate final approval. For lead magnet strategy concept briefs: run at end of Sprint 1 before checkpoint presentation.
 
 ---
 
@@ -33,6 +35,20 @@ Before starting:
 ---
 
 ## Framework
+
+### Mode Check (Before Step 1)
+
+**Multi-agent mode (Task tool available):** Follow Steps 1-4 below — spawn each expert as a parallel subagent using the Task tool. This is the standard path.
+
+**Simple mode (Task tool unavailable):** Run each expert review sequentially inline. For each expert in the panel:
+1. Open with: "As a [Expert Name], I'm evaluating this [asset type]..."
+2. Apply their criteria from Step 1
+3. Score against rubric (1-10)
+4. State top 3 must-fix items
+
+Output format is identical to multi-agent mode. Sequential mode is slower but produces the same structured review. Proceed to Step 3 (Synthesis) once all experts are complete.
+
+---
 
 ### Step 1: Determine Asset Type and Select Expert Panel
 
@@ -83,24 +99,30 @@ Use the Task tool to spawn each expert simultaneously. Each expert receives:
 
 **Expert agent prompt template:**
 
+When building the prompt for each expert, replace `[your specific evaluation criteria]` with the criteria from that expert's Step 1 description. Expand the bullet point into 4-6 scored dimensions. Example for Conversion Copywriter on a landing page: "1. Headline — does it name the primary pain point immediately? 2. Benefit clarity — are benefits concrete outcomes, not features? 3. Objection handling — does the page address the top 3 buyer objections? 4. CTA — single, specific, low-friction? 5. Social proof — credible and specific (not generic logos)?"
+
 ```
-You are a [Expert Role] evaluating a B2B marketing asset.
+You are a [Expert Role from Step 1] evaluating a B2B marketing [asset type].
 
-Asset type: [type]
-Asset path: [path — read this file]
+Read the asset: [asset file path]
+Read the ICP profile: context/icp.md
+Read the voice standard: context/voice-dna.md
 
-Your evaluation framework: [specific criteria for this expert]
+Your evaluation criteria (from your role in Step 1):
+[List 4-6 specific scored dimensions for this expert. Expand from the Step 1 description.
+Example for Conversion Copywriter: "1. Headline strength — does it speak to the primary pain immediately?
+2. Benefit clarity — specific outcomes, not vague features?
+3. Objection handling — top 3 buyer objections addressed?
+4. CTA strength — single, specific, low-friction?
+5. Social proof — credible and specific?"]
 
-ICP: Read context/icp.md for the target buyer profile.
-Voice standard: Read context/voice-dna.md for voice expectations.
-
-Evaluate the asset against your framework. Be specific and honest.
+Evaluate the asset against your criteria. Be specific and honest. Reference specific sections.
 
 Output format:
 ## [Expert Name] Review
 
 ### Strengths (what works)
-- [Specific strength with line/section reference]
+- [Specific strength with section reference]
 
 ### Issues (what needs fixing)
 - [Specific issue + why it matters + suggested fix]

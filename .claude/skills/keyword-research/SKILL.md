@@ -96,8 +96,9 @@ For each topic hypothesis, identify 2-5 keyword variants and look up:
 
 **Data sources available:**
 - If MCP/browser tools available: Use Ahrefs, Semrush, or Moz APIs
-- Fallback: Use Google Search itself — search the keyword, examine autocomplete, PAA boxes, related searches
-- Google Keyword Planner (free with Google Ads account)
+- Fallback (always executable): Use WebSearch — type the keyword, observe autocomplete suggestions and related searches returned in results; these reveal real search behavior without JS rendering
+- Question-format keywords: Use `WebSearch(query="how to [topic] site:reddit.com OR site:quora.com")` — forums surface the actual questions buyers type, more reliably than Google's PAA boxes (which require browser rendering)
+- Google Keyword Planner (free with Google Ads account) for volume estimates
 
 ### Step 6: Score Business Potential (Ahrefs 0-3 Scale)
 
@@ -172,9 +173,11 @@ Strong content strategy creates one piece that distributes in 5+ ways (Simmonds)
 For Money Phrase keywords (Track A), estimate:
 
 - **Rough monthly traffic potential** (if ranked in top 3)
-- **Likely conversion rate range** (based on intent + offer type)
-- **Estimated leads per month** (rough directional)
+- **Likely conversion rate range** (industry benchmark — replace with your actual rate)
+- **Estimated leads per month** (directional benchmark estimate, not a measured number)
 - **Deal value alignment** (does this traffic attract the right ICP for deal size?)
+
+**Important:** These estimates are industry benchmarks from training data — not projections from your actual campaign data. Label every number in your output as "(est.)" and note: "Replace conversion rates with your actual historical rates for accurate projections." Use these as a directional prioritization tool, not as a forecast.
 
 This turns keyword research into a revenue conversation, not a traffic conversation.
 
@@ -256,11 +259,13 @@ Save to: `knowledge/research/keyword-research-[company/topic]-[date].md`
 
 ## Pipeline Impact Estimate (Track A)
 
-| Keyword | Est. Monthly Traffic (top 3) | Est. Conversion Rate | Est. Leads/Mo | ICP Fit |
-|---------|------------------------------|----------------------|----------------|---------|
-| [keyword] | [X] | [X%] | [X] | [Strong/Medium] |
+*All figures below are benchmark estimates based on industry data — not projections from your actual campaign performance. Replace conversion rates with your historical rates before using these in planning.*
 
-**Total estimated pipeline contribution:** [X leads/mo if top 3 rankings achieved on Priority 1 keywords]
+| Keyword | Est. Monthly Traffic (top 3) | Conv. Rate (benchmark est.) | Est. Leads/Mo (est.) | ICP Fit |
+|---------|------------------------------|----------------------|----------------|---------|
+| [keyword] | [X] | [X% est.] | [X est.] | [Strong/Medium] |
+
+**Directional pipeline estimate:** [X leads/mo if top 3 rankings achieved on Priority 1 keywords — replace with actual conversion data for accurate forecasting]
 
 ---
 

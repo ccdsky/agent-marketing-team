@@ -104,7 +104,11 @@ Score each competitor 1-5 on each layer. Low scores = your positioning opportuni
 #### 2b. Customer Language Extraction (JTBD Four Forces)
 Mine reviews and community discussions for customer language organized by JTBD forces:
 
-**Sources:** G2, Capterra, TrustRadius, Product Hunt, Reddit (relevant subreddits), LinkedIn comments, App Store reviews (if applicable)
+**Sources (accessible without login):** Product Hunt, Reddit (relevant subreddits), LinkedIn comments, Capterra (partial — some reviews visible without login), App Store reviews (if applicable)
+
+**Sources requiring login (use fallback):** G2 and TrustRadius require authentication — WebFetch returns login walls. Fallback: `WebSearch(query="site:g2.com [competitor] reviews [pain point]")` returns Google-indexed review snippets without login. Lower fidelity than full reviews but still captures real customer language.
+
+**If Firecrawl MCP is configured with authenticated sessions:** G2 and TrustRadius are accessible via `firecrawl.scrape()` with auth — use for highest-quality review mining.
 
 **Organize findings by force:**
 - **Push language** (frustration with old solution): "I was tired of...", "We kept running into...", "The problem with [old tool] was..."
