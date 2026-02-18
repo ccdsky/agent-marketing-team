@@ -126,13 +126,18 @@ The P.S. gets read almost as much as the subject line. Use it for:
 - A bonus thought that didn't fit in the body
 - A personal note
 
-### Step 4: Voice Pass
+### Step 4: Voice and ICP Pass
 
-Read aloud. Ask:
+**Voice check** — Read aloud. Ask:
 - Would someone forward this to a colleague? (if not, why not?)
 - Does this feel like a conversation or a broadcast?
 - Are there any sentences that sound like they were written by a marketing team?
 - Does it sound like the owner's actual voice?
+
+**ICP check** — Verify against `context/icp.md`:
+- Would the ICP find this genuinely valuable (not just informational)?
+- Does it speak to their actual context and questions?
+- Is the language they use, not jargon they don't?
 
 Rewrite any paragraphs that fail these tests.
 

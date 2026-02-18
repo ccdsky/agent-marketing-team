@@ -101,7 +101,7 @@ Fill out and copy to `output/campaigns/[slug]/campaign-brief.md`.
 | Final day | "Last chance" — deadline is real |
 
 **Urgency mechanisms:** [limited spots | price increase | enrollment close | bonus expiration]
-*(Only use urgency that is real and honerable)*
+*(Only use urgency that is real and honorable)*
 
 ---
 

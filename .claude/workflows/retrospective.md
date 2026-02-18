@@ -22,7 +22,7 @@ Even quick campaigns deserve a quick retro. 10 minutes of documentation compound
 Before answering the 5 questions, collect:
 - Task completion times vs estimates
 - Quality Gate scores from each asset
-- Distribution Specialist's Week 1 analytics report
+- Distribution Specialist's Week 1 analytics report: `knowledge/feedback/analytics/[campaign-slug]-retrospective-[date].md`
 - Any escalations or blockers that occurred
 - Sprint 1 checkpoint: what did user approve vs revise?
 - Sprint 2 checkpoint: what feedback was given?

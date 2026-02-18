@@ -520,7 +520,7 @@ After campaign launches and week 1 data is in, facilitate retrospective:
 
 ### Document Learnings
 
-**Create:** `knowledge/learnings/campaigns/retrospectives/[campaign-slug]-[date].md`
+**Create:** `knowledge/learnings/campaigns/retrospectives/[campaign-slug]-[date]-retro.md`
 
 **Format:**
 ```markdown
