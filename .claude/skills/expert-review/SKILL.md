@@ -6,20 +6,14 @@ Spawn 3-5 specialized review agents to analyze a draft marketing asset from diff
 
 Invoke when: A Sprint 2 draft is complete and ready for multi-perspective review before the Quality Gate sees it, or when the user requests "expert review" on a specific asset.
 
----
-
-## Why Multi-Agent Review
-
-B2B marketing assets must satisfy multiple stakeholders — end user, manager, executive, procurement — and survive committee review. A single reviewer catches single-perspective issues. Multi-agent review catches cross-audience problems before they reach real buyers.
-
-**When NOT to use this skill:**
-- Sprint 1 content sketches or copy outlines (too early for marketing copy — wait for full drafts)
+**Do NOT invoke when:**
+- Sprint 1 content sketches or copy outlines (too early — wait for full drafts)
 - Simple social posts or short-form content (overhead not worth it)
-- When the brief is still unclear (fix the brief first)
+- Brief is still unclear (fix the brief first)
 
-**Exception — Lead Magnet Strategy concept briefs:** These are Sprint 1 outputs but *are* ready for expert review. Use the "Lead Magnet Strategy" panel (Step 1, final entry), not the finished content panel. The concept brief panel evaluates strategic feasibility, not copy quality.
+**Exception — Lead Magnet Strategy concept briefs:** These are Sprint 1 outputs but *are* ready for expert review. Use the "Lead Magnet Strategy" panel (Step 1, final entry). The concept brief panel evaluates strategic feasibility, not copy quality. Run at end of Sprint 1 before checkpoint presentation.
 
-**Timing:** For marketing copy (landing pages, emails, blog posts): run after Creative Specialist produces a full Sprint 2 draft. Expert review feeds revision guidance back before Quality Gate final approval. For lead magnet strategy concept briefs: run at end of Sprint 1 before checkpoint presentation.
+**Timing for marketing copy** (landing pages, emails, blog posts): run after Creative Specialist produces a full Sprint 2 draft. Expert review feeds revision guidance back before Quality Gate final approval.
 
 ---
 
@@ -143,7 +137,12 @@ Output format:
 
 ### Step 3: Collect and Synthesize Parallel Feedback
 
-After all expert agents complete, synthesize their findings:
+**If fewer than all experts respond:**
+- **5/5 received:** Apply full weights table.
+- **3-4/5 received:** Normalize weights proportionally across responding experts. Label synthesis "REDUCED CONFIDENCE — [N]/5 experts responded."
+- **Fewer than 3/5 received:** Do not synthesize. Note: "Expert review incomplete — [N]/5 experts responded. Proceeding with self-assessment only." Set task metadata: `{"expert_review_status": "incomplete", "experts_responded": N}`.
+
+After confirming sufficient responses, synthesize their findings:
 
 **1. Consensus strengths** — What do multiple experts agree is working? (These are safe — don't change them)
 
@@ -160,6 +159,7 @@ After all expert agents complete, synthesize their findings:
 | Landing page | Conversion Copywriter 30% + ICP Relevance 25% + Voice 20% + CLOSURE 15% + B2B Psychology 10% |
 | Lead magnet | Bridge 30% + Value Equation 25% + B2B Applicability 20% + Completeness 15% + Three Pillars 10% |
 | Email sequence | Arc 30% + Subject Lines 20% + CTAs 20% + B2B Cycle 20% + Unsub Risk 10% |
+| Blog post | SEO Structure 25% + ICP Value 25% + Credibility 20% + Voice 20% + CTA 10% |
 
 ### Step 4: Build Prioritized Revision List
 

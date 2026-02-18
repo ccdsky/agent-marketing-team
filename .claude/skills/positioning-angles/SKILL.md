@@ -194,6 +194,19 @@ For standalone research: `knowledge/research/positioning-angles-[company]-[date]
 
 ---
 
+## Sprint 1 Checkpoint
+
+**Do not proceed to Sprint 2 asset creation.** This output presents options — the human selects the direction.
+
+When handing off to Campaign Lead, include:
+- Top-scoring recommendation and why it leads
+- The 2-3 alternative angles and what trade-offs each represents
+- One open validation question (typically: which [I]-tagged assumption needs primary research most urgently?)
+
+Campaign Lead presents at Sprint 1 checkpoint. Human approves angle. Then asset creation begins.
+
+---
+
 ## Quality Gate
 
 Before marking complete:

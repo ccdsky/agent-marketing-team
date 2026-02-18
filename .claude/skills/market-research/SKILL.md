@@ -140,6 +140,16 @@ For each section, include:
 - Implication for positioning/content strategy
 - Confidence level: **HIGH** (direct evidence) / **MEDIUM** (reasonable inference) / **LOW** (speculation)
 
+**Default confidence by source type:**
+
+| Source Type | Default | Override if... |
+|-------------|---------|----------------|
+| Direct customer quote (review, interview) | HIGH | Single outlier only → MEDIUM |
+| Competitor website copy | HIGH | Content dated >1 year → MEDIUM |
+| Analyst report / research study | MEDIUM | Study <6 months old → HIGH |
+| Forum/Reddit discussion | MEDIUM | Single thread only → LOW |
+| Agent inference from patterns | LOW | Corroborated by 2+ other sources → MEDIUM |
+
 ---
 
 ### Phase 4: PRIMARY RESEARCH SUPPORT (Human Leads, AI Assists)

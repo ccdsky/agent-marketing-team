@@ -164,7 +164,7 @@ For each channel, note: format requirements, audience fit, cost (time or money),
 
 Before finalizing the concept: "Would someone pay for this?"
 
-If yes → proceed to content creation with `/lead-magnet` skill.
+If yes → present to Campaign Lead for Sprint 1 checkpoint approval. Do NOT proceed to content creation without human approval.
 If no → back to Step 1. A weak lead magnet damages your brand across ALL channels.
 
 **Additional quality gates:**
@@ -251,23 +251,25 @@ For standalone use: `output/drafts/lead-magnet-concept-[topic]-[date].md`
 
 ---
 
-## Nurture Sequence Concept
+## Nurture Sequence Goals
 
-**Email 1 (instant):** [What to deliver — no selling]
-**Email 2 (day 2-3):** [What insight extends the value — reveals next problem]
-**Email 3 (day 4-5):** [Social proof story — who solved the next problem]
-**Email 4 (day 6-7):** [The offer — connect to core offer with single CTA]
+**Delivery:** [How lead magnet arrives — instant email link / PDF / tool URL — within 60 seconds]
+**First-touch moment:** [What value does the subscriber get in the first 5 minutes?]
+**Next problem revealed:** [Which problem does the lead magnet expose that the core offer solves?]
+**Nurture goal:** [What should the subscriber believe or be able to do before a conversion offer is appropriate?]
 
-*Brief this to Creative Specialist for `/email-sequence` execution.*
+*Brief these goals to `/email-sequence` skill — let it determine the arc, email count, and structure.*
 
 ---
 
 ## Distribution Channels
 
-| Channel | Format | Audience Fit | Estimated Conversion |
-|---------|--------|--------------|----------------------|
+| Channel | Format | Audience Fit | Benchmark Range (est.) |
+|---------|--------|--------------|------------------------|
 | [Channel] | [Format req.] | [High/Med/Low] | [X%] |
 [...]
+
+*Industry benchmark ranges. Replace with your actual conversion rates after first campaign.*
 
 **Primary channel recommendation:** [Where to focus first and why]
 
@@ -294,6 +296,19 @@ If proceeding to content creation, include this handoff:
 - **Bridge to maintain:** Reference the connection to [core offer] at the end
 - **Length/format guidance:** [Specific scope — e.g., "10-15 checklist items, max 2 pages"]
 ```
+
+---
+
+## Sprint 1 Checkpoint
+
+**Do not proceed to content creation.** This output presents a concept for approval — the human selects direction.
+
+When handing off to Campaign Lead, include:
+- Recommended concept and Value Equation score
+- Any alternative concepts considered and why they scored lower
+- One open question for the human (e.g., "Should we use Service or Information format given our capacity?")
+
+Campaign Lead presents at Sprint 1 checkpoint. Human approves concept. Then `/lead-magnet` content creation begins.
 
 ---
 
