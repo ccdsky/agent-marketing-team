@@ -664,6 +664,8 @@ Decision needed from Campaign Lead."
 
 ## Sprint-Specific Review Standards
 
+**Determine your sprint from the task title.** All tasks are prefixed `[S1]`, `[S2]`, or `[S3]`. Call `TaskGet(taskId="[ID]")` and read the subject to know which sprint you're in — this governs your approval thresholds.
+
 ### Sprint 1: Sketches (Not Full Drafts)
 
 **What you're reviewing:** Structure outlines, not polished content

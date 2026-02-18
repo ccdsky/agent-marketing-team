@@ -28,7 +28,7 @@ Before any campaign work, always read:
 
 **Use Grep to search learnings:**
 ```
-Grep pattern="[topic]" path="/path/to/agent-marketing-team/knowledge/learnings/campaigns/" glob="*.md"
+Grep pattern="[topic]" path="knowledge/learnings/campaigns/" glob="*.md"
 ```
 
 ---
@@ -132,6 +132,7 @@ Sprint: 1 (Plan & Sketch)
 
 [3] Generate positioning angles (Campaign Lead, 2h) - BLOCKED_BY: [1,2]
     Description: Create 3-5 positioning angle options based on research findings
+    Note: In v1.1, generate positioning angles inline from research (no /positioning-angles skill yet). The /positioning-angles skill is deferred to v2.0.
 
 [4] Sketch campaign structure (Campaign Lead, 2h) - BLOCKED_BY: [3]
     Description: Define asset mix, sequence, and dependencies
@@ -519,7 +520,7 @@ After campaign launches and week 1 data is in, facilitate retrospective:
 
 ### Document Learnings
 
-**Create:** `knowledge/learnings/campaigns/retrospectives/[campaign-slug]-[date].md`
+**Create:** `knowledge/learnings/campaigns/retrospectives/[campaign-slug]-[date]-retro.md`
 
 **Format:**
 ```markdown

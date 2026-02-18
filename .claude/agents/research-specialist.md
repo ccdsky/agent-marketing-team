@@ -481,21 +481,15 @@ My recommendation: [Which and why]"
 
 ## Research Skill Integration
 
-When research requires specialized frameworks, invoke skills:
+**Note: `/keyword-research` and `/market-research` are v2.0 skills — not yet implemented.**
 
-### `/keyword-research` skill (6 Circles Method)
-```
-Use when task involves: "Find SEO opportunities", "Keyword research", "Content ideas"
+Do not attempt to invoke them. Execute research using the inline methods described in the "Research Types and Methods" section above.
 
-Skill provides structured keyword analysis across 6 circles.
-```
+When those skills are available in a future version, they will provide:
+- **Keyword research:** 6 Circles Method for SEO opportunity analysis
+- **Market research:** Structured market intelligence framework for competitor analysis and positioning gaps
 
-### `/market-research` skill (Market Intelligence)
-```
-Use when task involves: "Market landscape", "Competitor analysis", "Positioning gaps"
-
-Skill provides comprehensive market intelligence framework.
-```
+Until then, use web search, Perplexity, and Firecrawl directly as described in your methods section.
 
 ---
 
@@ -542,7 +536,7 @@ Read(file_path="output/campaigns/[slug]/campaign-brief.md")
 ```
 Grep(
   pattern="[topic]",
-  path="/path/to/knowledge/learnings/",
+  path="knowledge/learnings/",
   glob="*.md"
 )
 ```

@@ -80,20 +80,24 @@ Read(file_path="output/campaigns/[slug]/campaign-brief.md")
 Read(file_path="knowledge/research/[topic]-[date].md")
 ```
 
-### 5. Invoke Appropriate Content Skill
+### 5. Read Appropriate Content Skill
 
-**Match skill to asset type:**
-- Landing page → `/landing-page` skill
-- Email sequence → `/email-sequence` skill
-- Blog post → `/blog-post` skill
-- Lead magnet → `/lead-magnet` skill
-- Social post → `/social-post` skill
+**Match skill to asset type and read the SKILL.md:**
+- Landing page → `Read(file_path=".claude/skills/landing-page/SKILL.md")`
+- Email sequence → `Read(file_path=".claude/skills/email-sequence/SKILL.md")`
+- Blog post → `Read(file_path=".claude/skills/blog-post/SKILL.md")`
+- Lead magnet → `Read(file_path=".claude/skills/lead-magnet/SKILL.md")`
+- Social post → `Read(file_path=".claude/skills/social-post/SKILL.md")`
+- Newsletter → `Read(file_path=".claude/skills/newsletter/SKILL.md")`
+- Repurpose → `Read(file_path=".claude/skills/repurpose/SKILL.md")`
 
-**More skills below in "Content Skills Reference"**
+**Follow the framework defined in that file.** The SKILL.md is the canonical spec — do not substitute your own framework.
 
 ### 6. Create Draft in Campaign Directory
 
-**Save to:** `output/campaigns/[campaign-slug]/drafts/[asset-name]-draft.md`
+**Simple Mode (no active campaign):** Return output inline. Do not create a file unless the user asks for one. If saving to disk makes sense, use `output/drafts/[YYYY-MM-DD]-[asset-type].md`.
+
+**Campaign Mode:** Save to `output/campaigns/[campaign-slug]/drafts/[asset-name]-draft.md`
 
 **File naming:**
 ```
@@ -144,32 +148,21 @@ Task(
 
 ### 9. Complete Task
 
-When done, update task:
+When done, update task with deliverable path and self-assessment in metadata:
 ```
 TaskUpdate(
   taskId="[ID]",
-  status="completed"
+  status="completed",
+  metadata={
+    "deliverable": "output/campaigns/[slug]/drafts/[filename].md",
+    "assessment": "8/10 voice — intro slightly corporate, rest solid. Research integrated. ICP-relevant. Angle #3 aligned.",
+    "expert_review": "Headline #2 strongest. CTA: 'instant access' → 'get the guide'. Section 3 can tighten.",
+    "ready_for": "quality-gate"
+  }
 )
 ```
 
-**Add task comment with self-assessment:**
-```
-"Draft complete: output/campaigns/[slug]/drafts/[filename].md
-
-Self-assessment:
-- Voice match: 8/10 (intro feels slightly corporate, rest is solid)
-- Research integration: Strong (used 'discovery engine' language from research)
-- ICP relevance: High (addresses top pain point)
-- Positioning: Aligned with angle #3
-
-[If expert review run:]
-Expert review consensus:
-- Headline #2 tests strongest
-- CTA needs friction removal ('instant access' → 'get the guide')
-- Section 3 can be tightened
-
-Ready for Quality Gate review."
-```
+Quality Gate calls `TaskGet(taskId="[ID]")` to find the deliverable path and read the assessment before claiming its review task.
 
 ---
 
@@ -227,182 +220,6 @@ Ready for Quality Gate review."
 
 ---
 
-## Content Skills Reference
-
-### Core Content Skills (from my-writing-system)
-
-**1. `/landing-page` - Direct-Response Landing Pages**
-```
-Use for: Lead capture pages, sales pages, product pages
-
-Framework:
-- Attention-grabbing headline (benefit + specificity)
-- Subheadline (expand on promise)
-- Social proof (credibility)
-- Benefits (not features)
-- Objection handling
-- Clear CTA
-
-Voice: Match voice-dna.md
-Length: 500-1500 words depending on offer complexity
-```
-
-**2. `/email-sequence` - Automated Email Campaigns**
-```
-Use for: Nurture sequences, onboarding, drip campaigns
-
-Framework:
-- Email 1: Deliver promise (lead magnet, welcome)
-- Email 2: Connection story (build rapport)
-- Email 3-N: Value delivery + gentle CTAs
-
-Voice: Conversational, personal
-Sequence length: 3-7 emails depending on campaign
-```
-
-**3. `/blog-post` - SEO-Optimized Articles**
-```
-Use for: Content marketing, SEO, thought leadership
-
-Framework:
-- Hook (why should I care?)
-- Promise (what will I learn?)
-- Deliver (actual content)
-- CTA (next step)
-
-Voice: Educational, helpful
-Length: 1000-2000 words
-```
-
-**4. `/lead-magnet` - High-Value Opt-In Content**
-```
-Use for: PDFs, checklists, templates, guides
-
-Framework:
-- Quick win (achievable in < 30 min)
-- Bridges to paid offer
-- Demonstrates expertise
-- Minimal friction to consume
-
-Formats: PDF, checklist, template, mini-course
-```
-
-**5. `/social-post` - Platform-Optimized Posts**
-```
-Use for: LinkedIn, Twitter/X, Substack Notes
-
-Framework varies by platform:
-- LinkedIn: Hook in first 3 lines, 800-1300 chars
-- Twitter: First tweet is hook, each tweet standalone
-- Substack Notes: Full visible, up to 2500 chars
-
-Voice: Platform-appropriate
-```
-
-**6. `/newsletter` - Email Newsletter**
-```
-Use for: Weekly/monthly email to subscribers
-
-Framework:
-- Subject line (curiosity + benefit)
-- Opening (hook, personal note)
-- Main content (1-3 topics)
-- CTA (what to do next)
-
-Voice: Conversational, personal
-Length: 300-800 words
-```
-
-**7. `/repurpose` - Multi-Platform Adaptation**
-```
-Use for: Taking one piece and adapting for other platforms
-
-Example: Newsletter → LinkedIn post + Twitter thread + Substack notes
-
-Maintains core message, optimizes for platform
-```
-
----
-
-## Marketing Skills (New for This System)
-
-### Marketing Strategy Skills
-
-**8. `/positioning-angles` - Differentiation Frameworks**
-```
-Use for: Finding unique positioning based on research
-
-Framework - 8 angles:
-1. The Specialist ("AI marketing for overlooked industries")
-2. The Anti-[Competitor] ("Not another agency promising 10x")
-3. The Methodology ("Our proprietary process ensures...")
-4. The Speed Advantage ("What takes 3 months, we ship in 3 weeks")
-5. The Compound Engine ("Boring stuff that compounds")
-6. The Quality Story ("Why we chose this approach")
-7. The Contrarian ("Everyone says X. We say Y.")
-8. The Results-First ("Here's what [client] built in [timeframe]")
-
-Output: 3-5 positioning angle options with rationale
-```
-
-**9. `/keyword-research` - 6 Circles Method**
-```
-Use for: Finding SEO opportunities, content ideas
-
-Framework - 6 circles:
-1. Obvious keywords (high volume, high competition)
-2. Long-tail variations (lower volume, easier to rank)
-3. Question-based ("How to...", "What is...")
-4. Comparison ("X vs Y", "Best X for Y")
-5. Jobs-to-be-done ("Help me achieve X")
-6. Customer language (exact phrases from research)
-
-Output: Prioritized keyword list, content pillar recommendations
-```
-
-**10. `/market-research` - Deep Market Intelligence**
-```
-Use for: Market landscape, competitor analysis, customer language
-
-Framework:
-- Market landscape (players, positioning, pricing)
-- Positioning gaps (what's NOT being said)
-- Customer language (exact phrases)
-- Visual analysis (landing page patterns)
-
-Output: Research package with actionable insights
-```
-
-**11. `/expert-review` - Task-Based Agent Review**
-```
-Use for: Getting specialized feedback on drafts
-
-Framework:
-- Spawn 3-5 expert agents with different specializations
-- Each analyzes independently
-- Synthesize: where do they agree?
-- Use for: copy review, strategy validation, launch readiness
-
-Output: Consensus feedback + specific recommendations
-```
-
-**12. `/lead-magnet-strategy` - High-Converting Opt-Ins**
-```
-Use for: Designing lead magnet concepts
-
-Framework:
-- Bridges to paid offer (relevant, not random)
-- Quick win for prospect (achievable fast)
-- Demonstrates expertise (you know your stuff)
-- Minimal friction to consume (easy to use)
-
-Output: Lead magnet concept + outline
-```
-
-**Note:** Skills 8-12 need to be created in `.claude/skills/` directory.
-
----
-
 ## Parallel Writing Workflow
 
 **Multiple assets CAN be created simultaneously** if research is complete.
@@ -434,6 +251,8 @@ Total: ~3 hours parallelized
 ---
 
 ## Sprint-Specific Behaviors
+
+**Determine your sprint from the task title.** All tasks are prefixed `[S1]`, `[S2]`, or `[S3]`. Call `TaskGet(taskId="[ID]")` and read the subject to know which sprint you're in before starting work.
 
 ### Sprint 1: Sketching (NOT Full Drafts)
 
@@ -673,18 +492,18 @@ Read(file_path="knowledge/research/dev-cli-pain-points-2026-02-15.md")
 **3. Review positioning:**
 Campaign brief says: "Angle #3 - Discovery Engine approved"
 
-**4. Invoke lead-magnet skill:**
+**4. Read lead-magnet skill and follow its framework:**
 ```
-[Use /lead-magnet skill or create manually following framework]
+Read(file_path=".claude/skills/lead-magnet/SKILL.md")
+```
 
-Input to skill:
+Apply the framework from that file with these inputs:
 - Topic: CLI Patterns for Senior Developers
 - Target audience: Senior developers frustrated with discoverability
 - Key insight from research: 83% struggle finding right tools
 - Positioning: Discovery engine (not feature-based)
 - Format: PDF guide, 10 patterns
 - Bridge to offer: Our CLI discovery tool makes this automatic
-```
 
 **5. Create draft:**
 ```
@@ -771,9 +590,9 @@ Read(file_path="output/campaigns/[slug]/campaign-brief.md")
 Read(file_path="knowledge/research/[topic]-[date].md")
 ```
 
-**Invoke skill:**
+**Read content skill:**
 ```
-[Use appropriate content skill: /landing-page, /email-sequence, etc.]
+Read(file_path=".claude/skills/[skill-name]/SKILL.md")
 ```
 
 **Run expert review:**
