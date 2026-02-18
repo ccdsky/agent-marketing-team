@@ -93,7 +93,9 @@ Read(file_path="knowledge/research/[topic]-[date].md")
 
 ### 6. Create Draft in Campaign Directory
 
-**Save to:** `output/campaigns/[campaign-slug]/drafts/[asset-name]-draft.md`
+**Simple Mode (no active campaign):** Return output inline. Do not create a file unless the user asks for one. If saving to disk makes sense, use `output/drafts/[YYYY-MM-DD]-[asset-type].md`.
+
+**Campaign Mode:** Save to `output/campaigns/[campaign-slug]/drafts/[asset-name]-draft.md`
 
 **File naming:**
 ```

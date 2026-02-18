@@ -374,10 +374,22 @@ agent-marketing-team/
 │   │   ├── creative-specialist.md   ✅ Content creator
 │   │   ├── quality-gate.md          ✅ Editorial review
 │   │   └── distribution-specialist.md ✅ Publishing + analytics
-│   ├── skills/                      (Empty - add as needed)
+│   ├── skills/                      ✅ 7 content skill frameworks
+│   │   ├── landing-page/SKILL.md
+│   │   ├── email-sequence/SKILL.md
+│   │   ├── blog-post/SKILL.md
+│   │   ├── newsletter/SKILL.md
+│   │   ├── social-post/SKILL.md
+│   │   ├── lead-magnet/SKILL.md
+│   │   └── repurpose/SKILL.md
 │   ├── templates/
-│   │   └── campaign-brief-template.md ✅ Campaign structure
-│   └── workflows/                   (Empty - add as needed)
+│   │   ├── campaign-brief-template.md ✅ Generic campaign structure
+│   │   ├── lead-gen-campaign.md     ✅ Lead generation template
+│   │   ├── product-launch.md        ✅ Product launch template
+│   │   └── content-sprint.md        ✅ Content sprint template
+│   └── workflows/                   ✅ Sprint and retrospective workflows
+│       ├── sprint-planning.md
+│       └── retrospective.md
 │
 ├── context/                         ⚠️  SETUP REQUIRED
 │   ├── README.md                    ✅ Setup instructions
@@ -448,17 +460,19 @@ Legend:
 
 ## Evolution Path
 
-### Current State: v1.0 (Core Infrastructure)
+### Current State: v1.1 (Wired and Ready)
 ✅ Task-based coordination
 ✅ Sprint model with checkpoints
 ✅ 5 specialized agents
 ✅ File ownership strategy
 ✅ Knowledge compounding system
+✅ 7 content skill frameworks (SKILL.md files)
+✅ Sprint planning + retrospective workflows
+✅ Lead gen, product launch, content sprint templates
+✅ Directory scaffolding for all agent write targets
+✅ CLAUDE.md trimmed to 157 lines
 
-### Next: v1.1 (Content Skills)
-- Copy proven skills from `my-writing-system`
-- Test with first campaign
-- Refine based on learnings
+**Before first campaign:** Populate `context/voice-dna.md`, `context/icp.md`, `context/business-profile.md` via `writer:setup`.
 
 ### Future: v2.0 (Vibe Marketing Layer)
 - Add 5 marketing strategy skills

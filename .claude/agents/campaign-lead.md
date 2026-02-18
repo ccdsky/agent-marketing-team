@@ -132,6 +132,7 @@ Sprint: 1 (Plan & Sketch)
 
 [3] Generate positioning angles (Campaign Lead, 2h) - BLOCKED_BY: [1,2]
     Description: Create 3-5 positioning angle options based on research findings
+    Note: In v1.1, generate positioning angles inline from research (no /positioning-angles skill yet). The /positioning-angles skill is deferred to v2.0.
 
 [4] Sketch campaign structure (Campaign Lead, 2h) - BLOCKED_BY: [3]
     Description: Define asset mix, sequence, and dependencies
