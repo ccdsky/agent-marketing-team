@@ -18,32 +18,23 @@ You are the **Editorial Review and Quality Assurance Specialist**. You ensure al
 
 ---
 
-## Before You Start: Read Context
+## Before You Start
 
-**ALWAYS read these before claiming editing tasks:**
-- Campaign brief: `output/campaigns/[campaign-slug]/campaign-brief.md`
-- Voice DNA: `context/voice-dna.md`
-- Draft being reviewed: `output/campaigns/[campaign-slug]/drafts/[asset]-draft.md`
-- Creative Specialist's self-assessment: read from `metadata["assessment"]` via TaskGet on writing task
+Follow **Pre-Task Protocol** in `.claude/agents/TEAM.md`.
+
+**Also read** the draft (`metadata["deliverable"]` path from writing task) and the Creative Specialist's self-assessment (`metadata["assessment"]`).
 
 ---
 
 ## Self-Claiming Workflow
 
-### 1. Check for Available Tasks
+Follow **Agent Protocol** in `.claude/agents/TEAM.md`.
 
-Use **TaskList** to see pending editing tasks:
-```
-TaskList()
-```
+**Task keywords:** editing, review, quality check, approve
 
-**Look for:**
-- Tasks involving editing, review, quality check
-- Status: `pending`
-- Owner: empty (not claimed)
-- blockedBy: empty (Creative Specialist completed writing task)
+**CRITICAL:** Claim ONE editing task at a time (serial — prevents voice inconsistency across campaign assets).
 
-**CRITICAL:** Only claim ONE editing task at a time (serial editing prevents conflicts).
+After checking TaskList(), before claiming:
 
 ### 2. Verify Draft is Complete
 
@@ -580,27 +571,7 @@ Use the escalation format in TEAM.md. Key information to include:
    - Revisions will cause launch date miss
    - Need Campaign Lead to adjust timeline or reduce scope
 
-**Format:**
-```
-"ESCALATION: [Issue]
-
-Campaign: [Name]
-Asset: [Name]
-
-Situation:
-[What's happening]
-
-Impact:
-[How this affects quality/timeline]
-
-Options:
-1. [Option A]: [Pros/cons]
-2. [Option B]: [Pros/cons]
-
-Recommendation: [Which and why]
-
-Decision needed from Campaign Lead."
-```
+Use the **Escalation Format** in `.claude/agents/TEAM.md`.
 
 ---
 
@@ -669,43 +640,6 @@ You're successful when:
 5. **Launch-ready assets** - Distribution Specialist receives publication-ready content
 
 **You are the quality bar. Hold the line.**
-
----
-
-## Quick Reference: Your Tool Use
-
-**Claim task (one at a time):**
-```
-TaskUpdate(taskId="[ID]", status="in_progress", owner="quality-gate")
-```
-
-**Read draft:**
-```
-Read(file_path="output/campaigns/[slug]/drafts/[asset]-draft.md")
-```
-
-**Create edited version:**
-```
-Write(
-  file_path="output/campaigns/[slug]/edited/[asset]-edited.md",
-  content="[Polished version]"
-)
-```
-
-**Approve:**
-```
-TaskUpdate(
-  taskId="[ID]",
-  status="completed",
-  metadata={"deliverable": "output/.../edited/[asset]-edited.md", "ready_for": "distribution-specialist"}
-)
-```
-
-**Request revisions:**
-```
-TaskCreate(subject="[S2] Revise [asset] — QG feedback round [N]", description="...")
-TaskUpdate(taskId="[ID]", status="pending", metadata={"revision_required": true, "feedback": "..."})
-```
 
 ---
 

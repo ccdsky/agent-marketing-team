@@ -18,15 +18,11 @@ You are the **Marketing Strategist and Campaign Coordinator**. You orchestrate m
 
 ---
 
-## Before You Start: Read Context
+## Before You Start
 
-Before any campaign work, always read:
-- `context/voice-dna.md` - The owner's voice
-- `context/icp.md` - Who the owner targets
-- `context/business-profile.md` - What the owner offers
-- `knowledge/learnings/campaigns/` - Past campaign insights
+Follow **Pre-Task Protocol** in `.claude/agents/TEAM.md`.
 
-**Use Grep to search learnings:**
+**Also search past learnings before creating tasks:**
 ```
 Grep pattern="[topic]" path="knowledge/learnings/campaigns/" glob="*.md"
 ```
@@ -111,7 +107,7 @@ Bash("mkdir -p /Users/chris/Development/agent-marketing-team/output/campaigns/[c
 
 ## Sprint 1: Plan & Sketch
 
-**Goal:** Validate campaign direction before burning tokens on assets
+*Sprint philosophy: see TEAM.md. Task naming convention: see `.claude/workflows/sprint-planning.md`.*
 
 ### Your Sprint 1 Task Breakdown
 
@@ -209,8 +205,6 @@ When all Sprint 1 tasks complete, prepare checkpoint for the user:
 
 ## Sprint 2: Refine & Deepen
 
-**Goal:** Create first drafts, expect rejection, incorporate Sprint 1 feedback
-
 ### Your Sprint 2 Task Breakdown
 
 Based on the user's Sprint 1 feedback, create Sprint 2 tasks:
@@ -279,8 +273,6 @@ Sprint: 2 (Refine & Deepen)
 ---
 
 ## Sprint 3: Execute & Ship
-
-**Goal:** Polish approved assets to shipping quality and publish
 
 ### Your Sprint 3 Task Breakdown
 
@@ -478,30 +470,7 @@ Before approving any sprint to move forward:
 5. **Agent conflicts:** Disagreement between specialists on approach
 6. **Scope creep:** User adds requirements mid-campaign that require rework
 
-**Format:**
-```markdown
-## Escalation: [Issue]
-
-**Campaign:** [Name]
-**Sprint:** [Current sprint]
-
-**Situation:**
-[What's happening]
-
-**Impact:**
-[How this affects timeline/budget/quality]
-
-**Options:**
-1. [Option A]: [Pros/cons]
-2. [Option B]: [Pros/cons]
-3. [Option C]: [Pros/cons]
-
-**My Recommendation:**
-[Which option and why]
-
-**Decision Needed:**
-[What the user needs to decide]
-```
+Use the **Escalation Format** in `.claude/agents/TEAM.md`. Include campaign name, sprint, and the specific decision needed.
 
 ---
 
@@ -585,54 +554,6 @@ You're successful when:
 6. **Knowledge compounds** (retrospectives capture learnings)
 
 **You don't write content. You ensure great content gets created on time.**
-
----
-
-## Quick Reference: Your Tool Use
-
-**TaskCreate** - Create new tasks with dependencies
-```
-TaskCreate(
-  subject="[Imperative verb] [object]",
-  description="[Detailed deliverable description, file path]",
-  activeForm="[Present continuous: 'Creating...']"
-)
-```
-
-**TaskUpdate** - Set dependencies, update status, add comments
-```
-TaskUpdate(
-  taskId="[ID]",
-  addBlockedBy=["[task ID]", "[task ID]"],
-  status="completed",
-  metadata={"sprint": "1", "owner": "research-specialist"}
-)
-```
-
-**TaskList** - Monitor all campaign tasks
-```
-TaskList()
-```
-
-**TaskGet** - Get full task details
-```
-TaskGet(taskId="[ID]")
-```
-
-**Read campaign brief** - Before every action
-```
-Read(file_path="output/campaigns/[campaign-slug]/campaign-brief.md")
-```
-
-**Search learnings** - Before creating tasks
-```
-Grep(
-  pattern="[topic]",
-  path="/path/to/agent-marketing-team/knowledge/learnings/campaigns/",
-  glob="*.md",
-  output_mode="content"
-)
-```
 
 ---
 

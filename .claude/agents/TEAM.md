@@ -42,7 +42,7 @@ Strategist → creates handoff.md → Researcher reads → creates package → h
 ```
 Campaign Lead → creates task list with dependencies
 Agents self-claim tasks when unblocked
-Agents communicate via task comments
+Agents communicate via task metadata
 Progress transparent to everyone
 ```
 
@@ -246,6 +246,118 @@ After every campaign, we **extract learnings** and compound knowledge:
 | **Distribution Specialist** | Publishing + Analytics | Format for platforms, publish, track performance. Self-claims publishing tasks. |
 
 **See individual agent files for detailed workflows.**
+
+---
+
+---
+
+## System Pre-Flight
+
+Before any agent begins work, verify these context files are populated (not placeholder stubs):
+- `context/voice-dna.md` — must contain actual writing samples and voice patterns
+- `context/icp.md` — must contain real ICP definition
+- `context/business-profile.md` — must contain actual offerings
+
+**If any file contains placeholder text:** Stop. Escalate to the user: "Context file [name] needs to be populated before I can work. Run `/writer:setup` or manually fill in the template."
+
+`context/brand-guide.md` is **optional**. If it doesn't exist, skip reads for it — do not fail.
+
+---
+
+## Pre-Task Protocol
+
+Before claiming any task, read:
+- `context/voice-dna.md`
+- `context/icp.md`
+- `context/business-profile.md`
+- Campaign brief: `output/campaigns/[slug]/campaign-brief.md` (if in a campaign)
+- Relevant research: `knowledge/research/[topic]-[date].md` (if available)
+- Past learnings: `knowledge/learnings/campaigns/` (Grep for relevant patterns)
+
+If context files may be unpopulated, run System Pre-Flight first.
+
+---
+
+## Execution Model
+
+**Simple Mode (single asset):** The activated specialist operates directly within the conversation. No subagents. Sequential execution. Use for single-asset tasks like "Write a LinkedIn post."
+
+**Campaign Mode (multi-asset sprint):** Campaign Lead uses the `Task` tool to spawn specialists as subagents. Each subagent accesses the shared project file system. "Parallel" execution only applies here.
+
+**Spawning a specialist in Campaign Mode:**
+```
+Task(
+  subagent_type="general-purpose",
+  prompt="You are the [role] for the [campaign-name] campaign. Read .claude/agents/[role].md and claim your next available task from TaskList().",
+  description="[Role] — [campaign-slug]"
+)
+```
+
+---
+
+## Agent Protocol (Self-Claiming)
+
+All agents follow this protocol:
+
+**1. Check for tasks:**
+```
+TaskList()
+```
+Look for: Status `pending`, owner empty, `blockedBy` empty.
+
+**2. Claim:**
+```
+TaskUpdate(taskId="[ID]", status="in_progress", owner="[your-role]")
+```
+
+**3. Read task details:**
+```
+TaskGet(taskId="[ID]")
+```
+Read `task.metadata` for upstream deliverable paths and context.
+
+**4. Execute** — follow your agent-specific workflow.
+
+**5. Complete with metadata:**
+```
+TaskUpdate(
+  taskId="[ID]",
+  status="completed",
+  metadata={
+    "deliverable": "[path to output file]",
+    "assessment": "[brief self-assessment]",
+    "ready_for": "[next-agent-role]"
+  }
+)
+```
+
+**Quality Gate only:** Claim ONE editing task at a time (serial). Complete fully before claiming the next.
+
+---
+
+## Escalation Format
+
+Use this format when escalating to Campaign Lead or directly to the user:
+
+```markdown
+## Escalation: [Issue]
+
+**From:** [Agent name]
+**Campaign:** [Name] (if applicable)
+
+**Situation:**
+[What's happening]
+
+**Options:**
+1. [Option A]: [Pros/cons]
+2. [Option B]: [Pros/cons]
+
+**My Recommendation:**
+[Which option and why]
+
+**Decision Needed:**
+[What needs to be decided before work can continue]
+```
 
 ---
 

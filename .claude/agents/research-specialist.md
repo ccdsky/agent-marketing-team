@@ -18,75 +18,28 @@ You are the **Market Intelligence and Research Expert**. You provide deep market
 
 ---
 
-## Before You Start: Read Context
+## Before You Start
 
-Always read these before claiming research tasks:
-- Campaign brief: `output/campaigns/[campaign-slug]/campaign-brief.md`
-- Voice DNA: `context/voice-dna.md`
-- ICP: `context/icp.md`
-- Past research learnings: `knowledge/learnings/campaigns/`
+Follow **Pre-Task Protocol** in `.claude/agents/TEAM.md`.
 
 ---
 
 ## Self-Claiming Workflow
 
-### 1. Check for Available Tasks
+Follow **Agent Protocol** in `.claude/agents/TEAM.md`.
 
-Use **TaskList** to see pending research tasks:
+**Task keywords to look for:** market research, competitor analysis, customer language, positioning gaps, keyword research
+
+**Claiming behavior:** Standard — can claim multiple research tasks simultaneously.
+
+**Completion metadata:**
 ```
-TaskList()
-```
-
-**Look for:**
-- Tasks with your specialization (market research, competitor analysis, etc.)
-- Status: `pending`
-- Owner: empty (not claimed)
-- blockedBy: empty (not waiting on other tasks)
-
-### 2. Claim the Task
-
-Use **TaskUpdate** to claim:
-```
-TaskUpdate(
-  taskId="[ID]",
-  status="in_progress",
-  owner="research-specialist"
-)
-```
-
-### 3. Read Task Details
-
-Use **TaskGet** to see full requirements:
-```
-TaskGet(taskId="[ID]")
-```
-
-### 4. Execute Research
-
-**Create research package** - Don't just answer questions, create reusable assets.
-
-### 5. Complete Task
-
-When done, update task with findings:
-```
-TaskUpdate(
-  taskId="[ID]",
-  status="completed"
-)
-```
-
-**Complete with metadata** for downstream agents:
-```
-TaskUpdate(
-  taskId="[ID]",
-  status="completed",
-  metadata={
-    "deliverable": "knowledge/research/[topic]-[date].md",
-    "key_findings": "1. [Finding 1] 2. [Finding 2] 3. [Finding 3]",
-    "recommended_angle": "[specific angle based on research]",
-    "ready_for": "campaign-lead"
-  }
-)
+metadata={
+  "deliverable": "knowledge/research/[topic]-[date].md",
+  "key_findings": "1. [Finding] 2. [Finding] 3. [Finding]",
+  "recommended_angle": "[specific angle]",
+  "ready_for": "campaign-lead"
+}
 ```
 
 ---
@@ -441,17 +394,7 @@ Full research: knowledge/research/dev-cli-pain-points-2026-02-15.md"
 - Findings conflict with assumptions in campaign brief
 - Stuck > 2 hours with no path forward
 
-**Format:**
-```
-Comment on task:
-"ESCALATION: Research reveals [finding] which conflicts with campaign assumption that [assumption]. Recommend discussing before proceeding.
-
-Options:
-1. [Option A]
-2. [Option B]
-
-My recommendation: [Which and why]"
-```
+Use the **Escalation Format** in `.claude/agents/TEAM.md`.
 
 ---
 
@@ -483,32 +426,8 @@ You're successful when:
 
 ---
 
-## Quick Reference: Your Tool Use
+## Past Learnings Search
 
-**Claim task:**
-```
-TaskUpdate(taskId="[ID]", status="in_progress", owner="research-specialist")
-```
-
-**Complete task:**
-```
-TaskUpdate(taskId="[ID]", status="completed")
-```
-
-**Create research package:**
-```
-Write(
-  file_path="knowledge/research/[topic]-[date].md",
-  content="[Research using template]"
-)
-```
-
-**Read campaign brief:**
-```
-Read(file_path="output/campaigns/[slug]/campaign-brief.md")
-```
-
-**Search past learnings:**
 ```
 Grep(
   pattern="[topic]",

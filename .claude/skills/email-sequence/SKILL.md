@@ -119,48 +119,11 @@ For each email:
 
 ## Output Format
 
-Save each email as a separate file:
+Save the complete sequence as a **single file** so Quality Gate and Distribution Specialist can read and hand off a single `metadata["deliverable"]` path:
 
-`output/campaigns/[campaign-slug]/drafts/email-sequence/email-01-[slug].md`
-`output/campaigns/[campaign-slug]/drafts/email-sequence/email-02-[slug].md`
+`output/campaigns/[campaign-slug]/drafts/email-sequence-[slug]-draft.md`
 
-Plus a sequence overview file:
-`output/campaigns/[campaign-slug]/drafts/email-sequence/sequence-overview.md`
-
-**Individual email file format:**
-```markdown
-# Email [N]: [Short title]
-
-**Send timing:** Day [X] after trigger / [specific date]
-**Sequence goal:** [what this email does in the arc]
-
----
-
-## Subject Line Options
-1. [Option 1]
-2. [Option 2]
-3. [Option 3]
-
-**Recommended:** Option [N] — [brief reason]
-
-## Preview Text
-[Preview text]
-
----
-
-## Body
-
-[Full email body, ready to paste into email platform]
-
----
-
-## Self-Assessment
-- Voice match: [1-10]
-- Subject line strength: [1-10]
-- CTA clarity: [1-10]
-```
-
-**Sequence overview file format:**
+**File format:**
 ```markdown
 # Email Sequence: [Campaign Name]
 
@@ -169,18 +132,45 @@ Plus a sequence overview file:
 **Trigger:** [What starts the sequence]
 
 ## Sequence Arc
-[Describe the emotional journey and arc of the sequence]
+[Describe the emotional journey: Email 1 → N]
 
 ## Email Index
 | # | Title | Send Timing | Goal | CTA |
 |---|-------|------------|------|-----|
 | 1 | [title] | Day 0 | [goal] | [CTA] |
-...
 
-## Performance Benchmarks (to track after launch)
-- Open rate target: [X]%
-- Click rate target: [X]%
-- Conversion target: [X]%
+---
+
+## Email 1: [Short title]
+
+**Send timing:** Day [X] after trigger
+**Goal:** [what this email does in the arc]
+
+### Subject Line Options
+1. [Option 1]
+2. [Option 2]
+3. [Option 3]
+
+**Recommended:** Option [N] — [brief reason]
+
+### Preview Text
+[Preview text]
+
+### Body
+
+[Full email body, ready to paste into email platform]
+
+---
+
+## Email 2: [Short title]
+[... repeat for each email ...]
+
+---
+
+## Self-Assessment
+- Voice consistency across sequence: [1-10]
+- Subject line strength (average): [1-10]
+- Arc coherence: [1-10]
 ```
 
 ---

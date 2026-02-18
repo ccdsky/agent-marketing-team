@@ -91,14 +91,9 @@ You are part of an **AI-powered marketing team** that executes full-funnel campa
 
 ---
 
-## Context Files (Always Read Before Work)
+## Context Files
 
-| File | Purpose |
-|------|---------|
-| `context/voice-dna.md` | Your writing voice — read before any content |
-| `context/icp.md` | Who you target — read before strategy or writing |
-| `context/business-profile.md` | What you offer — read before positioning |
-| `output/campaigns/[name]/campaign-brief.md` | Campaign source of truth |
+**Pre-Task Protocol** (what to read before any work) is defined in `.claude/agents/TEAM.md`.
 
 ---
 

@@ -18,16 +18,11 @@ You are the **Content Creator and Copywriter**. You write all marketing assets i
 
 ---
 
-## Before You Start: Read Context
+## Before You Start
 
-**ALWAYS read these before claiming writing tasks:**
-- Campaign brief: `output/campaigns/[campaign-slug]/campaign-brief.md`
-- Voice DNA: `context/voice-dna.md`
-- ICP: `context/icp.md`
-- Research package: `knowledge/research/[topic]-[date].md` (specified in task)
-- Past learnings: `knowledge/learnings/campaigns/`
+Follow **Pre-Task Protocol** in `.claude/agents/TEAM.md`.
 
-**Never write without reading research first.**
+**Never write without reading the research package first** (path in task `metadata["deliverable"]`).
 
 ---
 
@@ -434,21 +429,7 @@ Need clarification before proceeding."
 - Stuck > 1 hour with no path forward
 - Draft quality standards can't be met within scope
 
-**Format:**
-```
-"ESCALATION: Can't write [asset] without [missing information].
-
-Research package covers [X] but doesn't address [Y], which is critical for this asset.
-
-Options:
-1. Request additional research task
-2. Make assumptions (risky)
-3. Reduce scope of asset
-
-Recommendation: Option 1 - need 2-4 hours of targeted research on [Y].
-
-Blocked until resolved."
-```
+Use the **Escalation Format** in `.claude/agents/TEAM.md`.
 
 ---
 
@@ -560,49 +541,6 @@ You're successful when:
 6. **Compounds knowledge** - Patterns identified feed learnings
 
 **You are the creator. Make it voice-matched, research-informed, and valuable.**
-
----
-
-## Quick Reference: Your Tool Use
-
-**Claim task:**
-```
-TaskUpdate(taskId="[ID]", status="in_progress", owner="creative-specialist")
-```
-
-**Complete task:**
-```
-TaskUpdate(taskId="[ID]", status="completed")
-```
-
-**Create draft:**
-```
-Write(
-  file_path="output/campaigns/[slug]/drafts/[asset]-draft.md",
-  content="[Draft content]"
-)
-```
-
-**Read context:**
-```
-Read(file_path="context/voice-dna.md")
-Read(file_path="output/campaigns/[slug]/campaign-brief.md")
-Read(file_path="knowledge/research/[topic]-[date].md")
-```
-
-**Read content skill:**
-```
-Read(file_path=".claude/skills/[skill-name]/SKILL.md")
-```
-
-**Run expert review:**
-```
-Task(
-  subagent_type="general-purpose",
-  prompt="Expert review: [specific expertise needed]",
-  description="Review [asset]"
-)
-```
 
 ---
 

@@ -177,7 +177,7 @@ Before marking complete:
 - [ ] None of the versions sound like they were obviously adapted from the original
 - [ ] Hooks are platform-appropriate
 - [ ] CTAs link back to original where appropriate
-- [ ] Voice matches platform-specific tone from brand-guide.md
+- [ ] Voice matches platform-specific tone from brand-guide.md (optional — skip if file doesn't exist)
 - [ ] Overview file created with platform map
 - [ ] All files saved to repurposed/ folder
 - [ ] Self-assessment complete for each version
