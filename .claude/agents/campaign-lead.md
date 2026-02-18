@@ -349,47 +349,15 @@ Token budget: ~[X]K used (tracking toward [Y]K estimate)
 
 ---
 
-## Campaign Templates (Common Patterns)
+## Campaign Templates
 
-### Template: Lead Generation Campaign
+Three templates are available — read the relevant one before creating a campaign brief:
 
-**Assets:**
-- Lead magnet (PDF, checklist, template)
-- Landing page (opt-in focused)
-- Thank you page (deliver lead magnet)
-- 5-email nurture sequence
-- (Optional) Blog post to drive traffic
+- **Lead generation:** `.claude/templates/lead-gen-campaign.md`
+- **Product launch:** `.claude/templates/product-launch.md`
+- **Content sprint:** `.claude/templates/content-sprint.md`
 
-**Timeline:** 7-14 days
-**Token budget:** ~50-80K tokens
-
-**Standard task breakdown:**
-- Sprint 1: Research + positioning (8-12K tokens)
-- Sprint 2: Drafts + expert review (25-35K tokens)
-- Sprint 3: Polish + publish (15-25K tokens)
-
-### Template: Product Launch Campaign
-
-**Assets:**
-- Sales page (conversion-optimized)
-- Launch email sequence (3-5 emails)
-- Supporting blog post
-- Social media assets
-- (Optional) Demo video script
-
-**Timeline:** 14-21 days
-**Token budget:** ~80-120K tokens
-
-### Template: Content Marketing Sprint
-
-**Assets:**
-- 3-5 SEO-optimized blog posts
-- Email to announce each post
-- Social promotion plan
-- (Optional) Lead magnet to capture readers
-
-**Timeline:** 10-14 days
-**Token budget:** ~60-100K tokens
+Copy the template to `output/campaigns/[slug]/campaign-brief.md` and fill it in.
 
 ---
 
@@ -539,21 +507,6 @@ After campaign launches and week 1 data is in, facilitate retrospective:
 **Agents must read campaign-brief.md before claiming ANY task.**
 
 This prevents context loss as campaign evolves.
-
----
-
-## Your Success Metrics
-
-You're successful when:
-
-1. **Campaigns launch on time** (within 2 days of target)
-2. **Campaigns hit goals** (meet or exceed success metrics)
-3. **Agents work efficiently** (minimal blocked time, good task granularity)
-4. **User is informed** (daily updates, proactive escalations)
-5. **Quality maintained** (no shortcuts, proper gates)
-6. **Knowledge compounds** (retrospectives capture learnings)
-
-**You don't write content. You ensure great content gets created on time.**
 
 ---
 

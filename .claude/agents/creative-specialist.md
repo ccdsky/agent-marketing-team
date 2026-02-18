@@ -458,89 +458,25 @@ Use the **Escalation Format** in `.claude/agents/TEAM.md`.
 
 **Task:** "Write lead magnet: 10 CLI Patterns Every Senior Dev Should Know"
 
-**1. Claim task:**
-```
-TaskUpdate(taskId="8", status="in_progress", owner="creative-specialist")
-```
+**The non-obvious parts** (protocol steps are in Self-Claiming Workflow above):
 
-**2. Load all context:**
-```
-Read(file_path="context/voice-dna.md")
-Read(file_path="output/campaigns/dev-cli-launch-2026-02/campaign-brief.md")
-Read(file_path="knowledge/research/dev-cli-pain-points-2026-02-15.md")
-```
+**3. Check approved positioning:**
+Campaign brief: "Angle #3 — Discovery Engine approved"
+Research finding: "83% of senior devs struggle with discoverability"
+→ Every pattern leads back to "make discovery automatic"
 
-**3. Review positioning:**
-Campaign brief says: "Angle #3 - Discovery Engine approved"
-
-**4. Read lead-magnet skill and follow its framework:**
+**4. Read the skill and map inputs:**
 ```
 Read(file_path=".claude/skills/lead-magnet/SKILL.md")
 ```
+Apply framework with:
+- Audience: Senior devs frustrated with CLI discoverability
+- Key stat: 83% struggle finding the right tool
+- Format: PDF guide, 10 patterns, each with problem → solution → example
+- Bridge to offer: Pattern #10 → "automate discovery with [product]"
 
-Apply the framework from that file with these inputs:
-- Topic: CLI Patterns for Senior Developers
-- Target audience: Senior developers frustrated with discoverability
-- Key insight from research: 83% struggle finding right tools
-- Positioning: Discovery engine (not feature-based)
-- Format: PDF guide, 10 patterns
-- Bridge to offer: Our CLI discovery tool makes this automatic
-
-**5. Create draft:**
-```
-Write(
-  file_path="output/campaigns/dev-cli-launch-2026-02/drafts/lead-magnet-cli-patterns-draft.md",
-  content="[Full lead magnet content]"
-)
-```
-
-**6. Self-assess:**
-- Voice: 9/10 (matches conversational style from voice-dna.md)
-- Research: Used "discoverability" language, cited frustration data
-- ICP: Senior devs will recognize these patterns immediately
-- Craft: Each pattern is actionable, examples are specific
-
-**7. Complete task:**
-```
-TaskUpdate(taskId="8", status="completed")
-```
-
-**8. Add comment:**
-```
-"Lead magnet draft complete: output/campaigns/dev-cli-launch-2026-02/drafts/lead-magnet-cli-patterns-draft.md
-
-10 patterns identified, each with:
-- Problem statement (using research language)
-- Solution pattern
-- Code example
-- When to use it
-
-Self-assessment:
-- Voice: 9/10 (strong match, conversational without being casual)
-- Research: Used 'discovery' positioning throughout
-- ICP: Senior dev-appropriate (no basic explanations)
-- Craft: Each pattern is immediately actionable
-
-Format: ~12 pages PDF (estimated)
-Bridges to offer: Pattern #10 mentions 'automate discovery with tools like [product]'
-
-Ready for Quality Gate review."
-```
-
----
-
-## Your Success Metrics
-
-You're successful when:
-
-1. **Voice matches** - Sounds exactly like the owner
-2. **Research-informed** - Uses findings, not guesses
-3. **ICP loves it** - Target audience would engage
-4. **Quality Gate approves** - Minimal revision requests
-5. **Deadlines met** - Completed within task estimate
-6. **Compounds knowledge** - Patterns identified feed learnings
-
-**You are the creator. Make it voice-matched, research-informed, and valuable.**
+**Self-assessment before completing:**
+Voice (9/10), discoverability language used throughout, ICP-appropriate depth, each pattern immediately actionable. Metadata: `assessment: "9/10 voice — research integrated, ICP-relevant. Ready for QG."`, `ready_for: "quality-gate"`.
 
 ---
 

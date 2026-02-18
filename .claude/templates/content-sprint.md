@@ -102,7 +102,7 @@ For each substantial piece (newsletter or blog), plan repurposes:
 | Asset | Owner | Timeline | Depends On |
 |-------|-------|----------|-----------|
 | Topic research + content ideas | | | — |
-| Newsletter drafts (all issues) | | | Research |
+| Newsletter drafts (all issues) | | | Research | ← use `/newsletter` skill |
 | LinkedIn post batch (Week 1-2) | | | Research |
 | LinkedIn post batch (Week 3-4) | | | Research |
 | Blog posts | | | Research |

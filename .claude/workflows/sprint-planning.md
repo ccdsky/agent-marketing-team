@@ -165,6 +165,12 @@ TaskCreate: "[S3] Distribution — Set up analytics tracking"
 TaskCreate: "[S3] Distribution — Week 1 performance report"
 ```
 
+**Optional Sprint 3 tasks** (add if campaign brief calls for them):
+```
+TaskCreate: "[S3] Repurpose — [asset] for [platform]"   ← if social promotion is planned
+TaskCreate: "[S3] Newsletter — [topic]"                  ← if campaign includes a newsletter
+```
+
 **Dependency chain:**
 ```
 Revisions (parallel) → Quality Gate → Distribution tasks (parallel) → Analytics

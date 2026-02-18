@@ -412,20 +412,6 @@ Until then, use web search, Perplexity, and Firecrawl directly as described in y
 
 ---
 
-## Your Success Metrics
-
-You're successful when:
-
-1. **Research is actionable** - Others can make decisions from your work
-2. **Research is timely** - Completed within task estimate
-3. **Research informs strategy** - Campaign Lead uses insights in positioning
-4. **Content is better** - Creative Specialist references your findings
-5. **Patterns identified** - You find insights, not just facts
-
-**You are the foundation. Make it solid.**
-
----
-
 ## Past Learnings Search
 
 ```

@@ -615,154 +615,18 @@ Work with Campaign Lead to set up tracking **before** campaign launches.
 [What to do to hit goal or optimize further]
 ```
 
-**5. Campaign Retrospective (Post-Campaign)**
+**5. Post-Campaign Analytics Summary**
 
-**After campaign completes, create comprehensive analysis:**
+After Sprint 3 completes, save your final analytics data:
 
-**Save to:** `knowledge/feedback/analytics/[campaign-slug]-retrospective-[date].md`
-
-**Format:**
-```markdown
-# Campaign Retrospective: [Name]
-
-**Launch Date:** [Date]
-**Duration:** [X] days/weeks
-**Goal:** [Original goal]
-**Result:** [Actual result]
-**Success:** [Met goal? Yes/No, by how much]
-
----
-
-## Final Performance
-
-### Primary Metrics
-
-| Metric | Target | Actual | Variance |
-|--------|--------|--------|----------|
-| [Primary goal] | [X] | [Y] | [+/- Z]% |
-
-### Funnel Performance
-
-| Stage | Volume | Conversion | Notes |
-|-------|--------|------------|-------|
-| Landing page visitors | [X] | - | [Traffic sources] |
-| Opt-ins | [Y] | [Z]% | [Performance vs benchmark] |
-| Email opens | [A] | [B]% | [Email N performed best] |
-| Email clicks | [C] | [D]% | [CTA effectiveness] |
-| Conversions | [E] | [F]% | [Final conversion rate] |
-
----
-
-## What Worked
-
-### Asset Performance
-
-**Best performing assets:**
-1. **[Asset name]:** [Metric] - [Why it worked]
-2. **[Asset name]:** [Metric] - [Why it worked]
-
-**Worst performing assets:**
-1. **[Asset name]:** [Metric] - [Why it didn't work]
-
-### Channel Performance
-
-**Best performing channels:**
-1. **[Channel]:** [Cost/lead], [Volume], [Why effective]
-2. **[Channel]:** [Cost/lead], [Volume], [Why effective]
-
-**Lessons:**
-- [Pattern or insight]
-- [Pattern or insight]
-
----
-
-## What Didn't Work
-
-### Issues Encountered
-
-1. **[Issue]:** [Description, impact, how resolved]
-2. **[Issue]:** [Description, impact, how resolved]
-
-### Missed Opportunities
-
-- [What we should have done differently]
-- [What we didn't test that could have helped]
-
----
-
-## Learnings to Compound
-
-### Timing Learnings
-**Save to:** `knowledge/learnings/campaigns/timing/`
-
-- [Specific timing insight]
-  Example: "Email 3 sent on Day 5 had 2x higher click rate than when sent on Day 3"
-
-### Asset Mix Learnings
-**Save to:** `knowledge/learnings/campaigns/asset-mix/`
-
-- [Specific asset combination insight]
-  Example: "Lead magnet + blog post outperformed lead magnet alone by 40%"
-
-### Coordination Learnings
-**Save to:** `knowledge/learnings/campaigns/coordination/`
-
-- [Specific agent coordination insight]
-  Example: "Parallel research on 2 topics worked well, 3+ created duplication"
-
-### Quality Gate Learnings
-**Save to:** `knowledge/learnings/campaigns/quality-gates/`
-
-- [Specific quality process insight]
-  Example: "Editor reviewing lead magnet before landing page improved consistency"
-
----
-
-## Recommendations for Next Campaign
-
-**Double down on:**
-- [What worked, should repeat]
-
-**Avoid:**
-- [What didn't work, should avoid]
-
-**Test next time:**
-- [Hypotheses to validate in future campaigns]
-
-**Process improvements:**
-- [How to optimize workflow]
-
----
-
-## ROI Analysis
-
-**Investment:**
-- Time: [X] agent hours
-- Tokens: [Y]K tokens (~$[Z])
-- Paid traffic: $[A] (if applicable)
-- Tools/services: $[B]
-- **Total:** $[Total]
-
-**Return:**
-- Leads generated: [X]
-- Customers: [Y]
-- Revenue: $[Z]
-- **ROI:** [Z / Total] = [X]x
-
-**Cost per lead:** $[Total / Leads]
-**Cost per customer:** $[Total / Customers]
-
-**Was this efficient?** [Yes/No, why]
-
----
-
-## Carry Forward
-
-**Apply immediately to next campaign:**
-1. [Highest-value learning]
-2. [Second-highest-value learning]
-3. [Third-highest-value learning]
 ```
+Write(
+  file_path="knowledge/feedback/analytics/[campaign-slug]-analytics-[date].md",
+  content="[Final metrics vs targets, funnel breakdown, channel performance, cost per lead, ROI estimate]"
+)
+```
+
+Campaign Lead will incorporate this into the campaign retrospective (`retrospective.md`).
 
 ---
 
@@ -839,21 +703,6 @@ Can you draft 2 subject line alternatives based on your voice expertise?"
 Use the **Escalation Format** in `.claude/agents/TEAM.md`. Include campaign name, week, current metrics vs targets, and recommended action.
 
 ---
-
-## Your Success Metrics
-
-You're successful when:
-
-1. **Publishing is flawless** - All assets formatted correctly, launched smoothly
-2. **Performance is transparent** - Campaign Lead always knows campaign status
-3. **Goals are met** - Campaigns hit success metrics
-4. **Insights are actionable** - Analytics drive real optimizations
-5. **Learnings compound** - Patterns identified improve future campaigns
-
-**You close the loop. Publish well, track accurately, optimize continuously.**
-
----
-
 
 ---
 

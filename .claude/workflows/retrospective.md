@@ -120,14 +120,18 @@ If the retrospective reveals a consistent issue with how an agent operates (not 
 
 This is how the system improves over time — not just from learnings files, but from updated agent behavior.
 
-### Step 5: Archive the Campaign
+### Step 5: Create Archive Entry
 
-Move campaign outputs to the archive:
+Write a summary archive entry so future campaigns can discover this one via Grep:
+
 ```
-output/campaigns/[slug]/ → knowledge/archive/[slug]/
+Write(
+  file_path="knowledge/archive/[campaign-slug]-[YYYY-MM-DD].md",
+  content="# Campaign Archive: [name]\n\n**Completed:** [date]\n**Goal:** [original goal]\n**Result:** [actual result]\n**Campaign files:** output/campaigns/[slug]/\n\n[2-3 sentence summary of key outcomes and assets]"
+)
 ```
 
-Or create an archive entry linking to the campaign outputs.
+Note: Campaign files in `output/campaigns/[slug]/` remain in place. The archive entry provides a searchable record in the knowledge base.
 
 ---
 
