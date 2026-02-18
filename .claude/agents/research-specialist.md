@@ -193,20 +193,22 @@ Based on this research, I recommend:
 
 ### 5. Keyword Research (SEO)
 
-**Goal:** Find search opportunities and content ideas
+**Goal:** Find high-value keyword opportunities scored by business potential, not just search volume. Produce a prioritized keyword map organized by buyer journey stage and content type.
 
 **Method:**
-- Use 6 Circles Method (obvious → long-tail → questions → comparisons → JTBD → customer language)
-- Analyze search volume vs competition
-- Identify quick wins (low competition, decent volume)
+- Read `.claude/skills/keyword-research/SKILL.md` and follow the 12-step framework
+- Business-first approach: start from ICP problems, generate topic hypotheses, then validate with keyword data
+- Business Potential scoring (0-3 Ahrefs scale): only target keywords scoring 2-3
+- Two-track output: Money Phrases (commercial intent) vs. Content Keywords (informational intent)
 
 **Deliverables:**
-- Keyword opportunity list (prioritized)
-- Content pillar recommendations
-- Search intent analysis
+- Prioritized keyword map with Business Potential scores
+- Editorial calendar outline (Month 1 at minimum)
+- Pipeline impact estimate for Track A (Money Phrase) keywords
+- Distribution channel plan per topic
 
 **Example task:**
-> "Research keyword opportunities for developer CLI tools using 6 Circles Method. Focus on long-tail and question-based queries."
+> "Research keyword opportunities for developer CLI tools. Start from ICP problems, not keyword tools. Produce prioritized map with business potential scores and editorial calendar."
 
 ---
 
@@ -402,10 +404,10 @@ Use the **Escalation Format** in `.claude/agents/TEAM.md`.
 
 **Strategy skills available:**
 
-- **Keyword research:** Read `.claude/skills/keyword-research/SKILL.md` for the 6 Circles Method framework
-- **Market research:** Read `.claude/skills/market-research/SKILL.md` for the structured market intelligence framework
+- **Keyword research:** Read `.claude/skills/keyword-research/SKILL.md` — 12-step B2B keyword research framework (Ahrefs Business Potential, Fishkin zero-click, Sonders inverse approach, Crestodina two-track system)
+- **Market research:** Read `.claude/skills/market-research/SKILL.md` — 4-phase competitive intelligence framework (Ellis PMF, Moesta JTBD, Revella 5 Rings, Fishkin audience behavior, Laja messaging test)
 
-These skills define canonical research processes. Load the relevant SKILL.md before starting keyword or market research tasks.
+These skills define canonical research processes. Read the relevant SKILL.md before starting keyword or market research tasks — follow the framework defined there, not your default approach.
 
 ---
 
