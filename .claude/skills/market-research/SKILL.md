@@ -8,23 +8,9 @@ Invoke when: Research Specialist receives a market research request, or Campaign
 
 ---
 
-## Thought Leader Foundations
+## Methodology Sources
 
-This skill synthesizes five complementary research lenses:
-
-**Sean Ellis (GrowthHackers) — The 40% Test:** PMF survey: "How would you feel if you could no longer use [product]?" 40%+ "very disappointed" = product-market fit. The follow-up questions are the gold: "What is the main benefit?" gives value prop language in the customer's own words. "What alternative would you use?" maps the real competitive landscape.
-
-**Bob Moesta / Clayton Christensen — Jobs-to-be-Done:** Four Forces of Progress: Push (frustration with current state) + Pull (attraction to new solution) must overcome Anxiety (fear of switching) + Habit (comfort with status quo). "Only people have Jobs-to-be-Done, not organizations" — in enterprise B2B, find the specific person willing to spend political capital to champion the purchase. Career risk is real: "What if it goes wrong and I look bad?"
-
-**Adele Revella (Buyer Persona Institute) — 5 Rings of Buying Insight:** Priority Initiative (what triggers the search), Success Factors (expected outcomes), Perceived Barriers (what eliminates you), Buyer's Journey (who influences), Decision Criteria (what makes them choose). 77% of marketers never reference their buyer personas — because most are fabricated from demographics, not researched from actual buying decisions. Interview non-customers and lost deals, not just happy customers.
-
-**Rand Fishkin / SparkToro — Audience Intelligence:** Observe what your audience actually does online (follows, reads, watches, discusses) instead of asking what they think. Behavioral data at scale vs. self-reported survey data. Identifies channels, creators, and publications that actually reach your ICP.
-
-**Peep Laja / Wynter — Message Testing:** 4-layer test: Clarity → Relevance → Value → Differentiation. Test with verified category buyers, not internal stakeholders. Brand tracking every 6-12 months: unaided awareness, aided awareness, perception, consideration.
-
-**The critical cross-cutting insight:** The most dangerous market research mistake is asking people what they want instead of studying what they do. Ellis measures disappointment, not satisfaction. Moesta reconstructs purchase stories, not wishlists. Revella follows buyer narratives, not scripts. Fishkin observes behavior, not self-reports. Laja tests with real buyers, not committees.
-
-**AI agent advantage:** Observational desk research (what people DO) is often more reliable than self-reported data (what people SAY). This makes the agent's desk research capability genuinely valuable, not a poor substitute for human interviews.
+Ellis (GrowthHackers) — 40% PMF test, value prop language mining. Moesta/Christensen — JTBD four forces (Push/Pull/Anxiety/Habit). Revella (Buyer Persona Institute) — 5 Rings of Buying Insight. Fishkin/SparkToro — audience behavior observation. Laja/Wynter — 4-layer messaging test (Clarity/Relevance/Value/Differentiation).
 
 ---
 
@@ -158,7 +144,11 @@ For each section, include:
 
 ### Phase 4: PRIMARY RESEARCH SUPPORT (Human Leads, AI Assists)
 
-**Important:** This phase acknowledges what AI can't do alone. Flag these needs explicitly rather than skipping them.
+**Status: INSTRUMENTS READY — Human execution required.**
+
+This phase produces research instruments (interview guide, survey, message test variants). AI writes the tools; a human must conduct the actual interviews or surveys. Mark this phase complete when instruments are written — but note in the Executive Summary whether primary research was conducted.
+
+If no human follow-through is planned, still include the instruments — they document what primary research *would* validate and give Campaign Lead an honest picture of research completeness.
 
 AI prepares instruments for human-led primary research:
 
@@ -305,6 +295,9 @@ Based on this research, 3-5 positioning angles worth testing:
 
 ## Phase 4: Primary Research Instruments
 
+**Status:** Instruments written — [Primary research conducted: Yes / No / Pending]
+*If "No" or "Pending": note which hypotheses in Phase 3 remain unvalidated by primary data.*
+
 ### JTBD Interview Guide
 
 [Full interview guide with opening, probe questions, closing]
@@ -338,18 +331,12 @@ Based on this research, 3-5 positioning angles worth testing:
 
 ---
 
-## Quality Checklist
+## Quality Gate
 
 Before marking complete:
 
-- [ ] Market scope defined before starting (not just "the market")
-- [ ] Three-tier competitive landscape mapped (direct + adjacent + real alternative)
-- [ ] Positioning analysis covers at least 5 competitors (4-layer Laja framework)
-- [ ] Customer language organized by JTBD four forces (not just a list of quotes)
-- [ ] Audience behavior mapped (channels, not just demographics)
-- [ ] Content gap analysis completed (topics competitors ignore)
-- [ ] Confidence levels assigned to all key findings (HIGH/MEDIUM/LOW)
-- [ ] Positioning hypotheses generated (feeds /positioning-angles)
-- [ ] Primary research instruments included where applicable (interview guide, survey, message test variants)
-- [ ] Research gaps honestly flagged (no speculation presented as fact)
-- [ ] File saved to correct path
+- [ ] Three-tier competitive landscape mapped — includes "do nothing" / status quo as Tier 3
+- [ ] Customer language organized by JTBD four forces (not just a quote list)
+- [ ] Confidence levels assigned to all key Phase 3 findings (HIGH/MEDIUM/LOW)
+- [ ] Phase 4 status labeled: "Primary research conducted: Yes / No / Pending"
+- [ ] Research gaps flagged honestly — no [LOW] confidence findings presented as conclusions

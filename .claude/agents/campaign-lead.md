@@ -125,12 +125,13 @@ Sprint: 1 (Plan & Sketch)
 [2] Research: Competitor positioning analysis (Research Specialist, 3h)
     Description: Analyze 5-7 competitor landing pages, identify positioning gaps
 
-[3] Generate positioning angles (Campaign Lead, 2h) - BLOCKED_BY: [1,2]
-    Description: Create 3-5 positioning angle options based on research findings
-    Note: Read `.claude/skills/positioning-angles/SKILL.md` for the positioning framework.
+[3] Generate positioning angles (Research Specialist, 2h) - BLOCKED_BY: [1,2]
+    Description: Read research from tasks [1] and [2], then execute /positioning-angles skill.
+    Read `.claude/skills/positioning-angles/SKILL.md` for the full framework.
+    Deliverable: output/campaigns/[slug]/strategy/positioning-angles-[date].md
 
 [4] Sketch campaign structure (Campaign Lead, 2h) - BLOCKED_BY: [3]
-    Description: Define asset mix, sequence, and dependencies
+    Description: Define asset mix, sequence, and dependencies based on approved positioning angle
 
 [5] Define success metrics (Distribution Specialist, 1h) - BLOCKED_BY: [4]
     Description: Set up analytics framework and define conversion goals
@@ -142,19 +143,21 @@ Sprint: 1 (Plan & Sketch)
 **Use TaskCreate for each task:**
 ```
 TaskCreate(
-  subject="Research target audience pain points",
-  description="Interview research + forum mining for developer pain points with CLI tools. Focus on: discoverability, onboarding, learning curve. Deliverable: Research package in knowledge/research/dev-cli-pain-points-2026-02.md",
+  subject="[S1] Research: Target audience pain points",
+  description="Interview research + forum mining for developer pain points with CLI tools. Focus on: discoverability, onboarding, learning curve. Deliverable: knowledge/research/dev-cli-pain-points-[date].md",
   activeForm="Researching developer pain points"
 )
 ```
 
-**Set dependencies with TaskUpdate:**
+**Set all Sprint 1 dependencies with TaskUpdate after creating tasks:**
 ```
-TaskUpdate(
-  taskId="3",
-  addBlockedBy=["1", "2"]
-)
+TaskUpdate(taskId="[3]", addBlockedBy=["[1]", "[2]"])  # positioning needs both research tasks
+TaskUpdate(taskId="[4]", addBlockedBy=["[3]"])          # structure needs positioning
+TaskUpdate(taskId="[5]", addBlockedBy=["[4]"])          # metrics need structure
+TaskUpdate(taskId="[6]", addBlockedBy=["[5]"])          # checkpoint needs metrics
 ```
+
+**Note:** Campaign Lead coordinates — does not execute research or positioning work. Tasks [1], [2], [3] are executed by Research Specialist.
 
 ### Sprint 1 Checkpoint Presentation
 

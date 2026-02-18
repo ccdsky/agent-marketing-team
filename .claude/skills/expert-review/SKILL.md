@@ -25,10 +25,14 @@ B2B marketing assets must satisfy multiple stakeholders — end user, manager, e
 
 ## Required Inputs
 
-Before starting:
+**Standalone invocation** (user requests "expert review this [asset]" directly): Ask for the asset file path and asset type before proceeding. Example: "What's the path to the asset? What type is it — landing page, lead magnet, email sequence, or blog post?" Then proceed to Step 1 (Mode Check) with those inputs.
+
+**Called by Creative Specialist (campaign mode):** Asset path and type are provided in context. Read campaign brief for additional background.
+
+Before starting, read:
 - Draft asset file path (e.g., `output/campaigns/[slug]/drafts/landing-page-draft.md`)
-- Asset type (landing page, lead magnet, email sequence, blog post, social post)
-- Campaign brief: `output/campaigns/[slug]/campaign-brief.md`
+- Asset type (landing page, lead magnet, email sequence, blog post, lead magnet strategy concept brief)
+- Campaign brief if available: `output/campaigns/[slug]/campaign-brief.md`
 - `context/icp.md` — Who the asset targets
 - `context/voice-dna.md` — Voice standard to evaluate against
 
@@ -250,19 +254,13 @@ Save to: `output/campaigns/[campaign-slug]/reviews/expert-review-[asset-type]-[d
 
 ---
 
-## Quality Checklist
+## Quality Gate
 
 Before marking complete:
 
-- [ ] Asset type determined before selecting expert panel
-- [ ] Correct expert panel for asset type (not generic reviewers)
-- [ ] All 3-5 experts spawned in parallel (not sequentially — use Task tool)
-- [ ] Each expert received specific framework criteria, not vague instructions
-- [ ] Consensus strengths identified (what NOT to change)
-- [ ] Consensus issues distinguished from single-expert opinions
-- [ ] Conflicts resolved with clear recommendation and rationale
-- [ ] Weighted aggregate score calculated
-- [ ] Revision list prioritized: must-fix / should-fix / nice-to-have
-- [ ] Creative Specialist revision checklist written with checkboxes
-- [ ] Clear routing instruction: "Route to Quality Gate when all must-fix items complete"
-- [ ] Output saved to correct path
+- [ ] Correct expert panel selected for asset type (not generic reviewers)
+- [ ] Each expert prompt includes specific scored criteria (not vague "evaluate this")
+- [ ] Consensus strengths identified — these are safe, do not flag for change
+- [ ] Consensus issues clearly distinguished from single-expert opinions
+- [ ] Conflicts resolved with explicit recommendation citing which expert's lens takes precedence
+- [ ] Revision list prioritized: must-fix / should-fix / nice-to-have (not one flat list)

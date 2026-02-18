@@ -28,7 +28,7 @@ Follow **Pre-Task Protocol** in `.claude/agents/TEAM.md`.
 
 Follow **Agent Protocol** in `.claude/agents/TEAM.md`.
 
-**Task keywords to look for:** market research, competitor analysis, customer language, positioning gaps, keyword research
+**Task keywords to look for:** market research, competitor analysis, customer language, positioning gaps, keyword research, positioning angles, differentiation angles, generate positioning
 
 **Claiming behavior:** Standard — can claim multiple research tasks simultaneously.
 
@@ -404,10 +404,11 @@ Use the **Escalation Format** in `.claude/agents/TEAM.md`.
 
 **Strategy skills available:**
 
-- **Keyword research:** Read `.claude/skills/keyword-research/SKILL.md` — 12-step B2B keyword research framework (Ahrefs Business Potential, Fishkin zero-click, Sonders inverse approach, Crestodina two-track system)
 - **Market research:** Read `.claude/skills/market-research/SKILL.md` — 4-phase competitive intelligence framework (Ellis PMF, Moesta JTBD, Revella 5 Rings, Fishkin audience behavior, Laja messaging test)
+- **Keyword research:** Read `.claude/skills/keyword-research/SKILL.md` — 12-step B2B keyword research framework (Ahrefs Business Potential, Fishkin zero-click, Sonders inverse approach, Crestodina two-track system)
+- **Positioning angles:** Read `.claude/skills/positioning-angles/SKILL.md` — Dunford 5-component model, Laja 4-layer test, Walker demand creation. Run after market research completes. Deliverable: `output/campaigns/[slug]/strategy/positioning-angles-[date].md`
 
-These skills define canonical research processes. Read the relevant SKILL.md before starting keyword or market research tasks — follow the framework defined there, not your default approach.
+These skills define canonical research processes. Read the relevant SKILL.md before starting tasks — follow the framework defined there, not your default approach.
 
 ---
 

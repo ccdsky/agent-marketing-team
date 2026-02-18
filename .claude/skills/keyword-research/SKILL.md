@@ -8,21 +8,9 @@ Invoke when: Research Specialist receives a keyword research request, or Campaig
 
 ---
 
-## Thought Leader Foundations
+## Methodology Sources
 
-This skill uses an inverse, business-first approach to keyword research:
-
-**Ahrefs / Tim Soulo — Business Potential Score:** The single most important filter. Score every keyword 0-3 on "Can I naturally demonstrate my product solving this problem?" 3 = product is irreplaceable. 2 = very helpful. 1 = barely relevant. 0 = no fit. Only target keywords scoring 2-3. Use Traffic Potential (total organic traffic the #1 page gets from ALL keywords it ranks for) over raw search volume.
-
-**Rand Fishkin / SparkToro — Zero-Click Reality:** 58-69% of Google searches end without a click. HubSpot lost 80% of traffic while revenue held — traffic is not a business outcome. B2B buyers discover solutions through peers, communities, and podcasts, not just Google. Keyword research must be paired with audience research: where does the ICP actually spend attention?
-
-**Andy Crestodina / Orbit Media — Two-Track System:** "Money phrases" (commercial intent for product/service pages) vs. "content keywords" (informational intent for blog/educational content). Sales calls are keyword goldmines — the questions prospects ask reveal exact search language. Topic-first, keyword-second: decide what your audience needs, then validate with keyword data.
-
-**Ross Simmonds / Foundation — Distribution-First:** "Create once, distribute forever." For each target keyword, ask not just "can we rank?" but "where else can we distribute content about this?" Reddit increasingly appears in B2B SERPs — underutilized distribution channel.
-
-**Mike Sonders — Inverse Keyword Research:** Start with business goals → generate topic hypotheses → validate with keyword data (not the reverse). Reduces research time from 15-40 hours to under 30 minutes with AI-native approach.
-
-**Eli Schwartz — Product-Led SEO:** Build strategy around user problems, not keyword strings. A page that genuinely solves a problem will rank because it satisfies intent. Discover non-obvious keywords by understanding what users are trying to accomplish.
+Ahrefs/Soulo — Business Potential Score (0-3), Traffic Potential over volume. Fishkin/SparkToro — zero-click reality, B2B dark social discovery. Crestodina/Orbit — two-track system (money phrases vs. content keywords). Simmonds/Foundation — distribution-first. Sonders — inverse research (goals → hypotheses → validate). Schwartz — product-led SEO.
 
 ---
 
@@ -66,7 +54,9 @@ The best keyword ideas come from customers, not keyword tools:
 
 ### Step 3: Discover Audience Attention Channels
 
-Where does this ICP consume content beyond Google?
+**Pre-check:** If market-research has already been completed for this campaign, read the Audience Behavior Map from `knowledge/research/market-research-[topic]-[date].md` Phase 2c. Extract channels, content formats, and communities from there — skip the research below and proceed to Step 4 with the existing data.
+
+**If no prior market-research (standalone keyword research):** Map where this ICP consumes content beyond Google:
 
 - **Communities:** Slack groups, Discord servers, subreddits, LinkedIn groups
 - **Newsletters:** What newsletters do they subscribe to? (Check icp.md content preferences)
@@ -287,20 +277,13 @@ Save to: `knowledge/research/keyword-research-[company/topic]-[date].md`
 
 ---
 
-## Quality Checklist
+## Quality Gate
 
 Before marking complete:
 
-- [ ] Started from business goals and ICP problems, not keyword tools
-- [ ] Customer language mined from at least 2 sources (reviews, calls, communities)
-- [ ] Minimum 15 topic hypotheses generated before keyword validation
-- [ ] Business Potential scores assigned to all keywords (0-3 Ahrefs scale)
-- [ ] Only BP 2-3 keywords in final map (score 1 in watch list, score 0 excluded)
-- [ ] SERP reality checked for Priority 1 keywords (who ranks, format, zero-click flags)
-- [ ] Two tracks split: Money Phrases vs. Content Keywords
-- [ ] Buyer journey stage and ICP role tagged for content keywords
-- [ ] Distribution channels identified for each major topic
-- [ ] Pipeline impact estimated for Track A keywords
-- [ ] Editorial calendar outline included (at least Month 1)
-- [ ] Research gaps flagged honestly
-- [ ] File saved to correct path
+- [ ] Started from ICP problems and business goals — not from keyword tool suggestions
+- [ ] Customer language mined from at least 2 sources (context/icp.md + at least one external source)
+- [ ] All keywords scored Business Potential 0-3 — only BP 2-3 in final map (1 in watch list, 0 excluded)
+- [ ] SERP reality checked for Priority 1 keywords (zero-click flags, enterprise dominance, format match)
+- [ ] Pipeline estimates labeled "(benchmark est.)" — not presented as measured data
+- [ ] Research gaps flagged (including if sales transcripts were unavailable)

@@ -10,35 +10,9 @@ Invoke when: Campaign Lead needs a lead magnet concept before assigning `/lead-m
 
 ---
 
-## Thought Leader Foundations
+## Methodology Sources
 
-**Alex Hormozi ($100M Leads) — The Bridge Framework:**
-Master definition: "A complete solution to a narrow problem that, once solved, reveals another problem solved by your core offer." Every word matters:
-- **Complete** — not a teaser or a sample. Fully solve the narrow problem.
-- **Narrow** — not "how to grow your business." Something specific and achievable.
-- **Reveals** — creates awareness of the next problem (the bridge).
-- **Solved by your core offer** — natural, logical next step, not a hard sell.
-
-**Hormozi — The Value Equation:**
-Value = (Dream Outcome × Perceived Likelihood of Achievement) / (Time Delay × Effort & Sacrifice)
-
-Competitive advantage comes from the denominator — making things faster and easier. A calculator that gives an answer in 30 seconds is structurally more valuable than a 20-page guide with more information. "If your lead magnet is not good enough that people tell other people about it, you have failed."
-
-**Hormozi — Three Lead Magnet Types:**
-1. **Problem Revealers (Diagnosis)** — show a problem they didn't know they had. B2B gold: free audits, assessments, benchmarking tools, gap analyses
-2. **Samples & Trials** — solve a recurring problem for a limited time. B2B gold: free pilot, limited feature access, one free campaign setup
-3. **One Step of a Multi-Step Process** — give away one valuable step, sell the complete process. B2B gold: free strategy session, free architecture review
-
-**Hormozi — "Give Away the Secrets, Sell the Implementation":**
-Information is commoditized. Your secrets are on YouTube. What people pay for: implementation, speed, accountability, convenience. Giving away secrets filters for your best customers — those who value implementation over information.
-
-**Exposure Ninja — CLOSURE + Train Journey:**
-- Train Journey Principle: your offer should be the next logical station, not the final destination. Bad: "Contact us." Good: "We'll show you exactly how much you could save."
-- Five archetypes ranked for B2B: **Consultative First Step > Quiz/Calculator > Free Course > Checklist/Template > Freewall**
-- Three Pillars test: Relevancy (aligned with audience needs) + Perceived Value (worth sharing contact info) + True to Your Word (delivers on promise)
-
-**Exposure Ninja — Homer Simpson Principle:**
-Design for the distracted, confused visitor. Minimum friction: Name + email only. No account creation. Mobile-friendly. Instant delivery. Each additional form field reduces completion rates.
+Hormozi ($100M Leads) — Bridge Framework, Value Equation, three lead magnet types, "give away the secrets." Exposure Ninja — CLOSURE framework, Train Journey Principle, Three Pillars test, Homer Simpson Principle.
 
 ---
 
@@ -109,10 +83,12 @@ Before building anything, score the concept:
 **Value = (Dream Outcome × Perceived Likelihood) / (Time Delay × Effort)**
 
 Rate each dimension 1-10:
-- **Dream Outcome** — How desirable is the promised result to the ICP? (10 = career-changing)
-- **Perceived Likelihood** — How believable is it that this delivers? (10 = guaranteed by social proof)
-- **Time Delay** — How fast does the ICP get value? (10 = instant, 1 = 6 months)
-- **Effort & Sacrifice** — How much work is required from the ICP? (10 = zero effort, 1 = hours of work)
+- **Dream Outcome** — How desirable is the promised result to the ICP? (10 = career-changing, 1 = marginal)
+- **Perceived Likelihood** — How believable is it that this delivers? (10 = guaranteed by social proof, 1 = claim only)
+- **Time Delay** — How long until the ICP gets value? (1 = instant, 10 = weeks/months of waiting) ← lower is better for denominator
+- **Effort & Sacrifice** — How much work does the ICP invest? (1 = zero effort, 10 = significant time required) ← lower is better for denominator
+
+**Denominator note:** Time Delay and Effort are in the denominator — lower scores mean faster/easier, which increases Value. A score of 1 for each means "instant and effortless." Score them honestly: slow or effortful lead magnets should get high denominator scores, which correctly reduces the Value calculation.
 
 **Score formula:** (Dream Outcome × Perceived Likelihood) / (Time Delay × Effort)
 
@@ -159,18 +135,18 @@ Homer Simpson Principle — design for the distracted, time-poor, mobile user:
 - **Mobile:** Must work perfectly on mobile (a large majority of B2B buyers check on phones)
 - **No account creation** — ever
 
-### Step 7: Map the Nurture Bridge
+### Step 7: Map the Nurture Goals
 
 After the opt-in, what happens? The lead magnet starts the relationship — the email sequence completes it.
 
-Design the nurture sequence concept (feeds `/email-sequence` skill):
+Define delivery mechanics and nurture goals for the `/email-sequence` skill to design the actual arc:
 
-- **Email 1 (instant):** Deliver the lead magnet. No sales. Just value.
-- **Email 2 (day 2-3):** Share a related insight that extends the value. Reveal the "next problem."
-- **Email 3 (day 4-5):** Tell a story. Social proof. Case study of someone who solved the next problem.
-- **Email 4 (day 6-7):** Make the offer. Connect to core offer. Single clear CTA.
+- **Delivery:** How does the lead magnet arrive? (Instant email link / PDF attachment / tool URL) — within 60 seconds of signup
+- **First-touch moment:** What value does the subscriber get in the first 5 minutes?
+- **Next problem revealed:** Which specific problem does the lead magnet expose that the core offer solves? (This is the bridge the sequence must complete)
+- **Nurture goal:** What should the subscriber believe or be able to do by the time a conversion offer is appropriate?
 
-This is a 4-email minimum. The sequence should feel like natural continuation of the lead magnet, not a pivot to sales.
+**Do not prescribe the email count or arc structure here.** The `/email-sequence` skill designs the arc based on audience temperature, sequence goal, and the bridge defined above. Brief it with the delivery mechanics and nurture goals — let it determine structure.
 
 ### Step 8: Map Distribution Channels
 
@@ -202,7 +178,7 @@ If no → back to Step 1. A weak lead magnet damages your brand across ALL chann
 
 Save to: `output/campaigns/[campaign-slug]/strategy/lead-magnet-concept-[date].md`
 
-For standalone strategy: `knowledge/research/lead-magnet-strategy-[topic]-[date].md`
+For standalone use: `output/drafts/lead-magnet-concept-[topic]-[date].md`
 
 ```markdown
 # Lead Magnet Concept Brief: [Concept Name]
@@ -321,21 +297,12 @@ If proceeding to content creation, include this handoff:
 
 ---
 
-## Quality Checklist
+## Quality Gate
 
 Before marking complete:
 
-- [ ] Bridge defined: narrow problem → lead magnet → next problem revealed → core offer connection
-- [ ] Bridge tested: natural and logical (not manufactured or forced)
-- [ ] Lead magnet type selected and rationale documented
-- [ ] Value Equation scored on all four dimensions
-- [ ] Value score meets minimum threshold (≥ 6.25) — if not, redesigned
-- [ ] Exposure Ninja Three Pillars test passed (all three)
-- [ ] Three naming options generated with specificity formula
-- [ ] Best name selected with evaluation rationale
-- [ ] Frictionless delivery designed (form fields, timing, format, mobile)
-- [ ] Nurture sequence concept mapped (4 emails minimum)
-- [ ] Distribution channels identified (3-5)
-- [ ] Quality gate tests completed ("Would they pay?" / "Would they share?")
-- [ ] Output format complete with Creative Specialist handoff brief
-- [ ] File saved to correct path
+- [ ] Bridge is natural and logical — solving narrow problem genuinely reveals the next problem (not manufactured)
+- [ ] Value Equation score ≥ 6.25 — if below threshold, redesign before proceeding
+- [ ] All three Exposure Ninja Pillars pass (Relevancy / Perceived Value / True to Your Word)
+- [ ] Quality gate tests pass: "Would someone pay for this?" and "Would the ICP share it with a colleague?"
+- [ ] Nurture goals section defines delivery mechanics and bridge — NOT a prescribed email arc

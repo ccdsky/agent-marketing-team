@@ -8,17 +8,9 @@ Invoke when: Campaign Lead assigns positioning work in Sprint 1, or user request
 
 ---
 
-## Thought Leader Foundations
+## Methodology Sources
 
-This skill is grounded in proven B2B positioning methodology:
-
-**April Dunford (Obviously Awesome):** Positioning is context, not messaging. Her 5-component framework: Competitive Alternatives → Unique Attributes → Value (for customers) → Target Customers → Market Category. Most B2B companies position against the wrong competitor — always ask what buyers would do *without* the product.
-
-**Peep Laja (Wynter):** 4-layer messaging test: Clarity → Relevance → Value → Differentiation. 78% of B2B buyers have a shortlist before talking to sales — positioning must work before human contact. In mature markets, find a different consideration set rather than competing on "better."
-
-**Chris Walker (Refine Labs):** Demand creation vs. demand capture. Most B2B positioning focuses on capture (people already searching) while ignoring creation (making people aware they have a problem). Dark social — Slack, DMs, podcasts — often drives B2B decisions more than trackable channels.
-
-**Play Bigger (Category Design):** Category creation as positioning strategy. The category king captures 76% of the economics — being second is not a strategy. Only viable for genuinely novel products; most B2B companies should position within an existing category with a distinctive twist.
+Dunford (Obviously Awesome) — 5-component positioning model. Laja (Wynter) — 4-layer messaging test. Walker (Refine Labs) — demand creation vs. capture. Play Bigger — category design.
 
 ---
 
@@ -99,6 +91,15 @@ Score each angle on three dimensions (1-5 each):
 
 Minimum threshold to include in output: 9+. Angles below 9 are noted but not recommended.
 
+**Evidence tagging (required):** For each dimension score, tag the evidence source:
+- **[E]** Evidence-based — score directly supported by research package data (quotes, competitor analysis, customer interviews)
+- **[I]** Inferred — score based on ICP profile interpretation or general market knowledge without specific evidence
+
+Example: `Defensibility 4/5 [E] — based on competitor analysis showing no one else uses this mechanism`
+vs. `ICP Resonance 3/5 [I] — inferred from ICP role profile; not validated in customer interviews`
+
+Scores with [I] tags should be treated as hypotheses, not facts. Flag them in the output for validation.
+
 ### Step 6: Apply Laja's 4-Layer Test to Top Angles
 
 For the top 2-3 scoring angles, evaluate:
@@ -135,18 +136,18 @@ For standalone research: `knowledge/research/positioning-angles-[company]-[date]
 
 ---
 
-## Recommended Angles (Score 12-15)
+## Qualifying Angles (Score ≥ 9, ranked highest to lowest)
 
-### Angle 1: [Short name]
+### Angle 1: [Short name] — Score: [X/15]
 
 **Positioning statement:** [One sentence framing]
 **Against:** [What alternative this beats]
 **Unique mechanism:** [Why it works / what makes it structurally different]
 **Target context:** [When/where this resonates most]
 
-**Scores:** Defensibility [X/5] | ICP Resonance [X/5] | Provability [X/5] | **Total: [X/15]**
+**Scores:** Defensibility [X/5] [E/I] | ICP Resonance [X/5] [E/I] | Provability [X/5] [E/I]
 
-**Laja test:** Clarity ✓/✗ | Relevance ✓/✗ | Value ✓/✗ | Differentiation ✓/✗
+**Laja test (top 3 angles only):** Clarity ✓/✗ | Relevance ✓/✗ | Value ✓/✗ | Differentiation ✓/✗
 
 **Evidence available:** [testimonials, data, case studies that support this]
 
@@ -154,17 +155,15 @@ For standalone research: `knowledge/research/positioning-angles-[company]-[date]
 
 ---
 
-### Angle 2: [Short name]
+### Angle 2: [Short name] — Score: [X/15]
 [same structure]
 
 ---
 
-## Strong Contenders (Score 9-11)
+### Angle 3: [Short name] — Score: [X/15]
+[same structure]
 
-### Angle 3: [Short name]
-[same structure — shortened, no Laja test]
-
-[Continue for remaining 9+ angles]
+[Continue for all remaining qualifying angles, score descending]
 
 ---
 
@@ -195,17 +194,12 @@ For standalone research: `knowledge/research/positioning-angles-[company]-[date]
 
 ---
 
-## Quality Checklist
+## Quality Gate
 
 Before marking complete:
 
-- [ ] Real competitive landscape mapped (not just named competitors — includes "do nothing")
-- [ ] Unique attributes are truly unique (filtered: competitors can't claim the same tomorrow)
-- [ ] Every attribute mapped to an ICP outcome, not just a feature
-- [ ] Minimum 5 angles generated with distinct framings
-- [ ] All angles scored on all three dimensions (Defensibility, Resonance, Provability)
-- [ ] Top angles passed Laja's 4-layer test (or flagged for revision)
-- [ ] At least one angle with score 12+ identified
-- [ ] Recommended direction section complete with rationale
-- [ ] Output saved to correct path
-- [ ] Handoff notes written for Campaign Lead
+- [ ] Competitive landscape includes "do nothing" / status quo alternative (not just named vendors)
+- [ ] Every unique attribute filtered: "could a competitor claim this tomorrow?" — if yes, remove
+- [ ] All scores tagged [E] evidence-based or [I] inferred — no bare scores
+- [ ] Top 2-3 angles passed Laja's 4-layer test (Clarity / Relevance / Value / Differentiation)
+- [ ] Any [I]-tagged scores flagged for validation in Handoff Notes
