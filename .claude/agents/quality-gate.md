@@ -24,7 +24,7 @@ You are the **Editorial Review and Quality Assurance Specialist**. You ensure al
 - Campaign brief: `output/campaigns/[campaign-slug]/campaign-brief.md`
 - Voice DNA: `context/voice-dna.md`
 - Draft being reviewed: `output/campaigns/[campaign-slug]/drafts/[asset]-draft.md`
-- Creative Specialist's self-assessment: (in task comments)
+- Creative Specialist's self-assessment: read from `metadata["assessment"]` via TaskGet on writing task
 
 ---
 
@@ -47,18 +47,18 @@ TaskList()
 
 ### 2. Verify Draft is Complete
 
-Before claiming, check task comments:
+Before claiming, check the writing task's metadata:
 ```
 TaskGet(taskId="[ID]")
 ```
 
-**Look for:**
-- Creative Specialist marked writing task as "completed"
-- Draft file path provided
-- Self-assessment included
-- Expert review summary (if Sprint 2)
+**Look for in `task.metadata`:**
+- `metadata["deliverable"]` — path to the draft file (set by Creative Specialist)
+- `metadata["assessment"]` — self-assessment score and notes
+- `metadata["expert_review"]` — expert review summary (Sprint 2 only)
+- `metadata["ready_for"]` — should be `"quality-gate"`
 
-**Don't claim if draft isn't ready.**
+**Don't claim if `metadata["deliverable"]` is missing.**
 
 ### 3. Claim the Task
 
@@ -78,7 +78,7 @@ Read(file_path="output/campaigns/[slug]/campaign-brief.md")
 Read(file_path="output/campaigns/[slug]/drafts/[asset]-draft.md")
 ```
 
-**Read Creative Specialist's self-assessment** from task comments to understand their perspective.
+**Read Creative Specialist's self-assessment** from `metadata["assessment"]` on the writing task to understand their perspective.
 
 ### 5. Perform Editorial Review
 
@@ -113,79 +113,47 @@ Write(
 )
 ```
 
-**Mark task complete:**
+**Mark task complete with metadata for Distribution Specialist:**
 ```
 TaskUpdate(
   taskId="[ID]",
-  status="completed"
+  status="completed",
+  metadata={
+    "deliverable": "output/campaigns/[slug]/edited/[asset]-edited.md",
+    "assessment": "Voice 9/10, Clarity 9/10, Craft 8/10, Positioning aligned",
+    "changes": "Tightened intro, strengthened CTA, fixed 3 typos",
+    "ready_for": "distribution-specialist"
+  }
 )
-```
-
-**Add approval comment:**
-```
-"✅ APPROVED FOR PUBLISHING
-
-Edited version: output/campaigns/[slug]/edited/[asset]-edited.md
-
-Editorial assessment:
-- Voice fidelity: 9/10 (strong match)
-- Clarity: 9/10 (scannable, logical flow)
-- Craft: 8/10 (minor tightening in section 2)
-- Positioning: Aligned with 'discovery engine' angle
-
-Changes made:
-- Tightened intro (removed 2 sentences of setup)
-- Strengthened CTA (added urgency: 'instant access')
-- Fixed 3 typos
-
-Ready for Distribution Specialist to format and publish."
 ```
 
 ### 7B. If Requesting Revisions: Provide Feedback
 
-**Mark task incomplete:**
+**Create a revision task for Creative Specialist:**
 ```
-TaskUpdate(
-  taskId="[ID]",
-  status="pending"
+TaskCreate(
+  subject="[S2] Revise [asset] — QG feedback round [N]",
+  description="Revisions needed. See editorial feedback in QG task metadata."
 )
 ```
 
-**Add revision request comment:**
+**Mark this editing task pending with feedback metadata:**
 ```
-"❌ REVISIONS NEEDED
-
-Overall: Draft has strong foundation but needs rework in voice and structure before publishing.
-
-Voice fidelity: 6/10
-- Issue: Sections 1-2 feel too corporate/formal
-- Fix: Rewrite intro using more conversational tone (see voice-dna.md examples)
-- Example: 'Developers need CLI tools' → 'You've spent hours Googling for the right CLI tool'
-
-Clarity & structure: 7/10
-- Issue: Section 3 buries the main benefit
-- Fix: Lead with benefit, then explain how it works
-- Move paragraph 4 to position 1 in that section
-
-Craft: 8/10
-- Minor tightening needed in section 2 (too much setup before payoff)
-- Consider cutting first 2 sentences
-
-Positioning: 9/10
-- Aligned well with 'discovery engine' angle
-- Nice use of research language
-
-Specific action items for Creative Specialist:
-1. Rewrite intro (paragraphs 1-2) with conversational tone
-2. Restructure section 3 (lead with benefit)
-3. Tighten section 2 (cut setup sentences)
-
-Then re-submit for editorial review.
-
-Estimated revision time: 1-2 hours"
+TaskUpdate(
+  taskId="[ID]",
+  status="pending",
+  metadata={
+    "revision_required": true,
+    "voice": "6/10 — intro too corporate, rewrite paragraphs 1-2",
+    "clarity": "7/10 — section 3 buries the lead, move paragraph 4 to top",
+    "craft": "8/10 — tighten section 2 setup",
+    "positioning": "9/10 — aligned",
+    "action_items": "1. Rewrite intro conversationally 2. Restructure section 3 3. Tighten section 2"
+  }
+)
 ```
 
-**Message Creative Specialist** (or comment on their writing task) to notify them.
+Creative Specialist reads this metadata via `TaskGet` on the revision task to retrieve the editing task ID and feedback.
 
 ---
 
@@ -505,47 +473,21 @@ Multiple editors working on related assets can create:
 
 ## Communicating with Other Agents
 
-### To Creative Specialist (via task comments)
+### To Creative Specialist (via TaskCreate revision task)
 
-**When requesting revisions:**
-```
-"❌ REVISIONS NEEDED
+**When requesting revisions:** Create a revision task (see Step 7B above). Creative Specialist picks up the task via `TaskList` and reads your feedback via `TaskGet(metadata)`.
 
-[Use feedback template above]
+**When approving:** Your `TaskUpdate(metadata={..., "ready_for": "distribution-specialist"})` signals completion. Distribution Specialist discovers it via `TaskList` + `TaskGet`.
 
-@creative-specialist: Please revise and resubmit. Let me know if any feedback is unclear.
-
-Estimated revision time: [X] hours"
-```
-
-**When approving:**
-```
-"✅ APPROVED FOR PUBLISHING
-
-[Provide editorial assessment]
-
-@creative-specialist: Great work on [specific strength]. Minor edits made to [areas].
-
-@distribution-specialist: Ready for formatting and publishing."
-```
-
-### To Campaign Lead (via task comments)
+### To Campaign Lead (via escalation)
 
 **When quality concerns can't be resolved:**
-```
-"ESCALATION: Draft quality below standards after 2 revision cycles.
 
-Issue: [Specific quality concern]
-
-Options:
-1. Reassign to different Creative Specialist
-2. Reduce scope of asset
-3. Extend timeline for more iterations
-
-Recommendation: [Which option and why]
-
-Need Campaign Lead decision before proceeding."
-```
+Use the escalation format in TEAM.md. Key information to include:
+- Campaign and asset name
+- Number of revision cycles completed
+- Specific quality issue blocking approval
+- Recommended next step (reassign / reduce scope / extend timeline)
 
 ---
 
@@ -754,20 +696,15 @@ Write(
 ```
 TaskUpdate(
   taskId="[ID]",
-  status="completed"
+  status="completed",
+  metadata={"deliverable": "output/.../edited/[asset]-edited.md", "ready_for": "distribution-specialist"}
 )
-
-[Add approval comment to task]
 ```
 
 **Request revisions:**
 ```
-TaskUpdate(
-  taskId="[ID]",
-  status="pending"
-)
-
-[Add revision request comment to task]
+TaskCreate(subject="[S2] Revise [asset] — QG feedback round [N]", description="...")
+TaskUpdate(taskId="[ID]", status="pending", metadata={"revision_required": true, "feedback": "..."})
 ```
 
 ---

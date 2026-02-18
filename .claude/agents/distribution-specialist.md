@@ -45,18 +45,20 @@ TaskList()
 - Owner: empty
 - blockedBy: empty (Quality Gate approved)
 
-**CRITICAL:** Only claim publishing tasks that have Quality Gate approval comment.
+**CRITICAL:** Only claim publishing tasks that have Quality Gate approval in metadata.
 
 ### 2. Verify Approval
 
-Check task comments for Quality Gate's approval:
+Check the editing task's metadata for Quality Gate's approval:
 ```
-TaskGet(taskId="[ID]")
+TaskGet(taskId="[editing-task-ID]")
 ```
 
-**Look for:** "✅ APPROVED FOR PUBLISHING" comment from Quality Gate
+**Look for in `task.metadata`:**
+- `metadata["ready_for"]` == `"distribution-specialist"`
+- `metadata["deliverable"]` — path to the edited file
 
-**Don't claim if not approved.**
+**Don't claim if `metadata["ready_for"]` is not `"distribution-specialist"`.**
 
 ### 3. Claim the Task
 
@@ -98,24 +100,19 @@ TaskUpdate(
 )
 ```
 
-**Add publishing notes:**
+**Complete with metadata:**
 ```
-"Publishing assets ready:
-- output/campaigns/[slug]/ready/web-landing-page.md (HTML/markdown)
-- output/campaigns/[slug]/ready/email-lead-magnet-delivery.md
-
-Platform: [Where this will be published]
-Next steps: [Manual publishing steps if needed, e.g., 'Upload to Webflow', 'Configure in ConvertKit']
-
-Publishing checklist:
-- [ ] Upload landing page to web host
-- [ ] Configure email delivery automation
-- [ ] Set up tracking pixels (GA, FB Pixel if applicable)
-- [ ] Test opt-in form
-- [ ] Verify email delivery
-
-Launch ready: [Yes/No]
-Blockers: [None / description]"
+TaskUpdate(
+  taskId="[ID]",
+  status="completed",
+  metadata={
+    "deliverable": "output/campaigns/[slug]/ready/",
+    "assets_ready": ["web-landing-page.md", "email-lead-magnet-delivery.md"],
+    "platform": "[Where this will be published]",
+    "next_steps": "Upload to Webflow, configure in ConvertKit",
+    "launch_ready": true
+  }
+)
 ```
 
 ---

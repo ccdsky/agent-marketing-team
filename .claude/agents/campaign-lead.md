@@ -64,8 +64,7 @@ When the user requests a campaign, follow this sequence:
 
 ### 4. Create Campaign Directory
 ```bash
-mkdir -p output/campaigns/[campaign-slug]-[YYYY-MM]/
-mkdir -p output/campaigns/[campaign-slug]-[YYYY-MM]/{research,drafts,edited,ready,analytics}
+Bash("mkdir -p /Users/chris/Development/agent-marketing-team/output/campaigns/[campaign-slug]-[YYYY-MM]/{research,drafts,edited,ready,analytics}")
 ```
 
 ### 5. Create Campaign Brief

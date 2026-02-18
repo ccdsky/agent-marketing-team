@@ -75,17 +75,18 @@ TaskUpdate(
 )
 ```
 
-**Add task comment** with key findings:
+**Complete with metadata** for downstream agents:
 ```
-Add comment to task:
-"Research complete. Key findings:
-1. [Finding 1]
-2. [Finding 2]
-3. [Finding 3]
-
-Full research package: knowledge/research/[topic]-[date].md
-
-Recommended focus for content: [specific angle based on research]"
+TaskUpdate(
+  taskId="[ID]",
+  status="completed",
+  metadata={
+    "deliverable": "knowledge/research/[topic]-[date].md",
+    "key_findings": "1. [Finding 1] 2. [Finding 2] 3. [Finding 3]",
+    "recommended_angle": "[specific angle based on research]",
+    "ready_for": "campaign-lead"
+  }
+)
 ```
 
 ---
@@ -267,10 +268,10 @@ Based on this research, I recommend:
 
 **Example:**
 ```
-# Using Perplexity MCP to research market landscape
-[Use MCP tool to query Perplexity]
-
-Query: "What is the current state of the developer CLI tools market? Include market size, key players, growth trends, and emerging patterns."
+# v1.1: Perplexity MCP not yet configured — use WebSearch instead
+WebSearch(query="developer CLI tools market 2026 key players trends")
+WebSearch(query="developer CLI tools market size growth emerging patterns")
+# v2.0: Perplexity MCP will enable richer multi-source synthesis
 ```
 
 ### Firecrawl MCP (Website Scraping)
@@ -282,15 +283,12 @@ Query: "What is the current state of the developer CLI tools market? Include mar
 
 **Example:**
 ```
-# Scrape competitor landing pages
-[Use Firecrawl MCP]
-
-URLs to scrape:
-- competitor1.com/product
-- competitor2.com/pricing
-- competitor3.com/features
-
-Extract: Headlines, subheadlines, CTAs, pricing, feature lists
+# v1.1: Firecrawl MCP not yet configured — use WebFetch instead
+WebFetch(url="https://competitor1.com/product")
+WebFetch(url="https://competitor2.com/pricing")
+WebFetch(url="https://competitor3.com/features")
+# Extract: headlines, subheadlines, CTAs, pricing, feature lists from fetched content
+# v2.0: Firecrawl MCP will enable bulk scraping and structured extraction
 ```
 
 ### Playwright MCP (Screenshots & Visual Analysis)
@@ -302,14 +300,11 @@ Extract: Headlines, subheadlines, CTAs, pricing, feature lists
 
 **Example:**
 ```
-# Screenshot competitor landing pages
-[Use Playwright MCP]
-
-Take full-page screenshots of:
-- competitor1.com/product
-- competitor2.com/pricing
-
-Save to: knowledge/research/competitor-screenshots/
+# v1.1: Playwright MCP not yet configured — use WebFetch for page content instead
+WebFetch(url="https://competitor1.com/product")
+WebFetch(url="https://competitor2.com/pricing")
+# Note structural patterns and visual hierarchy from the fetched markup
+# v2.0: Playwright MCP will enable actual screenshots and visual analysis
 ```
 
 ---
@@ -376,30 +371,11 @@ Before marking research complete, verify:
 
 ## Communicating with Other Agents
 
-### To Campaign Lead (via task comments)
+Downstream agents discover your research via `TaskGet(taskId)` → `metadata["deliverable"]` and `metadata["key_findings"]`.
 
-**When research reveals strategic insights:**
-```
-Comment on task:
-"Research complete. IMPORTANT: Findings suggest we should pivot positioning from [X] to [Y] because [evidence]. Recommend discussing before proceeding to Sprint 2.
+**When research reveals a strategic pivot:** Set `metadata["recommended_angle"]` to flag the insight. Campaign Lead reads this when synthesizing positioning.
 
-Full research: knowledge/research/[file].md"
-```
-
-### To Creative Specialist (via task comments)
-
-**When research informs content creation:**
-```
-Comment on task:
-"Research package ready. Key angles for content:
-
-1. Lead with 'discoverability' pain (83% mention rate)
-2. Use phrase 'stop Googling, start shipping' (appears 12x in forums)
-3. Avoid word 'complex' (negative connotation in interviews)
-4. Competitors ignore onboarding - we should emphasize
-
-Full research: knowledge/research/[file].md"
-```
+**When research is ready for Creative Specialist:** The task's `metadata["deliverable"]` path points to the full research package. Creative Specialist reads it directly before writing.
 
 ---
 
