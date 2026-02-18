@@ -133,7 +133,7 @@ Verify against `icp.md`:
 
 Save to: `output/campaigns/[campaign-slug]/drafts/social-[platform]-[topic]-draft.md`
 
-For standalone posts: `output/campaigns/standalone/drafts/social-[platform]-[topic]-[date].md`
+For standalone posts (Simple Mode): Return output inline. Do not create a file unless the user asks.
 
 **File format:**
 ```markdown

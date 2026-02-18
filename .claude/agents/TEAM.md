@@ -117,7 +117,7 @@ Each agent **creates NEW files** in their phase directory. No shared editing.
 | Drafting | Creative Specialist | `output/campaigns/[name]/drafts/` | Editor |
 | Editing | Quality Gate | `output/campaigns/[name]/edited/` | Publisher |
 | Publishing | Distribution Specialist | `output/campaigns/[name]/ready/` | Analyst |
-| Analysis | Performance Validator | `knowledge/feedback/analytics/` | Campaign Lead |
+| Analysis | Distribution Specialist | `knowledge/feedback/analytics/` | Campaign Lead |
 
 **Campaign directory structure:**
 ```
@@ -127,25 +127,36 @@ output/campaigns/dev-cli-launch-2026-02/
 ├── drafts/                 (Creative Specialist)
 ├── edited/                 (Quality Gate)
 ├── ready/                  (Distribution Specialist)
-└── analytics/              (Performance Validator)
+└── analytics/              (Distribution Specialist)
 ```
 
 ---
 
 ## Communication Protocols
 
-### Task Comments (Primary)
-**Use for:**
-- Deliverable handoffs: "Research package complete, key findings: [...]"
-- Blocking issues: "Can't proceed because Y is unclear"
-- Questions about specific task: "Should I include Z?"
+### Task Handoffs (Primary)
+Agents communicate deliverable location and status via `TaskUpdate` metadata on completion:
 
-**Max length:** 300 words. If longer, create doc and link it.
+```
+TaskUpdate(
+  taskId="[ID]",
+  status="completed",
+  metadata={
+    "deliverable": "output/campaigns/[slug]/drafts/landing-page-draft.md",
+    "assessment": "8/10 voice match — strong hook, ICP-relevant. Ready for QG.",
+    "ready_for": "quality-gate"
+  }
+)
+```
 
-### Direct Messages (Urgent)
+Downstream agents call `TaskGet(taskId="[ID]")` to read the deliverable path and assessment before claiming their task.
+
+**For blockers:** Update task metadata with `"status": "blocked"` and `"blocker": "[what's missing]"`, then escalate to Campaign Lead.
+
+### Escalation (Urgent)
 **Use for:**
-- "I'm stuck, need quick input"
-- "Are we still prioritizing X over Y?"
+- Stuck > 2 hours with no path forward
+- Strategic uncertainty requiring user input
 
 ### Broadcast (Rare)
 **Use for:**

@@ -142,7 +142,7 @@ Rewrite any paragraphs that fail these tests.
 
 Save to: `output/campaigns/[campaign-slug]/drafts/newsletter-[YYYY-MM-DD]-draft.md`
 
-For standalone issues: `output/campaigns/standalone/drafts/newsletter-[YYYY-MM-DD]-[topic].md`
+For standalone issues (Simple Mode): Return output inline. Do not create a file unless the user asks.
 
 **File format:**
 ```markdown

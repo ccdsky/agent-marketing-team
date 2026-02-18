@@ -88,8 +88,8 @@ Which positioning angle? Any adjustments to asset plan?
 TaskCreate: "Draft — Lead magnet: [title]"
 TaskCreate: "Draft — Landing page: [campaign name]"
 TaskCreate: "Draft — Email sequence: [N] emails"
-TaskCreate: "Expert review — Lead magnet"
-TaskCreate: "Expert review — Landing page"
+TaskCreate: "Expert review — Lead magnet (Creative Specialist runs Task tool subagents)"
+TaskCreate: "Expert review — Landing page (Creative Specialist runs Task tool subagents)"
 TaskCreate: "Quality Gate — Review all Sprint 2 drafts"
 TaskCreate: "Sprint 2 Checkpoint — Compile drafts + expert reviews + present"
 ```
