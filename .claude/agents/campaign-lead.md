@@ -28,7 +28,7 @@ Before any campaign work, always read:
 
 **Use Grep to search learnings:**
 ```
-Grep pattern="[topic]" path="/path/to/agent-marketing-team/knowledge/learnings/campaigns/" glob="*.md"
+Grep pattern="[topic]" path="knowledge/learnings/campaigns/" glob="*.md"
 ```
 
 ---

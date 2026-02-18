@@ -20,6 +20,20 @@ Invoke this workflow whenever Campaign Lead receives a multi-asset campaign requ
 
 ---
 
+## Task Naming Convention
+
+**Prefix all tasks with their sprint:** `[S1]`, `[S2]`, or `[S3]`
+
+This lets agents determine which sprint they're in by reading the task title from `TaskGet`, which governs sprint-specific behavior (draft depth, review thresholds, etc.).
+
+```
+[S1] Research — [topic]
+[S2] Draft — [asset]
+[S3] Revise — [asset]
+```
+
+---
+
 ## Sprint 1: Plan & Sketch
 
 **Goal:** Get the strategy right before burning tokens on assets.
@@ -27,13 +41,13 @@ Invoke this workflow whenever Campaign Lead receives a multi-asset campaign requ
 **Tasks to create:**
 
 ```
-TaskCreate: "Research — [Topic]: [target audience pain points]"
-TaskCreate: "Research — [Topic]: competitor positioning"
-TaskCreate: "Research — [Topic]: customer language mining"
-TaskCreate: "Positioning — Generate 3-5 angles"
-TaskCreate: "Campaign structure — Sketch asset plan and timeline"
-TaskCreate: "Metrics — Define success criteria"
-TaskCreate: "Sprint 1 Checkpoint — Compile and present to user"
+TaskCreate: "[S1] Research — [Topic]: [target audience pain points]"
+TaskCreate: "[S1] Research — [Topic]: competitor positioning"
+TaskCreate: "[S1] Research — [Topic]: customer language mining"
+TaskCreate: "[S1] Positioning — Generate 3-5 angles"
+TaskCreate: "[S1] Campaign structure — Sketch asset plan and timeline"
+TaskCreate: "[S1] Metrics — Define success criteria"
+TaskCreate: "[S1] Checkpoint — Compile and present to user"
 ```
 
 **Dependency chain:**
@@ -85,13 +99,13 @@ Which positioning angle? Any adjustments to asset plan?
 **Tasks to create (based on approved asset plan):**
 
 ```
-TaskCreate: "Draft — Lead magnet: [title]"
-TaskCreate: "Draft — Landing page: [campaign name]"
-TaskCreate: "Draft — Email sequence: [N] emails"
-TaskCreate: "Expert review — Lead magnet (Creative Specialist runs Task tool subagents)"
-TaskCreate: "Expert review — Landing page (Creative Specialist runs Task tool subagents)"
-TaskCreate: "Quality Gate — Review all Sprint 2 drafts"
-TaskCreate: "Sprint 2 Checkpoint — Compile drafts + expert reviews + present"
+TaskCreate: "[S2] Draft — Lead magnet: [title]"
+TaskCreate: "[S2] Draft — Landing page: [campaign name]"
+TaskCreate: "[S2] Draft — Email sequence: [N] emails"
+TaskCreate: "[S2] Expert review — Lead magnet (Creative Specialist runs Task tool subagents)"
+TaskCreate: "[S2] Expert review — Landing page (Creative Specialist runs Task tool subagents)"
+TaskCreate: "[S2] Quality Gate — Review all drafts"
+TaskCreate: "[S2] Checkpoint — Compile drafts + expert reviews + present"
 ```
 
 **Dependency chain:**
@@ -140,15 +154,15 @@ All drafts → Expert reviews → Quality Gate review → Checkpoint
 **Tasks to create:**
 
 ```
-TaskCreate: "Revise — Lead magnet (based on Sprint 2 feedback)"
-TaskCreate: "Revise — Landing page"
-TaskCreate: "Revise — Email sequence"
-TaskCreate: "Quality Gate — Final editorial review"
-TaskCreate: "Distribution — Format for web"
-TaskCreate: "Distribution — Set up email sequence in platform"
-TaskCreate: "Distribution — Publish campaign"
-TaskCreate: "Distribution — Set up analytics tracking"
-TaskCreate: "Distribution — Week 1 performance report"
+TaskCreate: "[S3] Revise — Lead magnet (based on Sprint 2 feedback)"
+TaskCreate: "[S3] Revise — Landing page"
+TaskCreate: "[S3] Revise — Email sequence"
+TaskCreate: "[S3] Quality Gate — Final editorial review"
+TaskCreate: "[S3] Distribution — Format for web"
+TaskCreate: "[S3] Distribution — Set up email sequence in platform"
+TaskCreate: "[S3] Distribution — Publish campaign"
+TaskCreate: "[S3] Distribution — Set up analytics tracking"
+TaskCreate: "[S3] Distribution — Week 1 performance report"
 ```
 
 **Dependency chain:**

@@ -42,7 +42,9 @@ Pick one hook type based on the post goal:
 | **Question** | "Why do [most people] fail at [topic]?" | Engagement |
 | **Number** | "5 things I wish I knew about [topic]:" | Shareability |
 
-### Step 3: Write Platform-Specific Format
+### Step 3: Write Platform-Specific Draft
+
+Write the full post following the platform structure below. Don't self-censor during drafting — revise in Step 4.
 
 #### LinkedIn
 
@@ -106,26 +108,20 @@ Tweet N: [Summary or CTA]
 - Can share article excerpts with commentary
 - Questions perform well
 
-### Step 4: Write the Draft
+### Step 4: Voice and ICP Pass
 
-Write the full post following the chosen structure. Don't self-censor during drafting — revise in Step 5.
-
-### Step 5: Voice Check
-
-Read the draft aloud against `voice-dna.md`. Ask:
+**Voice check** — Read aloud against `voice-dna.md`. Ask:
 - Does this sound like the owner's actual speech patterns?
 - Are there any phrases the voice-dna marks as anti-patterns?
 - Is the tone calibrated correctly for this platform?
 - Does it avoid the "AI writing" tells (excessive hedging, generic advice)?
 
-Rewrite any lines that don't pass.
-
-### Step 6: ICP Relevance Check
-
-Verify against `icp.md`:
+**ICP check** — Verify against `icp.md`:
 - Does this address a real pain point or aspiration of the ICP?
 - Is the language they'd recognize (not jargon they don't use)?
 - Would they share this? Tag someone? Save it?
+
+Rewrite any lines that don't pass both checks.
 
 ---
 

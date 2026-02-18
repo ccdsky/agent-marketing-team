@@ -109,16 +109,16 @@ Fill out and copy to `output/campaigns/[slug]/campaign-brief.md`.
 
 | Asset | Owner | Sprint | Depends On |
 |-------|-------|--------|-----------|
-| Sales / landing page | Creative Specialist | Sprint 2 | Research |
-| Pre-launch email sequence | Creative Specialist | Sprint 2 | Research |
-| Launch day email | Creative Specialist | Sprint 2 | Research |
-| Post-launch email sequence | Creative Specialist | Sprint 2 | Research |
-| Pre-launch social posts (3-5) | Creative Specialist | Sprint 2 | Research |
-| Launch day social posts | Creative Specialist | Sprint 2 | Research |
-| Quality Gate review — all assets | Quality Gate | Sprint 2 | All drafts |
-| Format + set up all assets | Distribution Specialist | Sprint 3 | QG approval |
-| Analytics tracking setup | Distribution Specialist | Sprint 3 | Day before launch |
-| Daily performance reports | Distribution Specialist | Sprint 3 (ongoing) | Launch |
+| Sales / landing page | | | Research |
+| Pre-launch email sequence | | | Research |
+| Launch day email | | | Research |
+| Post-launch email sequence | | | Research |
+| Pre-launch social posts (3-5) | | | Research |
+| Launch day social posts | | | Research |
+| Quality Gate review — all assets | | | All drafts |
+| Format + set up all assets | | | QG approval |
+| Analytics tracking setup | | | Day before launch |
+| Daily performance reports | | | Launch |
 
 ---
 

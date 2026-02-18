@@ -252,6 +252,8 @@ Total: ~3 hours parallelized
 
 ## Sprint-Specific Behaviors
 
+**Determine your sprint from the task title.** All tasks are prefixed `[S1]`, `[S2]`, or `[S3]`. Call `TaskGet(taskId="[ID]")` and read the subject to know which sprint you're in before starting work.
+
 ### Sprint 1: Sketching (NOT Full Drafts)
 
 **If writing task in Sprint 1:** Create structure sketches, not polished content

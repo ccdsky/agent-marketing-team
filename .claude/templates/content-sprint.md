@@ -101,14 +101,14 @@ For each substantial piece (newsletter or blog), plan repurposes:
 
 | Asset | Owner | Timeline | Depends On |
 |-------|-------|----------|-----------|
-| Topic research + content ideas | Research Specialist | Week 0 | — |
-| Newsletter drafts (all issues) | Creative Specialist | Week 1-4 | Research |
-| LinkedIn post batch (Week 1-2) | Creative Specialist | Week 0 | Research |
-| LinkedIn post batch (Week 3-4) | Creative Specialist | Week 2 | Research |
-| Blog posts | Creative Specialist | Week 1-3 | Research |
-| Quality Gate review (batch) | Quality Gate | After each batch | Drafts |
-| Repurposed content | Creative Specialist | Rolling | Published pieces |
-| Weekly performance report | Distribution Specialist | Every Monday | Prior week |
+| Topic research + content ideas | | | — |
+| Newsletter drafts (all issues) | | | Research |
+| LinkedIn post batch (Week 1-2) | | | Research |
+| LinkedIn post batch (Week 3-4) | | | Research |
+| Blog posts | | | Research |
+| Quality Gate review (batch) | | | Drafts |
+| Repurposed content | | | Published pieces |
+| Weekly performance report | | | Prior week |
 
 ---
 

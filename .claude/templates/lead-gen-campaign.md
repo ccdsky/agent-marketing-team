@@ -53,13 +53,13 @@ Fill out this template when starting a lead gen campaign, then copy to `output/c
 
 | Asset | Owner | Sprint | Depends On |
 |-------|-------|--------|-----------|
-| Lead magnet content | Creative Specialist | Sprint 2 | Research |
-| Landing page | Creative Specialist | Sprint 2 | Research + Lead magnet concept |
-| Email sequence (delivery + nurture) | Creative Specialist | Sprint 2 | Lead magnet |
-| Quality Gate review — all assets | Quality Gate | Sprint 2 | All drafts |
-| Landing page (web-ready) | Distribution Specialist | Sprint 3 | Quality Gate approval |
-| Email sequence (platform setup) | Distribution Specialist | Sprint 3 | Quality Gate approval |
-| Analytics tracking | Distribution Specialist | Sprint 3 | Launch |
+| Lead magnet content | | | Research |
+| Landing page | | | Research + Lead magnet concept |
+| Email sequence (delivery + nurture) | | | Lead magnet |
+| Quality Gate review — all assets | | | All drafts |
+| Landing page (web-ready) | | | Quality Gate approval |
+| Email sequence (platform setup) | | | Quality Gate approval |
+| Analytics tracking | | | Launch |
 
 **Email sequence length:** [3 | 5 | 7] emails
 
