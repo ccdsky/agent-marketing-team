@@ -338,14 +338,19 @@ agent-marketing-team/
 │   │   ├── creative-specialist.md   ✅ Content creator
 │   │   ├── quality-gate.md          ✅ Editorial review
 │   │   └── distribution-specialist.md ✅ Publishing + analytics
-│   ├── skills/                      ✅ 7 content skill frameworks
-│   │   ├── landing-page/SKILL.md
+│   ├── skills/                      ✅ 12 skill frameworks (7 content + 5 strategy)
+│   │   ├── landing-page/SKILL.md    # Content skills
 │   │   ├── email-sequence/SKILL.md
 │   │   ├── blog-post/SKILL.md
 │   │   ├── newsletter/SKILL.md
 │   │   ├── social-post/SKILL.md
 │   │   ├── lead-magnet/SKILL.md
-│   │   └── repurpose/SKILL.md
+│   │   ├── repurpose/SKILL.md
+│   │   ├── positioning-angles/SKILL.md  # Strategy skills
+│   │   ├── keyword-research/SKILL.md
+│   │   ├── market-research/SKILL.md
+│   │   ├── expert-review/SKILL.md
+│   │   └── lead-magnet-strategy/SKILL.md
 │   ├── templates/
 │   │   ├── campaign-brief-template.md ✅ Generic campaign structure
 │   │   ├── lead-gen-campaign.md     ✅ Lead generation template
@@ -381,7 +386,9 @@ agent-marketing-team/
 │       └── [campaign-slug-YYYY-MM]/
 │           ├── campaign-brief.md
 │           ├── research/
+│           ├── strategy/       ← positioning angles, lead magnet concepts
 │           ├── drafts/
+│           ├── reviews/        ← expert review outputs
 │           ├── edited/
 │           ├── ready/
 │           └── analytics/
@@ -424,23 +431,32 @@ Legend:
 
 ## Evolution Path
 
-### Current State: v1.1 (Core Complete)
+### Current State: v1.2 (Complete)
+
 ✅ Task-based coordination
 ✅ Sprint model with checkpoints
 ✅ 5 specialized agents
-✅ File ownership strategy
+✅ File ownership strategy (research/ → strategy/ → drafts/ → reviews/ → edited/ → ready/)
 ✅ Knowledge compounding system
-✅ 7 content skill frameworks (SKILL.md files)
+✅ 12 skill frameworks — 7 content + 5 strategy
 ✅ Sprint planning + retrospective workflows
 ✅ Lead gen, product launch, content sprint templates
-✅ Directory scaffolding for all agent write targets
+✅ Sprint 1 checkpoint gates in all strategy skills (options presented, not decisions made)
+✅ Evidence tagging ([E]/[I]) in positioning angles for hypothesis vs. fact distinction
 
 **Before first campaign:** Populate `context/voice-dna.md`, `context/icp.md`, `context/business-profile.md` via `/writer:setup`.
 
-### Next: v1.2 (Strategy Skills)
-- 5 strategy skill frameworks (positioning, keyword, market research, expert review, lead magnet strategy)
-- Thought-leader-informed methodologies (Hormozi, Dunford, Fishkin, Ellis, Moesta, and others)
-- Plan: `docs/plans/2026-02-18-feat-v1.2-strategy-skills-plan.md`
+### v1.1 → v1.2 Changes
+- Added 5 strategy skills: `/positioning-angles`, `/keyword-research`, `/market-research`, `/expert-review`, `/lead-magnet-strategy`
+- Strategy skills produce concepts/options for Sprint 1 checkpoint — do not proceed to content creation without human approval
+- Expert review: 4 asset-type panels with weighted synthesis; graceful degradation if <5 agents respond
+- Market research: confidence baseline table standardizes HIGH/MEDIUM/LOW by source type
+- All skills trimmed to operational instructions only (rationale sections removed)
+
+### Next: v1.3 (Candidates)
+- Performance feedback loop: analytics → recommendations → campaign brief updates
+- Campaign retrospective automation
+- Multi-campaign knowledge synthesis
 
 ---
 
@@ -489,7 +505,7 @@ A complete AI-powered marketing team ready to execute full-funnel campaigns with
 **What happens next:**
 Every campaign makes the system better. Learnings compound. Quality improves. Execution gets faster.
 
-**Core system complete. Strategy skills (v1.2) in progress. Ready to compound.**
+**v1.2 complete. 12 skills, full sprint model, human checkpoints at every strategic decision. Ready to compound.**
 
 ---
 

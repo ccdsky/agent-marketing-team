@@ -102,7 +102,9 @@ agent-marketing-team/
 │       └── [slug]-[YYYY-MM]/   # Each campaign gets its own directory
 │           ├── campaign-brief.md
 │           ├── research/
+│           ├── strategy/       # Positioning angles, lead magnet concepts
 │           ├── drafts/         # Creative Specialist writes here
+│           ├── reviews/        # Expert review outputs
 │           ├── edited/         # Quality Gate writes here
 │           ├── ready/          # Distribution Specialist writes here
 │           └── analytics/
