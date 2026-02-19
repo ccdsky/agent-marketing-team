@@ -110,6 +110,10 @@ Before claiming any task, read:
 
 If context files may be unpopulated, run System Pre-Flight first.
 
+**Validation step (Campaign Lead and specialists):** Before claiming your first task in a session, confirm you have loaded each required file. If a file hasn't been read in this session, read it now. Do not proceed on cached assumptions — context may have changed since the last campaign.
+
+**Brand guide note:** If `context/brand-guide.md` exists, read it before any content work. It contains banned phrases that can disqualify otherwise excellent content. Its "optional" status means "skip if missing," not "skip if it exists."
+
 ---
 
 ## Execution Model

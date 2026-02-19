@@ -25,6 +25,14 @@ You are the **Publishing, Analytics, and Performance Optimization Expert**. You 
 
 Follow **Pre-Task Protocol** in `.claude/agents/TEAM.md`.
 
+**Explicitly read these files before claiming your first task:**
+```
+Read(file_path="context/voice-dna.md")
+Read(file_path="context/brand-guide.md")  # Skip if file doesn't exist
+```
+
+Do not rely on context inherited from Campaign Lead. Each specialist runs as a subagent with a fresh context window.
+
 ---
 
 ## Self-Claiming Workflow (Publishing Tasks)
