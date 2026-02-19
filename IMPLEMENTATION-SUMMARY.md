@@ -10,7 +10,7 @@
 
 A complete AI-powered marketing team system that executes full-funnel campaigns from market research through conversion optimization.
 
-**Not a writing team—a marketing team.** Thinks in funnels, researches first, measures outcomes.
+Thinks in funnels, researches first, measures outcomes.
 
 ---
 
@@ -93,7 +93,7 @@ A complete AI-powered marketing team system that executes full-funnel campaigns 
 - Archive (published campaigns)
 
 ✅ **Documentation**
-- README.md (setup guide + PRD)
+- README.md (setup guide)
 - context/README.md (how to set up voice, ICP, business profile)
 - knowledge/README.md (how knowledge compounds)
 - IMPLEMENTATION-SUMMARY.md (this file)
@@ -137,42 +137,24 @@ A complete AI-powered marketing team system that executes full-funnel campaigns 
 
 ---
 
-## What's NOT Yet Built (Future v2.0)
+## Strategy Skills (v1.2 — Complete)
 
-### Vibe Marketing Research Layer
+Five strategy skills complement the 7 existing content skills. The system now has 12 skills covering the full marketing workflow.
 
-**Not yet implemented:**
-1. `/positioning-angles` skill (8 differentiation frameworks)
-2. `/keyword-research` skill (6 Circles Method)
-3. `/market-research` skill (comprehensive market intelligence)
-4. `/expert-review` skill (task-based specialized agents)
-5. `/lead-magnet-strategy` skill (high-converting opt-in concepts)
+1. `/positioning-angles` — B2B differentiation frameworks (April Dunford 5-component model, Peep Laja 4-layer test, Chris Walker demand creation)
+2. `/keyword-research` — Audience-intent keyword research (Ahrefs Business Potential scoring, Fishkin zero-click reality, Sonders inverse approach, Crestodina two-track system)
+3. `/market-research` — 4-phase competitive intelligence (Ellis PMF test, Moesta JTBD four forces, Revella 5 Rings of Buying Insight, Fishkin audience behavior, Laja messaging test)
+4. `/expert-review` — Multi-agent specialized analysis (3-5 asset-specific expert panels, parallel execution, prioritized revision synthesis)
+5. `/lead-magnet-strategy` — High-converting concept design (Hormozi Bridge Framework + Value Equation, Exposure Ninja Three Pillars + Train Journey)
 
-**Why not included in v1.0:**
-- Core infrastructure needed first (agents, coordination, sprints)
-- Skills require additional frameworks from Vibe Marketing Playbook
-- Can add incrementally after validating core system works
+### Optional: MCP Integration
 
-**How to add in v2.0:**
-- Create skill files in `.claude/skills/[skill-name]/`
-- Follow skill creation patterns from existing skills
-- Reference Vibe Marketing Playbook for frameworks
+For deeper market research, configure MCPs in `~/.claude/mcp-config.json`:
+- **Perplexity MCP** — Multi-source market research synthesis
+- **Firecrawl MCP** — Scrape competitor websites at scale
+- **Playwright MCP** — Screenshot competitor pages for visual analysis
 
-### MCP Integration
-
-**Not yet configured:**
-- Perplexity MCP (deep market research)
-- Firecrawl MCP (scrape competitor websites)
-- Playwright MCP (screenshot competitor pages)
-
-**Why not configured:**
-- Requires MCP server setup in Claude Code
-- Not required for basic campaign functionality
-- Can add when ready to do deep market research
-
-**How to add:**
-- Configure in `~/.claude/mcp-config.json`
-- Research Specialist agent already has MCP usage patterns documented
+Not required — agents fall back to WebSearch and WebFetch when MCPs aren't configured.
 
 ---
 
@@ -229,30 +211,12 @@ After context files are created:
 
 **Start small, validate system, then scale to complex campaigns.**
 
-### Optional Enhancements
+### Optional: Review the v1.2 Strategy Skills Plan
 
-**3. Copy Proven Skills from Writing System**
+If you want to understand the design rationale behind the strategy skills:
 
-If you have working content skills from another project:
-
-```bash
-# From your other project's skills directory:
-cd ~/path/to/other-project/.claude/skills/
-
-# Copy relevant skills to agent-marketing-team:
-cp -r landing-page/ ~/path/to/agent-marketing-team/.claude/skills/
-cp -r email-sequence/ ~/path/to/agent-marketing-team/.claude/skills/
-cp -r newsletter/ ~/path/to/agent-marketing-team/.claude/skills/
 ```
-
-**4. Migrate Learnings**
-
-If you have documented patterns in `my-writing-system`:
-
-```bash
-# Copy relevant learnings to new system
-cp my-writing-system/knowledge/learnings/*.md \
-   agent-marketing-team/knowledge/learnings/campaigns/
+docs/plans/2026-02-18-feat-v1.2-strategy-skills-plan.md
 ```
 
 ---
@@ -374,14 +338,19 @@ agent-marketing-team/
 │   │   ├── creative-specialist.md   ✅ Content creator
 │   │   ├── quality-gate.md          ✅ Editorial review
 │   │   └── distribution-specialist.md ✅ Publishing + analytics
-│   ├── skills/                      ✅ 7 content skill frameworks
-│   │   ├── landing-page/SKILL.md
+│   ├── skills/                      ✅ 12 skill frameworks (7 content + 5 strategy)
+│   │   ├── landing-page/SKILL.md    # Content skills
 │   │   ├── email-sequence/SKILL.md
 │   │   ├── blog-post/SKILL.md
 │   │   ├── newsletter/SKILL.md
 │   │   ├── social-post/SKILL.md
 │   │   ├── lead-magnet/SKILL.md
-│   │   └── repurpose/SKILL.md
+│   │   ├── repurpose/SKILL.md
+│   │   ├── positioning-angles/SKILL.md  # Strategy skills
+│   │   ├── keyword-research/SKILL.md
+│   │   ├── market-research/SKILL.md
+│   │   ├── expert-review/SKILL.md
+│   │   └── lead-magnet-strategy/SKILL.md
 │   ├── templates/
 │   │   ├── campaign-brief-template.md ✅ Generic campaign structure
 │   │   ├── lead-gen-campaign.md     ✅ Lead generation template
@@ -417,14 +386,16 @@ agent-marketing-team/
 │       └── [campaign-slug-YYYY-MM]/
 │           ├── campaign-brief.md
 │           ├── research/
+│           ├── strategy/       ← positioning angles, lead magnet concepts
 │           ├── drafts/
+│           ├── reviews/        ← expert review outputs
 │           ├── edited/
 │           ├── ready/
 │           └── analytics/
 │
 ├── .gitignore                       ✅ Privacy settings
 ├── CLAUDE.md                        ✅ Routing + instructions
-├── README.md                        ✅ Documentation + PRD
+├── README.md                        ✅ Documentation
 └── IMPLEMENTATION-SUMMARY.md        ✅ This file
 
 Legend:
@@ -460,24 +431,32 @@ Legend:
 
 ## Evolution Path
 
-### Current State: v1.1 (Wired and Ready)
+### Current State: v1.2 (Complete)
+
 ✅ Task-based coordination
 ✅ Sprint model with checkpoints
 ✅ 5 specialized agents
-✅ File ownership strategy
+✅ File ownership strategy (research/ → strategy/ → drafts/ → reviews/ → edited/ → ready/)
 ✅ Knowledge compounding system
-✅ 7 content skill frameworks (SKILL.md files)
+✅ 12 skill frameworks — 7 content + 5 strategy
 ✅ Sprint planning + retrospective workflows
 ✅ Lead gen, product launch, content sprint templates
-✅ Directory scaffolding for all agent write targets
-✅ CLAUDE.md trimmed to 157 lines
+✅ Sprint 1 checkpoint gates in all strategy skills (options presented, not decisions made)
+✅ Evidence tagging ([E]/[I]) in positioning angles for hypothesis vs. fact distinction
 
-**Before first campaign:** Populate `context/voice-dna.md`, `context/icp.md`, `context/business-profile.md` via `writer:setup`.
+**Before first campaign:** Populate `context/voice-dna.md`, `context/icp.md`, `context/business-profile.md` via `/writer:setup`.
 
-### Future: v2.0 (Vibe Marketing Layer)
-- Add 5 marketing strategy skills
-- Integrate MCPs for market research
-- Full marketing intelligence capabilities
+### v1.1 → v1.2 Changes
+- Added 5 strategy skills: `/positioning-angles`, `/keyword-research`, `/market-research`, `/expert-review`, `/lead-magnet-strategy`
+- Strategy skills produce concepts/options for Sprint 1 checkpoint — do not proceed to content creation without human approval
+- Expert review: 4 asset-type panels with weighted synthesis; graceful degradation if <5 agents respond
+- Market research: confidence baseline table standardizes HIGH/MEDIUM/LOW by source type
+- All skills trimmed to operational instructions only (rationale sections removed)
+
+### Next: v1.3 (Candidates)
+- Performance feedback loop: analytics → recommendations → campaign brief updates
+- Campaign retrospective automation
+- Multi-campaign knowledge synthesis
 
 ---
 
@@ -526,7 +505,7 @@ A complete AI-powered marketing team ready to execute full-funnel campaigns with
 **What happens next:**
 Every campaign makes the system better. Learnings compound. Quality improves. Execution gets faster.
 
-**This is v1.0. Ready to validate, ready to iterate, ready to compound.**
+**v1.2 complete. 12 skills, full sprint model, human checkpoints at every strategic decision. Ready to compound.**
 
 ---
 

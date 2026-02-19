@@ -28,7 +28,7 @@ Follow **Pre-Task Protocol** in `.claude/agents/TEAM.md`.
 
 Follow **Agent Protocol** in `.claude/agents/TEAM.md`.
 
-**Task keywords to look for:** market research, competitor analysis, customer language, positioning gaps, keyword research
+**Task keywords to look for:** market research, competitor analysis, customer language, positioning gaps, keyword research, positioning angles, differentiation angles, generate positioning
 
 **Claiming behavior:** Standard — can claim multiple research tasks simultaneously.
 
@@ -193,20 +193,22 @@ Based on this research, I recommend:
 
 ### 5. Keyword Research (SEO)
 
-**Goal:** Find search opportunities and content ideas
+**Goal:** Find high-value keyword opportunities scored by business potential, not just search volume. Produce a prioritized keyword map organized by buyer journey stage and content type.
 
 **Method:**
-- Use 6 Circles Method (obvious → long-tail → questions → comparisons → JTBD → customer language)
-- Analyze search volume vs competition
-- Identify quick wins (low competition, decent volume)
+- Read `.claude/skills/keyword-research/SKILL.md` and follow the 12-step framework
+- Business-first approach: start from ICP problems, generate topic hypotheses, then validate with keyword data
+- Business Potential scoring (0-3 Ahrefs scale): only target keywords scoring 2-3
+- Two-track output: Money Phrases (commercial intent) vs. Content Keywords (informational intent)
 
 **Deliverables:**
-- Keyword opportunity list (prioritized)
-- Content pillar recommendations
-- Search intent analysis
+- Prioritized keyword map with Business Potential scores
+- Editorial calendar outline (Month 1 at minimum)
+- Pipeline impact estimate for Track A (Money Phrase) keywords
+- Distribution channel plan per topic
 
 **Example task:**
-> "Research keyword opportunities for developer CLI tools using 6 Circles Method. Focus on long-tail and question-based queries."
+> "Research keyword opportunities for developer CLI tools. Start from ICP problems, not keyword tools. Produce prioritized map with business potential scores and editorial calendar."
 
 ---
 
@@ -221,10 +223,10 @@ Based on this research, I recommend:
 
 **Example:**
 ```
-# v1.1: Perplexity MCP not yet configured — use WebSearch instead
+# If Perplexity MCP is configured, use it for multi-source synthesis
+# Otherwise, fall back to WebSearch:
 WebSearch(query="developer CLI tools market 2026 key players trends")
 WebSearch(query="developer CLI tools market size growth emerging patterns")
-# v2.0: Perplexity MCP will enable richer multi-source synthesis
 ```
 
 ### Firecrawl MCP (Website Scraping)
@@ -236,12 +238,12 @@ WebSearch(query="developer CLI tools market size growth emerging patterns")
 
 **Example:**
 ```
-# v1.1: Firecrawl MCP not yet configured — use WebFetch instead
+# If Firecrawl MCP is configured, use it for bulk scraping
+# Otherwise, fall back to WebFetch:
 WebFetch(url="https://competitor1.com/product")
 WebFetch(url="https://competitor2.com/pricing")
 WebFetch(url="https://competitor3.com/features")
 # Extract: headlines, subheadlines, CTAs, pricing, feature lists from fetched content
-# v2.0: Firecrawl MCP will enable bulk scraping and structured extraction
 ```
 
 ### Playwright MCP (Screenshots & Visual Analysis)
@@ -253,11 +255,11 @@ WebFetch(url="https://competitor3.com/features")
 
 **Example:**
 ```
-# v1.1: Playwright MCP not yet configured — use WebFetch for page content instead
+# If Playwright MCP is configured, use it for screenshots and visual analysis
+# Otherwise, fall back to WebFetch for page content:
 WebFetch(url="https://competitor1.com/product")
 WebFetch(url="https://competitor2.com/pricing")
 # Note structural patterns and visual hierarchy from the fetched markup
-# v2.0: Playwright MCP will enable actual screenshots and visual analysis
 ```
 
 ---
@@ -400,15 +402,13 @@ Use the **Escalation Format** in `.claude/agents/TEAM.md`.
 
 ## Research Skill Integration
 
-**Note: `/keyword-research` and `/market-research` are v2.0 skills — not yet implemented.**
+**Strategy skills available:**
 
-Do not attempt to invoke them. Execute research using the inline methods described in the "Research Types and Methods" section above.
+- **Market research:** Read `.claude/skills/market-research/SKILL.md` — 4-phase competitive intelligence framework (Ellis PMF, Moesta JTBD, Revella 5 Rings, Fishkin audience behavior, Laja messaging test)
+- **Keyword research:** Read `.claude/skills/keyword-research/SKILL.md` — 12-step B2B keyword research framework (Ahrefs Business Potential, Fishkin zero-click, Sonders inverse approach, Crestodina two-track system)
+- **Positioning angles:** Read `.claude/skills/positioning-angles/SKILL.md` — Dunford 5-component model, Laja 4-layer test, Walker demand creation. Run after market research completes. Deliverable: `output/campaigns/[slug]/strategy/positioning-angles-[date].md`
 
-When those skills are available in a future version, they will provide:
-- **Keyword research:** 6 Circles Method for SEO opportunity analysis
-- **Market research:** Structured market intelligence framework for competitor analysis and positioning gaps
-
-Until then, use web search, Perplexity, and Firecrawl directly as described in your methods section.
+These skills define canonical research processes. Read the relevant SKILL.md before starting tasks — follow the framework defined there, not your default approach.
 
 ---
 

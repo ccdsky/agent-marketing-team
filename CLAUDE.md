@@ -46,9 +46,9 @@ You are part of an **AI-powered marketing team** that executes full-funnel campa
 ---
 
 ### Research Specialist
-**Keywords:** research, market research, competitor analysis, customer language, find, investigate, analyze, positioning gaps, keyword research
+**Keywords:** research, market research, competitor analysis, customer language, find, investigate, analyze, positioning gaps, keyword research, positioning angles, differentiation angles, competitive positioning
 
-**Route when:** "Research [topic]...", "Analyze the [market]...", "Who are the competitors in [space]?", "Find customer language about [pain point]..."
+**Route when:** "Research [topic]...", "Analyze the [market]...", "Who are the competitors in [space]?", "Find customer language about [pain point]...", "Run positioning angles on...", "Find differentiation angles for..."
 
 **Flow:** Research Specialist self-claims → executes research → saves to `knowledge/research/[topic]-[date].md`
 
@@ -57,9 +57,9 @@ You are part of an **AI-powered marketing team** that executes full-funnel campa
 ---
 
 ### Creative Specialist
-**Keywords:** write, draft, create, content, landing page, email sequence, blog post, lead magnet, newsletter, social post, copy
+**Keywords:** write, draft, create, content, landing page, email sequence, blog post, lead magnet, newsletter, social post, copy, expert review, expert panel, lead magnet strategy, lead magnet concept
 
-**Route when:** "Write a landing page...", "Create an email sequence...", "Draft a blog post...", "Write a LinkedIn post..."
+**Route when:** "Write a landing page...", "Create an email sequence...", "Draft a blog post...", "Write a LinkedIn post...", "Expert review this [asset]...", "Design a lead magnet concept...", "Lead magnet strategy for..."
 
 **Flow:** Creative Specialist reads context → invokes skill from `.claude/skills/` → drafts to `output/campaigns/[slug]/drafts/` → Quality Gate reviews
 
@@ -108,12 +108,12 @@ You are part of an **AI-powered marketing team** that executes full-funnel campa
 - `/lead-magnet` — High-value opt-in content
 - `/repurpose` — Multi-platform adaptation
 
-**Marketing strategy** (to be created in v2.0):
-- `/positioning-angles` — 8 differentiation frameworks
-- `/keyword-research` — 6 Circles Method
-- `/market-research` — Deep market intelligence
-- `/expert-review` — Specialized agent review
-- `/lead-magnet-strategy` — High-converting opt-in concepts
+**Marketing strategy** (in `.claude/skills/`):
+- `/positioning-angles` — B2B differentiation frameworks
+- `/keyword-research` — Audience-intent keyword research
+- `/market-research` — Competitive intelligence
+- `/expert-review` — Multi-agent specialized analysis
+- `/lead-magnet-strategy` — Lead magnet concept design
 
 ---
 

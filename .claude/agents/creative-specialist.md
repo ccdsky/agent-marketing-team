@@ -85,6 +85,8 @@ Read(file_path="knowledge/research/[topic]-[date].md")
 - Social post → `Read(file_path=".claude/skills/social-post/SKILL.md")`
 - Newsletter → `Read(file_path=".claude/skills/newsletter/SKILL.md")`
 - Repurpose → `Read(file_path=".claude/skills/repurpose/SKILL.md")`
+- Expert review → `Read(file_path=".claude/skills/expert-review/SKILL.md")`
+- Lead magnet strategy (concept brief) → `Read(file_path=".claude/skills/lead-magnet-strategy/SKILL.md")`
 
 **Follow the framework defined in that file.** The SKILL.md is the canonical spec — do not substitute your own framework.
 
@@ -117,29 +119,14 @@ Before marking complete, honestly evaluate:
 
 For Sprint 2 drafts, run expert review before marking complete:
 
-**Use Task tool to spawn expert review agents:**
+**Read the expert review skill and follow its framework:**
 ```
-Task(
-  subagent_type="general-purpose",
-  prompt="You are an expert copywriter reviewing this landing page draft.
-
-  Analyze for: headline strength, value proposition clarity, CTA effectiveness, flow, objection handling.
-
-  Draft: [paste draft or file path]
-
-  Provide: What's working, what needs improvement, specific headline alternatives.",
-  description="Expert review: Landing page"
-)
+Read(file_path=".claude/skills/expert-review/SKILL.md")
 ```
 
-**Spawn 3-5 experts with different specializations:**
-- Expert 1: Conversion copywriting (CTAs, urgency, objections)
-- Expert 2: Voice & tone (does it match voice-dna.md?)
-- Expert 3: Structure & flow (is it scannable and logical?)
-- Expert 4: ICP relevance (would target audience care?)
-- Expert 5: Positioning alignment (does it reflect approved angle?)
+The skill defines asset-specific expert panels (landing pages, lead magnets, email sequences, blog posts), parallel spawning via Task tool, scoring rubrics, and synthesis format. Follow it — don't substitute ad-hoc expert prompts.
 
-**Synthesize expert feedback** and include in task comment.
+**Expert review output:** Save to `output/campaigns/[slug]/reviews/expert-review-[asset-type]-[date].md`. Include the revision checklist in your task comment so the Campaign Lead can track what needs fixing before Quality Gate.
 
 ### 9. Complete Task
 
