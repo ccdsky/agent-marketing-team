@@ -147,6 +147,8 @@ Keep it short. They just got value — don't undermine it with a sales pitch.
 
 Save to: `output/campaigns/[campaign-slug]/drafts/lead-magnet-[title-slug]-draft.md`
 
+*This single file contains both the lead magnet content and the delivery email template. No separate delivery email file is created.*
+
 **File format:**
 ```markdown
 # Lead Magnet Draft: [Title]

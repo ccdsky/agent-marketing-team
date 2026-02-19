@@ -125,6 +125,8 @@ Verify ICP fit: Would the target reader find this genuinely useful? Does it trea
 
 Save to: `output/campaigns/[campaign-slug]/drafts/blog-[topic-slug]-draft.md`
 
+For standalone posts (Simple Mode): Return output inline. Do not create a file unless the user asks.
+
 **File format:**
 ```markdown
 # Blog Post Draft: [Title]

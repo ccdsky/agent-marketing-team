@@ -15,7 +15,7 @@ Before repurposing, read:
 - `context/icp.md` — Who reads/watches on each target platform
 - `context/business-profile.md` — Content pillars and brand consistency
 - **The source content** — Read the full original piece
-- **Brand guide** (if exists): `context/brand-guide.md` — Platform-specific tone adjustments
+- **Brand guide** (optional): `context/brand-guide.md` — Platform-specific tone adjustments. Skip if file doesn't exist.
 
 ---
 
@@ -137,11 +137,11 @@ repurposed/
 3. [Story/example to anchor]
 
 ## Platform Map
-| Platform | Anchor Idea | Status |
-|----------|------------|--------|
-| LinkedIn | [Insight N] | Draft |
-| Twitter/X | [Insight N] | Draft |
-| Substack Notes | [Insight N] | Draft |
+| Platform | Anchor Idea | File | Status |
+|----------|------------|------|--------|
+| LinkedIn | [Insight N] | linkedin-[topic-slug].md | Draft |
+| Twitter/X | [Insight N] | twitter-thread-[topic-slug].md | Draft |
+| Substack Notes | [Insight N] | substack-notes-[topic-slug].md | Draft |
 ```
 
 **Individual platform file format:**

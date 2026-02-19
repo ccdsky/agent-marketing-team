@@ -187,5 +187,4 @@ Before marking complete:
 - [ ] CTA escalates naturally across the sequence
 - [ ] Voice consistent across all emails (read-aloud test)
 - [ ] ICP language used throughout (check icp.md Language Patterns)
-- [ ] Sequence overview file created
-- [ ] All files saved to correct path structure
+- [ ] File saved to correct output path (single file containing full sequence)

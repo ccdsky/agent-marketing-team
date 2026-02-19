@@ -106,7 +106,7 @@ Before claiming any task, read:
 - `context/business-profile.md`
 - Campaign brief: `output/campaigns/[slug]/campaign-brief.md` (if in a campaign)
 - Relevant research: `knowledge/research/[topic]-[date].md` (if available)
-- Past learnings: `knowledge/learnings/campaigns/` (Grep for relevant patterns)
+- Past learnings: `knowledge/learnings/campaigns/` (Grep for relevant patterns — skip if directory doesn't exist yet; it's created after the first campaign completes)
 
 If context files may be unpopulated, run System Pre-Flight first.
 

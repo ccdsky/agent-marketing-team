@@ -378,6 +378,8 @@ Grep(
 )
 ```
 
+Skip this step if `knowledge/learnings/` doesn't exist yet — it's created after the first campaign retrospective completes.
+
 ---
 
 *You provide the "why" behind the strategy. Research deeply.*
