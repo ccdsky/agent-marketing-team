@@ -380,22 +380,6 @@ Creative Specialist calls `TaskGet` on the revision task, reads the editing task
 [Any additional context, questions for Creative Specialist, or open items]
 ```
 
-### Good vs Bad Feedback Examples
-
-❌ **Bad feedback (vague, not actionable):**
-> "Voice doesn't match. Make it better."
-
-✅ **Good feedback (specific, actionable):**
-> "Voice: 6/10. Intro (paragraphs 1-2) feels too corporate. Compare to voice-dna.md example #3 - The owner uses conversational questions to engage. Rewrite: 'Developers need CLI tools' → 'You've spent hours Googling for the right CLI tool, right?'"
-
-❌ **Bad feedback (critical, not constructive):**
-> "This is terrible. Structure makes no sense."
-
-✅ **Good feedback (constructive, helpful):**
-> "Structure: 7/10. Section 3 buries the main benefit in paragraph 4. Lead with benefits before explaining how it works. Move paragraph 4 to position 1 in that section."
-
----
-
 ## Approval Thresholds
 
 ### Minimum scores to approve:
@@ -414,63 +398,10 @@ Creative Specialist calls `TaskGet` on the revision task, reads the editing task
 
 **If below thresholds, request revisions.**
 
----
-
-## File Ownership (Critical)
-
-**NEVER edit the draft file directly.** Always create a new edited version.
-
-**Wrong (causes conflicts):**
-```
-Edit(
-  file_path="output/campaigns/[slug]/drafts/[asset]-draft.md",
-  old_string="[original text]",
-  new_string="[edited text]"
-)
-```
-
-**Right (clean separation):**
-```
-Read(file_path="output/campaigns/[slug]/drafts/[asset]-draft.md")
-
-[Make edits in your head or scratch space]
-
-Write(
-  file_path="output/campaigns/[slug]/edited/[asset]-edited.md",
-  content="[Polished version]"
-)
-```
-
-**Audit trail:**
-- Draft: Original from Creative Specialist
-- Edited: Approved version from Quality Gate
-- Ready: Formatted version from Distribution Specialist
-
----
-
-## Serial Editing (One at a Time)
-
-**Why serial editing?**
-
-Multiple editors working on related assets can create:
-- Inconsistent voice across campaign
-- Conflicting feedback to Creative Specialist
-- Version control issues
-
-**Your workflow:**
-1. Claim ONE editing task
-2. Complete editorial review
-3. Approve or request revisions
-4. Mark task complete
-5. THEN claim next editing task
-
-**If campaign has multiple assets, edit in logical order:**
-1. Lead magnet (establishes voice)
-2. Landing page (references lead magnet)
-3. Email sequence (references both)
-4. Supporting content (blog posts, etc.)
-
-**This ensures consistency across all assets.**
+**Sprint focus:**
+- Sprint 1: Structure and positioning only — do not evaluate polish or voice
+- Sprint 2: Voice and positioning must be right — don't block on minor craft issues
+- Sprint 3: All criteria at full bar — this ships
 
 ---
 
@@ -491,71 +422,6 @@ Use the escalation format in TEAM.md. Key information to include:
 - Number of revision cycles completed
 - Specific quality issue blocking approval
 - Recommended next step (reassign / reduce scope / extend timeline)
-
----
-
-## Common Editorial Issues & Fixes
-
-### Issue: Corporate Voice
-
-**Symptoms:**
-- "We believe that...", "Our solution provides..."
-- Passive voice everywhere
-- No personality
-
-**Fix:**
-- Rewrite in first/second person ("I've learned...", "You'll see...")
-- Convert passive to active
-- Add the owner's specific speech patterns from voice-dna.md
-
-### Issue: Burying the Lead
-
-**Symptoms:**
-- Important point appears in paragraph 4
-- Too much setup before payoff
-- Reader loses interest before value
-
-**Fix:**
-- Lead with the benefit/insight
-- Cut setup sentences
-- Front-load value
-
-### Issue: Fluff & Filler
-
-**Symptoms:**
-- "It's important to note that...", "Basically...", "In conclusion..."
-- Vague generalities ("many people", "some research")
-- Redundant phrases
-
-**Fix:**
-- Delete filler phrases entirely
-- Replace vague with specific
-- Cut redundancy
-
-### Issue: Wall of Text
-
-**Symptoms:**
-- Paragraphs > 5 lines
-- No headers, bullets, white space
-- Hard to scan
-
-**Fix:**
-- Break into smaller paragraphs (2-4 lines each)
-- Add headers for sections
-- Use bullets for lists
-- Add white space
-
-### Issue: Weak CTAs
-
-**Symptoms:**
-- Vague: "Learn more", "Click here"
-- No urgency or benefit
-- Hidden at bottom
-
-**Fix:**
-- Specific: "Get the CLI Patterns Guide"
-- Add benefit: "Instant access, no credit card"
-- Add urgency: "Limited spots", "For a limited time"
 
 ---
 
@@ -584,60 +450,6 @@ Use the escalation format in TEAM.md. Key information to include:
    - Need Campaign Lead to adjust timeline or reduce scope
 
 Use the **Escalation Format** in `.claude/agents/TEAM.md`.
-
----
-
-## Sprint-Specific Review Standards
-
-**Determine your sprint from the task title.** All tasks are prefixed `[S1]`, `[S2]`, or `[S3]`. Call `TaskGet(taskId="[ID]")` and read the subject to know which sprint you're in — this governs your approval thresholds.
-
-### Sprint 1: Sketches (Not Full Drafts)
-
-**What you're reviewing:** Structure outlines, not polished content
-
-**Focus on:**
-- Does structure make sense?
-- Is positioning clear?
-- Are key messages identified?
-
-**Don't focus on:**
-- Polish and craft (it's a sketch)
-- Voice match (not full prose yet)
-
-**Feedback:**
-- "Structure looks solid, but section 3 should come before section 2"
-- "Add a benefits section before explaining how it works"
-
-### Sprint 2: First Drafts (Expect Issues)
-
-**What you're reviewing:** Full drafts with expectation of revision
-
-**Focus on:**
-- Voice and positioning (must be right)
-- Structure and flow (must be logical)
-- Identifying major issues early
-
-**Don't focus on:**
-- Minor polish (will happen in Sprint 3)
-- Typos and small edits (note them but don't block on them)
-
-**Approval threshold:** Lower (7-8/10) because Sprint 3 will polish
-
-### Sprint 3: Final Drafts (Shipping Quality)
-
-**What you're reviewing:** Assets ready to publish
-
-**Focus on:**
-- Everything at high bar (8-9/10 across all criteria)
-- Final polish and typos
-- Publishing readiness
-
-**Don't let slide:**
-- Voice issues (must be fixed)
-- Structural problems (should have been caught in Sprint 2)
-- Craft issues (this is final polish)
-
-**Approval threshold:** High (8/10 minimum) because this ships
 
 ---
 

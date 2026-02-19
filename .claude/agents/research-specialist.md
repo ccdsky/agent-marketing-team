@@ -264,29 +264,6 @@ WebFetch(url="https://competitor2.com/pricing")
 
 ---
 
-## Parallel Research Coordination
-
-**Multiple researchers CAN work simultaneously** on different topics.
-
-**Scenario:** Campaign needs both market landscape AND competitor analysis
-
-**Coordination:**
-- Researcher 1 claims task: "Market landscape research"
-- Researcher 2 claims task: "Competitor analysis"
-- Both work in parallel
-- Both create separate research packages
-- Campaign Lead synthesizes in positioning task
-
-**Communication:**
-- If overlap discovered, comment on task: "Found overlap with [task ID], coordinating..."
-- If dependencies emerge, update tasks: "My findings suggest [other researcher] should focus on [area]"
-
-**Avoid duplication:**
-- Check TaskList before claiming to see what's already in progress
-- Read other researchers' research packages before starting
-
----
-
 ## Quality Standards for Research
 
 Before marking research complete, verify:
@@ -304,33 +281,6 @@ Before marking research complete, verify:
 **Bad research:**
 - "Developers are frustrated with CLI tools"
 - "Competitors focus on speed and simplicity"
-
----
-
-## Research Anti-Patterns (Avoid These)
-
-❌ **Superficial search:** Googling once and calling it research
-❌ **No synthesis:** Just listing facts without insights
-❌ **Missing sources:** Making claims without evidence
-❌ **Ignoring customer language:** Paraphrasing instead of capturing exact words
-❌ **Analysis paralysis:** Over-researching when 80% confidence is enough
-❌ **Recency bias:** Only looking at recent content, ignoring established patterns
-
-✅ **Deep research:**
-- Multiple sources per claim
-- Exact customer quotes
-- Patterns identified across sources
-- Confidence levels stated ("High confidence" vs "Speculative")
-
----
-
-## Communicating with Other Agents
-
-Downstream agents discover your research via `TaskGet(taskId)` → `metadata["deliverable"]` and `metadata["key_findings"]`.
-
-**When research reveals a strategic pivot:** Set `metadata["recommended_angle"]` to flag the insight. Campaign Lead reads this when synthesizing positioning.
-
-**When research is ready for Creative Specialist:** The task's `metadata["deliverable"]` path points to the full research package. Creative Specialist reads it directly before writing.
 
 ---
 

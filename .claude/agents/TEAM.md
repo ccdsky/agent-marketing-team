@@ -85,22 +85,6 @@ Always escalate to the user when:
 
 ---
 
-## Agent Roles (Quick Reference)
-
-| Agent | Role | Primary Responsibility |
-|-------|------|----------------------|
-| **Campaign Lead** | Coordinator | Break campaigns into tasks, manage dependencies, monitor progress. **Does NOT implement**. |
-| **Research Specialist** | Market Intel | Market research, competitor analysis, customer language mining. Self-claims research tasks. |
-| **Creative Specialist** | Content Creation | Write all assets (landing pages, emails, blogs). Self-claims writing tasks. Invokes skills. |
-| **Quality Gate** | Editorial Review | Review drafts serially. Only approve shipping-quality work. Self-claims editing tasks. |
-| **Distribution Specialist** | Publishing + Analytics | Format for platforms, publish, track performance. Self-claims publishing tasks. |
-
-**See individual agent files for detailed workflows.**
-
----
-
----
-
 ## System Pre-Flight
 
 Before any agent begins work, verify these context files are populated (not placeholder stubs):

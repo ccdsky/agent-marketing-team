@@ -257,6 +257,8 @@ Save to: `knowledge/research/keyword-research-[company/topic]-[date].md`
 
 **Directional pipeline estimate:** [X leads/mo if top 3 rankings achieved on Priority 1 keywords — replace with actual conversion data for accurate forecasting]
 
+**Do not sum the Est. Leads/Mo column** — keyword audiences overlap significantly. This table shows per-keyword potential, not additive totals.
+
 ---
 
 ## Audience Attention Map

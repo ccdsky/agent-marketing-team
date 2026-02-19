@@ -692,22 +692,6 @@ Recommendation: Shift 30% of promotion budget from Twitter to LinkedIn for Week 
 Full report: knowledge/feedback/analytics/dev-cli-week1-[date].md"
 ```
 
-### To Creative Specialist (via task comments)
-
-**Data-driven optimization requests:**
-```
-"Performance data suggests Email 3 is under-performing (15% open rate vs 40% avg).
-
-Issue: Subject line 'Feature Update' is too generic.
-
-Recommendation: Test subject line variants:
-- Current: 'Feature Update'
-- Test A: 'This CLI pattern saved me 10 hours this week'
-- Test B: 'The discovery trick everyone misses'
-
-Can you draft 2 subject line alternatives based on your voice expertise?"
-```
-
 ---
 
 ## When to Escalate

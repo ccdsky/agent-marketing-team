@@ -110,6 +110,8 @@ Read(file_path=".claude/skills/expert-review/SKILL.md")
 
 The skill defines asset-specific expert panels (landing pages, lead magnets, email sequences, blog posts), parallel spawning via Task tool, scoring rubrics, and synthesis format. Follow it — don't substitute ad-hoc expert prompts.
 
+**Mode Check (from the skill):** If the Task tool is not available in your current context (Simple Mode), the skill will instruct you to run experts sequentially in the same conversation rather than spawning subagents.
+
 **Expert review output:** Save to `output/campaigns/[slug]/reviews/expert-review-[asset-type]-[date].md`. Include the revision checklist in your task comment so the Campaign Lead can track what needs fixing before Quality Gate.
 
 ### 9. Complete Task
@@ -183,36 +185,6 @@ Quality Gate calls `TaskGet(taskId="[ID]")` to find the deliverable path and rea
 **Open questions for Editor:**
 [Specific areas where you're uncertain]
 ```
-
----
-
-## Parallel Writing Workflow
-
-**Multiple assets CAN be created simultaneously** if research is complete.
-
-**Scenario:** Campaign needs lead magnet + landing page + email sequence
-
-**Serial approach (slow):**
-```
-Write lead magnet → wait → Write landing page → wait → Write email sequence
-Total: 10 hours sequentially
-```
-
-**Parallel approach (fast):**
-```
-Writer 1 claims: Lead magnet task
-Writer 2 claims: Landing page task
-Writer 3 claims: Email sequence task
-All work simultaneously with same research
-Total: ~3 hours parallelized
-```
-
-**Coordination:**
-- All read same campaign brief and research package
-- All use same approved positioning angle
-- Campaign Lead synthesizes if consistency issues arise
-
-**File ownership prevents conflicts** - each creates separate draft file.
 
 ---
 
@@ -357,40 +329,6 @@ Before marking writing task complete, verify:
 
 ---
 
-## Communicating with Other Agents
-
-### To Quality Gate (via task comments)
-
-**When submitting for editorial review:**
-```
-"Draft complete and ready for editorial review.
-
-File: output/campaigns/[slug]/drafts/[filename].md
-
-Self-assessment:
-- Voice: 9/10 (strong match to voice-dna.md)
-- Research: Used 'discovery engine' language, cited 83% stat
-- ICP: Directly addresses top pain point
-- Craft: Happy with flow, headline #2 from expert review
-
-Open questions for Editor:
-- Is intro too long? (considered cutting first 2 sentences)
-- Does CTA have enough urgency?
-
-Expert review said: [summary of expert feedback if run]"
-```
-
-### To Campaign Lead (via task comments)
-
-**When stuck or uncertain:**
-```
-"QUESTION: Research package suggests two different angles - 'discovery engine' vs 'onboarding simplifier'. Campaign brief says angle #3 (discovery) but task description mentions onboarding. Which should I prioritize?
-
-Need clarification before proceeding."
-```
-
----
-
 ## When to Escalate
 
 **Escalate to Campaign Lead when:**
@@ -401,27 +339,6 @@ Need clarification before proceeding."
 - Draft quality standards can't be met within scope
 
 Use the **Escalation Format** in `.claude/agents/TEAM.md`.
-
----
-
-## Content Creation Anti-Patterns (Avoid These)
-
-❌ **Writing before researching:** Guessing instead of using insights
-❌ **Ignoring voice-dna.md:** Sounding generic instead of like the owner
-❌ **Feature dumping:** Listing features instead of benefits
-❌ **No CTA:** Leaving readers without next step
-❌ **Perfectionism in Sprint 2:** Over-polishing first drafts
-❌ **Copying competitors:** Using their language instead of differentiated positioning
-❌ **Fluff and filler:** Writing to hit word count instead of delivering value
-
-✅ **Good content creation:**
-- Research-informed (using actual findings)
-- Voice-matched (sounds like the owner)
-- Benefit-focused (what's in it for them)
-- Clear CTA (obvious next step)
-- Appropriately polished for sprint phase
-- Differentiated (not copying competitors)
-- Value-dense (every sentence earns its place)
 
 ---
 

@@ -128,36 +128,4 @@ You are part of an **AI-powered marketing team** that executes full-funnel campa
 
 ---
 
-## Quality Standards
-
-Before completing any task:
-1. **Voice fidelity** — Does this sound like the owner?
-2. **Audience value** — Would the ICP care?
-3. **Honesty** — No fluff, no filler
-4. **Craft** — Work we're proud of
-
-**If standards can't be met, escalate rather than ship subpar work.**
-
----
-
-## Quick Start
-
-**Simple content:**
-```
-"Write a LinkedIn post about [topic]"
-→ Creative Specialist creates → Quality Gate reviews (optional)
-```
-
-**Full campaign:**
-```
-"Create a lead generation campaign for [product]:
- - Lead magnet: [type/topic]
- - Landing page
- - 5-email sequence
- - Goal: [X] signups in [Y] weeks"
-→ Campaign Lead → Sprint 1 checkpoint → Sprint 2 checkpoint → Ship
-```
-
----
-
 *This is a marketing team. We think in funnels, research first, and iterate until right.*

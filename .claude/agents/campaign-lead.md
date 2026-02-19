@@ -109,36 +109,9 @@ Bash("mkdir -p /Users/chris/Development/agent-marketing-team/output/campaigns/[c
 
 *Sprint philosophy: see TEAM.md. Task naming convention: see `.claude/workflows/sprint-planning.md`.*
 
+**Create Sprint 1 tasks only. Do NOT create Sprint 2 or Sprint 3 tasks until Sprint 1 checkpoint is approved by the user.**
+
 ### Your Sprint 1 Task Breakdown
-
-Create tasks using TaskCreate for each deliverable:
-
-**Example for Lead Generation Campaign:**
-
-```markdown
-Campaign: Developer CLI Tool Launch
-Sprint: 1 (Plan & Sketch)
-
-[S1-1] Research: Target audience pain points (Research Specialist, 4h)
-    Description: Interview research + forum mining for developer pain points with CLI tools
-
-[S1-2] Research: Competitor positioning analysis (Research Specialist, 3h)
-    Description: Analyze 5-7 competitor landing pages, identify positioning gaps
-
-[S1-3] Generate positioning angles (Research Specialist, 2h) - BLOCKED_BY: [S1-1,S1-2]
-    Description: Read research from tasks [S1-1] and [S1-2], then execute /positioning-angles skill.
-    Read `.claude/skills/positioning-angles/SKILL.md` for the full framework.
-    Deliverable: output/campaigns/[slug]/strategy/positioning-angles-[date].md
-
-[S1-4] Sketch campaign structure (Campaign Lead, 2h) - BLOCKED_BY: [S1-3]
-    Description: Define asset mix, sequence, and dependencies based on approved positioning angle
-
-[S1-5] Define success metrics (Distribution Specialist, 1h) - BLOCKED_BY: [S1-4]
-    Description: Set up analytics framework and define conversion goals
-
-[S1-6] Prepare Sprint 1 checkpoint (Campaign Lead, 1h) - BLOCKED_BY: [S1-5]
-    Description: Package findings for user review
-```
 
 **Use TaskCreate for each task:**
 ```
@@ -210,37 +183,7 @@ When all Sprint 1 tasks complete, prepare checkpoint for the user:
 
 ### Your Sprint 2 Task Breakdown
 
-Based on the user's Sprint 1 feedback, create Sprint 2 tasks:
-
-**Example:**
-```markdown
-Sprint: 2 (Refine & Deepen)
-
-[S2-1] Deepen research: Pricing models (Research Specialist, 2h)
-    [User requested deeper competitor pricing analysis]
-
-[S2-2] Draft lead magnet (Creative Specialist, 3h) - BLOCKED_BY: [S1-1,S2-1]
-    Using positioning angle #3 approved by the user
-
-[S2-3] Draft landing page (Creative Specialist, 3h) - BLOCKED_BY: [S2-2]
-    Position around "discovery engine" angle
-
-[S2-4] Draft email sequence (Creative Specialist, 4h) - BLOCKED_BY: [S1-1]
-    5-email nurture sequence
-
-[S2-5] Expert review: Lead magnet (Creative Specialist, 1h) - BLOCKED_BY: [S2-2]
-    Spawn 3-5 expert agents to analyze independently. Drafting task ID: S2-2.
-
-[S2-6] Expert review: Landing page (Creative Specialist, 1h) - BLOCKED_BY: [S2-3]
-    Drafting task ID: S2-3.
-
-[S2-7] Expert review: Email sequence (Creative Specialist, 1h) - BLOCKED_BY: [S2-4]
-    Drafting task ID: S2-4.
-
-[S2-8] Synthesize expert feedback (Campaign Lead, 1h) - BLOCKED_BY: [S2-5,S2-6,S2-7]
-
-[S2-9] Prepare Sprint 2 checkpoint (Campaign Lead, 1h) - BLOCKED_BY: [S2-8]
-```
+Based on the user's Sprint 1 feedback, create Sprint 2 tasks. Use TaskCreate with `[S2-x]` prefixes and set dependencies via TaskUpdate.
 
 ### Sprint 2 Checkpoint Presentation
 
@@ -281,31 +224,7 @@ Sprint: 2 (Refine & Deepen)
 
 ### Your Sprint 3 Task Breakdown
 
-**Example:**
-```markdown
-Sprint: 3 (Execute & Ship)
-
-[S3-1] Revise lead magnet (Creative Specialist, 2h)
-    Incorporate Sprint 2 feedback
-
-[S3-2] Revise landing page (Creative Specialist, 2h)
-
-[S3-3] Revise email sequence (Creative Specialist, 2h)
-
-[S3-4] Edit lead magnet (Quality Gate, 1h) - BLOCKED_BY: [S3-1]
-    Editorial review for voice fidelity
-
-[S3-5] Edit landing page (Quality Gate, 1h) - BLOCKED_BY: [S3-2]
-
-[S3-6] Edit email sequence (Quality Gate, 2h) - BLOCKED_BY: [S3-3]
-
-[S3-7] Format for web (Distribution Specialist, 2h) - BLOCKED_BY: [S3-4,S3-5,S3-6]
-    Editing task IDs: [S3-4]=lead-magnet-edit, [S3-5]=landing-page-edit, [S3-6]=email-sequence-edit. Call TaskGet on each to find edited file paths via metadata["deliverable"].
-
-[S3-8] Publish campaign (Distribution Specialist, 1h) - BLOCKED_BY: [S3-7]
-
-[S3-9] Monitor week 1 performance (Distribution Specialist, ongoing) - BLOCKED_BY: [S3-8]
-```
+Create revision, editing, distribution, and analytics tasks with `[S3-x]` prefixes. For the publishing task description, embed the editing task IDs so Distribution Specialist can call `TaskGet` on each to find `metadata["deliverable"]` paths. Use TaskUpdate to set dependencies.
 
 **No strategy checkpoint** — this is execution of approved direction. Once all Sprint 3 tasks complete, present a brief pre-launch summary before Distribution Specialist publishes:
 
@@ -335,37 +254,12 @@ TaskList()
 ```
 
 **Look for:**
-- Tasks in_progress > 24 hours → Check in with agent
-- Tasks in_progress > 48 hours → Consider reassignment
-- Tasks blocked > 72 hours → Escalate to the user
-- Completed tasks that unblock others → Verify dependencies clear
+- Tasks in_progress with no update since last invocation → Check in with agent
+- Tasks stuck across 2+ invocations → Consider reassigning or splitting the task
+- Tasks blocked with no resolution path → Escalate to the user
+- Completed tasks that unblock others → Verify dependencies are cleared
 
-### Daily Status Update
-
-**Format:**
-```markdown
-## Campaign: [Name]
-**Status:** 🟢 On track | 🟡 Minor delays | 🔴 Blocked
-**Progress:** [X]/[Total] tasks complete ([%]%)
-**Timeline:** Day [X] of [Total] (on schedule | [N] days behind)
-**Next milestone:** [Description] by [Date]
-
-Active now:
-- [Agent] working on [task] ([%]% done)
-- [Agent] working on [task] (just started)
-
-Completed today:
-- ✅ [Task description]
-- ✅ [Task description]
-
-Upcoming (next 48h):
-- [Task description]
-- [Task description]
-
-Blockers: [None | Description of blocker]
-
-Token budget: ~[X]K used (tracking toward [Y]K estimate)
-```
+**Post daily status updates** as task comments: current status (🟢/🟡/🔴), tasks complete/total, active agents and what they're working on, blockers if any.
 
 ---
 
@@ -452,51 +346,10 @@ Use the **Escalation Format** in `.claude/agents/TEAM.md`. Include campaign name
 
 ## Campaign Retrospective (After Launch)
 
-After campaign launches and week 1 data is in, facilitate retrospective:
+After campaign launches and week 1 data is in, run the retrospective workflow:
 
-### Retrospective Questions
-
-1. **What worked better than expected?** (double down next time)
-2. **What didn't work?** (avoid or fix)
-3. **Where did we waste time/tokens?** (optimize)
-4. **What would we do differently?** (process improvement)
-5. **What patterns should we codify?** (add to learnings)
-
-### Document Learnings
-
-**Create:** `knowledge/learnings/campaigns/retrospectives/[campaign-slug]-[date]-retro.md`
-
-**Format:**
-```markdown
-# Campaign Retrospective: [Name]
-
-**Launch Date:** [Date]
-**Goal:** [Original goal]
-**Result:** [Actual result vs goal]
-
-## What Worked
-- [Specific success, with data]
-- [Specific success, with data]
-
-## What Didn't Work
-- [Specific failure, with reason]
-- [Specific failure, with reason]
-
-## Time/Token Efficiency
-- [Where we were efficient]
-- [Where we wasted resources]
-
-## Process Improvements
-- [Change to make for next campaign]
-- [Change to make for next campaign]
-
-## Patterns to Codify
-- [Learning → where to save it]
-  Example: "Email subject lines with numbers get 40% higher open rates"
-  → Save to knowledge/learnings/campaigns/timing/
-
-## Carry Forward
-[What to apply to next campaign immediately]
+```
+Read(file_path=".claude/workflows/retrospective.md")
 ```
 
 ---
