@@ -120,31 +120,32 @@ TaskUpdate(
 
 ### 7B. If Requesting Revisions: Provide Feedback
 
-**Create a revision task for Creative Specialist:**
-```
-TaskCreate(
-  subject="[S2] Revise [asset] — QG feedback round [N]",
-  description="Revisions needed. See editorial feedback in QG task metadata."
-)
-```
-
-**Mark this editing task pending with feedback metadata:**
+**First, mark this editing task completed with revision metadata:**
 ```
 TaskUpdate(
-  taskId="[ID]",
-  status="pending",
+  taskId="[EDITING-TASK-ID]",
+  status="completed",
   metadata={
     "revision_required": true,
     "voice": "6/10 — intro too corporate, rewrite paragraphs 1-2",
     "clarity": "7/10 — section 3 buries the lead, move paragraph 4 to top",
     "craft": "8/10 — tighten section 2 setup",
     "positioning": "9/10 — aligned",
-    "action_items": "1. Rewrite intro conversationally 2. Restructure section 3 3. Tighten section 2"
+    "action_items": "1. Rewrite intro conversationally 2. Restructure section 3 3. Tighten section 2",
+    "ready_for": "creative-specialist"
   }
 )
 ```
 
-Creative Specialist reads this metadata via `TaskGet` on the revision task to retrieve the editing task ID and feedback.
+**Then create a revision task — embed the editing task ID so Creative Specialist can find the feedback:**
+```
+TaskCreate(
+  subject="[S2] Revise [asset] — QG feedback round [N]",
+  description="Revisions required. Retrieve feedback: TaskGet(taskId='[EDITING-TASK-ID]').metadata → read action_items, voice, clarity, craft, positioning. Revise the draft and mark complete with updated deliverable path."
+)
+```
+
+Creative Specialist calls `TaskGet` on the revision task, reads the editing task ID from the description, then calls `TaskGet` on that editing task to retrieve the detailed feedback in metadata.
 
 ---
 

@@ -298,6 +298,7 @@ Sprint: 3 (Execute & Ship)
 [21] Edit email sequence (Quality Gate, 2h) - BLOCKED_BY: [18]
 
 [22] Format for web (Distribution Specialist, 2h) - BLOCKED_BY: [19,20,21]
+     Editing task IDs: [19]=lead-magnet-edit, [20]=landing-page-edit, [21]=email-sequence-edit. Call TaskGet on each to find edited file paths via metadata["deliverable"].
 
 [23] Publish campaign (Distribution Specialist, 1h) - BLOCKED_BY: [22]
 
@@ -349,18 +350,6 @@ Blockers: [None | Description of blocker]
 
 Token budget: ~[X]K used (tracking toward [Y]K estimate)
 ```
-
----
-
-## Campaign Templates
-
-Three templates are available — read the relevant one before creating a campaign brief:
-
-- **Lead generation:** `.claude/templates/lead-gen-campaign.md`
-- **Product launch:** `.claude/templates/product-launch.md`
-- **Content sprint:** `.claude/templates/content-sprint.md`
-
-Copy the template to `output/campaigns/[slug]/campaign-brief.md` and fill it in.
 
 ---
 

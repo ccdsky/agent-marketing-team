@@ -46,9 +46,9 @@ You are part of an **AI-powered marketing team** that executes full-funnel campa
 ---
 
 ### Research Specialist
-**Keywords:** research, market research, competitor analysis, customer language, find, investigate, analyze, positioning gaps, keyword research, positioning angles, differentiation angles, competitive positioning
+**Keywords:** research, market research, competitor analysis, customer language, find, investigate, analyze, positioning gaps, keyword research, positioning angles, differentiation angles, competitive positioning, lead magnet strategy, lead magnet concept
 
-**Route when:** "Research [topic]...", "Analyze the [market]...", "Who are the competitors in [space]?", "Find customer language about [pain point]...", "Run positioning angles on...", "Find differentiation angles for..."
+**Route when:** "Research [topic]...", "Analyze the [market]...", "Who are the competitors in [space]?", "Find customer language about [pain point]...", "Run positioning angles on...", "Find differentiation angles for...", "Design a lead magnet concept...", "Lead magnet strategy for..."
 
 **Flow:** Research Specialist self-claims → executes research → saves to `knowledge/research/[topic]-[date].md`
 
@@ -57,9 +57,11 @@ You are part of an **AI-powered marketing team** that executes full-funnel campa
 ---
 
 ### Creative Specialist
-**Keywords:** write, draft, create, content, landing page, email sequence, blog post, lead magnet, newsletter, social post, copy, expert review, expert panel, lead magnet strategy, lead magnet concept
+**Keywords:** write, draft, create, content, landing page, email sequence, blog post, lead magnet, newsletter, social post, copy, expert review, expert panel
 
-**Route when:** "Write a landing page...", "Create an email sequence...", "Draft a blog post...", "Write a LinkedIn post...", "Expert review this [asset]...", "Design a lead magnet concept...", "Lead magnet strategy for..."
+**Route when:** "Write a landing page...", "Create an email sequence...", "Draft a blog post...", "Write a LinkedIn post...", "Expert review this [asset]..."
+
+**Routing note:** Strategy and concept work ("lead magnet strategy", "lead magnet concept", "positioning angles") routes to Research Specialist, not Creative Specialist. Multi-keyword requests that span both strategy and creation route to Campaign Lead.
 
 **Flow:** Creative Specialist reads context → invokes skill from `.claude/skills/` → drafts to `output/campaigns/[slug]/drafts/` → Quality Gate reviews
 

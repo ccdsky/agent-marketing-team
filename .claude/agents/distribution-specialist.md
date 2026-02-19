@@ -35,18 +35,22 @@ Follow **Agent Protocol** in `.claude/agents/TEAM.md`.
 
 **CRITICAL:** Only claim publishing tasks that have Quality Gate approval in metadata.
 
-### 2. Verify Approval
+### 2. Verify Approval and Find Edited Asset
 
-Check the editing task's metadata for Quality Gate's approval:
+The publishing task description (created by Campaign Lead) contains the editing task ID(s). Use them to verify QG approval and find the edited file:
+
 ```
-TaskGet(taskId="[editing-task-ID]")
+TaskGet(taskId="[EDITING-TASK-ID from task description]")
 ```
 
 **Look for in `task.metadata`:**
-- `metadata["ready_for"]` == `"distribution-specialist"`
+- `metadata["ready_for"]` == `"distribution-specialist"` — required before claiming
 - `metadata["deliverable"]` — path to the edited file
+- `metadata["revision_required"]` — if `true`, QG rejected; do not publish
 
 **Don't claim if `metadata["ready_for"]` is not `"distribution-specialist"`.**
+
+If the publishing task description doesn't include an editing task ID, fall back to reading the edited file directly: `output/campaigns/[slug]/edited/[asset]-edited.md`
 
 ### 3. Claim the Task
 

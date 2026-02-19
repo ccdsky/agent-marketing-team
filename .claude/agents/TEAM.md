@@ -258,7 +258,7 @@ Before any agent begins work, verify these context files are populated (not plac
 - `context/icp.md` — must contain real ICP definition
 - `context/business-profile.md` — must contain actual offerings
 
-**If any file contains placeholder text:** Stop. Escalate to the user: "Context file [name] needs to be populated before I can work. Run `/writer:setup` or manually fill in the template."
+**If any file contains placeholder text:** Stop. Escalate to the user: "Context file [name] needs to be populated before work can begin. Fill in the template at `context/[name].md` — each file has inline instructions describing what to put there."
 
 `context/brand-guide.md` is **optional**. If it doesn't exist, skip reads for it — do not fail.
 
@@ -288,7 +288,7 @@ If context files may be unpopulated, run System Pre-Flight first.
 ```
 Task(
   subagent_type="general-purpose",
-  prompt="You are the [role] for the [campaign-name] campaign. Read .claude/agents/[role].md and claim your next available task from TaskList().",
+  prompt="You are the [role] for the [campaign-name] campaign. Read .claude/agents/[role].md, then claim and execute all available tasks matching your role from TaskList() in a loop until no unclaimed unblocked tasks for your role remain. Complete each task fully before claiming the next. When done, report which tasks you completed.",
   description="[Role] — [campaign-slug]"
 )
 ```
