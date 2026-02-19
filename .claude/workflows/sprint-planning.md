@@ -157,7 +157,9 @@ All drafts → Expert reviews → Quality Gate review → Checkpoint
 TaskCreate: "[S3] Revise — Lead magnet (based on Sprint 2 feedback)"
 TaskCreate: "[S3] Revise — Landing page"
 TaskCreate: "[S3] Revise — Email sequence"
-TaskCreate: "[S3] Quality Gate — Final editorial review"
+TaskCreate: "[S3] Quality Gate — Edit lead magnet"
+TaskCreate: "[S3] Quality Gate — Edit landing page"
+TaskCreate: "[S3] Quality Gate — Edit email sequence"
 TaskCreate: "[S3] Distribution — Format for web"
 TaskCreate: "[S3] Distribution — Set up email sequence in platform"
 TaskCreate: "[S3] Distribution — Publish campaign"
@@ -173,8 +175,9 @@ TaskCreate: "[S3] Newsletter — [topic]"                  ← if campaign inclu
 
 **Dependency chain:**
 ```
-Revisions (parallel) → Quality Gate → Distribution tasks (parallel) → Analytics
+Revisions (parallel) → Quality Gate per asset (parallel) → Distribution tasks (parallel) → Analytics
 ```
+Note: each Quality Gate task is blocked by its corresponding revision task, not all revisions.
 
 ---
 

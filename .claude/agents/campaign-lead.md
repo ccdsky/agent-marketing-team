@@ -119,24 +119,24 @@ Create tasks using TaskCreate for each deliverable:
 Campaign: Developer CLI Tool Launch
 Sprint: 1 (Plan & Sketch)
 
-[1] Research: Target audience pain points (Research Specialist, 4h)
+[S1-1] Research: Target audience pain points (Research Specialist, 4h)
     Description: Interview research + forum mining for developer pain points with CLI tools
 
-[2] Research: Competitor positioning analysis (Research Specialist, 3h)
+[S1-2] Research: Competitor positioning analysis (Research Specialist, 3h)
     Description: Analyze 5-7 competitor landing pages, identify positioning gaps
 
-[3] Generate positioning angles (Research Specialist, 2h) - BLOCKED_BY: [1,2]
-    Description: Read research from tasks [1] and [2], then execute /positioning-angles skill.
+[S1-3] Generate positioning angles (Research Specialist, 2h) - BLOCKED_BY: [S1-1,S1-2]
+    Description: Read research from tasks [S1-1] and [S1-2], then execute /positioning-angles skill.
     Read `.claude/skills/positioning-angles/SKILL.md` for the full framework.
     Deliverable: output/campaigns/[slug]/strategy/positioning-angles-[date].md
 
-[4] Sketch campaign structure (Campaign Lead, 2h) - BLOCKED_BY: [3]
+[S1-4] Sketch campaign structure (Campaign Lead, 2h) - BLOCKED_BY: [S1-3]
     Description: Define asset mix, sequence, and dependencies based on approved positioning angle
 
-[5] Define success metrics (Distribution Specialist, 1h) - BLOCKED_BY: [4]
+[S1-5] Define success metrics (Distribution Specialist, 1h) - BLOCKED_BY: [S1-4]
     Description: Set up analytics framework and define conversion goals
 
-[6] Prepare Sprint 1 checkpoint (Campaign Lead, 1h) - BLOCKED_BY: [5]
+[S1-6] Prepare Sprint 1 checkpoint (Campaign Lead, 1h) - BLOCKED_BY: [S1-5]
     Description: Package findings for user review
 ```
 
@@ -151,13 +151,13 @@ TaskCreate(
 
 **Set all Sprint 1 dependencies with TaskUpdate after creating tasks:**
 ```
-TaskUpdate(taskId="[3]", addBlockedBy=["[1]", "[2]"])  # positioning needs both research tasks
-TaskUpdate(taskId="[4]", addBlockedBy=["[3]"])          # structure needs positioning
-TaskUpdate(taskId="[5]", addBlockedBy=["[4]"])          # metrics need structure
-TaskUpdate(taskId="[6]", addBlockedBy=["[5]"])          # checkpoint needs metrics
+TaskUpdate(taskId="[S1-3]", addBlockedBy=["[S1-1]", "[S1-2]"])  # positioning needs both research tasks
+TaskUpdate(taskId="[S1-4]", addBlockedBy=["[S1-3]"])              # structure needs positioning
+TaskUpdate(taskId="[S1-5]", addBlockedBy=["[S1-4]"])              # metrics need structure
+TaskUpdate(taskId="[S1-6]", addBlockedBy=["[S1-5]"])              # checkpoint needs metrics
 ```
 
-**Note:** Campaign Lead coordinates — does not execute research or positioning work. Tasks [1], [2], [3] are executed by Research Specialist.
+**Note:** Campaign Lead coordinates — does not execute research or positioning work. Tasks [S1-1], [S1-2], [S1-3] are executed by Research Specialist.
 
 ### Sprint 1 Checkpoint Presentation
 
@@ -216,28 +216,30 @@ Based on the user's Sprint 1 feedback, create Sprint 2 tasks:
 ```markdown
 Sprint: 2 (Refine & Deepen)
 
-[7] Deepen research: Pricing models (Research Specialist, 2h)
+[S2-1] Deepen research: Pricing models (Research Specialist, 2h)
     [User requested deeper competitor pricing analysis]
 
-[8] Draft lead magnet (Creative Specialist, 3h) - BLOCKED_BY: [1,7]
+[S2-2] Draft lead magnet (Creative Specialist, 3h) - BLOCKED_BY: [S1-1,S2-1]
     Using positioning angle #3 approved by the user
 
-[9] Draft landing page (Creative Specialist, 3h) - BLOCKED_BY: [8]
+[S2-3] Draft landing page (Creative Specialist, 3h) - BLOCKED_BY: [S2-2]
     Position around "discovery engine" angle
 
-[10] Draft email sequence (Creative Specialist, 4h) - BLOCKED_BY: [1]
-     5-email nurture sequence
+[S2-4] Draft email sequence (Creative Specialist, 4h) - BLOCKED_BY: [S1-1]
+    5-email nurture sequence
 
-[11] Expert review: Lead magnet (Creative Specialist, 1h) - BLOCKED_BY: [8]
-     Spawn 3-5 expert agents to analyze independently
+[S2-5] Expert review: Lead magnet (Creative Specialist, 1h) - BLOCKED_BY: [S2-2]
+    Spawn 3-5 expert agents to analyze independently. Drafting task ID: S2-2.
 
-[12] Expert review: Landing page (Creative Specialist, 1h) - BLOCKED_BY: [9]
+[S2-6] Expert review: Landing page (Creative Specialist, 1h) - BLOCKED_BY: [S2-3]
+    Drafting task ID: S2-3.
 
-[13] Expert review: Email sequence (Creative Specialist, 1h) - BLOCKED_BY: [10]
+[S2-7] Expert review: Email sequence (Creative Specialist, 1h) - BLOCKED_BY: [S2-4]
+    Drafting task ID: S2-4.
 
-[14] Synthesize expert feedback (Campaign Lead, 1h) - BLOCKED_BY: [11,12,13]
+[S2-8] Synthesize expert feedback (Campaign Lead, 1h) - BLOCKED_BY: [S2-5,S2-6,S2-7]
 
-[15] Prepare Sprint 2 checkpoint (Campaign Lead, 1h) - BLOCKED_BY: [14]
+[S2-9] Prepare Sprint 2 checkpoint (Campaign Lead, 1h) - BLOCKED_BY: [S2-8]
 ```
 
 ### Sprint 2 Checkpoint Presentation
@@ -283,29 +285,43 @@ Sprint: 2 (Refine & Deepen)
 ```markdown
 Sprint: 3 (Execute & Ship)
 
-[16] Revise lead magnet (Creative Specialist, 2h)
-     Incorporate Sprint 2 feedback
+[S3-1] Revise lead magnet (Creative Specialist, 2h)
+    Incorporate Sprint 2 feedback
 
-[17] Revise landing page (Creative Specialist, 2h)
+[S3-2] Revise landing page (Creative Specialist, 2h)
 
-[18] Revise email sequence (Creative Specialist, 2h)
+[S3-3] Revise email sequence (Creative Specialist, 2h)
 
-[19] Edit lead magnet (Quality Gate, 1h) - BLOCKED_BY: [16]
-     Editorial review for voice fidelity
+[S3-4] Edit lead magnet (Quality Gate, 1h) - BLOCKED_BY: [S3-1]
+    Editorial review for voice fidelity
 
-[20] Edit landing page (Quality Gate, 1h) - BLOCKED_BY: [17]
+[S3-5] Edit landing page (Quality Gate, 1h) - BLOCKED_BY: [S3-2]
 
-[21] Edit email sequence (Quality Gate, 2h) - BLOCKED_BY: [18]
+[S3-6] Edit email sequence (Quality Gate, 2h) - BLOCKED_BY: [S3-3]
 
-[22] Format for web (Distribution Specialist, 2h) - BLOCKED_BY: [19,20,21]
-     Editing task IDs: [19]=lead-magnet-edit, [20]=landing-page-edit, [21]=email-sequence-edit. Call TaskGet on each to find edited file paths via metadata["deliverable"].
+[S3-7] Format for web (Distribution Specialist, 2h) - BLOCKED_BY: [S3-4,S3-5,S3-6]
+    Editing task IDs: [S3-4]=lead-magnet-edit, [S3-5]=landing-page-edit, [S3-6]=email-sequence-edit. Call TaskGet on each to find edited file paths via metadata["deliverable"].
 
-[23] Publish campaign (Distribution Specialist, 1h) - BLOCKED_BY: [22]
+[S3-8] Publish campaign (Distribution Specialist, 1h) - BLOCKED_BY: [S3-7]
 
-[24] Monitor week 1 performance (Distribution Specialist, ongoing) - BLOCKED_BY: [23]
+[S3-9] Monitor week 1 performance (Distribution Specialist, ongoing) - BLOCKED_BY: [S3-8]
 ```
 
-**No checkpoint needed** - this is execution of approved direction.
+**No strategy checkpoint** — this is execution of approved direction. Once all Sprint 3 tasks complete, present a brief pre-launch summary before Distribution Specialist publishes:
+
+```markdown
+## Ready to Launch: [Campaign Name]
+
+✅ All assets revised and approved by Quality Gate
+✅ Platform formatting ready
+
+**Assets queued for publish:**
+- Lead magnet: [path]
+- Landing page: [path]
+- Email sequence: [path]
+
+**Reply "go" to publish**, or flag any last-minute changes.
+```
 
 ---
 

@@ -34,7 +34,18 @@ Follow **Agent Protocol** in `.claude/agents/TEAM.md`.
 
 **CRITICAL:** Claim ONE editing task at a time (serial — prevents voice inconsistency across campaign assets).
 
-After checking TaskList(), before claiming:
+### 1. Find Editing Tasks
+
+```
+TaskList()
+```
+
+**Filter for your role:** Look for tasks where:
+- Status: `pending`, owner: empty, `blockedBy`: empty
+- Subject contains: editing, review, quality check, approve
+- Corresponding writing task has `metadata["ready_for"]` == `"quality-gate"`
+
+Verify `ready_for` by calling `TaskGet` on the writing task before claiming.
 
 ### 2. Verify Draft is Complete
 

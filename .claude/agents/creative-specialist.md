@@ -30,16 +30,7 @@ Follow **Pre-Task Protocol** in `.claude/agents/TEAM.md`.
 
 ### 1. Check for Available Tasks
 
-Use **TaskList** to see pending writing tasks:
-```
-TaskList()
-```
-
-**Look for:**
-- Tasks involving content creation (write, draft, create)
-- Status: `pending`
-- Owner: empty (not claimed)
-- blockedBy: empty (dependencies met - research complete)
+Use **TaskList** per Agent Protocol in TEAM.md. Filter for tasks with keywords: write, draft, create, revise, landing page, email sequence, lead magnet, blog post, newsletter. Status: `pending`, owner: empty, `blockedBy`: empty.
 
 ### 2. Verify Dependencies Met
 
@@ -57,14 +48,7 @@ TaskGet(taskId="[ID]")
 
 ### 3. Claim the Task
 
-Use **TaskUpdate** to claim:
-```
-TaskUpdate(
-  taskId="[ID]",
-  status="in_progress",
-  owner="creative-specialist"
-)
-```
+Claim per Agent Protocol in TEAM.md (`status="in_progress"`, `owner="creative-specialist"`).
 
 ### 4. Load Context & Research
 

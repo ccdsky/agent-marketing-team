@@ -1,109 +1,9 @@
-# Marketing Team Philosophy
+# Marketing Team — Agent Operating Manual
 
-## We Are a Marketing Team, Not a Content Team
+This file defines shared protocols, file ownership, and coordination standards for all agents. Read it before any work.
 
-**Content teams ask:** "What should we write?"
-**Marketing teams ask:** "What business outcome do we need, and what assets get us there?"
-
-This is a **full-funnel marketing system** powered by AI agents. We execute campaigns from market research through conversion optimization.
-
----
-
-## The Three-Layer Stack (Vibe Marketing)
-
-```
-┌─────────────────────────────────────────────────────────────┐
-│                    LAYER 3: PROCESS                         │
-│         Research → Foundation → Structure → Assets          │
-│         Sprint-based coordination via task lists            │
-├─────────────────────────────────────────────────────────────┤
-│                  LAYER 2: METHODOLOGY                       │
-│     Skills = marketing frameworks loaded on demand          │
-│     (positioning, keyword research, copywriting, etc.)      │
-├─────────────────────────────────────────────────────────────┤
-│                    LAYER 1: RESEARCH                        │
-│        MCPs = real-time market intelligence                 │
-│        (Perplexity, Firecrawl, Playwright)                  │
-└─────────────────────────────────────────────────────────────┘
-```
-
----
-
-## Core Principle: Task-Based Coordination
-
-**We do NOT use sequential handoffs.** Agents coordinate through **shared task lists** managed by Claude Code's TaskTool.
-
-**Traditional handoff model (old):**
-```
-Strategist → creates handoff.md → Researcher reads → creates package → hands to Writer
-```
-
-**Task-based model (new):**
-```
-Campaign Lead → creates task list with dependencies
-Agents self-claim tasks when unblocked
-Agents communicate via task metadata
-Progress transparent to everyone
-```
-
-**Benefits:**
-- Parallel work (multiple researchers, multiple writers)
-- Clear dependencies (task can't start until X completes)
-- Transparent progress (anyone can see task status)
-- No file conflicts (agents own their phase outputs)
-
----
-
-## Sprint Model: Iterative Validation
-
-Campaigns execute in **3 sprints with checkpoints**, not one-shot linear execution.
-
-### Sprint 1: Plan & Sketch (Strategy Validation)
-**Goal:** Validate campaign direction before asset creation
-**Duration:** 2-7 days depending on complexity
-**Outputs:**
-- Market research synthesis
-- 3-5 positioning angle options
-- Campaign structure sketch (what assets, why, in what order)
-- Success metrics definition
-- Token budget estimate
-
-**Checkpoint:** User reviews and approves strategic direction
-
-### Sprint 2: Refine & Deepen (Creative Iteration)
-**Goal:** Create first drafts, expect rejection, incorporate feedback
-**Duration:** 3-10 days depending on complexity
-**Outputs:**
-- First-draft assets (landing pages, emails, content)
-- Expert review synthesis (3-5 specialized agents analyze)
-- Revised positioning based on Sprint 1 feedback
-- Deeper research addressing gaps
-
-**Checkpoint:** User reviews drafts and provides specific feedback
-
-### Sprint 3: Execute & Ship (Final Production)
-**Goal:** Polish approved assets to shipping quality
-**Duration:** 2-5 days
-**Outputs:**
-- Shipping-quality assets
-- Published campaign materials
-- Analytics tracking set up
-- Week 1 performance baseline
-
-**No checkpoint needed** - work is execution of approved direction
-
----
-
-## The Vibe Marketing Insight: Options + Taste = Winners
-
-> "AI generates options. Your taste picks winners. That's your advantage."
-
-**How we work:**
-1. **Agents generate variants** (positioning angles, headlines, sequences)
-2. **You pick winners** (using taste + business judgment)
-3. **Agents optimize winners** (iterate on selected direction)
-
-**We provide OPTIONS. You provide TASTE.**
+Sprint model and task naming conventions: `.claude/workflows/sprint-planning.md`
+Campaign retrospectives: `.claude/workflows/retrospective.md`
 
 ---
 
@@ -158,11 +58,6 @@ Downstream agents call `TaskGet(taskId="[ID]")` to read the deliverable path and
 - Stuck > 2 hours with no path forward
 - Strategic uncertainty requiring user input
 
-### Broadcast (Rare)
-**Use for:**
-- "Timeline shifted, see updated tasks"
-- "Client feedback changed direction"
-
 ---
 
 ## Quality Standards (All Agents)
@@ -187,51 +82,6 @@ Always escalate to the user when:
 - **Sensitivity:** Content involves personal stories or controversial positions
 - **Conflicts:** Agents disagree on approach
 - **Stuck > 2 hours:** Can't make progress on claimed task
-
----
-
-## Campaign Learning Culture
-
-After every campaign, we **extract learnings** and compound knowledge:
-
-**Sprint Retrospective Questions:**
-1. What worked better than expected? (double down)
-2. What didn't work? (avoid or fix)
-3. Where did we waste time/tokens? (optimize)
-4. What would we do differently next time? (process improvement)
-5. What patterns should we codify? (add to learnings)
-
-**Location:** `knowledge/learnings/campaigns/retrospectives/[campaign]-[date].md`
-
-**Categories:**
-- `timing/` - When to send emails, publish content, etc.
-- `asset-mix/` - Which asset combinations work best
-- `coordination/` - How agents work together effectively
-- `task-patterns/` - Task breakdown patterns that work
-- `quality-gates/` - What catches issues early
-
----
-
-## The Marketing Team Mindset
-
-**We think in funnels, not pieces:**
-- Top of funnel: Lead generation (lead magnets, landing pages, blogs)
-- Middle of funnel: Nurture (email sequences, case studies, demos)
-- Bottom of funnel: Conversion (sales pages, pricing, testimonials)
-
-**We measure outcomes, not outputs:**
-- Not "we published 5 pieces"
-- Instead "we generated 500 qualified leads"
-
-**We research first, create second:**
-- Market landscape before positioning
-- Customer language before copywriting
-- Competitor analysis before differentiation
-
-**We iterate until right:**
-- Sprint 1: Strategy options
-- Sprint 2: First drafts (expect rejection)
-- Sprint 3: Polish and ship
 
 ---
 
@@ -304,6 +154,17 @@ All agents follow this protocol:
 TaskList()
 ```
 Look for: Status `pending`, owner empty, `blockedBy` empty.
+
+**Filter by role keywords before claiming:**
+
+| Role | Claim tasks containing these keywords |
+|------|--------------------------------------|
+| Research Specialist | research, competitor analysis, customer language, positioning angles, keyword research |
+| Creative Specialist | draft, write, revise, create, blog post, email sequence, landing page, lead magnet, newsletter, social post |
+| Quality Gate | edit, review, quality check, approve |
+| Distribution Specialist | format, publish, distribution, analytics, performance |
+
+**If no matching task exists:** Do not claim an off-role task. Report back that no role-appropriate tasks are available.
 
 **2. Claim:**
 ```

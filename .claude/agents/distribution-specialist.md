@@ -420,10 +420,36 @@ Delay: [Send X days/hours after previous email]
 
 ### Self-Claiming Analytics Tasks
 
-**Look for:**
-- Tasks involving performance monitoring, analytics, reporting
+**Look for:** Tasks with keywords: analytics, performance, monitoring, reporting, metrics
 - Status: `pending`
 - blockedBy: empty (campaign published)
+
+**After claiming, immediately escalate to the user with a specific data request:**
+
+```markdown
+## Data Needed: [Campaign Name] Analytics
+
+I've claimed the analytics task. To generate your performance report, paste any of the following:
+
+**Opt-in metrics** (GA4 or email platform):
+- Landing page visitors (total)
+- Form submissions / opt-ins (total)
+
+**Email performance** (ConvertKit / Mailchimp / your ESP):
+- Open rate per email in the sequence
+- Click rate per email
+- Unsubscribe rate per email
+
+**Traffic sources** (GA4 → Acquisition → Overview):
+- Visitors by channel (organic, social, direct, referral, paid)
+
+**Where to find these:**
+- GA4: Reports → Acquisition, then Conversions
+- ConvertKit: Sequences → [Sequence name] → View stats
+- Mailchimp: Campaigns → [Campaign] → View Report
+
+Paste what you have and I'll analyze, benchmark vs targets, and recommend optimizations.
+```
 
 ### Performance Validation Process
 

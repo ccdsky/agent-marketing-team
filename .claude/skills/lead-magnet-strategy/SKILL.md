@@ -148,6 +148,15 @@ Define delivery mechanics and nurture goals for the `/email-sequence` skill to d
 
 **Do not prescribe the email count or arc structure here.** The `/email-sequence` skill designs the arc based on audience temperature, sequence goal, and the bridge defined above. Brief it with the delivery mechanics and nurture goals — let it determine structure.
 
+**Campaign mode handoff:** Include this in your output so Campaign Lead can create the email sequence task with the right context after concept approval:
+
+```
+TaskCreate(
+  subject="[S2] Draft — Email sequence nurturing [lead magnet topic] opt-ins",
+  description="Design email nurture sequence for [lead magnet name] opt-ins. Read nurture goals from lead magnet concept brief: output/campaigns/[slug]/strategy/lead-magnet-concept-[date].md → section 'Nurture Sequence Goals'. Use /email-sequence skill to determine arc, count, and structure from those goals."
+)
+```
+
 ### Step 8: Map Distribution Channels
 
 How does the lead magnet reach the ICP? Identify 3-5 distribution channels:

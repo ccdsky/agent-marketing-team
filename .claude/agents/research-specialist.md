@@ -366,7 +366,13 @@ Write(
 ```
 TaskUpdate(
   taskId="2",
-  status="completed"
+  status="completed",
+  metadata={
+    "deliverable": "knowledge/research/dev-cli-pain-points-2026-02-15.md",
+    "key_findings": "1. Discoverability (83% mention) 2. Learning curve (67%) 3. Onboarding (54%)",
+    "recommended_angle": "Discovery engine — addresses #1 pain point",
+    "ready_for": "campaign-lead"
+  }
 )
 ```
 

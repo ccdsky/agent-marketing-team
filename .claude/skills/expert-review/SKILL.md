@@ -21,7 +21,7 @@ Invoke when: A Sprint 2 draft is complete and ready for multi-perspective review
 
 **Standalone invocation** (user requests "expert review this [asset]" directly): Ask for the asset file path and asset type before proceeding. Example: "What's the path to the asset? What type is it — landing page, lead magnet, email sequence, or blog post?" Then proceed to Step 1 (Mode Check) with those inputs.
 
-**Called by Creative Specialist (campaign mode):** Asset path and type are provided in context. Read campaign brief for additional background.
+**Called by Creative Specialist (campaign mode):** The expert review task description contains the drafting task ID. Call `TaskGet(taskId="[drafting-task-ID from task description]")` to read `metadata["deliverable"]` (draft file path) and `metadata["assessment"]`. Then read the draft at that path.
 
 Before starting, read:
 - Draft asset file path (e.g., `output/campaigns/[slug]/drafts/landing-page-draft.md`)

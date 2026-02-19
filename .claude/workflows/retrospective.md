@@ -111,14 +111,21 @@ tags: [relevant-tags]
 [When this pattern might not apply]
 ```
 
-### Step 4: Update Agent Definitions (If Needed)
+### Step 4: Flag Agent Improvements for Human Review
 
-If the retrospective reveals a consistent issue with how an agent operates (not a one-off), update the relevant agent file:
-- Process improvement → add to the agent's workflow section
-- New pattern → add to the agent's reference examples
-- Anti-pattern discovered → add to the agent's "what not to do" section
+If the retrospective reveals a consistent issue with how an agent operates, **do not edit agent files directly**. Document the suggested improvement in the retrospective file and flag it for human review:
 
-This is how the system improves over time — not just from learnings files, but from updated agent behavior.
+```markdown
+## Recommended Agent Updates
+
+**human_review_required: true**
+
+| Agent File | Section | Suggested Change | Evidence |
+|------------|---------|-----------------|----------|
+| [agent-name].md | [Section name] | [What to add/change] | [Data or observation from this campaign] |
+```
+
+The human reviews these suggestions and applies approved changes. This prevents incorrect edits from compounding into systemic issues.
 
 ### Step 5: Create Archive Entry
 

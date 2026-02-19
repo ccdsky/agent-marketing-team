@@ -92,7 +92,11 @@ Mine reviews and community discussions for customer language organized by JTBD f
 
 **Sources (accessible without login):** Product Hunt, Reddit (relevant subreddits), LinkedIn comments, Capterra (partial — some reviews visible without login), App Store reviews (if applicable)
 
-**Sources requiring login (use fallback):** G2 and TrustRadius require authentication — WebFetch returns login walls. Fallback: `WebSearch(query="site:g2.com [competitor] reviews [pain point]")` returns Google-indexed review snippets without login. Lower fidelity than full reviews but still captures real customer language.
+**Sources requiring login (use fallback):** G2 and TrustRadius require authentication — WebFetch returns login walls. Fallback: `WebSearch(query="site:g2.com [competitor] reviews [pain point]")` returns Google-indexed review snippets without login.
+
+**Confidence for fallback content:**
+- Google-indexed snippet (verbatim sentence from a review): **MEDIUM**
+- AI Overview / SERP summary ("many reviewers say..."): **LOW** — do not treat as direct customer language; it's a paraphrase
 
 **If Firecrawl MCP is configured with authenticated sessions:** G2 and TrustRadius are accessible via `firecrawl.scrape()` with auth — use for highest-quality review mining.
 
@@ -148,6 +152,8 @@ For each section, include:
 | Competitor website copy | HIGH | Content dated >1 year → MEDIUM |
 | Analyst report / research study | MEDIUM | Study <6 months old → HIGH |
 | Forum/Reddit discussion | MEDIUM | Single thread only → LOW |
+| Google snippet (G2/TrustRadius via search) | MEDIUM | Single result only → LOW |
+| AI Overview / SERP summary | LOW | Never upgrade — paraphrase only |
 | Agent inference from patterns | LOW | Corroborated by 2+ other sources → MEDIUM |
 
 ---
