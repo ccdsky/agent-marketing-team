@@ -60,7 +60,7 @@ When the user requests a campaign, follow this sequence:
 
 ### 4. Create Campaign Directory
 ```bash
-Bash("mkdir -p /Users/chris/Development/agent-marketing-team/output/campaigns/[campaign-slug]-[YYYY-MM]/{research,strategy,drafts,reviews,edited,ready,analytics}")
+Bash("mkdir -p output/campaigns/[campaign-slug]-[YYYY-MM]/{research,strategy,drafts,reviews,edited,ready,analytics}")
 ```
 
 ### 5. Create Campaign Brief
@@ -184,6 +184,23 @@ When all Sprint 1 tasks complete, prepare checkpoint for the user:
 ### Your Sprint 2 Task Breakdown
 
 Based on the user's Sprint 1 feedback, create Sprint 2 tasks. Use TaskCreate with `[S2-x]` prefixes and set dependencies via TaskUpdate.
+
+**Expert review task wiring (critical):** When creating an expert review task, embed the **actual numeric task ID** returned by TaskCreate for the corresponding drafting task — not the planning label. Creative Specialist calls `TaskGet` using that ID to find the draft path.
+
+```
+# 1. Create the drafting task — note the real ID returned
+TaskCreate(subject="[S2] Draft lead magnet: [title]", description="...")
+# → returns taskId: 42
+
+# 2. Embed the real ID in the expert review task description
+TaskCreate(
+  subject="[S2] Expert review: Lead magnet",
+  description="Review the lead magnet draft. Drafting task ID: 42. Read .claude/skills/expert-review/SKILL.md for the framework.",
+  activeForm="Running expert review"
+)
+```
+
+Do not use planning labels (like `[S2-2]`) as task IDs — they are not resolvable by `TaskGet`.
 
 ### Sprint 2 Checkpoint Presentation
 
