@@ -13,7 +13,9 @@ Each agent **creates NEW files** in their phase directory. No shared editing.
 
 | Phase | Owner | Creates Files In | Read-Only For |
 |-------|-------|------------------|---------------|
-| Research | Research Specialist | `knowledge/research/` | Writer, Strategist |
+| Strategy | Campaign Lead | `output/campaigns/[name]/campaign-brief.md` | All agents |
+| Retrospective | Campaign Lead | `knowledge/learnings/`, `knowledge/archive/` | All agents |
+| Research | Research Specialist | `knowledge/research/` | All agents |
 | Drafting | Creative Specialist | `output/campaigns/[name]/drafts/` | Editor |
 | Editing | Quality Gate | `output/campaigns/[name]/edited/` | Publisher |
 | Publishing | Distribution Specialist | `output/campaigns/[name]/ready/` | Analyst |
@@ -94,7 +96,7 @@ Before any agent begins work, verify these context files are populated (not plac
 
 **If any file contains placeholder text:** Stop. Escalate to the user: "Context file [name] needs to be populated before work can begin. Fill in the template at `context/[name].md` — each file has inline instructions describing what to put there."
 
-`context/brand-guide.md` is **optional**. If it doesn't exist, skip reads for it — do not fail.
+`context/brand-guide.md` — read if it exists, skip if missing. Absence of the file is not a failure; skipping a file that exists is.
 
 ---
 

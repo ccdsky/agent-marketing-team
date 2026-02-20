@@ -84,19 +84,18 @@ The following agent definition changes are validated by this test plan:
 
 ## Delegation Audit Protocol
 
-For each sprint, verify delegation by checking which agent created which file:
+For each sprint, verify delegation by reviewing the session transcript:
 
-```bash
-# After Sprint 2 completes, check file ownership via session log
-# Pass: drafts/ files created by Creative Specialist subagent task
-# Pass: edited/ files created by Quality Gate subagent task
-# Fail: either file type created by Campaign Lead
+**Pass criteria:**
+- `Task()` call spawning Creative Specialist appears **before** any `Write()` to `drafts/`
+- `Task()` call spawning Quality Gate appears **before** any `Write()` to `edited/`
+- Campaign Lead has zero `Write()` calls to `drafts/` or `edited/`
 
-# Evidence to look for in session log:
-# - Task() call spawning creative-specialist before any Write() to drafts/
-# - Task() call spawning quality-gate before any Write() to edited/
-# - Zero Write() calls from Campaign Lead to drafts/ or edited/
-```
+**Fail criteria:**
+- Any `Write()` to `drafts/` or `edited/` executed by Campaign Lead directly
+- Specialists never spawned as separate `Task(subagent_type="general-purpose")` calls
+
+Audit by searching the session log for `Write(file_path=` calls attributed to Campaign Lead. If any path contains `drafts/` or `edited/`, test 2.12 fails.
 
 ---
 

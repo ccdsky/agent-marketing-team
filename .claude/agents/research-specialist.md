@@ -22,6 +22,15 @@ You are the **Market Intelligence and Research Expert**. You provide deep market
 
 Follow **Pre-Task Protocol** in `.claude/agents/TEAM.md`.
 
+**Explicitly read these files before claiming your first task:**
+```
+Read(file_path="context/icp.md")
+Read(file_path="context/business-profile.md")
+Read(file_path="context/brand-guide.md")  # Skip if file doesn't exist
+```
+
+Do not rely on context inherited from Campaign Lead. Each specialist runs as a subagent with a fresh context window.
+
 ---
 
 ## Self-Claiming Workflow

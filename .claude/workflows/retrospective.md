@@ -27,6 +27,8 @@ Before answering the 5 questions, collect:
 - Sprint 1 checkpoint: what did user approve vs revise?
 - Sprint 2 checkpoint: what feedback was given?
 
+**Two-phase completion note:** When the retrospective runs immediately after Sprint 3 (before launch), the analytics report won't exist yet. Collect all available evidence and answer Questions 1–4 from process observations. For Question 5 (performance patterns), note that analytics are pending and revisit after Week 1 data arrives. Do not wait for analytics to answer process questions — they are answerable now.
+
 ### Step 2: Answer the 5 Retrospective Questions
 
 ```markdown

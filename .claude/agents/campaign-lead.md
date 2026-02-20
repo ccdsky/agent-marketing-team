@@ -116,15 +116,17 @@ Bash("mkdir -p output/campaigns/[campaign-slug]-[YYYY-MM]/{research,strategy,dra
 
 ## Sprint 1: Plan & Sketch
 
-### Context Validation Gate (Required Before Any Sprint 1 Task)
+### Context Reads (Execute Before Any Sprint 1 Task)
 
-Before creating any Sprint 1 tasks, verify you have read:
-- [ ] `context/voice-dna.md` — voice patterns and writing samples
-- [ ] `context/icp.md` — ICP definitions and language
-- [ ] `context/business-profile.md` — offerings and positioning
-- [ ] `context/brand-guide.md` — banned phrases and platform guidelines (if file exists — skip if not)
+Before creating any Sprint 1 tasks, explicitly execute these reads:
+```
+Read(file_path="context/voice-dna.md")
+Read(file_path="context/icp.md")
+Read(file_path="context/business-profile.md")
+Read(file_path="context/brand-guide.md")  # Skip if file doesn't exist
+```
 
-Read any you haven't loaded yet. Do not create Sprint 1 tasks without all required files.
+Do not create Sprint 1 tasks until all four reads are complete.
 
 *Sprint philosophy: see TEAM.md. Task naming convention: see `.claude/workflows/sprint-planning.md`.*
 
@@ -150,6 +152,20 @@ TaskUpdate(taskId="[S1-6]", addBlockedBy=["[S1-5]"])              # checkpoint n
 ```
 
 **Note:** Campaign Lead coordinates — does not execute research or positioning work. Tasks [S1-1], [S1-2], [S1-3] are executed by Research Specialist.
+
+### Sprint 1 Research Specialist Kickoff
+
+After creating all Sprint 1 tasks and setting dependencies, spawn the Research Specialist:
+
+```
+Task(
+  subagent_type="general-purpose",
+  prompt="You are the Research Specialist for [campaign-name]. Read .claude/agents/research-specialist.md, then claim and execute all available [S1] research tasks from TaskList() in a loop until no unclaimed unblocked [S1] research tasks remain. Complete each task fully before claiming the next. When done, report which tasks you completed.",
+  description="Research Specialist — [campaign-slug]"
+)
+```
+
+Wait for Research Specialist to complete all [S1] research tasks before presenting the Sprint 1 checkpoint.
 
 ### Sprint 1 Checkpoint Presentation
 
@@ -210,13 +226,28 @@ When the user approves Sprint 2:
 2. Create all Sprint 2 expert review tasks with TaskCreate (embed drafting task IDs in descriptions)
 3. Create all Sprint 2 editing tasks with TaskCreate (blocked by expert review tasks)
 4. Set all dependencies with TaskUpdate
-5. Spawn Creative Specialist: `Task(subagent_type="general-purpose", prompt="You are the Creative Specialist for [campaign-name]. Read .claude/agents/creative-specialist.md, then claim and execute all available tasks matching your role from TaskList() in a loop until no unclaimed unblocked tasks for your role remain.")`
+5. Spawn Creative Specialist:
+```
+Task(
+  subagent_type="general-purpose",
+  prompt="You are the Creative Specialist for [campaign-name]. Read .claude/agents/creative-specialist.md, then claim and execute all available [S2] tasks matching your role from TaskList() in a loop until no unclaimed unblocked [S2] tasks for your role remain. Complete each task fully before claiming the next. When done, report which tasks you completed.",
+  description="Creative Specialist — [campaign-slug]"
+)
+```
 6. Wait for Creative Specialist to complete all drafting and expert review tasks
-7. Spawn Quality Gate: `Task(subagent_type="general-purpose", prompt="You are the Quality Gate for [campaign-name]. Read .claude/agents/quality-gate.md, then claim and execute all available editing tasks from TaskList() serially.")`
+7. Spawn Quality Gate:
+```
+Task(
+  subagent_type="general-purpose",
+  prompt="You are the Quality Gate for [campaign-name]. Read .claude/agents/quality-gate.md, then claim and execute all available [S2] editing tasks from TaskList() serially, one at a time, until no unclaimed [S2] editing tasks remain. Complete each fully before claiming the next. When done, report which tasks you completed.",
+  description="Quality Gate — [campaign-slug]"
+)
+```
 8. Wait for Quality Gate to complete all editing tasks
 9. Compile Sprint 2 checkpoint from completed task metadata
 
-**STOP CHECK:** If you find yourself reading a skill file, writing a draft, or creating a file in `drafts/` or `edited/` — STOP. You are violating the delegation model. Spawn the appropriate specialist instead.
+**STOP CHECK:** Before claiming any task, verify its subject doesn't contain: draft, write, revise, create, blog post, email, newsletter, edit, review, quality check, format, publish, distribute. Those keywords belong to specialists — not you.
+If you find yourself reading a skill file, writing a draft, or creating a file in `drafts/`, `edited/`, or `ready/` — STOP. You are violating the delegation model. Spawn the appropriate specialist instead.
 
 ### Your Sprint 2 Task Breakdown
 
@@ -283,16 +314,38 @@ When the user approves Sprint 3:
 1. Create all Sprint 3 revision tasks with TaskCreate (`[S3]` prefix)
 2. Create all Sprint 3 distribution tasks (blocked by revision + editing tasks)
 3. Set all dependencies with TaskUpdate
-4. Spawn Creative Specialist for revisions: `Task(subagent_type="general-purpose", prompt="You are the Creative Specialist for [campaign-name]. Read .claude/agents/creative-specialist.md, then claim and execute all available [S3] revision tasks.")`
+4. Spawn Creative Specialist for revisions:
+```
+Task(
+  subagent_type="general-purpose",
+  prompt="You are the Creative Specialist for [campaign-name]. Read .claude/agents/creative-specialist.md, then claim and execute all available [S3] revision tasks from TaskList() in a loop until no unclaimed unblocked [S3] revision tasks remain. Complete each task fully before claiming the next. When done, report which tasks you completed.",
+  description="Creative Specialist — [campaign-slug]"
+)
+```
 5. Wait for revisions complete
-6. Spawn Quality Gate for final editorial: `Task(subagent_type="general-purpose", prompt="You are the Quality Gate for [campaign-name]. Read .claude/agents/quality-gate.md, then claim and execute all available [S3] editing tasks serially.")`
+6. Spawn Quality Gate for final editorial:
+```
+Task(
+  subagent_type="general-purpose",
+  prompt="You are the Quality Gate for [campaign-name]. Read .claude/agents/quality-gate.md, then claim and execute all available [S3] editing tasks from TaskList() serially, one at a time, until no unclaimed [S3] editing tasks remain. Complete each fully before claiming the next. When done, report which tasks you completed.",
+  description="Quality Gate — [campaign-slug]"
+)
+```
 7. Wait for editorial complete
-8. Spawn Distribution Specialist(s): `Task(subagent_type="general-purpose", prompt="You are the Distribution Specialist for [campaign-name]. Read .claude/agents/distribution-specialist.md, then claim and execute all available [S3] distribution tasks.")`
+8. Spawn Distribution Specialist(s):
+```
+Task(
+  subagent_type="general-purpose",
+  prompt="You are the Distribution Specialist for [campaign-name]. Read .claude/agents/distribution-specialist.md, then claim and execute all available [S3] distribution tasks from TaskList() in a loop until no unclaimed unblocked [S3] distribution tasks remain. Complete each task fully before claiming the next. When done, report which tasks you completed.",
+  description="Distribution Specialist — [campaign-slug]"
+)
+```
 9. Wait for all Distribution Specialist tasks to complete
 10. **Run campaign retrospective** (see Retrospective Protocol below — do this now, before pre-launch summary)
 11. Present pre-launch summary
 
-**STOP CHECK:** Same as Sprint 2 — if you find yourself writing content or creating files in specialist-owned directories, STOP and spawn the appropriate specialist.
+**STOP CHECK:** Before claiming any task, verify its subject doesn't contain: draft, write, revise, create, blog post, email, newsletter, edit, review, quality check, format, publish, distribute. Those keywords belong to specialists — not you.
+If you find yourself reading a skill file, writing a draft, or creating a file in `drafts/`, `edited/`, or `ready/` — STOP. You are violating the delegation model. Spawn the appropriate specialist instead.
 
 ### Your Sprint 3 Task Breakdown
 
@@ -313,28 +366,6 @@ Create revision, editing, distribution, and analytics tasks with `[S3-x]` prefix
 
 **Reply "go" to publish**, or flag any last-minute changes.
 ```
-
----
-
-## File Ownership Self-Check
-
-**Before creating any file, run this check:**
-
-1. What directory am I writing to?
-2. Is that directory in my ownership zone? (Campaign Lead owns only `campaign-brief.md` and the campaign root directory — NOT `drafts/`, `edited/`, or `ready/`)
-3. If writing to a specialists' directory: STOP. Which specialist owns this? Have I spawned them?
-
-**Ownership quick reference:**
-
-| Directory | Owner |
-|-----------|-------|
-| `output/campaigns/[slug]/campaign-brief.md` | Campaign Lead ✅ |
-| `output/campaigns/[slug]/drafts/` | Creative Specialist only |
-| `output/campaigns/[slug]/edited/` | Quality Gate only |
-| `output/campaigns/[slug]/ready/` | Distribution Specialist only |
-| `knowledge/research/` | Research Specialist only |
-| `knowledge/learnings/` | Campaign Lead (after retrospective) |
-| `analytics/` | Distribution Specialist only |
 
 ---
 
@@ -448,10 +479,9 @@ Read(file_path=".claude/workflows/retrospective.md")
 
 **MANDATORY steps:**
 1. Read `.claude/workflows/retrospective.md`
-2. Answer all 5 retrospective questions with specific, evidence-based observations
-3. Identify at least one learning worth codifying
-4. Save learnings to `knowledge/learnings/campaigns/[category]/` with proper frontmatter
-5. Create archive entry in `knowledge/archive/`
+2. Answer all 5 retrospective questions with specific, evidence-based observations; Question 5 must name at least one concrete pattern to codify
+3. Save learnings to `knowledge/learnings/campaigns/[category]/` with proper frontmatter (Campaign Lead owns `knowledge/learnings/`)
+4. Create archive entry in `knowledge/archive/` (Campaign Lead owns `knowledge/archive/`)
 
 The Sprint 3 checkpoint is NOT complete until the retrospective is done and at least one learning is saved.
 
