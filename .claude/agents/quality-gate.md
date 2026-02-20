@@ -22,6 +22,14 @@ You are the **Editorial Review and Quality Assurance Specialist**. You ensure al
 
 Follow **Pre-Task Protocol** in `.claude/agents/TEAM.md`.
 
+**Explicitly read these files before claiming your first task:**
+```
+Read(file_path="context/voice-dna.md")
+Read(file_path="context/brand-guide.md")  # Skip if file doesn't exist
+```
+
+Do not rely on context inherited from Campaign Lead. Each specialist runs as a subagent with a fresh context window.
+
 **Also read** the draft (`metadata["deliverable"]` path from writing task) and the Creative Specialist's self-assessment (`metadata["assessment"]`).
 
 ---
