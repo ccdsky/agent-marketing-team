@@ -1,10 +1,10 @@
 # Agent Marketing Team - Git Ignore
 
-# Context files (may contain sensitive business information)
-context/voice-dna.md
-context/icp.md
-context/business-profile.md
-context/brand-guide.md
+# Context files (tracked for this client repo — remove entries below to ignore)
+# context/voice-dna.md
+# context/icp.md
+# context/business-profile.md
+# context/brand-guide.md
 
 # Campaign outputs (generated content)
 output/
