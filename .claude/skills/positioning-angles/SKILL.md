@@ -10,7 +10,7 @@ Invoke when: Campaign Lead assigns positioning work in Sprint 1, or user request
 
 ## Methodology Sources
 
-Dunford (Obviously Awesome) — 5-component positioning model. Laja (Wynter) — 4-layer messaging test. Walker (Refine Labs) — demand creation vs. capture. Play Bigger — category design.
+Dunford (Obviously Awesome) — 5-component positioning model. Laja (Wynter) — 4-layer messaging test. Walker (Refine Labs) — demand creation vs. capture. Play Bigger — category design. Thiel (Zero to One) — "secret" test for mechanism strength and category creation. Masterson/Forde (Great Leads) — lead type selection by awareness stage. Kahneman (Thinking, Fast and Slow) — dual-process mechanism credibility test.
 
 ---
 
@@ -64,6 +64,51 @@ For each unique attribute, identify:
 
 This produces the raw material for positioning angles.
 
+### Step 3.5: Build the Mechanism
+
+The mechanism is the "why this works" story that makes positioning believable and defensible. Every strong positioning angle has a mechanism underneath it — build it explicitly before generating angles.
+
+**Structure — Failure → Shift → Result:**
+
+1. **THE FAILURE** — Why what they tried before didn't work
+   "Most [solutions] fail because they [common approach flaw]"
+   Source this from icp.md pain points and research package.
+
+2. **THE SHIFT** — What's different about your approach
+   "We discovered that [insight/method/framework] changes the equation"
+   Source this from business-profile.md unique attributes (Step 2 output).
+
+3. **THE RESULT** — What becomes possible
+   "[Specific outcome] because [mechanism removes the old bottleneck]"
+   Source this from Step 3's attribute-to-value mapping.
+
+**Four Mechanism Types (choose the strongest fit):**
+
+| Type | Pattern | Best when... |
+|------|---------|-------------|
+| Process | "Instead of X, we do Y, which means Z" | Your method is genuinely different |
+| Discovery | "We found that [non-obvious truth], which is why [result]" | You have a proprietary insight |
+| System | "Our [Named System] works because [addresses root cause]" | You have a structured framework |
+| Timing | "Until [recent change], this wasn't possible. Now [capability]" | A market shift enables your approach |
+
+**Naming Rules:**
+- 2-4 words. Memorable. Ownable.
+- Should feel proprietary without being jargon.
+- Test: if a competitor could use this exact name, it's not specific enough.
+- Examples: "Awareness Matching System", "Offer Compression Method", "Revenue Signal Engine"
+
+**Thiel's "Secret" Test:**
+- Does this mechanism encode a non-obvious truth about the market?
+- Is it something you believe that most competitors would disagree with?
+- If yes → this is a strong candidate for category creation. Flag it and consider a Category Creation angle in Step 4.
+
+**Kahneman Dual-Process Litmus Test:**
+- System 1: "I haven't heard it explained like that before" → you're close
+- System 2: "That actually makes sense why mine didn't work" → you've got it
+- Must pass both. Intuition without logic is a gimmick. Logic without intuition won't be remembered.
+
+**Output:** One mechanism per unique attribute cluster from Step 3. Tag each with its type. Carry forward into Step 4 — every angle should reference or build on a mechanism, not just the "mechanism-based" angle type.
+
 ### Step 4: Generate 5-8 Positioning Angles
 
 Each angle is a different way of framing the product's position relative to the competitive landscape. Angles should be mutually exclusive — if two angles feel similar, collapse them.
@@ -73,9 +118,10 @@ Each angle is a different way of framing the product's position relative to the 
 - **Against a specific alternative:** "Unlike [alternative], [product] does [X] so buyers can [outcome]"
 - **For a specific context:** "The [product] for [specific situation/trigger]"
 - **Category creation:** "[Product] is the first [new category name] for [ICP]"
-- **Mechanism-based:** "The only [product type] that works by [unique mechanism]"
+- **Mechanism-based:** "The only [product type] that works by [unique mechanism]" — Reference Step 3.5 output for the mechanism to use here.
 - **Outcome-based:** "The [ICP]'s fastest path to [specific outcome]"
 - **Against the status quo:** "Stop [painful workaround]. [Product] handles [X] automatically"
+- **Category creation:** "[Product] is the first [new category name] for [ICP]" — Prerequisite: Step 3.5 mechanism passes Thiel's "secret" test. The mechanism defines the category — the category name should make the mechanism's insight self-evident.
 
 ### Step 5: Score Each Angle
 

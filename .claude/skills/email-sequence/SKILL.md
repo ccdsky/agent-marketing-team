@@ -42,6 +42,27 @@ Email 4: Resolve with insight or solution
 Email 5: CTA + urgency or next step
 ```
 
+**Awareness-Stage Arc:**
+
+In addition to the emotional arc above, map each email to an awareness-stage transition. The subscriber enters at one stage and should exit at the next:
+
+| Email | Awareness Transition | Job | Masterson Lead Type |
+|-------|---------------------|-----|---------------------|
+| 1 | Problem Aware → Solution Aware | Deliver value, name the mechanism | Solution Lead |
+| 2 | Solution Aware → Solution Aware (deeper) | Expand mechanism, share non-obvious insight | Secret Lead |
+| 3 | Solution Aware → Product Aware | Introduce your specific approach, case study | Proof Lead |
+| 4 | Product Aware → Most Aware | Handle top objection, build certainty | Promise Lead |
+| 5 | Most Aware → Convert | Clear offer, genuine urgency, one CTA | Direct Offer Lead |
+
+*The table above shows a lead-magnet-delivery example. Adjust entry stage based on subscriber temperature:*
+- **Nurture sequences:** Subscribers may enter at Unaware — add 1-2 emails at the start for story/problem-agitation before introducing solutions.
+- **Launch sequences:** Subscribers are typically Solution or Product Aware — compress early stages, emphasize proof and offer.
+- **Re-engagement sequences:** Subscribers were Most Aware but lapsed — restart at Problem Aware to rebuild relevance.
+
+**Rule:** Never skip more than one awareness stage per email. If subscribers enter at Unaware, you need more emails — don’t jump straight to a product pitch.
+
+Each email’s subject line and opening hook should match the Masterson lead type for its TARGET awareness stage (the stage you’re moving the reader toward, not where they start).
+
 ### Step 2: Write Each Email
 
 For each email, complete in this order:

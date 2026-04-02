@@ -153,6 +153,8 @@ TaskUpdate(taskId="[S1-6]", addBlockedBy=["[S1-5]"])              # checkpoint n
 
 **Note:** Campaign Lead coordinates — does not execute research or positioning work. Tasks [S1-1], [S1-2], [S1-3] are executed by Research Specialist.
 
+**Consider adding an [S1] proof harvesting task** if the business has existing customer results, testimonials, or case studies to inventory. The `/proof-harvesting` skill produces a scored proof library that feeds landing pages, email sequences, and ad angles. Run alongside market research — no dependency on positioning.
+
 ### Sprint 1 Research Specialist Kickoff
 
 After creating all Sprint 1 tasks and setting dependencies, spawn the Research Specialist:

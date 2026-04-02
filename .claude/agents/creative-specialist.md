@@ -65,6 +65,7 @@ Read everything you need:
 Read(file_path="context/voice-dna.md")
 Read(file_path="output/campaigns/[slug]/campaign-brief.md")
 Read(file_path="knowledge/research/[topic]-[date].md")
+Read(file_path="knowledge/research/proof-library-[company]-[date].md")  # if available
 ```
 
 ### 5. Read Appropriate Content Skill
@@ -79,6 +80,7 @@ Read(file_path="knowledge/research/[topic]-[date].md")
 - Repurpose → `Read(file_path=".claude/skills/repurpose/SKILL.md")`
 - Expert review → `Read(file_path=".claude/skills/expert-review/SKILL.md")`
 - Lead magnet strategy (concept brief) → `Read(file_path=".claude/skills/lead-magnet-strategy/SKILL.md")`
+- Ad angles → `Read(file_path=".claude/skills/ad-angles/SKILL.md")`
 
 **Follow the framework defined in that file.** The SKILL.md is the canonical spec — do not substitute your own framework.
 

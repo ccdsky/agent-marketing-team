@@ -37,7 +37,7 @@ Do not rely on context inherited from Campaign Lead. Each specialist runs as a s
 
 Follow **Agent Protocol** in `.claude/agents/TEAM.md`.
 
-**Task keywords to look for:** market research, competitor analysis, customer language, positioning gaps, keyword research, positioning angles, differentiation angles, generate positioning
+**Task keywords to look for:** market research, competitor analysis, customer language, positioning gaps, keyword research, positioning angles, differentiation angles, generate positioning, ad angles, angle multiplication, proof harvesting, proof inventory, proof audit
 
 **Claiming behavior:** Standard — can claim multiple research tasks simultaneously.
 
@@ -371,7 +371,9 @@ Use the **Escalation Format** in `.claude/agents/TEAM.md`.
 
 - **Market research:** Read `.claude/skills/market-research/SKILL.md` — 4-phase competitive intelligence framework (Ellis PMF, Moesta JTBD, Revella 5 Rings, Fishkin audience behavior, Laja messaging test)
 - **Keyword research:** Read `.claude/skills/keyword-research/SKILL.md` — 12-step B2B keyword research framework (Ahrefs Business Potential, Fishkin zero-click, Sonders inverse approach, Crestodina two-track system)
-- **Positioning angles:** Read `.claude/skills/positioning-angles/SKILL.md` — Dunford 5-component model, Laja 4-layer test, Walker demand creation. Run after market research completes. Deliverable: `output/campaigns/[slug]/strategy/positioning-angles-[date].md`
+- **Positioning angles:** Read `.claude/skills/positioning-angles/SKILL.md` — Dunford 5-component model, Laja 4-layer test, Walker demand creation, Thiel "secret" test, Kahneman dual-process mechanism credibility. Run after market research completes. Deliverable: `output/campaigns/[slug]/strategy/positioning-angles-[date].md`
+- **Ad-angle multiplication:** Read `.claude/skills/ad-angles/SKILL.md` — Multiplies approved positioning into 10-15 creative variants across 6 dimensions (Pain, Desire, Proof, Identity, Contrarian, Urgency). Run after Sprint 1 checkpoint when angle is approved.
+- **Proof harvesting:** Read `.claude/skills/proof-harvesting/SKILL.md` — Systematic proof extraction and scoring with Cialdini persuasion tags. Run during Sprint 1 alongside market research. Output feeds all content skills.
 
 These skills define canonical research processes. Read the relevant SKILL.md before starting tasks — follow the framework defined there, not your default approach.
 

@@ -26,7 +26,23 @@ Before writing, always read:
 Clarify before writing:
 - **What are we offering?** (lead magnet, product, service, trial)
 - **One conversion action:** email signup | purchase | book a call | download
-- **Traffic source:** cold traffic (SEO/ads) | warm (email) | hot (retargeting)
+- **Buyer Awareness Stage:** Diagnose before writing — determines your entire messaging approach
+
+  | Stage | The buyer... | Lead Type (Masterson/Forde) |
+  |-------|-------------|---------------------------|
+  | **Unaware** | Doesn't know they have the problem | Story Lead or Secret Lead |
+  | **Problem Aware** | Feels the pain, doesn't know solutions exist | Problem-Agitation Lead |
+  | **Solution Aware** | Knows solutions exist, evaluating approaches | Solution/Mechanism Lead |
+  | **Product Aware** | Knows your product, not yet convinced | Promise Lead or Proof Lead |
+  | **Most Aware** | Knows and trusts you, needs the right offer | Direct Offer Lead |
+
+  **Messaging rules by stage:**
+  - Unaware: Never mention the product above the fold. Lead with story or shared experience. Goal: make them realize they have a problem.
+  - Problem Aware: Agitate before solving. Don't present the solution in Section 1. Goal: deepen the pain until they want a solution.
+  - Solution Aware: Lead with mechanism differentiation. "Most solutions fail because..." Goal: position your approach as structurally different.
+  - Product Aware: Lead with proof. Testimonials, case studies, specific results. Goal: remove doubt with evidence.
+  - Most Aware: Lead with offer. Price, guarantee, urgency. Skip the education. Goal: make the decision easy.
+
 - **Primary objection to overcome:** (from icp.md — what makes them hesitate?)
 
 ### Step 2: Build the 7-Section Structure
@@ -75,6 +91,12 @@ Transition from problem to solution. Don't hard-sell yet — position the soluti
 3. Explain WHY it works (the unique mechanism)
 4. One-sentence promise: what they'll have/be able to do
 
+**Mechanism Credibility Check (Kahneman):**
+- System 1 (intuitive): Does the mechanism "feel right" on first read? Test: could you explain it to a friend in one sentence and get a nod?
+- System 2 (analytical): Does it hold up to logical scrutiny? Test: if someone asks "why does that work?" can you answer specifically?
+- If it passes System 1 but fails System 2 → it's a gimmick, revise
+- If it passes System 2 but fails System 1 → it's too complex, simplify
+
 #### Section 4: Proof Block
 
 Back up the promise with evidence. Use whatever proof exists:
@@ -88,6 +110,14 @@ Back up the promise with evidence. Use whatever proof exists:
 6. Your own credentials (years of experience, past results)
 
 **Write proof as stories, not praise.** "John reduced his CAC by 40% in 6 weeks" beats "Amazing product!"
+
+**Proof Persuasion Dimensions (Cialdini):**
+When selecting and arranging proof, ensure coverage across multiple persuasion principles:
+- **Social Proof:** "People like you chose this" — user counts, adoption stats, industry logos
+- **Authority:** "Experts endorse this" — credentials, endorsements, media mentions
+- **Consistency:** "The journey works" — case study arcs showing commitment → effort → result
+
+Arrange proof to satisfy both System 1 (emotional testimonial story) and System 2 (specific numbers and outcomes) in sequence.
 
 #### Section 5: Offer Stack / What You Get
 
@@ -151,7 +181,8 @@ Save to: `output/campaigns/[campaign-slug]/drafts/landing-page-draft.md`
 
 **Conversion goal:** [one action]
 **Target ICP segment:** [from icp.md]
-**Traffic source assumption:** [cold|warm|hot]
+**Awareness stage:** [Unaware|Problem Aware|Solution Aware|Product Aware|Most Aware]
+**Lead type used:** [Story|Secret|Problem-Agitation|Solution/Mechanism|Promise|Proof|Direct Offer]
 
 ---
 

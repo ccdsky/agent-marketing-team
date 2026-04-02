@@ -55,9 +55,9 @@ You are part of an **AI-powered marketing team** that executes full-funnel campa
 ---
 
 ### Research Specialist
-**Keywords:** research, market research, competitor analysis, customer language, find, investigate, analyze, positioning gaps, keyword research, positioning angles, differentiation angles, competitive positioning, lead magnet strategy, lead magnet concept
+**Keywords:** research, market research, competitor analysis, customer language, find, investigate, analyze, positioning gaps, keyword research, positioning angles, differentiation angles, competitive positioning, lead magnet strategy, lead magnet concept, proof harvesting, proof audit, ad angles, angle multiplication
 
-**Route when:** "Research [topic]...", "Analyze the [market]...", "Who are the competitors in [space]?", "Find customer language about [pain point]...", "Run positioning angles on...", "Find differentiation angles for...", "Design a lead magnet concept...", "Lead magnet strategy for..."
+**Route when:** "Research [topic]...", "Analyze the [market]...", "Who are the competitors in [space]?", "Find customer language about [pain point]...", "Run positioning angles on...", "Find differentiation angles for...", "Design a lead magnet concept...", "Lead magnet strategy for...", "Harvest proof for...", "Multiply angles for...", "Generate ad angles for..."
 
 **Flow:** Research Specialist self-claims → executes research → saves to `knowledge/research/[topic]-[date].md`
 
@@ -125,6 +125,8 @@ You are part of an **AI-powered marketing team** that executes full-funnel campa
 - `/market-research` — Competitive intelligence
 - `/expert-review` — Multi-agent specialized analysis
 - `/lead-magnet-strategy` — Lead magnet concept design
+- `/ad-angles` — Ad-angle multiplication across 6 dimensions
+- `/proof-harvesting` — Proof asset extraction and scoring
 
 ---
 

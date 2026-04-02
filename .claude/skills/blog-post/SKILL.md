@@ -29,6 +29,15 @@ Clarify before writing:
 - **Search intent:** Informational | Navigational | Commercial | Transactional
 - **Reader's question:** The specific question this article answers
 - **Funnel stage:** Awareness (top) | Consideration (middle) | Decision (bottom)
+- **Awareness-stage mapping:** Match funnel stage to messaging approach:
+
+  | Funnel Stage | Schwartz Awareness Level | Masterson Lead Type | Intro Strategy |
+  |-------------|-------------------------|--------------------|----|
+  | Awareness (top) | Unaware or Problem Aware | Story Lead or Problem-Agitation Lead | Open with shared experience or pain point — reader should recognize their situation |
+  | Consideration (mid) | Solution Aware | Solution/Mechanism Lead | Open with mechanism differentiation — "Most approaches fail because..." |
+  | Decision (bottom) | Product Aware or Most Aware | Proof Lead or Direct Offer Lead | Open with evidence or results — reader needs confirmation, not education |
+
+  This determines your opening paragraph strategy — not just the CTA.
 - **CTA:** What should the reader do after reading?
 
 ### Step 2: Plan the Structure
