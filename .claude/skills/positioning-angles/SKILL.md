@@ -117,7 +117,6 @@ Each angle is a different way of framing the product's position relative to the 
 
 - **Against a specific alternative:** "Unlike [alternative], [product] does [X] so buyers can [outcome]"
 - **For a specific context:** "The [product] for [specific situation/trigger]"
-- **Category creation:** "[Product] is the first [new category name] for [ICP]"
 - **Mechanism-based:** "The only [product type] that works by [unique mechanism]" — Reference Step 3.5 output for the mechanism to use here.
 - **Outcome-based:** "The [ICP]'s fastest path to [specific outcome]"
 - **Against the status quo:** "Stop [painful workaround]. [Product] handles [X] automatically"

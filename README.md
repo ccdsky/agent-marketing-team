@@ -73,7 +73,9 @@ agent-marketing-team/
 │   │   ├── keyword-research/   # Audience-intent keyword research
 │   │   ├── market-research/    # Competitive intelligence
 │   │   ├── expert-review/      # Multi-agent specialized analysis
-│   │   └── lead-magnet-strategy/ # Lead magnet concept design
+│   │   ├── lead-magnet-strategy/ # Lead magnet concept design
+│   │   ├── ad-angles/          # Ad-angle multiplication (6 dimensions)
+│   │   └── proof-harvesting/   # Proof asset extraction and scoring
 │   │
 │   ├── templates/              # Campaign structure templates
 │   │   ├── campaign-brief-template.md
@@ -178,6 +180,8 @@ This exercises the complete pipeline: research → strategy checkpoint → draft
 | `/market-research` | Structured competitive intelligence with desk research + primary research flags |
 | `/expert-review` | Multi-agent review from 3-5 specialist perspectives |
 | `/lead-magnet-strategy` | Scored lead magnet concepts before any content creation begins |
+| `/ad-angles` | 10-15 creative variants of an approved angle across Pain, Desire, Proof, Identity, Contrarian, Urgency |
+| `/proof-harvesting` | Scored proof library (testimonials, case studies, data) with Cialdini persuasion tags and gap analysis |
 
 Skills are markdown framework files in `.claude/skills/[name]/SKILL.md`. Agents read them on demand — they define the canonical process for each content type.
 
@@ -241,6 +245,118 @@ After every campaign, the system runs a retrospective that extracts patterns int
 Research packages persist in `knowledge/research/` — competitor analysis from one campaign informs positioning for the next.
 
 **The system gets better with every campaign.**
+
+---
+
+## Direct-Response Frameworks
+
+Several skills encode direct-response marketing theory that shapes how the team writes. These frameworks are embedded in the skills themselves — agents apply them automatically when running the skill. Understanding how they work will help you get better results and give better feedback.
+
+### Schwartz Awareness Mapping
+
+**Where it lives:** `/landing-page` Step 1, `/email-sequence` Step 1, `/blog-post` Step 1
+
+Every buyer sits at one of five awareness stages. The stage determines the messaging approach — what you can say, what you must not say, and what kind of "lead" (opening) to use.
+
+| Stage | The buyer... | What to lead with |
+|-------|-------------|-------------------|
+| **Unaware** | Doesn't know they have the problem | Story or curiosity — never mention the product |
+| **Problem Aware** | Feels the pain, doesn't know solutions exist | Agitate the pain before offering solutions |
+| **Solution Aware** | Evaluating approaches | Mechanism differentiation — "Most fail because..." |
+| **Product Aware** | Knows your product, not yet convinced | Proof — results, case studies, testimonials |
+| **Most Aware** | Knows and trusts you | Direct offer — price, terms, urgency |
+
+**How to use it:** When requesting a landing page, email sequence, or blog post, tell the system who the audience is and where they're coming from. The skill will diagnose the awareness stage and apply the right messaging rules. If you're running ads to cold traffic, that's Unaware/Problem Aware. If you're emailing your existing list, that's Product Aware or Most Aware.
+
+**Lead types** (from Masterson/Forde's *Great Leads*) are paired with each stage: Story Leads for Unaware, Problem-Agitation Leads for Problem Aware, Solution/Mechanism Leads for Solution Aware, Proof Leads for Product Aware, Direct Offer Leads for Most Aware.
+
+### Mechanism-Based Positioning
+
+**Where it lives:** `/positioning-angles` Step 3.5
+
+A mechanism is the "why this works" story. It makes your positioning believable and defensible — not just a claim, but an explanation that creates an "aha" moment.
+
+**The structure:**
+1. **The Failure** — Why what they tried before didn't work
+2. **The Shift** — What's different about your approach
+3. **The Result** — What becomes possible now
+
+**Four mechanism types:**
+- **Process** — "Instead of X, we do Y, which means Z"
+- **Discovery** — "We found that [non-obvious truth]..."
+- **System** — "Our [Named System] works because..."
+- **Timing** — "Until [recent change], this wasn't possible..."
+
+**How to use it:** When you run `/positioning-angles`, Step 3.5 will build mechanisms from your unique attributes before generating angles. Every angle then references or builds on a mechanism. If your mechanism passes Thiel's "secret" test (encodes a non-obvious truth competitors would disagree with), the skill flags it as a category-creation candidate.
+
+The mechanism also gets checked against Kahneman's dual-process model: does it *feel* right intuitively (System 1) AND hold up to logical scrutiny (System 2)? If it only passes one, it needs revision.
+
+### Ad-Angle Multiplication
+
+**Where it lives:** `/ad-angles` (new skill)
+
+After Sprint 1 approves a positioning angle, this skill multiplies it into 10-15 distinct creative variants — each targeting a different buyer psychology and awareness stage.
+
+**Six dimensions:**
+
+| Dimension | Leads with... | Source |
+|-----------|--------------|--------|
+| **Pain** | What hurts | ICP pain points |
+| **Desire** | What they want | ICP desired outcomes |
+| **Proof** | Evidence | Proof library |
+| **Identity** | Who they are | Tribal belonging |
+| **Contrarian** | What's wrong | Challenge conventional wisdom |
+| **Urgency** | Why now | Market timing (genuine only) |
+
+**How to use it:** Run this at the start of Sprint 2 after the positioning angle is approved. The output is a tagged table — each angle includes its awareness stage target (so you know which audience it fits) and best channel (LinkedIn ad, email subject, blog title, etc.). Creative Specialist uses this as a hook library when writing content.
+
+```
+"Multiply the approved positioning angle into ad angles for [campaign]"
+```
+
+### Proof Harvesting
+
+**Where it lives:** `/proof-harvesting` (new skill)
+
+Before writing any content that needs evidence, run this to inventory and score all available proof assets.
+
+**How it works:**
+1. **Inventory** — Audit all sources: testimonials, case studies, data, credentials, media, community metrics
+2. **Score** — Rate each asset on Specificity (1-5), Credibility (1-5), and Relevance (1-5). Minimum 9/15 to include.
+3. **Tag** — Assign Cialdini persuasion dimensions: Social Proof, Authority, Consistency, Liking, Reciprocity, Scarcity
+4. **Gap analysis** — Map inventory against content needs and identify what's missing
+
+**How to use it:** Run this during Sprint 1 alongside market research. It produces a `knowledge/research/proof-library-[company]-[date].md` file that Creative Specialist loads before writing landing pages, email sequences, and ad copy.
+
+```
+"Harvest proof for [company/product]"
+```
+
+If gaps exist (e.g., no case study arc for email sequences, no Score 13+ result for landing page hero), the skill tells you who to ask and what to request.
+
+### How the Frameworks Connect
+
+In a full campaign, the frameworks chain together:
+
+```
+Sprint 1:
+  /market-research        → competitive landscape
+  /proof-harvesting       → scored proof library
+  /positioning-angles     → mechanism built (Step 3.5), angles scored
+  [Human checkpoint]      → approve positioning angle
+
+Sprint 2:
+  /ad-angles              → 10-15 creative variants from approved angle
+  /landing-page           → awareness stage drives messaging approach
+  /email-sequence         → awareness arc maps each email's job
+  /blog-post              → funnel stage → awareness level → intro strategy
+  [Human checkpoint]      → approve drafts
+
+Sprint 3:
+  Revise, polish, ship
+```
+
+Each skill reads the output of upstream skills. The proof library feeds landing pages and ad angles. The mechanism from positioning-angles feeds the landing page's Solution Bridge. The awareness diagnosis in the landing page matches the awareness-stage arc in the email sequence. No framework is applied in isolation.
 
 ---
 
