@@ -8,25 +8,125 @@ Five specialized agents coordinate through shared task lists, work in parallel, 
 
 ## What It Does
 
-Give it a campaign goal. It researches, strategizes, writes, reviews, and formats — across multiple assets, with your approval at two checkpoints.
+Give it anything from a one-line request to a multi-asset campaign. It researches, strategizes, writes, reviews, and formats — with your approval at two checkpoints.
 
-**Simple request:**
-```
-"Write a LinkedIn post about why B2B teams should think in funnels, not content pieces"
-```
-→ Creative Specialist reads your voice profile, creates a draft in your voice, returns it inline.
+### Quick Tasks (Single Asset, No Campaign)
 
-**Full campaign:**
-```
-"Create a lead generation campaign for my developer CLI tool:
- - Lead magnet: CLI patterns guide
- - Landing page
- - 5-email nurture sequence
- - Goal: 500 signups in 2 weeks"
-```
-→ Campaign Lead designs the strategy → Research Specialist analyzes the market and competitors → Creative Specialist writes all assets in your voice → Quality Gate reviews for voice fidelity and craft → Distribution Specialist formats for platforms and sets up tracking.
+These run inline — one specialist, no sprint overhead.
 
-**You review at two checkpoints:**
+**Draft a post:**
+```
+"Write a LinkedIn post about why most B2B landing pages fail
+ at the first sentence"
+```
+→ Creative Specialist diagnoses the audience awareness stage (Problem Aware — they feel the pain but haven't found the fix), uses a Problem-Agitation Lead, writes in your voice.
+
+**Research a market:**
+```
+"Research the stormwater compliance software market — who are the
+ players, how do they position, and where are the gaps?"
+```
+→ Research Specialist runs the `/market-research` framework: maps three tiers of competitors, mines customer language from review sites, scores competitor messaging on Clarity/Relevance/Value/Differentiation, and flags positioning gaps where no one is competing.
+
+**Find your positioning:**
+```
+"Run positioning angles for Gray Matter Logic against the
+ ERP consulting market"
+```
+→ Research Specialist maps the real competitive alternatives (including "do nothing" and "hire an internal team"), extracts unique attributes, builds mechanisms using the Failure→Shift→Result structure, generates 5-8 angles scored by defensibility/resonance/provability, and tests the top 3 against Laja's 4-layer filter.
+
+**Harvest your proof:**
+```
+"Harvest proof for 2NDNATURE — we have case studies on the website,
+ a few G2 reviews, and some customer emails with results"
+```
+→ Research Specialist inventories every proof asset, scores each on Specificity + Credibility + Relevance (min 9/15 to include), tags with Cialdini persuasion dimensions (Social Proof, Authority, Consistency), and maps gaps against what your landing page, emails, and ads will need.
+
+**Get a content strategy:**
+```
+"What keywords should we target for our municipal stormwater
+ compliance product? We want to build organic traffic."
+```
+→ Research Specialist runs the `/keyword-research` framework: starts from ICP problems (not keyword tools), scores by Business Potential (0-3), splits into Money Phrases vs. Content Keywords, and produces an editorial calendar.
+
+### Multi-Asset Campaigns (Full Sprint Model)
+
+These activate Campaign Lead, who coordinates specialists across three sprints.
+
+**Lead generation campaign:**
+```
+"Create a lead generation campaign for our ERP migration assessment tool:
+ - Lead magnet: 'ERP Migration Readiness Scorecard'
+ - Landing page targeting CFOs frustrated with their current system
+ - 5-email nurture sequence bridging from scorecard to sales call
+ - Goal: 200 qualified leads in 30 days"
+```
+
+Sprint 1 produces: market research, proof library, positioning angles with named mechanisms, lead magnet concept brief scored by Hormozi's Value Equation. You approve the direction.
+
+Sprint 2 produces: the scorecard content, a landing page (awareness-diagnosed — CFOs from LinkedIn ads are Solution Aware, so it leads with mechanism differentiation, not problem agitation), a 5-email sequence with awareness-stage transitions per email (Solution Aware → Product Aware → Most Aware → Convert), ad angles multiplied across 6 dimensions for LinkedIn and email. You approve the drafts.
+
+Sprint 3: polish, editorial review, platform formatting, publish.
+
+**Product launch:**
+```
+"Launch our new AI-powered compliance monitoring feature:
+ - Sales page for existing customers (they know us)
+ - Announcement email sequence (3 emails)
+ - Blog post for SEO
+ - LinkedIn campaign (5 posts over 2 weeks)
+ - Target: 50 demo requests from existing customers,
+   100 new leads from organic"
+```
+
+The system handles two audiences simultaneously: existing customers are Most Aware (direct offer lead, proof-heavy), while organic traffic is Unaware/Problem Aware (story leads, pain agitation). Each asset gets the right messaging for its audience — the sales page and announcement emails lead with the offer and proof, while the blog post and LinkedIn campaign lead with the problem and mechanism.
+
+**Content sprint:**
+```
+"Create a 4-week content marketing sprint on stormwater compliance:
+ - 4 blog posts targeting different keywords
+ - 1 newsletter per week repurposing blog content
+ - LinkedIn posts promoting each piece
+ - Goal: rank for 'stormwater compliance software' within 90 days"
+```
+
+Each blog post gets its funnel stage mapped to an awareness level: the top-of-funnel post opens with a Story Lead ("Last winter, a city in Oregon got a $2M fine..."), the mid-funnel post uses a Mechanism Lead ("Most compliance tools fail because they monitor after the fact..."), the bottom-funnel post uses a Proof Lead ("Here's how City of Portland reduced violations by 67%...").
+
+### Standalone Skill Requests
+
+You can invoke any skill directly without a campaign.
+
+```
+"Write a landing page for our free compliance audit — targeting
+ municipal public works directors who've been manually tracking
+ stormwater permits in spreadsheets"
+```
+→ Diagnoses awareness stage (Problem Aware — they know spreadsheets aren't working but haven't looked for software). Uses Problem-Agitation Lead above the fold. Names the mechanism in Section 3. Pulls proof from the proof library if available. Scores itself honestly before handing to Quality Gate.
+
+```
+"Create a 5-email onboarding sequence for new trial signups of
+ our compliance platform"
+```
+→ Maps the awareness arc: Email 1 moves them from Product Aware to Most Aware (deliver the activation value), Email 2 deepens with a non-obvious insight, Email 3 introduces the full platform with a case study, Email 4 handles the top objection, Email 5 converts with a clear upgrade CTA.
+
+```
+"Design a lead magnet concept for attracting IT directors
+ who are evaluating ERP systems"
+```
+→ Runs `/lead-magnet-strategy`: defines the Bridge (narrow problem → lead magnet → next problem revealed → core offer), selects the type (Problem Revealer — they need to discover how bad their current system is), scores with Hormozi's Value Equation, tests three names, maps distribution channels, and produces a concept brief for approval before any content gets written.
+
+```
+"Expert review our landing page draft"
+```
+→ Spawns 3-5 specialist reviewers (conversion optimizer, copywriter, ICP advocate, design strategist) who evaluate in parallel, score independently, then synthesize into a prioritized revision list.
+
+```
+"Repurpose our latest blog post for LinkedIn, Twitter thread,
+ and newsletter"
+```
+→ Adapts the core content for each platform's native format, length, and conventions — not just truncation, but restructuring for how people consume on each platform.
+
+**You review at two checkpoints (campaigns only):**
 1. **After Sprint 1** — approve strategic direction and positioning angles
 2. **After Sprint 2** — approve drafts and provide feedback
 
@@ -190,13 +290,22 @@ Skills are markdown framework files in `.claude/skills/[name]/SKILL.md`. Agents 
 ## Campaign Types
 
 ### Lead Generation
-Build an email list with qualified leads. Assets: lead magnet, landing page, thank-you page, email nurture sequence. Timeline: 10-14 days.
+Build an email list with qualified leads. The system designs a lead magnet concept (scored by Hormozi's Value Equation before any content gets written), writes a landing page with awareness-appropriate messaging, creates the lead magnet content, builds a nurture sequence that walks subscribers through awareness stages toward a conversion CTA, and multiplies the core angle into ad variants.
+
+**Assets:** lead magnet concept brief, lead magnet content, landing page, email nurture sequence, ad-angle library, social promotion posts.
 
 ### Product Launch
-Announce a new offering, drive signups or sales. Assets: sales page, launch email sequence, blog post, social assets. Timeline: 14-21 days.
+Announce a new offering and drive signups or sales. The system handles dual audiences — existing customers (Most Aware, proof-heavy, direct offer) and new prospects (Unaware/Problem Aware, story-led, mechanism-heavy). Each asset gets the right messaging for its audience.
+
+**Assets:** sales/landing page, launch email sequence, announcement blog post, social campaign, ad-angle library.
 
 ### Content Marketing Sprint
-SEO-focused authority building. Assets: 3-5 blog posts, email announcements, social promotion plan. Timeline: 10-14 days.
+SEO-focused authority building. Each piece targets a different keyword and funnel stage, with the awareness framework ensuring top-of-funnel articles open differently than bottom-of-funnel articles. Blog content gets repurposed into newsletters and social posts natively.
+
+**Assets:** 3-5 keyword-targeted blog posts, email announcements, LinkedIn/Twitter promotion plan.
+
+### Rebranding / Repositioning
+When you're shifting positioning (like OSI → Gray Matter Logic), the system researches the new competitive landscape, builds mechanisms for the new positioning, generates scored angles, then produces all the content assets targeting the new audience — while maintaining voice consistency with the brand you're building.
 
 Templates for each type are in `.claude/templates/`.
 
@@ -250,113 +359,75 @@ Research packages persist in `knowledge/research/` — competitor analysis from 
 
 ## Direct-Response Frameworks
 
-Several skills encode direct-response marketing theory that shapes how the team writes. These frameworks are embedded in the skills themselves — agents apply them automatically when running the skill. Understanding how they work will help you get better results and give better feedback.
+The skills encode direct-response marketing theory that agents apply automatically. You don't need to memorize these — but understanding them helps you give better input and sharper feedback.
 
 ### Schwartz Awareness Mapping
 
-**Where it lives:** `/landing-page` Step 1, `/email-sequence` Step 1, `/blog-post` Step 1
+**Used in:** `/landing-page`, `/email-sequence`, `/blog-post`
 
-Every buyer sits at one of five awareness stages. The stage determines the messaging approach — what you can say, what you must not say, and what kind of "lead" (opening) to use.
+Every buyer sits at one of five awareness stages. The stage determines everything — what kind of opening to write, what to say, and what to avoid.
 
-| Stage | The buyer... | What to lead with |
-|-------|-------------|-------------------|
-| **Unaware** | Doesn't know they have the problem | Story or curiosity — never mention the product |
-| **Problem Aware** | Feels the pain, doesn't know solutions exist | Agitate the pain before offering solutions |
-| **Solution Aware** | Evaluating approaches | Mechanism differentiation — "Most fail because..." |
-| **Product Aware** | Knows your product, not yet convinced | Proof — results, case studies, testimonials |
-| **Most Aware** | Knows and trusts you | Direct offer — price, terms, urgency |
+| Stage | What to lead with | What fails |
+|-------|-------------------|-----------|
+| **Unaware** | Story, curiosity, pattern interrupt | Mentioning your product, explaining solutions |
+| **Problem Aware** | Pain agitation, "you're not alone" | Jumping to the solution too fast |
+| **Solution Aware** | Mechanism — "Most fail because..." | Generic features, undifferentiated claims |
+| **Product Aware** | Proof — results, case studies | More education (they already get it) |
+| **Most Aware** | Direct offer — price, terms, urgency | Long warmups, storytelling (just make it easy) |
 
-**How to use it:** When requesting a landing page, email sequence, or blog post, tell the system who the audience is and where they're coming from. The skill will diagnose the awareness stage and apply the right messaging rules. If you're running ads to cold traffic, that's Unaware/Problem Aware. If you're emailing your existing list, that's Product Aware or Most Aware.
+Each stage pairs with a **Masterson Lead Type** (from *Great Leads*): Story → Problem-Agitation → Mechanism → Proof → Direct Offer. The skill selects automatically based on who the audience is and where they're coming from.
 
-**Lead types** (from Masterson/Forde's *Great Leads*) are paired with each stage: Story Leads for Unaware, Problem-Agitation Leads for Problem Aware, Solution/Mechanism Leads for Solution Aware, Proof Leads for Product Aware, Direct Offer Leads for Most Aware.
+**Tip:** When requesting content, mention the traffic source — "this is for cold LinkedIn ads" (Unaware), "this goes to our email list" (Product/Most Aware), "this targets people searching for alternatives" (Solution Aware). That one detail shapes the entire piece.
 
 ### Mechanism-Based Positioning
 
-**Where it lives:** `/positioning-angles` Step 3.5
+**Used in:** `/positioning-angles` Step 3.5
 
-A mechanism is the "why this works" story. It makes your positioning believable and defensible — not just a claim, but an explanation that creates an "aha" moment.
+The mechanism is the "why this works" story — not a feature list, but an explanation that creates an "aha" moment. Structure: **Failure** (why the old way doesn't work) → **Shift** (what's different about your approach) → **Result** (what becomes possible).
 
-**The structure:**
-1. **The Failure** — Why what they tried before didn't work
-2. **The Shift** — What's different about your approach
-3. **The Result** — What becomes possible now
+Four types: **Process** (new method), **Discovery** (hidden insight), **System** (proprietary framework), **Timing** (market shift enables it).
 
-**Four mechanism types:**
-- **Process** — "Instead of X, we do Y, which means Z"
-- **Discovery** — "We found that [non-obvious truth]..."
-- **System** — "Our [Named System] works because..."
-- **Timing** — "Until [recent change], this wasn't possible..."
-
-**How to use it:** When you run `/positioning-angles`, Step 3.5 will build mechanisms from your unique attributes before generating angles. Every angle then references or builds on a mechanism. If your mechanism passes Thiel's "secret" test (encodes a non-obvious truth competitors would disagree with), the skill flags it as a category-creation candidate.
-
-The mechanism also gets checked against Kahneman's dual-process model: does it *feel* right intuitively (System 1) AND hold up to logical scrutiny (System 2)? If it only passes one, it needs revision.
+The mechanism gets two checks:
+- **Thiel's "secret" test** — Does it encode a truth competitors would disagree with? If yes, it's a category-creation candidate.
+- **Kahneman's dual-process test** — Does it feel intuitively right AND hold up to logic? If only one, revise.
 
 ### Ad-Angle Multiplication
 
-**Where it lives:** `/ad-angles` (new skill)
+**Used in:** `/ad-angles`
 
-After Sprint 1 approves a positioning angle, this skill multiplies it into 10-15 distinct creative variants — each targeting a different buyer psychology and awareness stage.
+Takes one approved positioning angle and expands it into 10-15 creative variants across six psychology dimensions: **Pain** (what hurts), **Desire** (what they want), **Proof** (evidence), **Identity** (tribal belonging), **Contrarian** (challenge consensus), **Urgency** (why now — genuine only).
 
-**Six dimensions:**
-
-| Dimension | Leads with... | Source |
-|-----------|--------------|--------|
-| **Pain** | What hurts | ICP pain points |
-| **Desire** | What they want | ICP desired outcomes |
-| **Proof** | Evidence | Proof library |
-| **Identity** | Who they are | Tribal belonging |
-| **Contrarian** | What's wrong | Challenge conventional wisdom |
-| **Urgency** | Why now | Market timing (genuine only) |
-
-**How to use it:** Run this at the start of Sprint 2 after the positioning angle is approved. The output is a tagged table — each angle includes its awareness stage target (so you know which audience it fits) and best channel (LinkedIn ad, email subject, blog title, etc.). Creative Specialist uses this as a hook library when writing content.
-
-```
-"Multiply the approved positioning angle into ad angles for [campaign]"
-```
+Each variant gets tagged with its target awareness stage and best channel (LinkedIn ad, email subject, blog title, etc.). Creative Specialist uses this as a hook library when writing Sprint 2 content.
 
 ### Proof Harvesting
 
-**Where it lives:** `/proof-harvesting` (new skill)
+**Used in:** `/proof-harvesting`
 
-Before writing any content that needs evidence, run this to inventory and score all available proof assets.
+Inventories every available proof asset (testimonials, case studies, data, credentials, media), scores each on Specificity + Credibility + Relevance (min 9/15 to include), tags with Cialdini persuasion dimensions (Social Proof, Authority, Consistency, Liking, Reciprocity, Scarcity), and maps gaps against what each content asset will need.
 
-**How it works:**
-1. **Inventory** — Audit all sources: testimonials, case studies, data, credentials, media, community metrics
-2. **Score** — Rate each asset on Specificity (1-5), Credibility (1-5), and Relevance (1-5). Minimum 9/15 to include.
-3. **Tag** — Assign Cialdini persuasion dimensions: Social Proof, Authority, Consistency, Liking, Reciprocity, Scarcity
-4. **Gap analysis** — Map inventory against content needs and identify what's missing
+Run during Sprint 1. The output is a reusable proof library that Creative Specialist loads before writing anything that needs evidence.
 
-**How to use it:** Run this during Sprint 1 alongside market research. It produces a `knowledge/research/proof-library-[company]-[date].md` file that Creative Specialist loads before writing landing pages, email sequences, and ad copy.
-
-```
-"Harvest proof for [company/product]"
-```
-
-If gaps exist (e.g., no case study arc for email sequences, no Score 13+ result for landing page hero), the skill tells you who to ask and what to request.
-
-### How the Frameworks Connect
-
-In a full campaign, the frameworks chain together:
+### How They Chain Together
 
 ```
 Sprint 1:
-  /market-research        → competitive landscape
-  /proof-harvesting       → scored proof library
-  /positioning-angles     → mechanism built (Step 3.5), angles scored
-  [Human checkpoint]      → approve positioning angle
+  /market-research        → competitive landscape, customer language
+  /proof-harvesting       → scored proof library with gap analysis
+  /positioning-angles     → mechanisms built, angles scored, Laja-tested
+  [You approve]           → select positioning angle
 
 Sprint 2:
   /ad-angles              → 10-15 creative variants from approved angle
-  /landing-page           → awareness stage drives messaging approach
-  /email-sequence         → awareness arc maps each email's job
+  /landing-page           → awareness stage drives messaging and lead type
+  /email-sequence         → awareness arc maps each email's transition
   /blog-post              → funnel stage → awareness level → intro strategy
-  [Human checkpoint]      → approve drafts
+  [You approve]           → approve drafts, give revision notes
 
 Sprint 3:
-  Revise, polish, ship
+  Revise → editorial review → format → publish
 ```
 
-Each skill reads the output of upstream skills. The proof library feeds landing pages and ad angles. The mechanism from positioning-angles feeds the landing page's Solution Bridge. The awareness diagnosis in the landing page matches the awareness-stage arc in the email sequence. No framework is applied in isolation.
+Each skill reads the output of upstream skills. The proof library feeds landing pages and ad angles. The mechanism feeds the Solution Bridge. The awareness diagnosis in the landing page matches the arc in the email sequence. Nothing is applied in isolation.
 
 ---
 
