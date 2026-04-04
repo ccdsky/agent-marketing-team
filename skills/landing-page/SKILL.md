@@ -27,29 +27,19 @@ Before writing, always read:
 
 ## Framework
 
-### Step 1: Define the Conversion Goal
+### Step 1: Diagnose Awareness Stage (Schwartz)
 
-Clarify before writing:
-- **What are we offering?** (lead magnet, product, service, trial)
-- **One conversion action:** email signup | purchase | book a call | download
-- **Buyer Awareness Stage (Schwartz):** Diagnose before writing — determines your entire messaging approach
+Diagnose before writing — this determines your entire messaging approach:
 
-  | Schwartz Awareness Stage | The buyer... | Lead Type (Masterson/Forde) |
-  |-------|-------------|---------------------------|
-  | **Unaware** | Doesn't know they have the problem | Story Lead or Secret Lead |
-  | **Problem Aware** | Feels the pain, doesn't know solutions exist | Problem-Agitation Lead |
-  | **Solution Aware** | Knows solutions exist, evaluating approaches | Solution/Mechanism Lead |
-  | **Product Aware** | Knows your product, not yet convinced | Promise Lead or Proof Lead |
-  | **Most Aware** | Knows and trusts you, needs the right offer | Direct Offer Lead |
+| Schwartz Stage | Lead Type (Masterson) | Above-Fold Rule |
+|-------|-------------|---------------------------|
+| **Unaware** | Story / Secret Lead | Never mention product. Lead with story. |
+| **Problem Aware** | Problem-Agitation Lead | Agitate before solving. No solution in Section 1. |
+| **Solution Aware** | Solution/Mechanism Lead | Lead with mechanism differentiation. |
+| **Product Aware** | Promise / Proof Lead | Lead with proof — testimonials, case studies, results. |
+| **Most Aware** | Direct Offer Lead | Lead with offer. Skip education. |
 
-  **Messaging rules by stage:**
-  - Unaware: Never mention the product above the fold. Lead with story or shared experience. Goal: make them realize they have a problem.
-  - Problem Aware: Agitate before solving. Don't present the solution in Section 1. Goal: deepen the pain until they want a solution.
-  - Solution Aware: Lead with mechanism differentiation. "Most solutions fail because..." Goal: position your approach as structurally different.
-  - Product Aware: Lead with proof. Testimonials, case studies, specific results. Goal: remove doubt with evidence.
-  - Most Aware: Lead with offer. Price, guarantee, urgency. Skip the education. Goal: make the decision easy.
-
-- **Primary objection to overcome:** (from icp.md — what makes them hesitate?)
+Also define: **One conversion action** and **primary objection to overcome** (from icp.md).
 
 ### Step 2: Build the 7-Section Structure
 
@@ -57,111 +47,39 @@ Write sections in this order. Each section has one job.
 
 #### Section 1: Above the Fold (The Hook)
 
-The only part most visitors see. Must do all of these:
-- Address the ICP's situation or pain directly
-- Make a specific, believable promise
-- Create enough curiosity or clarity to scroll
+Headline + subheadline + CTA button. Apply the Lead Type from Step 1. CTA label = the outcome, not the action.
 
-**Headline formula options (top 2):**
-- `[Specific outcome] without [biggest fear]`
-- `How [ICP] can [achieve goal] in [timeframe]`
-
-*(See `skills/landing-page/references/headline-formulas.md` for full list)*
-
-**Subheadline:** 1-2 sentences that expand the headline and clarify who this is for.
-
-**Above-fold CTA:** Action button, visible without scrolling. Label = the outcome, not the action.
-- Bad: "Submit" or "Sign up"
-- Good: "Get the free guide" or "Start my trial"
+*(See `skills/landing-page/references/headline-formulas.md` for formula options)*
 
 #### Section 2: Problem Agitation
 
-Name the pain the ICP is experiencing. Show you understand their world better than they've articulated it.
-
-**Structure:**
-1. Describe the symptom they notice
-2. Name the real underlying problem
-3. Show the emotional cost (frustration, anxiety, lost opportunities)
-
-**Length:** 3-5 short paragraphs or a short bulleted list of pain points.
-
-**Voice rule:** Use their exact language from `icp.md` Language Patterns section.
+Use exact language from `icp.md` Language Patterns section. 3-5 short paragraphs.
 
 #### Section 3: Solution Bridge
 
-Transition from problem to solution. Don't hard-sell yet — position the solution as the natural answer to the pain.
+Name the solution and its core mechanism. Explain WHY it works.
 
-**Structure:**
-1. "There's a better way" or "What if..." opening
-2. Name your solution and its core mechanism
-3. Explain WHY it works (the unique mechanism)
-4. One-sentence promise: what they'll have/be able to do
-
-**Mechanism Credibility Check:** Can you explain it in one sentence and get a nod (System 1)? Can you defend it when challenged (System 2)? If it only passes one — revise.
+**Mechanism Credibility Check:** Must pass both — intuitive nod (System 1) AND defensible when challenged (System 2). If it only passes one, revise.
 
 #### Section 4: Proof Block
 
-Back up the promise with evidence. Use whatever proof exists:
-
-**Hierarchy of proof (use the strongest available — top 2):**
-1. Specific customer results with numbers ("helped X achieve Y in Z weeks")
-2. Testimonials with full name and specific outcomes
-
-*(See `skills/landing-page/references/proof-hierarchy.md` for full 6-tier list)*
-
-**Write proof as stories, not praise.** "John reduced his CAC by 40% in 6 weeks" beats "Amazing product!"
-
-Cover at least two Cialdini dimensions (Social Proof, Authority, Consistency). Mix System 1 proof (emotional story) with System 2 proof (specific numbers) in sequence.
+Cover at least **two Cialdini dimensions** (Social Proof, Authority, Consistency, Liking, Reciprocity, Scarcity). Mix System 1 proof (emotional story) with System 2 proof (specific numbers) in sequence. *(See `references/proof-hierarchy.md` for the 6-tier list)*
 
 #### Section 5: Offer Stack / What You Get
 
-For lead magnets or products: list exactly what's included.
-
-**Format:**
-```
-What you get:
-- [Deliverable 1]: [specific benefit in 1 line]
-- [Deliverable 2]: [specific benefit in 1 line]
-- [Bonus or unique element]
-```
-
-For services: describe the process and what they receive at each stage.
+List exactly what's included with one-line benefit per item.
 
 #### Section 6: Objection Handling (FAQ)
 
-Address the top 3-5 objections from `icp.md`. Format as questions + honest answers.
-
-Common objection categories:
-- Time ("I don't have time for this")
-- Trust ("Will this actually work for me?")
-- Fit ("Is this right for my situation?")
-- Risk ("What if it doesn't work?")
-
-Write answers the owner would actually give — not marketing-speak.
+Address top 3-5 objections from `icp.md` as questions + answers.
 
 #### Section 7: Closing CTA
 
-Restate the offer and the single action. Urgency if genuine (limited spots, deadline). No fake urgency.
+Restate transformation + offer + single CTA + risk reversal (if applicable).
 
-**Structure:**
-```
-[Restate the transformation]
-[Restate what they get]
-[Primary CTA button]
-[Risk reversal if applicable: guarantee, free trial, no credit card]
-```
+### Step 3: Voice and ICP Pass
 
-### Step 3: Voice Pass
-
-Read entire page against `voice-dna.md`. Replace any generic marketing language with owner's actual voice patterns. The page should read like the owner wrote every word.
-
-### Step 4: ICP Fit Check
-
-Verify against `icp.md`:
-- Every section speaks to this specific person's situation
-- Pain points use their exact language
-- Objections are their real objections (not generic)
-- The promise maps to their actual desired outcome
+Verify against `voice-dna.md` (voice match) and `icp.md` (pain points use their exact language, objections are real).
 
 ---
 

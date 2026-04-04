@@ -157,55 +157,7 @@ Quality Gate calls `TaskGet(taskId="[ID]")` to find the deliverable path and rea
 
 ## Draft File Format
 
-**All drafts saved as markdown:**
-
-**Location:** `output/campaigns/[campaign-slug]/drafts/[asset-name]-draft.md`
-
-**Template:**
-```markdown
-# [Asset Name]
-
-**Type:** [Landing page | Email sequence | Blog post | etc.]
-**Campaign:** [Campaign name]
-**Positioning:** [Approved angle]
-**Created:** [Date]
-
----
-
-## Asset Metadata
-
-**Target Audience:** [ICP segment]
-**Primary Goal:** [What this asset achieves]
-**CTA:** [Call to action]
-**Key Messages:**
-- [Message 1]
-- [Message 2]
-- [Message 3]
-
----
-
-## Content
-
-[Actual draft content here]
-
----
-
-## Writing Notes
-
-**Voice DNA elements used:**
-- [Element 1 from voice-dna.md]
-- [Element 2 from voice-dna.md]
-
-**Research insights applied:**
-- [Insight 1 from research package]
-- [Insight 2 from research package]
-
-**Self-assessment:**
-[Honest evaluation of what's working and what needs work]
-
-**Open questions for Editor:**
-[Specific areas where you're uncertain]
-```
+Each skill's SKILL.md defines the output file format for its asset type. Follow that format exactly. All drafts save to: `output/campaigns/[campaign-slug]/drafts/[asset-name]-draft.md`
 
 ---
 
@@ -270,83 +222,13 @@ Note: NOT writing full copy yet - just structure to validate approach.
 
 ---
 
-## Voice Matching Protocol
+## Quality Standards
 
-**Critical:** Every asset must sound like the owner. Use voice-dna.md as bible.
-
-**Before writing, remind yourself:**
-```
-Read(file_path="context/voice-dna.md")
-```
-
-**While writing, check:**
-- Sentence rhythm (does it match voice patterns?)
-- Word choice (does the owner use these words?)
-- Tone (too formal? too casual?)
-- Personal vs corporate (is this "I" or "we"?)
-
-**After writing, verify:**
-- Read draft out loud - does it sound like the owner talking?
-- Compare to voice samples in voice-dna.md
-- Ask: "Would the owner actually say this?"
-
-**If voice doesn't match, revise before submitting.**
-
----
-
-## Research Integration Protocol
-
-**Every draft should reference research findings.**
-
-**Good integration:**
-```
-Research said: "83% mentioned 'discoverability' as top frustration"
-
-Draft uses: "If you've spent hours Googling for the right CLI tool, you're not alone.
-83% of developers say finding tools is their biggest time sink."
-```
-
-**Bad integration:**
-```
-Research said: "83% mentioned 'discoverability' as top frustration"
-
-Draft ignores: "CLI tools are powerful and useful for developers."
-[Generic statement, doesn't use research]
-```
-
-**In task comment, cite which research insights you used.**
-
----
-
-## Quality Self-Assessment Checklist
-
-Before marking writing task complete, verify:
-
-**Voice (8/10 minimum)**
-- [ ] Sounds like the owner (compare to voice-dna.md)
-- [ ] Sentence rhythm matches patterns
-- [ ] Word choice is authentic
-- [ ] Tone is appropriate
-
-**Research Integration (Must have)**
-- [ ] Used findings from research package
-- [ ] Addressed pain points identified
-- [ ] Applied customer language
-- [ ] Reflected approved positioning angle
-
-**ICP Relevance (Must have)**
-- [ ] Target audience would care
-- [ ] Speaks to their specific pain
-- [ ] Offers clear value
-- [ ] Next step is obvious
-
-**Craft Quality (8/10 minimum)**
-- [ ] No fluff or filler
-- [ ] Clear and scannable
-- [ ] Strong headlines/hooks
-- [ ] Effective CTAs
-
-**If any checkbox fails, revise before completing task.**
+Before marking any task complete, verify four dimensions (8/10 minimum each):
+1. **Voice** — Sounds like the owner (compare to `voice-dna.md` samples)
+2. **Research integration** — Cites specific findings from research package, uses ICP language from `icp.md`
+3. **ICP relevance** — Target audience would care, next step is obvious
+4. **Craft** — No fluff, strong hooks, effective CTAs
 
 ---
 
@@ -362,30 +244,6 @@ Before marking writing task complete, verify:
 Use the **Escalation Format** in `agents/TEAM.md`.
 
 ---
-
-## Example Writing Workflow
-
-**Task:** "Write lead magnet: 10 CLI Patterns Every Senior Dev Should Know"
-
-**The non-obvious parts** (protocol steps are in Self-Claiming Workflow above):
-
-**3. Check approved positioning:**
-Campaign brief: "Angle #3 — Discovery Engine approved"
-Research finding: "83% of senior devs struggle with discoverability"
-→ Every pattern leads back to "make discovery automatic"
-
-**4. Read the skill and map inputs:**
-```
-Read(file_path="skills/lead-magnet/SKILL.md")
-```
-Apply framework with:
-- Audience: Senior devs frustrated with CLI discoverability
-- Key stat: 83% struggle finding the right tool
-- Format: PDF guide, 10 patterns, each with problem → solution → example
-- Bridge to offer: Pattern #10 → "automate discovery with [product]"
-
-**Self-assessment before completing:**
-Voice (9/10), discoverability language used throughout, ICP-appropriate depth, each pattern immediately actionable. Metadata: `assessment: "9/10 voice — research integrated, ICP-relevant. Ready for QG."`, `ready_for: "quality-gate"`.
 
 ---
 

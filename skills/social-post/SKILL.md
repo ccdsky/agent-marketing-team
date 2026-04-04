@@ -59,84 +59,16 @@ Pick one hook type based on the post goal:
 
 ### Step 3: Write Platform-Specific Draft
 
-Write the full post following the platform structure below. Don't self-censor during drafting — revise in Step 4.
+Apply the hook from Step 2 and write natively for the platform. Key constraints:
+- **LinkedIn:** First 2 lines must stand alone (before "see more"). 150-300 words. 3-5 hashtags at end.
+- **Twitter/X:** 280 chars/tweet. Threads: 3-8 tweets, no hashtags. Each tweet must stand alone.
+- **Substack Notes:** 150-500 words. More personal than LinkedIn. Questions perform well.
 
-#### LinkedIn
+For detailed platform formatting, see `agents/references/platform-formats.md`.
 
-**Structure:**
-```
-[Hook — 1-2 lines, stops the scroll]
+### Step 4: Voice Pass
 
-[Bridge — 1 line connecting hook to content]
-
-[Body — 3-7 lines, short paragraphs, one idea per paragraph]
-
-[Proof or example — specific, concrete]
-
-[CTA — soft ask or invitation]
-
-[Hashtags — 3-5 relevant, placed after CTA]
-```
-
-**Rules:**
-- First 2 lines must stand alone (they appear before "see more")
-- Max 3 lines per paragraph (white space is your friend)
-- No bullet lists in first 2 lines
-- Emojis: use sparingly, only if authentic to your voice
-- Length: 150-300 words optimal (can go to 600 for high-value long-form)
-
-#### Twitter/X
-
-**Structure (thread):**
-```
-Tweet 1: [Hook — the single most compelling point]
-Tweet 2-8: [One idea per tweet, builds on previous]
-Tweet N: [Summary or CTA]
-```
-
-**Structure (single tweet):**
-```
-[Hook] [Core insight]. [CTA or question?]
-```
-
-**Rules:**
-- 280 chars per tweet
-- Threads: 3-8 tweets optimal
-- No hashtags in thread (kills engagement on X)
-- Add one hashtag max at very end if needed
-- Conversational, punchy, direct
-
-#### Substack Notes
-
-**Structure:**
-```
-[Hook or observation — 1-2 sentences]
-
-[Insight or story — 3-5 sentences]
-
-[Question or invitation to respond]
-```
-
-**Rules:**
-- 150-500 words
-- More personal, less polished than LinkedIn
-- Can share article excerpts with commentary
-- Questions perform well
-
-### Step 4: Voice and ICP Pass
-
-**Voice check** — Read aloud against `voice-dna.md`. Ask:
-- Does this sound like the owner's actual speech patterns?
-- Are there any phrases the voice-dna marks as anti-patterns?
-- Is the tone calibrated correctly for this platform?
-- Does it avoid the "AI writing" tells (excessive hedging, generic advice)?
-
-**ICP check** — Verify against `icp.md`:
-- Does this address a real pain point or aspiration of the ICP?
-- Is the language they'd recognize (not jargon they don't use)?
-- Would they share this? Tag someone? Save it?
-
-Rewrite any lines that don't pass both checks.
+Verify against `voice-dna.md` and `icp.md`. The share test: would the ICP tag someone or save this?
 
 ---
 

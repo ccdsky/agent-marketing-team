@@ -47,20 +47,9 @@ Lead magnets should **not** target Unaware audiences (they don't know they have 
 If no → too broad. Narrow the scope.
 If yes → proceed.
 
-**Title formula test:**
-Winning lead magnet titles have all three:
-- **Specific outcome** (not vague benefit)
-- **Target audience** (makes ICP feel this is for them)
-- **Timeframe or specificity** (makes it feel achievable)
+**Title test:** Must have all three — specific outcome + target audience + timeframe/specificity.
 
-Examples:
-- "The 5-Minute Content Audit Checklist for SaaS Founders" ✅
-- "The Complete Guide to Content Marketing" ❌ (too broad, no outcome)
-- "47 Email Subject Lines That Tripled My Open Rates" ✅
-- "Better Email Marketing" ❌ (not specific, no outcome)
-
-**Connection to paid offering:**
-The lead magnet should naturally lead toward the next step (newsletter, product, service). Define that connection before writing.
+**Connection to paid offering:** Define how the lead magnet bridges to the next step before writing.
 
 ### Step 2: Choose the Format
 
@@ -91,72 +80,15 @@ The lead magnet should naturally lead toward the next step (newsletter, product,
 
 #### Core Content
 
-**For checklists:**
-```
-Section 1: [Phase or Category]
-- [ ] [Specific action] — [brief why or how if needed]
-- [ ] [Specific action]
-...
-
-Section 2: [Next phase]
-...
-```
-
-**For templates:**
-```
-[Template name]
-Purpose: [one line]
-When to use: [specific situation]
-
-[Template with placeholders clearly marked in [BRACKETS]]
-
-Usage notes:
-- How to fill in placeholder X
-- When to modify section Y
-```
-
-**For mini-guides:**
-```
-Step 1: [Action verb title]
-[100-200 words explaining the step with concrete example]
-
-Step 2: [Action verb title]
-...
-```
-
-**For frameworks:**
-```
-[Framework name]
-Overview: [One paragraph — what the framework does]
-
-Component 1: [Name]
-- What it is
-- Why it matters
-- How to apply it (concrete example)
-
-Component 2: [Name]
-...
-
-[Visual if possible — table, diagram, matrix]
-```
+Write the content matching the chosen format. Each section must deliver value — no filler.
 
 #### Next Step (Internal CTA)
 
-At the end, connect to the logical next step — without hard-selling:
+Connect to the logical next step without hard-selling. One line, soft bridge.
 
-Options:
-- "If you found this useful, [newsletter name] covers [topic] every [frequency]. [Link to subscribe]"
-- "Ready to go deeper? [Product/service name] helps [ICP] [achieve outcome]. [Link]"
-- "Share this with [ICP role who would also benefit]"
+### Step 4: Voice Pass
 
-Keep it short. They just got value — don't undermine it with a sales pitch.
-
-### Step 4: Voice and ICP Check
-
-- Does the language match the ICP's vocabulary? (check icp.md Language Patterns)
-- Does it sound like the owner wrote it?
-- Is every section delivering value, or are there sections that are just filler?
-- Would the reader send this to a colleague?
+Verify against `voice-dna.md` and `icp.md`. The share test: would the reader send this to a colleague?
 
 ---
 

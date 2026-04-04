@@ -70,57 +70,11 @@ For each target platform, define:
 
 ### Step 3: Write Platform-Specific Versions
 
-#### LinkedIn Version
-
-Take the core insight from source. Rebuild it natively:
-
-```
-[Hook — single most valuable point, rewritten for LinkedIn's scroll]
-[Bridge — one sentence connecting hook to value]
-[Body — 3-5 short paragraphs with the supporting point]
-[CTA — "Full [newsletter/article/thread] in the comments" or link in bio]
-```
-
-Don't say "As I wrote in my newsletter..." — just deliver the value directly.
-
-#### Twitter/X Thread Version
-
-Extract 3-7 distinct sub-points from the source piece. Build as a thread:
-
-```
-Tweet 1: [The thesis — most surprising claim from the source]
-Tweet 2: [Point 1 — one specific sub-point]
-Tweet 3: [Point 2]
-...
-Tweet N-1: [The key takeaway]
-Tweet N: [RT if valuable + link to full piece]
-```
-
-Each tweet must stand alone. Don't write "As I mentioned in tweet 2..." — threads get shared in fragments.
-
-#### Substack Notes Version
-
-More personal, less polished than LinkedIn:
-
-```
-[Brief framing — 1 sentence: "I wrote about X this week and the part that surprised me was..."]
-[The one thing — the extracted insight, in 2-4 sentences]
-[Your reaction or personal extension of the idea]
-[Link to full piece]
-```
-
-#### Short-Form Adaptation (for other platforms)
-
-Apply the same principle: pick one idea, write it natively, link back.
+For each platform, rebuild natively around the anchor idea. Never copy the source opening. Never reference the original ("As I wrote in my newsletter...") — just deliver the value. For platform formatting constraints, see `agents/references/platform-formats.md`.
 
 ### Step 4: Voice Check
 
-For each platform version:
-- Does this sound like it was written for this platform specifically?
-- Does it match the voice-dna.md patterns (with any platform-specific adjustments from brand-guide.md)?
-- Is it native (not obviously repurposed from somewhere else)?
-
-The test: If someone saw this without context, would they know which piece it came from? If yes, it's too derivative. Rewrite to be more native.
+The derivative test: if someone saw this without context, would they know which piece it came from? If yes, rewrite to be more native. Verify against `voice-dna.md`.
 
 ---
 

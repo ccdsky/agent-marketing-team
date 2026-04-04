@@ -99,61 +99,16 @@ Lighter issue, great for busy weeks or building habits.
 ### Step 3: Write the Issue
 
 #### Subject Line (write 3 options)
-Newsletter subjects are different from marketing emails:
-- More personal, less clickbait
-- Can be conversational ("Something I've been thinking about")
-- Can be specific ("The mistake I made with [topic]")
-- Can be intriguing ("Why [conventional wisdom] is backwards")
 
-**Test:** Would you open this email from a friend?
+Test: Would you open this email from a friend?
 
-#### Opening Paragraph
+#### Body + Closing
 
-The most important paragraph. Either:
-1. Start with a specific, vivid detail (not a vague setup)
-2. Make a surprising claim and commit to it
-3. Drop the reader into the middle of a story
+Match the format chosen in Step 2. Close with a question (invites replies) or forward-looking note. Optional P.S. for a soft CTA.
 
-Avoid: "In today's issue, we'll cover..." / "This week, I want to talk about..." — these are weak openers that signal low-value content.
+### Step 4: Voice Pass
 
-#### Body
-
-Match the format chosen in Step 2. Key rules:
-- Short paragraphs (1-3 sentences)
-- White space is a design element
-- One idea per paragraph
-- Concrete examples > abstract claims
-- Personal > polished
-
-**Voice check during writing:** Does this sound like a human talking, not a marketing department writing?
-
-#### Closing
-
-Options:
-- Question for the reader (invites replies, builds community)
-- Forward-looking: "Next week I'm going to..."
-- Simple sign-off that matches the newsletter's established tone
-
-#### P.S. (optional but high-read)
-The P.S. gets read almost as much as the subject line. Use it for:
-- One soft CTA
-- A bonus thought that didn't fit in the body
-- A personal note
-
-### Step 4: Voice and ICP Pass
-
-**Voice check** — Read aloud. Ask:
-- Would someone forward this to a colleague? (if not, why not?)
-- Does this feel like a conversation or a broadcast?
-- Are there any sentences that sound like they were written by a marketing team?
-- Does it sound like the owner's actual voice?
-
-**ICP check** — Verify against `context/icp.md`:
-- Would the ICP find this genuinely valuable (not just informational)?
-- Does it speak to their actual context and questions?
-- Is the language they use, not jargon they don't?
-
-Rewrite any paragraphs that fail these tests.
+Verify against `voice-dna.md` and `icp.md`. The forward test: would someone send this to a colleague?
 
 ---
 

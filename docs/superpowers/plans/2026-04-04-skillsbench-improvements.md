@@ -504,24 +504,13 @@ After implementing Tasks 1-7, a second-pass audit against the paper identified a
 - **Gap 1 (fixed):** `ad-angles` and `proof-harvesting` lacked worked examples — added Acme CI/CD examples to both
 - **Gap 2 (fixed):** Section header inconsistency — all 14 non-init skills now use `## When to Use` consistently
 
-### Recommended Future Work
+### Fixed in Third Pass
 
-**Gap 3: Strip general marketing knowledge from content skills (F4 risk)**
+- **Gap 3 (fixed):** Stripped general marketing knowledge from all 7 content skills. Removed generic copywriting advice (email body structure templates, title formula lists, voice pass checklists, opening paragraph guidance) that Claude already knows from pretraining. Preserved all decision-forcing frameworks (Schwartz awareness diagnosis, Masterson lead types, Cialdini proof dimensions, mechanism credibility checks). Token reductions: landing-page −32%, email-sequence −14%, blog-post −21%, newsletter −18%, social-post −20%, lead-magnet −18%, repurpose −14%.
+- **Gap 3b (fixed):** Compressed creative-specialist.md (3,099 → 2,245 tokens, −28%) by removing redundant voice matching protocol, research integration good/bad examples, 16-item quality self-assessment checklist, and full example workflow. Replaced with 4-line quality standards summary.
+- **Gap 3c (fixed):** Compressed research-specialist.md (2,960 → 1,231 tokens, −58%) by removing full Research Types & Methods section (5 research types with Goals/Sources/Deliverables/Examples), MCP usage examples, quality standards good/bad examples, and verbose example workflow. Skills themselves contain this detail.
 
-The paper's Table 4 shows Media & Content Production at only +13.9pp — 8th out of 11 domains. The explanation: *"domains with strong pretraining coverage benefit less from external procedural guidance."* LLMs already know how to write good marketing copy.
-
-Some sections in our content skills reiterate general copywriting knowledge that Claude already has:
-- "Name the pain the ICP is experiencing" (landing-page Section 2)
-- "Make your headline specific and believable" (landing-page Section 1)
-- "Lead with a story or question" (social-post hook patterns)
-
-These sections risk the **conflicting guidance failure mode** (p.7): "Skills may introduce conflicting guidance or unnecessary complexity for tasks models already handle well." 16/84 tasks in the benchmark showed *negative* deltas from skills.
-
-**What to keep:** The genuinely additive frameworks — Schwartz awareness diagnosis (non-obvious: changes the entire approach), JTBD force mapping, Hormozi Value Equation scoring, Dunford 5-component positioning, Masterson lead type selection, Cialdini proof tagging. These are procedural and non-obvious.
-
-**What to trim:** Generic craft advice that any skilled writer/LLM knows. The litmus test: *"Would Claude produce worse output without this instruction?"* If a section describes what good copywriting looks like (which models already know), remove it. If it forces a specific decision framework the model wouldn't apply on its own, keep it.
-
-**Estimated impact:** Moving content skills from "standard" (+10.1pp) toward "detailed" (+18.8pp) category by reducing general-knowledge noise and focusing on decision-forcing frameworks.
+### Remaining Future Work
 
 **Gap 4: Skills composition effects (Future Work, p.8)**
 
