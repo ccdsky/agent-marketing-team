@@ -5,7 +5,7 @@ description: Write automated email campaigns (drip, nurture, onboarding, lead ma
 
 # Email Sequence Skill
 
-## Purpose
+## When to Use
 
 Write automated email campaigns — drip sequences, nurture sequences, onboarding sequences, or lead magnet delivery sequences. Produces complete, ready-to-load emails with subject lines, preview text, and body copy.
 
@@ -74,12 +74,11 @@ Each email’s subject line and opening hook should match the Masterson lead typ
 For each email, complete in this order:
 
 #### 1. Subject Line (write 3 options, choose the strongest)
-**Formulas:**
+**Formulas (top 2):**
 - Curiosity gap: "The one thing most [ICP] get wrong about [topic]"
 - Direct benefit: "Your [lead magnet name] is inside"
-- Story: "What happened when I tried [approach]"
-- Question: "Are you making this mistake?"
-- Specific: "[Number] [timeframe] from now, you could [outcome]"
+
+*(See `skills/email-sequence/references/subject-line-formulas.md` for full list)*
 
 **Rules:**
 - Under 50 characters for mobile (9 words max)
@@ -150,6 +149,15 @@ Save the complete sequence as a **single file** so Quality Gate and Distribution
 
 `output/campaigns/[campaign-slug]/drafts/email-sequence-[slug]-draft.md`
 
+**Mark complete:**
+```
+TaskUpdate(taskId="[ID]", status="completed", metadata={
+  "deliverable": "output/campaigns/[campaign-slug]/drafts/email-sequence-[slug]-draft.md",
+  "assessment": "[1-line: voice X/10, clarity X/10, craft X/10]",
+  "ready_for": "quality-gate"
+})
+```
+
 **File format:**
 ```markdown
 # Email Sequence: [Campaign Name]
@@ -198,6 +206,74 @@ Save the complete sequence as a **single file** so Quality Gate and Distribution
 - Voice consistency across sequence: [1-10]
 - Subject line strength (average): [1-10]
 - Arc coherence: [1-10]
+```
+
+---
+
+## Example
+
+**Product:** Acme CI/CD — CI/CD platform for mid-market engineering teams
+**Sequence type:** Lead magnet delivery (CI/CD Migration Checklist)
+**Trigger:** Opt-in form submission
+
+---
+
+**File:** `output/campaigns/acme-cicd-launch/drafts/email-sequence-cicd-checklist-draft.md`
+
+```
+## Sequence Arc
+Email 1: Deliver checklist + plant the "why migrations fail" hook
+Email 2: Share the #1 reason migration plans stall (non-obvious insight)
+Email 3: Case study — how Lattice cut deploy time 60% in 6 weeks (proof)
+Email 4: Handle the "we're too customized" objection head-on
+Email 5: Offer a free pipeline audit (direct CTA)
+
+## Email Arc Table
+| # | Title               | Timing | Goal                        | CTA              |
+|---|---------------------|--------|-----------------------------|------------------|
+| 1 | Your checklist      | Day 0  | Deliver, build curiosity    | Download link    |
+| 2 | The hidden blocker  | Day 2  | Non-obvious insight         | Reply or read    |
+| 3 | The Lattice story   | Day 4  | Proof + social proof        | Read case study  |
+| 4 | "We're too custom"  | Day 6  | Objection removal           | Book a call      |
+| 5 | Free audit offer    | Day 8  | Convert to booked call      | Schedule audit   |
+
+---
+
+## Email 1: Your checklist is here
+
+**Send timing:** Day 0 (immediate)
+**Goal:** Deliver value, earn the read on email 2
+
+### Subject Line Options
+1. Your CI/CD migration checklist
+2. Here's the checklist (+ one thing most teams miss)
+3. Your download is ready
+
+**Recommended:** Option 2 — plants curiosity without withholding the goods
+
+### Preview Text
+Opens right in your browser. Takes 4 minutes to read.
+
+### Body
+
+Hey [First Name],
+
+Your CI/CD Migration Checklist is attached — [DOWNLOAD LINK].
+
+It covers the 4 phases most teams skip that turn a 2-week migration into
+a 3-month headache. Phase 3 (rollback validation) is the one that bites
+everyone.
+
+One thing I'll share tomorrow: the reason most migration plans stall has
+nothing to do with the tooling. I'll show you what it actually is.
+
+For now — grab the checklist and check off what you've already done.
+You might be further along than you think.
+
+— [Sender Name]
+
+P.S. If you're mid-migration and something in the checklist doesn't apply
+to your stack, just reply. I read every response.
 ```
 
 ---

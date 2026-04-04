@@ -5,7 +5,7 @@ description: Write email newsletters with Schwartz subscriber-awareness matching
 
 # Newsletter Skill
 
-## Purpose
+## When to Use
 
 Write email newsletters that build deep reader relationships, establish authority, and drive action — without feeling like marketing. These are the emails people actually look forward to receiving.
 
@@ -163,6 +163,15 @@ Save to: `output/campaigns/[campaign-slug]/drafts/newsletter-[YYYY-MM-DD]-draft.
 
 For standalone issues (Simple Mode): Return output inline. Do not create a file unless the user asks.
 
+**Mark complete:**
+```
+TaskUpdate(taskId="[ID]", status="completed", metadata={
+  "deliverable": "output/campaigns/[campaign-slug]/drafts/newsletter-[YYYY-MM-DD]-draft.md",
+  "assessment": "[1-line: voice X/10, clarity X/10, craft X/10]",
+  "ready_for": "quality-gate"
+})
+```
+
 **File format:**
 ```markdown
 # Newsletter Draft: [Date] — [Working Title]
@@ -198,6 +207,65 @@ For standalone issues (Simple Mode): Return output inline. Do not create a file 
 - Subject line: [1-10]
 - Opening strength: [1-10]
 - Clarity of core idea: [1-10]
+```
+
+---
+
+## Example
+
+**Product:** Acme CI/CD — CI/CD platform for mid-market engineering teams
+**Format:** Personal Letter
+**Core idea:** The real reason mid-market CI/CD fails isn't tooling — it's
+the missing rollback habit
+
+---
+
+**File:** `output/campaigns/acme-cicd-launch/drafts/newsletter-2026-04-04-draft.md`
+
+```
+## Subject Line Options
+1. The deploy that changed how I think about rollbacks
+2. Why your rollback plan probably won't work
+3. Something most CI/CD guides skip
+
+**Recommended:** Option 1 — personal hook, curiosity without clickbait
+
+## Preview Text
+It wasn't a tooling problem. It was a habits problem.
+
+---
+
+## Issue
+
+Last month I watched a 20-person engineering team deploy a routine feature
+update that took down their checkout flow for 47 minutes.
+
+They had CI/CD. They had tests. They had a deployment checklist.
+
+What they didn't have was a rollback they'd actually tested in production
+conditions.
+
+Here's what I've seen in team after team: rollback plans exist in theory.
+Engineers add them to runbooks. Nobody runs them until it's an emergency.
+Then they discover the rollback takes 12 minutes, not 2 — and that's 10
+minutes your customers aren't buying anything.
+
+The fix isn't a better rollback script. It's making rollback drills a
+monthly habit — same as fire drills. Run it on a Tuesday. Learn what breaks.
+Fix it before Friday matters.
+
+Three things that change when teams build this habit:
+1. Deploy anxiety drops (you've already seen the worst case)
+2. Incident resolution time falls by 60-70%
+3. Engineers stop avoiding deploys late in the sprint
+
+If you're setting up or migrating your CI/CD pipeline, this is the one
+checklist item most guides bury in section 4. Put it in section 1.
+
+— [Sender Name]
+
+P.S. We put together a migration checklist that puts rollback validation
+front and center. [Download it here — link]
 ```
 
 ---

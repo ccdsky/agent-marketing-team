@@ -5,7 +5,7 @@ description: Adapt content for multiple platforms with Schwartz awareness-shift 
 
 # Repurpose Skill
 
-## Purpose
+## When to Use
 
 Adapt a piece of existing content for multiple platforms without losing the core insight — and without just copying and pasting. Good repurposing extracts the single best idea from a long piece and rebuilds it natively for the target platform.
 
@@ -129,6 +129,15 @@ The test: If someone saw this without context, would they know which piece it ca
 Create one folder per repurpose project:
 `output/campaigns/[slug]/drafts/repurposed/`
 
+**Mark complete:**
+```
+TaskUpdate(taskId="[ID]", status="completed", metadata={
+  "deliverable": "output/campaigns/[slug]/drafts/repurposed/repurpose-overview.md",
+  "assessment": "[1-line: voice X/10, clarity X/10, craft X/10]",
+  "ready_for": "quality-gate"
+})
+```
+
 Files:
 ```
 repurposed/
@@ -178,6 +187,61 @@ repurposed/
 - Native feel (doesn't look repurposed): [1-10]
 - Voice match: [1-10]
 - Hook strength: [1-10]
+```
+
+---
+
+## Example
+
+**Source:** Blog post — "Why Mid-Market Teams Are Ditching Jenkins"
+**Source type:** Blog post (Solution Aware audience)
+**Repurpose targets:** LinkedIn post + newsletter snippet
+
+---
+
+**File:** `output/campaigns/acme-cicd-launch/drafts/repurposed/repurpose-overview.md`
+
+```
+## Core Ideas Extracted
+1. Jenkins maintenance cost = 5-10 eng-hours/week (the hidden tax)
+2. Rollback drills cut incident resolution by 60-70%
+3. Story: team cut deploy incidents 60% in 6 weeks without a DevOps hire
+
+## Platform Map
+| Platform  | Anchor Idea    | File                              | Status |
+|-----------|----------------|-----------------------------------|--------|
+| LinkedIn  | Idea #3 (story)| linkedin-ditching-jenkins.md      | Draft  |
+| Newsletter| Idea #2 (drill)| newsletter-rollback-habit.md      | Draft  |
+```
+
+---
+
+**LinkedIn version** (`linkedin-ditching-jenkins.md`):
+
+Hook shifts from Solution Aware (blog reader searched this) → Problem Aware
+(LinkedIn reader didn't). Lead with the pain story, not the mechanism.
+
+```
+We cut deploy incidents 60% in 6 weeks — no DevOps hire.
+
+[Story-first body: what broke, what we changed, the monthly rollback drill]
+[CTA: Full breakdown in comments — link to blog]
+```
+
+---
+
+**Newsletter snippet** (`newsletter-rollback-habit.md`):
+
+Hook shifts to insight reveal — subscribers are Most Aware, go deeper.
+
+```
+[Subject: The deploy that changed how I think about rollbacks]
+
+[Open: the specific Monday morning incident — drop into the scene]
+[Insight: rollback plans exist in runbooks; nobody drills them until it's
+an emergency]
+[Takeaway: monthly rollback drill as standing team ritual]
+[CTA: I put the full framework in this week's blog post — link]
 ```
 
 ---

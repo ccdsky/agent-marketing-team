@@ -124,6 +124,22 @@ If context files may be unpopulated, run System Pre-Flight first.
 
 ---
 
+## Skill Loading Protocol
+
+Load skills **on-demand per task**, not all skills for your role.
+
+**Rule:** Read at most 2 SKILL.md files per task. If a task spans two domains, read both. Never pre-load skills you might not need.
+
+**How to load:**
+1. Claim a task from TaskList()
+2. Identify the 1-2 most relevant skills from your routing table
+3. Read the SKILL.md for the primary skill
+4. If needed during execution, read the skill's `references/` files on demand
+
+**Do NOT pre-read all skills before claiming tasks.**
+
+---
+
 ## Execution Model
 
 **Simple Mode (single asset):** The activated specialist operates directly within the conversation. No subagents. Sequential execution. Use for single-asset tasks like "Write a LinkedIn post."
@@ -196,27 +212,7 @@ TaskUpdate(
 
 ## Escalation Format
 
-Use this format when escalating to Campaign Lead or directly to the user:
-
-```markdown
-## Escalation: [Issue]
-
-**From:** [Agent name]
-**Campaign:** [Name] (if applicable)
-
-**Situation:**
-[What's happening]
-
-**Options:**
-1. [Option A]: [Pros/cons]
-2. [Option B]: [Pros/cons]
-
-**My Recommendation:**
-[Which option and why]
-
-**Decision Needed:**
-[What needs to be decided before work can continue]
-```
+When escalating, include: **situation** (what's happening), **options** (with tradeoffs), **your recommendation** (which and why), **decision needed** (what must be decided before work continues).
 
 ---
 

@@ -46,60 +46,27 @@ You are part of an **AI-powered marketing team** that executes full-funnel campa
 ---
 
 ### Campaign Lead
-**Keywords:** campaign, marketing campaign, lead generation, top-of-funnel, multi-asset, launch, full funnel
-
-**Route when:** "Create a marketing campaign...", "I need a lead generation campaign...", "Launch [product] with full marketing...", "Create lead magnet + landing page + emails..."
-
-**Flow:** Campaign Lead → TaskCreate sprint tasks → Specialists self-claim → Sprint checkpoints → Ship
-
+**Keywords:** campaign, multi-asset, launch, lead generation, full funnel
+**Routing note:** Multi-keyword requests spanning strategy + creation route here, not to individual specialists.
 **Details:** `agents/campaign-lead.md`
 
----
-
 ### Research Specialist
-**Keywords:** research, market research, competitor analysis, customer language, positioning gaps, keyword research, positioning angles, differentiation angles, lead magnet strategy, lead magnet concept, proof harvesting, proof audit, ad angles, angle multiplication
-
-**Route when:** "Research [topic]...", "Analyze the [market]...", "Who are the competitors in [space]?", "Find customer language about [pain point]...", "Run positioning angles on...", "Find differentiation angles for...", "Design a lead magnet concept...", "Lead magnet strategy for...", "Harvest proof for...", "Multiply angles for...", "Generate ad angles for..."
-
-**Flow:** Research Specialist self-claims → executes research → saves to `knowledge/research/[topic]-[date].md`
-
+**Keywords:** research, competitor analysis, positioning angles, keyword research, lead magnet strategy, proof harvesting, ad angles
+**Routing note:** Strategy/concept work routes here, not Creative Specialist. 6 skills, loaded on-demand per task (max 2).
 **Details:** `agents/research-specialist.md`
 
----
-
 ### Creative Specialist
-**Keywords:** write, draft, create, revise, landing page, email sequence, blog post, lead magnet, newsletter, social post, expert review, expert panel
-
-**Route when:** "Write a landing page...", "Create an email sequence...", "Draft a blog post...", "Write a LinkedIn post...", "Expert review this [asset]..."
-
-**Routing note:** Strategy and concept work ("lead magnet strategy", "lead magnet concept", "positioning angles") routes to Research Specialist, not Creative Specialist. Multi-keyword requests that span both strategy and creation route to Campaign Lead.
-
-**Flow:** Creative Specialist reads context → invokes skill from `skills/` → drafts to `output/campaigns/[slug]/drafts/` → Quality Gate reviews
-
+**Keywords:** write, draft, create, landing page, email sequence, blog post, lead magnet, newsletter, social post, expert review
+**Routing note:** Only content creation, not strategy. 8 skills, loaded on-demand per task (max 2).
 **Details:** `agents/creative-specialist.md`
 
----
-
 ### Quality Gate
-**Keywords:** review, edit, feedback, check, approve, editorial, quality check
-
-**Route when:** "Review this draft", "Edit this [asset]", "Is this ready to publish?", "Give me feedback on..."
-
-**Flow:** Quality Gate reads draft + voice-dna → evaluates (voice 40%, clarity 25%, craft 25%, positioning 10%) → approves or requests revisions
-
+**Keywords:** review, edit, feedback, approve, quality check
+**Rubric:** Voice 40%, Clarity 25%, Craft 25%, Positioning 10%. Approves or requests revisions.
 **Details:** `agents/quality-gate.md`
 
----
-
 ### Distribution Specialist
-**Keywords:** publish, format, distribute, analytics, performance, track, metrics
-
-**Route when:** "Format this for [platform]", "Publish this campaign", "How is the campaign performing?", "Track performance..."
-
-**Flow (publish):** Reads edited asset → formats for platform → saves to `ready/` → publishes
-
-**Flow (analytics):** Requests three-layer metrics from user (outcomes → demand signals → diagnostics) → assesses incrementality → reports to Campaign Lead
-
+**Keywords:** publish, format, distribute, analytics, performance, metrics
 **Details:** `agents/distribution-specialist.md`
 
 ---

@@ -5,7 +5,7 @@ description: Write direct-response landing pages with Schwartz awareness diagnos
 
 # Landing Page Skill
 
-## Purpose
+## When to Use
 
 Write a direct-response landing page that converts visitors into leads or customers. This skill produces a complete landing page draft — from above-fold headline through CTA — optimized for the specific campaign goal.
 
@@ -62,11 +62,11 @@ The only part most visitors see. Must do all of these:
 - Make a specific, believable promise
 - Create enough curiosity or clarity to scroll
 
-**Headline formula options:**
+**Headline formula options (top 2):**
 - `[Specific outcome] without [biggest fear]`
 - `How [ICP] can [achieve goal] in [timeframe]`
-- `The [ICP's] guide to [desired transformation]`
-- `Stop [painful thing]. Start [desired thing].`
+
+*(See `skills/landing-page/references/headline-formulas.md` for full list)*
 
 **Subheadline:** 1-2 sentences that expand the headline and clarify who this is for.
 
@@ -97,33 +97,21 @@ Transition from problem to solution. Don't hard-sell yet — position the soluti
 3. Explain WHY it works (the unique mechanism)
 4. One-sentence promise: what they'll have/be able to do
 
-**Mechanism Credibility Check (Kahneman):**
-- System 1 (intuitive): Does the mechanism "feel right" on first read? Test: could you explain it to a friend in one sentence and get a nod?
-- System 2 (analytical): Does it hold up to logical scrutiny? Test: if someone asks "why does that work?" can you answer specifically?
-- If it passes System 1 but fails System 2 → it's a gimmick, revise
-- If it passes System 2 but fails System 1 → it's too complex, simplify
+**Mechanism Credibility Check:** Can you explain it in one sentence and get a nod (System 1)? Can you defend it when challenged (System 2)? If it only passes one — revise.
 
 #### Section 4: Proof Block
 
 Back up the promise with evidence. Use whatever proof exists:
 
-**Hierarchy of proof (use the strongest available):**
+**Hierarchy of proof (use the strongest available — top 2):**
 1. Specific customer results with numbers ("helped X achieve Y in Z weeks")
 2. Testimonials with full name and specific outcomes
-3. Case studies or before/after stories
-4. Social proof numbers (subscribers, customers, revenue)
-5. Media logos or expert endorsements
-6. Your own credentials (years of experience, past results)
+
+*(See `skills/landing-page/references/proof-hierarchy.md` for full 6-tier list)*
 
 **Write proof as stories, not praise.** "John reduced his CAC by 40% in 6 weeks" beats "Amazing product!"
 
-**Proof Persuasion Dimensions (Cialdini):**
-When selecting and arranging proof, ensure coverage across multiple persuasion principles:
-- **Social Proof:** "People like you chose this" — user counts, adoption stats, industry logos
-- **Authority:** "Experts endorse this" — credentials, endorsements, media mentions
-- **Consistency:** "The journey works" — case study arcs showing commitment → effort → result
-
-Arrange proof to satisfy both System 1 (emotional testimonial story) and System 2 (specific numbers and outcomes) in sequence.
+Cover at least two Cialdini dimensions (Social Proof, Authority, Consistency). Mix System 1 proof (emotional story) with System 2 proof (specific numbers) in sequence.
 
 #### Section 5: Offer Stack / What You Get
 
@@ -180,6 +168,15 @@ Verify against `icp.md`:
 ## Output Format
 
 Save to: `output/campaigns/[campaign-slug]/drafts/landing-page-draft.md`
+
+**Mark complete:**
+```
+TaskUpdate(taskId="[ID]", status="completed", metadata={
+  "deliverable": "output/campaigns/[campaign-slug]/drafts/landing-page-draft.md",
+  "assessment": "[1-line: voice X/10, clarity X/10, craft X/10]",
+  "ready_for": "quality-gate"
+})
+```
 
 **File format:**
 ```markdown
@@ -249,6 +246,66 @@ Save to: `output/campaigns/[campaign-slug]/drafts/landing-page-draft.md`
 - Objection coverage: [1-10]
 - Overall conversion readiness: [1-10]
 - Key weaknesses for Quality Gate to focus on: [notes]
+```
+
+---
+
+## Example
+
+**Product:** Acme CI/CD — CI/CD platform for mid-market engineering teams
+**Conversion goal:** Email opt-in for lead magnet (CI/CD Migration Checklist)
+**Awareness stage:** Problem Aware
+**Lead type:** Problem-Agitation
+
+---
+
+**File:** `output/campaigns/acme-cicd-launch/drafts/landing-page-draft.md`
+
+```
+## Above the Fold
+
+### Headline
+Ship faster without breaking prod — even with a 20-person eng team.
+
+### Subheadline
+Acme CI/CD gives mid-market teams the deployment pipeline that enterprise
+teams spend months building. No DevOps hire required.
+
+### CTA Button
+Get the free migration checklist
+
+---
+
+## Section 2: Problem Agitation
+
+Your Jenkins setup made sense at 5 engineers.
+
+Now you have 20. Every deployment is a coin flip. Someone broke the shared
+pipeline last Tuesday. The post-mortem was 3 hours. Nothing changed.
+
+The problem isn't your team — it's that Jenkins was designed for teams with
+a dedicated DevOps engineer to babysit it. You don't have that.
+
+Meanwhile your competitors ship on Fridays. You don't.
+
+---
+
+## Section 3: Solution Bridge
+[Introduce Acme CI/CD — the mechanism: pre-configured pipelines for
+common mid-market stacks, zero-config branch protection, one-click rollback]
+
+## Section 4: Proof Block
+[3 customer stories with deployment frequency and incident metrics]
+
+## Section 5: Offer Stack
+[What's in the Migration Checklist — 4 deliverables]
+
+## Section 6: FAQ
+[Top 3 objections: "We're too customized for this", "Migration risk",
+"Cost vs. hiring a DevOps engineer"]
+
+## Section 7: Closing CTA
+[Restate: Ship on Fridays again. Get the checklist.]
 ```
 
 ---
