@@ -5,7 +5,7 @@ description: Write platform-optimized social posts (LinkedIn, Twitter/X, Substac
 
 # Social Post Skill
 
-## Purpose
+## When to Use
 
 Write platform-optimized social posts (LinkedIn, Twitter/X, Substack Notes) that match your voice, engage your ICP, and drive the campaign goal.
 
@@ -146,6 +146,15 @@ Save to: `output/campaigns/[campaign-slug]/drafts/social-[platform]-[topic]-draf
 
 For standalone posts (Simple Mode): Return output inline. Do not create a file unless the user asks.
 
+**Mark complete:**
+```
+TaskUpdate(taskId="[ID]", status="completed", metadata={
+  "deliverable": "output/campaigns/[campaign-slug]/drafts/social-[platform]-[topic]-draft.md",
+  "assessment": "[1-line: voice X/10, clarity X/10, craft X/10]",
+  "ready_for": "quality-gate"
+})
+```
+
 **File format:**
 ```markdown
 # Social Post: [Platform] — [Topic]
@@ -168,6 +177,53 @@ For standalone posts (Simple Mode): Return output inline. Do not create a file u
 - ICP relevance: [1-10]
 - Hook strength: [1-10]
 - Notes: [anything to flag for review]
+```
+
+---
+
+## Example
+
+**Product:** Acme CI/CD — CI/CD platform for mid-market engineering teams
+**Platform:** LinkedIn
+**Goal:** Lead generation (drive checklist opt-in)
+**Hook type:** Specific result
+
+---
+
+**File:** `output/campaigns/acme-cicd-launch/drafts/social-linkedin-cicd-draft.md`
+
+```
+## Draft
+
+We cut our deploy incidents by 60% in 6 weeks.
+
+Not by hiring a DevOps engineer. Not by rewriting our pipeline from scratch.
+
+By fixing the one thing nobody puts in their CI/CD runbook.
+
+Here's the thing about mid-market engineering teams (20-50 engineers): you
+graduate past the point where Jenkins "just works," but you're not big enough
+to justify a dedicated platform engineer to maintain it.
+
+So you inherit a CI/CD setup that works 90% of the time.
+
+That other 10% costs you 3-4 hours per incident, a Friday afternoon on
+call, and one engineer who quietly starts job hunting because they're tired
+of being paged.
+
+The fix we found: rollback validation as a standing monthly drill.
+
+Not a runbook checkbox. An actual drill — deploy something, roll it back,
+time it, fix what broke. Repeat monthly.
+
+Teams that do this cut incident resolution from 40+ minutes to under 8.
+
+If you're evaluating CI/CD options for a growing team, I put together a
+migration checklist that makes rollback validation step one (not step nine).
+
+Link in comments.
+
+#devops #cicd #engineeringteams
 ```
 
 ---

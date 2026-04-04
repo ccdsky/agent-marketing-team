@@ -5,7 +5,7 @@ description: Create high-value opt-in content (checklists, guides, templates, fr
 
 # Lead Magnet Skill
 
-## Purpose
+## When to Use
 
 Create high-value opt-in content that generates email subscribers by delivering a specific, immediate outcome. Lead magnets succeed when they solve one concrete problem so well that the reader tells others about it.
 
@@ -166,6 +166,15 @@ Save to: `output/campaigns/[campaign-slug]/drafts/lead-magnet-[title-slug]-draft
 
 *This single file contains both the lead magnet content and the delivery email template. No separate delivery email file is created.*
 
+**Mark complete:**
+```
+TaskUpdate(taskId="[ID]", status="completed", metadata={
+  "deliverable": "output/campaigns/[campaign-slug]/drafts/lead-magnet-[title-slug]-draft.md",
+  "assessment": "[1-line: voice X/10, clarity X/10, craft X/10]",
+  "ready_for": "quality-gate"
+})
+```
+
 **File format:**
 ```markdown
 # Lead Magnet Draft: [Title]
@@ -203,6 +212,58 @@ Body:
 - Voice match: [1-10]
 - Natural connection to paid offering: [1-10]
 - "Would they share this?" test: [Yes/No — why]
+```
+
+---
+
+## Example
+
+**Product:** Acme CI/CD — CI/CD platform for mid-market engineering teams
+**Format:** Checklist
+**Validated title:** The CI/CD Migration Checklist for Mid-Market Engineering Teams
+
+---
+
+**File:** `output/campaigns/acme-cicd-launch/drafts/lead-magnet-cicd-checklist-draft.md`
+
+```
+## Lead Magnet Content
+
+# The CI/CD Migration Checklist for Mid-Market Engineering Teams
+
+**Who this is for:** Engineering leads and DevOps-curious CTOs at companies
+with 15-50 engineers who are outgrowing their current pipeline setup.
+
+**What you'll have after this:** A phase-by-phase migration plan you can
+present to your team this week — with the 4 steps most guides skip.
+
+**How to use it:** Check off what you've done. Focus on the unchecked boxes.
+Phase 3 is where most migrations stall.
+
+---
+
+### Phase 1: Current State Audit
+
+- [ ] Document all active pipelines and their owners
+- [ ] List every custom plugin or script your pipeline depends on
+- [ ] Identify which pipelines run on a schedule vs. triggered by commits
+
+[Phase 2: Environment parity — 8 items]
+[Phase 3: Rollback validation — 5 items (the section most teams skip)]
+[Phase 4: Cutover and monitoring — 6 items]
+
+---
+
+## Next Step (Bridge to Offer)
+
+If you're in Phase 2 or later and want a second set of eyes on your
+migration plan, Acme CI/CD offers a free 30-minute pipeline audit for
+mid-market teams.
+
+We'll look at your current setup and tell you exactly where the risk is
+before you migrate — not after.
+
+[Book your free audit → link]
 ```
 
 ---

@@ -23,29 +23,29 @@ These run inline — one specialist, no sprint overhead.
 
 **Research a market:**
 ```
-"Research the stormwater compliance software market — who are the
- players, how do they position, and where are the gaps?"
+"Research the CI/CD platform market — who are the players,
+ how do they position, and where are the gaps?"
 ```
-→ Research Specialist runs the `/market-research` framework: maps three tiers of competitors, mines customer language from review sites, scores competitor messaging on Clarity/Relevance/Value/Differentiation, and flags positioning gaps where no one is competing.
+→ Research Specialist runs the `/market-research` framework: maps three tiers of competitors (CircleCI, BuildKite as Tier 1; GitHub Actions as Tier 2; in-house Jenkins as Tier 3), mines customer language from review sites, scores competitor messaging on Clarity/Relevance/Value/Differentiation, and flags positioning gaps where no one is competing.
 
 **Find your positioning:**
 ```
-"Run positioning angles for Gray Matter Logic against the
- ERP consulting market"
+"Run positioning angles for Acme CI/CD against the
+ mid-market CI/CD platform market"
 ```
-→ Research Specialist maps the real competitive alternatives (including "do nothing" and "hire an internal team"), extracts unique attributes, builds mechanisms using the Failure→Shift→Result structure, generates 5-8 angles scored by defensibility/resonance/provability, and tests the top 3 against Laja's 4-layer filter.
+→ Research Specialist maps the real competitive alternatives (including "do nothing — keep maintaining Jenkins" and "hire a DevOps engineer"), extracts unique attributes, builds mechanisms using the Failure→Shift→Result structure, generates 5-8 angles scored by defensibility/resonance/provability, and tests the top 3 against Laja's 4-layer filter.
 
 **Harvest your proof:**
 ```
-"Harvest proof for 2NDNATURE — we have case studies on the website,
- a few G2 reviews, and some customer emails with results"
+"Harvest proof for Acme Corporation — we have case studies on
+ the website, a few G2 reviews, and some customer emails with results"
 ```
 → Research Specialist inventories every proof asset, scores each on Specificity + Credibility + Relevance (min 9/15 to include), tags with Cialdini persuasion dimensions (Social Proof, Authority, Consistency), and maps gaps against what your landing page, emails, and ads will need.
 
 **Get a content strategy:**
 ```
-"What keywords should we target for our municipal stormwater
- compliance product? We want to build organic traffic."
+"What keywords should we target for our CI/CD platform?
+ We want to build organic traffic from mid-market engineering teams."
 ```
 → Research Specialist runs the `/keyword-research` framework: starts from ICP problems (not keyword tools), scores by Business Potential (0-3), splits into Money Phrases vs. Content Keywords, and produces an editorial calendar.
 
@@ -55,22 +55,22 @@ These activate Campaign Lead, who coordinates specialists across three sprints.
 
 **Lead generation campaign:**
 ```
-"Create a lead generation campaign for our ERP migration assessment tool:
- - Lead magnet: 'ERP Migration Readiness Scorecard'
- - Landing page targeting CFOs frustrated with their current system
- - 5-email nurture sequence bridging from scorecard to sales call
+"Create a lead generation campaign for Acme CI/CD:
+ - Lead magnet: 'CI/CD Migration Readiness Checklist'
+ - Landing page targeting DevOps leads frustrated with Jenkins maintenance
+ - 5-email nurture sequence bridging from checklist to demo request
  - Goal: 200 qualified leads in 30 days"
 ```
 
 Sprint 1 produces: market research, proof library, positioning angles with named mechanisms, lead magnet concept brief scored by Hormozi's Value Equation. You approve the direction.
 
-Sprint 2 produces: the scorecard content, a landing page (awareness-diagnosed — CFOs from LinkedIn ads are Solution Aware, so it leads with mechanism differentiation, not problem agitation), a 5-email sequence with awareness-stage transitions per email (Solution Aware → Product Aware → Most Aware → Convert), ad angles multiplied across 6 dimensions for LinkedIn and email. You approve the drafts.
+Sprint 2 produces: the checklist content, a landing page (awareness-diagnosed — DevOps leads from LinkedIn ads are Solution Aware, so it leads with mechanism differentiation, not problem agitation), a 5-email sequence with awareness-stage transitions per email (Solution Aware → Product Aware → Most Aware → Convert), ad angles multiplied across 6 dimensions for LinkedIn and email. You approve the drafts.
 
 Sprint 3: polish, editorial review, platform formatting, publish.
 
 **Product launch:**
 ```
-"Launch our new AI-powered compliance monitoring feature:
+"Launch Acme Corporation's new pipeline analytics feature:
  - Sales page for existing customers (they know us)
  - Announcement email sequence (3 emails)
  - Blog post for SEO
@@ -83,37 +83,37 @@ The system handles two audiences simultaneously: existing customers are Most Awa
 
 **Content sprint:**
 ```
-"Create a 4-week content marketing sprint on stormwater compliance:
+"Create a 4-week content marketing sprint on CI/CD best practices:
  - 4 blog posts targeting different keywords
  - 1 newsletter per week repurposing blog content
  - LinkedIn posts promoting each piece
- - Goal: rank for 'stormwater compliance software' within 90 days"
+ - Goal: rank for 'CI/CD platform mid-market' within 90 days"
 ```
 
-Each blog post gets its funnel stage mapped to an awareness level: the top-of-funnel post opens with a Story Lead ("Last winter, a city in Oregon got a $2M fine..."), the mid-funnel post uses a Mechanism Lead ("Most compliance tools fail because they monitor after the fact..."), the bottom-funnel post uses a Proof Lead ("Here's how City of Portland reduced violations by 67%...").
+Each blog post gets its funnel stage mapped to an awareness level: the top-of-funnel post opens with a Story Lead ("Last quarter, a mid-market team spent more time maintaining Jenkins than shipping code..."), the mid-funnel post uses a Mechanism Lead ("Most CI/CD tools fail because they treat pipelines as infrastructure, not product..."), the bottom-funnel post uses a Proof Lead ("Here's how a 30-engineer team cut deploy incidents by 60%...").
 
 ### Standalone Skill Requests
 
 You can invoke any skill directly without a campaign.
 
 ```
-"Write a landing page for our free compliance audit — targeting
- municipal public works directors who've been manually tracking
- stormwater permits in spreadsheets"
+"Write a landing page for our free CI/CD migration assessment —
+ targeting engineering managers who've been manually maintaining
+ Jenkins pipelines for years"
 ```
-→ Diagnoses awareness stage (Problem Aware — they know spreadsheets aren't working but haven't looked for software). Uses Problem-Agitation Lead above the fold. Names the mechanism in Section 3. Pulls proof from the proof library if available. Scores itself honestly before handing to Quality Gate.
+→ Diagnoses awareness stage (Problem Aware — they know Jenkins maintenance is painful but haven't looked for managed alternatives). Uses Problem-Agitation Lead above the fold. Names the mechanism in Section 3. Pulls proof from the proof library if available. Scores itself honestly before handing to Quality Gate.
 
 ```
 "Create a 5-email onboarding sequence for new trial signups of
- our compliance platform"
+ Acme CI/CD"
 ```
 → Maps the awareness arc: Email 1 moves them from Product Aware to Most Aware (deliver the activation value), Email 2 deepens with a non-obvious insight, Email 3 introduces the full platform with a case study, Email 4 handles the top objection, Email 5 converts with a clear upgrade CTA.
 
 ```
-"Design a lead magnet concept for attracting IT directors
- who are evaluating ERP systems"
+"Design a lead magnet concept for attracting DevOps leads
+ who are evaluating CI/CD platforms"
 ```
-→ Runs `/lead-magnet-strategy`: defines the Bridge (narrow problem → lead magnet → next problem revealed → core offer), selects the type (Problem Revealer — they need to discover how bad their current system is), scores with Hormozi's Value Equation, tests three names, maps distribution channels, and produces a concept brief for approval before any content gets written.
+→ Runs `/lead-magnet-strategy`: defines the Bridge (narrow problem → lead magnet → next problem revealed → core offer), selects the type (Problem Revealer — they need to discover how much time Jenkins maintenance actually costs), scores with Hormozi's Value Equation, tests three names, maps distribution channels, and produces a concept brief for approval before any content gets written.
 
 ```
 "Expert review our landing page draft"
@@ -139,12 +139,12 @@ Sprint 3 executes the approved direction without a checkpoint.
 | Agent | Role | What They Do |
 |-------|------|-------------|
 | **Campaign Lead** | Coordinator | Designs strategy, creates task breakdowns, manages sprint checkpoints. Does NOT write content. |
-| **Research Specialist** | Market Intelligence | Competitor analysis, customer language mining, keyword research, positioning gap identification. |
-| **Creative Specialist** | Content Creator | Writes all assets (landing pages, emails, blogs, lead magnets, social posts) in your voice using skill frameworks. |
+| **Research Specialist** | Market Intelligence | Competitor analysis, customer language mining, keyword research, positioning gap identification. 6 skills, loaded on-demand (max 2 per task). |
+| **Creative Specialist** | Content Creator | Writes all assets (landing pages, emails, blogs, lead magnets, social posts) in your voice. 8 skills, loaded on-demand (max 2 per task). |
 | **Quality Gate** | Editorial Review | Evaluates drafts: voice fidelity (40%), clarity (25%), craft (25%), positioning (10%). Approves or requests revisions. |
 | **Distribution Specialist** | Publishing & Analytics | Formats for platforms, publishes, tracks performance with outcomes-first reporting (revenue → demand signals → diagnostics), assesses incrementality. |
 
-Agent definitions live in `agents/`. Team-wide protocols (task coordination, sprint model, escalation) are in `agents/TEAM.md`.
+Agent definitions live in `agents/`. Team-wide protocols (task coordination, sprint model, escalation, skill loading) are in `agents/TEAM.md`.
 
 ---
 
@@ -161,23 +161,30 @@ agent-marketing-team/
 │   ├── research-specialist.md
 │   ├── creative-specialist.md
 │   ├── quality-gate.md
-│   └── distribution-specialist.md
+│   ├── distribution-specialist.md
+│   └── references/             # Extracted detail (loaded on-demand, not always)
+│       ├── platform-formats.md     # Platform-specific formatting guidelines
+│       ├── campaign-templates.md   # Campaign brief + sprint task templates
+│       └── review-rubric.md        # Detailed scoring examples + thresholds
 │
 ├── skills/                     # Skill frameworks (auto-discovered, invoked via /agent-marketing-team:skill-name)
-│   ├── landing-page/           # Direct-response landing pages
-│   ├── email-sequence/         # Drip, nurture, onboarding sequences
-│   ├── blog-post/              # SEO-optimized articles
-│   ├── newsletter/             # Email newsletters
-│   ├── social-post/            # LinkedIn, Twitter/X, Substack Notes
-│   ├── lead-magnet/            # High-value opt-in content
-│   ├── repurpose/              # Multi-platform adaptation
-│   ├── positioning-angles/     # B2B differentiation frameworks
-│   ├── keyword-research/       # Audience-intent keyword research
-│   ├── market-research/        # Competitive intelligence
-│   ├── expert-review/          # Multi-agent specialized analysis
-│   ├── lead-magnet-strategy/   # Lead magnet concept design
-│   ├── ad-angles/              # Ad-angle multiplication (6 dimensions)
-│   └── proof-harvesting/       # Proof asset extraction and scoring
+│   ├── landing-page/           # Each skill contains:
+│   │   ├── SKILL.md            #   Core procedure + worked example (~1,500-2,500 tokens)
+│   │   └── references/         #   Extended methodology, templates, formulas (loaded on-demand)
+│   ├── email-sequence/
+│   ├── blog-post/
+│   ├── newsletter/
+│   ├── social-post/
+│   ├── lead-magnet/
+│   ├── repurpose/
+│   ├── positioning-angles/
+│   ├── keyword-research/
+│   ├── market-research/
+│   ├── expert-review/
+│   ├── lead-magnet-strategy/
+│   ├── ad-angles/
+│   ├── proof-harvesting/
+│   └── init/
 │
 ├── templates/                  # Campaign structure templates
 │   ├── campaign-brief-template.md
@@ -198,6 +205,15 @@ agent-marketing-team/
 After install, run `/agent-marketing-team:init` in your project directory to scaffold `context/`, `knowledge/`, and `output/` with templates.
 
 **Why this structure:** Each agent writes to a separate directory. Drafts → Edited → Ready creates an audit trail with no file conflicts. Research compounds in `knowledge/` so future campaigns benefit from past work.
+
+### Skill Architecture
+
+Skills follow a **core + reference** pattern informed by [SkillsBench research](https://arxiv.org/abs/2602.12670) on what makes agent skills effective:
+
+- **SKILL.md** (~1,500-2,500 tokens): Focused procedure, decision sequence, output format, and one worked example using fictional "Acme CI/CD" as the reference product. This is what agents load per task.
+- **references/** (loaded on-demand): Extended methodology, scoring tables, full output templates, formula libraries. Only loaded when an agent needs deeper detail during execution.
+
+Agents load **at most 2 skills per task** via routing tables in their definitions. This prevents context overload — the research shows 2-3 focused skills outperform loading 4+ comprehensive ones.
 
 ---
 
@@ -277,7 +293,7 @@ This exercises the complete pipeline: research → strategy checkpoint → draft
 | `/ad-angles` | 10-15 creative variants of an approved angle across Pain, Desire, Proof, Identity, Contrarian, Urgency |
 | `/proof-harvesting` | Scored proof library (testimonials, case studies, data) with Cialdini persuasion tags and gap analysis |
 
-Skills are markdown framework files in `skills/[name]/SKILL.md`. Agents read them on demand — they define the canonical process for each content type.
+Each skill's `SKILL.md` contains the focused procedure and a worked example. Extended methodology and templates live in `references/` and are loaded only when needed.
 
 ---
 
@@ -299,7 +315,7 @@ SEO-focused authority building. Each piece targets a different keyword and funne
 **Assets:** 3-5 keyword-targeted blog posts, email announcements, LinkedIn/Twitter promotion plan.
 
 ### Rebranding / Repositioning
-When you're shifting positioning (like OSI → Gray Matter Logic), the system researches the new competitive landscape, builds mechanisms for the new positioning, generates scored angles, then produces all the content assets targeting the new audience — while maintaining voice consistency with the brand you're building.
+When you're shifting positioning, the system researches the new competitive landscape, builds mechanisms for the new positioning, generates scored angles, then produces all the content assets targeting the new audience — while maintaining voice consistency with the brand you're building.
 
 Templates for each type are in `templates/`.
 
@@ -320,12 +336,16 @@ Campaign Lead creates tasks with dependencies
 
 Multiple researchers and writers can work simultaneously. Quality Gate works serially (one asset at a time) to maintain voice consistency.
 
+### Selective Skill Loading
+
+Agents load skills on-demand per task, not all at once. Each agent has a **routing table** that maps task keywords to 1-2 relevant skills. This keeps context focused — a Creative Specialist writing a landing page loads only the `/landing-page` skill (~2,500 tokens), not all 8 content skills (~18,000 tokens).
+
 ### Sprint Model
 
 | Sprint | Goal | You Review | Duration |
 |--------|------|-----------|----------|
-| **1: Plan & Sketch** | Research, positioning angles, campaign structure | ✅ Approve direction | 2-7 days |
-| **2: Refine & Deepen** | Full drafts, expert reviews, deeper research | ✅ Approve creative | 3-10 days |
+| **1: Plan & Sketch** | Research, positioning angles, campaign structure | Approve direction | 2-7 days |
+| **2: Refine & Deepen** | Full drafts, expert reviews, deeper research | Approve creative | 3-10 days |
 | **3: Execute & Ship** | Polish, editorial review, format, publish, track | Auto (approved direction) | 2-5 days |
 
 ### File Ownership
@@ -403,7 +423,7 @@ Each stage pairs with a **Masterson Lead Type** (from *Great Leads*): Story → 
 
 ### Mechanism-Based Positioning
 
-**Used in:** `/positioning-angles` Step 3.5
+**Used in:** `/positioning-angles`
 
 The mechanism is the "why this works" story — not a feature list, but an explanation that creates an "aha" moment. Structure: **Failure** (why the old way doesn't work) → **Shift** (what's different about your approach) → **Result** (what becomes possible).
 

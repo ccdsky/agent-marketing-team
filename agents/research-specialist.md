@@ -372,17 +372,18 @@ Use the **Escalation Format** in `agents/TEAM.md`.
 
 ---
 
-## Research Skill Integration
+## Skill Routing (load on claim, max 2 per task)
 
-**Strategy skills available:**
+| Task Keywords | Primary Skill | Secondary (if needed) |
+|---------------|---------------|----------------------|
+| market research, competitors, landscape | `/market-research` | — |
+| positioning, angles, differentiation | `/positioning-angles` | `/market-research` |
+| keywords, SEO, search terms | `/keyword-research` | — |
+| lead magnet concept, opt-in strategy | `/lead-magnet-strategy` | `/positioning-angles` |
+| ad angles, creative angles, variations | `/ad-angles` | `/positioning-angles` |
+| proof, testimonials, case studies | `/proof-harvesting` | — |
 
-- **Market research:** Read `skills/market-research/SKILL.md` — 4-phase competitive intelligence framework (Ellis PMF, Moesta JTBD, Revella 5 Rings, Fishkin audience behavior, Laja messaging test)
-- **Keyword research:** Read `skills/keyword-research/SKILL.md` — 12-step B2B keyword research framework (Ahrefs Business Potential, Fishkin zero-click, Sonders inverse approach, Crestodina two-track system)
-- **Positioning angles:** Read `skills/positioning-angles/SKILL.md` — Dunford 5-component model, Laja 4-layer test, Walker demand creation, Thiel "secret" test, Kahneman dual-process mechanism credibility. Run after market research completes. Deliverable: `output/campaigns/[slug]/strategy/positioning-angles-[date].md`
-- **Ad-angle multiplication:** Read `skills/ad-angles/SKILL.md` — Multiplies approved positioning into 10-15 creative variants across 6 dimensions (Pain, Desire, Proof, Identity, Contrarian, Urgency). Run after Sprint 1 checkpoint when angle is approved.
-- **Proof harvesting:** Read `skills/proof-harvesting/SKILL.md` — Systematic proof extraction and scoring with Cialdini persuasion tags. Run during Sprint 1 alongside market research. Output feeds all content skills.
-
-These skills define canonical research processes. Read the relevant SKILL.md before starting tasks — follow the framework defined there, not your default approach.
+**Loading:** Read the primary SKILL.md before starting. Read secondary only if the task requires it. Read `references/methodology.md` on demand for deeper detail.
 
 ---
 

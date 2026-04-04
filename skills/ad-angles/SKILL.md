@@ -5,7 +5,7 @@ description: Multiply an approved positioning angle into 10-15 tagged creative v
 
 # Ad-Angle Multiplication Skill
 
-## Purpose
+## When to Use
 
 Multiply a single approved positioning angle into 10-15 distinct creative variants for ads, social posts, email subjects, and content hooks. Each variant targets a different buyer psychology dimension and awareness stage, producing a ready-to-use angle library for Sprint 2 content creation.
 
@@ -113,9 +113,18 @@ Remove any angle that:
 
 ## Output Format
 
-Save to: `output/campaigns/[campaign-slug]/strategy/ad-angles-[date].md`
+Save to: `output/campaigns/[campaign-slug]/strategy/ad-angles-[YYYY-MM-DD].md`
 
-For standalone use: `output/drafts/ad-angles-[topic]-[date].md`
+For standalone use: `output/drafts/ad-angles-[topic]-[YYYY-MM-DD].md`
+
+**Mark complete:**
+```
+TaskUpdate(taskId="[ID]", status="completed", metadata={
+  "deliverable": "output/campaigns/[campaign-slug]/strategy/ad-angles-[YYYY-MM-DD].md",
+  "assessment": "[1-line: voice X/10, clarity X/10, craft X/10]",
+  "ready_for": "creative-specialist"
+})
+```
 
 ```markdown
 # Ad-Angle Library: [Campaign Name]
@@ -188,6 +197,24 @@ For standalone use: `output/drafts/ad-angles-[topic]-[date].md`
 - [Any angles that need additional proof before use]
 - [Suggested A/B test pairings]
 ```
+
+---
+
+## Example
+
+**Approved angle:** "Maintenance-Free CI/CD" — Acme CI/CD removes pipeline maintenance entirely so engineers ship code, not fix infrastructure.
+
+**Dimension variants (showing 3 of 15):**
+
+| # | Dimension | Hook | Awareness | Channel |
+|---|-----------|------|-----------|---------|
+| 1 | Pain | "You didn't hire a DevOps engineer to babysit Jenkins." | Problem Aware | LinkedIn ad |
+| 2 | Proof | "60% fewer deploy incidents in 90 days — here's how one team did it." | Product Aware | Email subject |
+| 3 | Contrarian | "The best CI/CD pipeline is the one nobody has to think about." | Solution Aware | LinkedIn organic |
+
+[Variants 4-15: Desire (2), Identity (2), Urgency (2), additional Pain (2), Proof (2), Contrarian (1)]
+
+**Each variant tagged with:** dimension, Schwartz awareness stage, recommended channel, and which mechanism element it emphasizes (Failure/Shift/Result).
 
 ---
 

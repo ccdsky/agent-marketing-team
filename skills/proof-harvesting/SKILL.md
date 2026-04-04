@@ -5,7 +5,7 @@ description: Extract, score (Specificity + Credibility + Relevance), and tag pro
 
 # Proof Harvesting Skill
 
-## Purpose
+## When to Use
 
 Systematically extract, score, and organize proof assets from all available sources into a reusable proof library. Produces a structured inventory of testimonials, case studies, data points, and credentials — scored by strength and tagged by persuasion dimension — that feeds every content skill needing evidence.
 
@@ -111,7 +111,16 @@ Structure the output for downstream consumption by Creative Specialist:
 
 ## Output Format
 
-Save to: `knowledge/research/proof-library-[company]-[date].md`
+Save to: `knowledge/research/proof-library-[company]-[YYYY-MM-DD].md`
+
+**Mark complete:**
+```
+TaskUpdate(taskId="[ID]", status="completed", metadata={
+  "deliverable": "knowledge/research/proof-library-[company]-[YYYY-MM-DD].md",
+  "assessment": "[1-line: voice X/10, clarity X/10, craft X/10]",
+  "ready_for": "creative-specialist or campaign-lead"
+})
+```
 
 ```markdown
 # Proof Library: [Company/Product]
@@ -182,6 +191,24 @@ Save to: `knowledge/research/proof-library-[company]-[date].md`
 |-------|-------|--------------------|--------------------|
 | [Description] | [X/15] | [What's weak] | [What would improve it] |
 ```
+
+---
+
+## Example
+
+**Company:** Acme Corporation (Acme CI/CD platform)
+
+**Proof inventory excerpt:**
+
+| Asset | Type | Specificity | Credibility | Relevance | Total | Cialdini Tag |
+|-------|------|------------|-------------|-----------|-------|-------------|
+| "Deploy incidents dropped 60% in 90 days" — TechCorp case study | Case study | 5/5 | 4/5 | 5/5 | 14/15 | Social Proof |
+| "Acme is SOC2 compliant" — compliance page | Credential | 3/5 | 5/5 | 3/5 | 11/15 | Authority |
+| "Love this tool!" — G2 review | Testimonial | 1/5 | 3/5 | 2/5 | 6/15 | BELOW THRESHOLD |
+
+**Gap analysis excerpt:**
+- Landing page needs 3+ proof assets at 12/15+. Have: 2 qualifying. Gap: 1 more case study or specific testimonial needed.
+- Email sequence needs proof per email for Product Aware → Most Aware transitions. Current library covers 3 of 5 emails.
 
 ---
 

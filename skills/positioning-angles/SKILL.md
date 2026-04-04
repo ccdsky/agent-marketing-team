@@ -5,17 +5,9 @@ description: Generate 5-8 scored B2B positioning angles with mechanism construct
 
 # Positioning Angles Skill
 
-## Purpose
+## When to Use
 
-Generate 5-8 differentiated B2B positioning angles scored by defensibility, ICP resonance, and provability. This skill turns research into strategic positioning options the Campaign Lead uses to direct Sprint 2 content creation.
-
-Invoke when: Campaign Lead assigns positioning work in Sprint 1, or user requests "generate positioning angles for [product/company]."
-
----
-
-## Methodology Sources
-
-Dunford (Obviously Awesome) — 5-component positioning model. Laja (Wynter) — 4-layer messaging test. Walker (Refine Labs) — demand creation vs. capture. Play Bigger — category design. Thiel (Zero to One) — "secret" test for mechanism strength and category creation. Masterson/Forde (Great Leads) — lead type selection by awareness stage. Kahneman (Thinking, Fast and Slow) — dual-process mechanism credibility test.
+Generate 5-8 differentiated B2B positioning angles scored by defensibility, ICP resonance, and provability. Turns research into strategic positioning options the Campaign Lead uses to direct Sprint 2 content creation. Invoke when Campaign Lead assigns positioning work in Sprint 1, or user requests "generate positioning angles for [product/company]."
 
 ---
 
@@ -30,230 +22,70 @@ Before starting, always read:
 
 ---
 
-## Framework
+## Procedure
 
-### Step 1: Map the Real Competitive Landscape
+1. **Map the real competitive landscape.** Dunford's core question: "What would the buyer do if this product didn't exist?" Document primary competitive alternative (often status quo, spreadsheets, or "do nothing"), secondary alternatives (2-3), and why buyers switch from each.
 
-**Dunford's core question:** "What would the buyer do if this product didn't exist?"
+2. **Extract unique attributes.** List what the product can truthfully claim that real competitive alternatives cannot — not features, but capabilities, approaches, outcomes, or philosophies. Filtering rule: if a competitor could claim the same thing tomorrow, it's not unique.
 
-The real competition is rarely another vendor. In B2B, it's often:
-- "Do nothing / keep the status quo"
-- An internal spreadsheet or manual process
-- A generalist tool (Excel, Notion, Slack)
-- Hiring someone instead of buying software
+3. **Map attributes to customer value.** For each unique attribute: the outcome it delivers (not the feature), who values it most (ICP role), and in what context it matters most.
 
-Document:
-- **Primary competitive alternative** (most common — ask business-profile.md)
-- **Secondary alternatives** (2-3 other paths buyers consider)
-- **Why buyers switch** from each alternative (from icp.md pain points)
+4. **Build the mechanism.** Every strong positioning angle needs a "why this works" story. Structure: Failure (why prior solutions failed) → Shift (what's different about your approach) → Result (what becomes possible). Choose mechanism type: Process, Discovery, System, or Timing. Name it (2-4 words, ownable). Apply Thiel's "secret" test and Kahneman dual-process litmus test. For all four mechanism type patterns, naming rules, and test criteria, see `references/methodology.md`.
 
-### Step 2: Extract Unique Attributes
+5. **Generate 5-8 positioning angles.** Types: Against a specific alternative, For a specific context, Mechanism-based, Outcome-based, Against the status quo, Category creation (requires mechanism passing Thiel's test). Angles must be mutually exclusive — collapse if two feel similar. For full angle type patterns, see `references/methodology.md`.
 
-List what the product can truthfully claim that the real competitive alternatives cannot. Not features — capabilities, approaches, outcomes, or philosophies.
+6. **Score each angle** on Defensibility / ICP Resonance / Provability (1-5 each, max 15). Minimum threshold: 9+. Tag each dimension score [E] evidence-based or [I] inferred — no bare scores. For full scoring guide, see `references/methodology.md`.
 
-**Filtering rule:** If a competitor could claim the same thing tomorrow, it's not a unique attribute. Push until you find what's structurally or philosophically distinctive.
-
-Examples of strong unique attributes:
-- Built for a specific workflow that generic tools ignore
-- Delivers a specific outcome 10x faster by a specific mechanism
-- Trained on a proprietary data set competitors don't have
-- Founder-led expertise from a specific domain
-- Integration or compatibility that matters to the ICP
-
-### Step 3: Map Attributes to Customer Value
-
-For each unique attribute, identify:
-- **The outcome it delivers** (not the feature — the result the ICP cares about)
-- **Who values it most** (which ICP role — individual contributor, manager, executive?)
-- **In what context** (what situation makes this matter most?)
-
-This produces the raw material for positioning angles.
-
-### Step 3.5: Build the Mechanism
-
-The mechanism is the "why this works" story that makes positioning believable and defensible. Every strong positioning angle has a mechanism underneath it — build it explicitly before generating angles.
-
-**Structure — Failure → Shift → Result:**
-
-1. **THE FAILURE** — Why what they tried before didn't work
-   "Most [solutions] fail because they [common approach flaw]"
-   Source this from icp.md pain points and research package.
-
-2. **THE SHIFT** — What's different about your approach
-   "We discovered that [insight/method/framework] changes the equation"
-   Source this from business-profile.md unique attributes (Step 2 output).
-
-3. **THE RESULT** — What becomes possible
-   "[Specific outcome] because [mechanism removes the old bottleneck]"
-   Source this from Step 3's attribute-to-value mapping.
-
-**Four Mechanism Types (choose the strongest fit):**
-
-| Type | Pattern | Best when... |
-|------|---------|-------------|
-| Process | "Instead of X, we do Y, which means Z" | Your method is genuinely different |
-| Discovery | "We found that [non-obvious truth], which is why [result]" | You have a proprietary insight |
-| System | "Our [Named System] works because [addresses root cause]" | You have a structured framework |
-| Timing | "Until [recent change], this wasn't possible. Now [capability]" | A market shift enables your approach |
-
-**Naming Rules:**
-- 2-4 words. Memorable. Ownable.
-- Should feel proprietary without being jargon.
-- Test: if a competitor could use this exact name, it's not specific enough.
-- Examples: "Awareness Matching System", "Offer Compression Method", "Revenue Signal Engine"
-
-**Thiel's "Secret" Test:**
-- Does this mechanism encode a non-obvious truth about the market?
-- Is it something you believe that most competitors would disagree with?
-- If yes → this is a strong candidate for category creation. Flag it and consider a Category Creation angle in Step 4.
-
-**Kahneman Dual-Process Litmus Test:**
-- System 1: "I haven't heard it explained like that before" → you're close
-- System 2: "That actually makes sense why mine didn't work" → you've got it
-- Must pass both. Intuition without logic is a gimmick. Logic without intuition won't be remembered.
-
-**Output:** One mechanism per unique attribute cluster from Step 3. Tag each with its type. Carry forward into Step 4 — every angle should reference or build on a mechanism, not just the "mechanism-based" angle type.
-
-### Step 4: Generate 5-8 Positioning Angles
-
-Each angle is a different way of framing the product's position relative to the competitive landscape. Angles should be mutually exclusive — if two angles feel similar, collapse them.
-
-**Angle types to consider:**
-
-- **Against a specific alternative:** "Unlike [alternative], [product] does [X] so buyers can [outcome]"
-- **For a specific context:** "The [product] for [specific situation/trigger]"
-- **Mechanism-based:** "The only [product type] that works by [unique mechanism]" — Reference Step 3.5 output for the mechanism to use here.
-- **Outcome-based:** "The [ICP]'s fastest path to [specific outcome]"
-- **Against the status quo:** "Stop [painful workaround]. [Product] handles [X] automatically"
-- **Category creation:** "[Product] is the first [new category name] for [ICP]" — Prerequisite: Step 3.5 mechanism passes Thiel's "secret" test. The mechanism defines the category — the category name should make the mechanism's insight self-evident.
-
-### Step 5: Score Each Angle
-
-Score each angle on three dimensions (1-5 each):
-
-| Dimension | What it measures | Scoring guide |
-|-----------|------------------|---------------|
-| **Defensibility** | Can competitors copy this in 6 months? | 5 = structural/IP advantage; 1 = easily copied |
-| **ICP Resonance** | Does the target ICP actually care about this? | 5 = directly addresses primary pain; 1 = tangential |
-| **Provability** | Can we demonstrate this with evidence? | 5 = specific data/case studies; 1 = claim only |
-
-**Total score = Defensibility + ICP Resonance + Provability (max 15)**
-
-Minimum threshold to include in output: 9+. Angles below 9 are noted but not recommended.
-
-**Evidence tagging (required):** For each dimension score, tag the evidence source:
-- **[E]** Evidence-based — score directly supported by research package data (quotes, competitor analysis, customer interviews)
-- **[I]** Inferred — score based on ICP profile interpretation or general market knowledge without specific evidence
-
-Example: `Defensibility 4/5 [E] — based on competitor analysis showing no one else uses this mechanism`
-vs. `ICP Resonance 3/5 [I] — inferred from ICP role profile; not validated in customer interviews`
-
-Scores with [I] tags should be treated as hypotheses, not facts. Flag them in the output for validation.
-
-### Step 6: Apply Laja's 4-Layer Test to Top Angles
-
-For the top 2-3 scoring angles, evaluate:
-
-1. **Clarity** — Can a buyer understand this in one reading without context?
-2. **Relevance** — Does this speak to a problem they're actively experiencing?
-3. **Value** — Is the outcome worth caring about from their perspective?
-4. **Differentiation** — Could a competitor claim the same thing? If yes, back to Step 4.
-
-Flag any angle that fails one of these layers — it needs revision before use.
+7. **Apply Laja's 4-layer test to top 2-3 angles:** Clarity, Relevance, Value, Differentiation. Fail any layer → flag for revision. For detailed layer criteria, see `references/methodology.md`.
 
 ---
 
-## Output Format
+## Output
 
 Save to: `output/campaigns/[campaign-slug]/strategy/positioning-angles-[date].md`
-
 For standalone research: `knowledge/research/positioning-angles-[company]-[date].md`
 
-```markdown
-# Positioning Angles: [Company/Product]
+Required sections: Competitive Landscape, Qualifying Angles (score ≥ 9, ranked), Below Threshold table, Recommended Direction, Handoff Notes for Campaign Lead.
 
-**Date:** [YYYY-MM-DD]
-**Research basis:** [what research was used]
-**ICP focus:** [primary target from icp.md]
+For full markdown template, see `references/methodology.md`.
 
----
-
-## Competitive Landscape
-
-**Primary competitive alternative:** [what most buyers do instead]
-**Secondary alternatives:** [2-3 others]
-**Key switching trigger:** [what makes buyers look for alternatives]
-
----
-
-## Qualifying Angles (Score ≥ 9, ranked highest to lowest)
-
-### Angle 1: [Short name] — Score: [X/15]
-
-**Positioning statement:** [One sentence framing]
-**Against:** [What alternative this beats]
-**Unique mechanism:** [Why it works / what makes it structurally different]
-**Target context:** [When/where this resonates most]
-
-**Scores:** Defensibility [X/5] [E/I] | ICP Resonance [X/5] [E/I] | Provability [X/5] [E/I]
-
-**Laja test (top 3 angles only):** Clarity ✓/✗ | Relevance ✓/✗ | Value ✓/✗ | Differentiation ✓/✗
-
-**Evidence available:** [testimonials, data, case studies that support this]
-
-**Use for:** [which asset types / campaigns this angle fits]
-
----
-
-### Angle 2: [Short name] — Score: [X/15]
-[same structure]
-
----
-
-### Angle 3: [Short name] — Score: [X/15]
-[same structure]
-
-[Continue for all remaining qualifying angles, score descending]
-
----
-
-## Below Threshold (Score <9)
-
-| Angle | Score | Why not recommended |
-|-------|-------|---------------------|
-| [Name] | [X/15] | [brief note] |
-
----
-
-## Recommended Direction
-
-**Primary angle:** [Angle name — highest total score that passes Laja test]
-**Secondary angle:** [Angle name — use for different ICP segments or channels]
-**Category play:** [If applicable — new category name to test]
-
-**Rationale:** [2-3 sentences on why these lead, what evidence supports them, what to watch]
-
----
-
-## Handoff Notes for Campaign Lead
-
-- [Key context the Campaign Lead needs to brief Creative Specialist]
-- [Any angles that need primary research to validate]
-- [Channels where specific angles will land best — based on ICP audience hangouts]
+**Mark complete:**
+```
+TaskUpdate(taskId="[ID]", status="completed", metadata={
+  "deliverable": "output/campaigns/[campaign-slug]/strategy/positioning-angles-[YYYY-MM-DD].md",
+  "assessment": "[1-line: voice X/10, clarity X/10, craft X/10]",
+  "ready_for": "campaign-lead"
+})
 ```
 
+**Sprint 1 Checkpoint:** Do not proceed to Sprint 2 asset creation. Present top-scoring recommendation + 2-3 alternatives + one open validation question. Human approves angle, then asset creation begins.
+
 ---
 
-## Sprint 1 Checkpoint
+## Example
 
-**Do not proceed to Sprint 2 asset creation.** This output presents options — the human selects the direction.
+**Scenario:** Positioning angles for Acme CI/CD — a CI/CD platform for mid-market engineering teams.
 
-When handing off to Campaign Lead, include:
-- Top-scoring recommendation and why it leads
-- The 2-3 alternative angles and what trade-offs each represents
-- One open validation question (typically: which [I]-tagged assumption needs primary research most urgently?)
+**Competitive Landscape:**
+- Primary alternative: Self-managed Jenkins (most common — team is already paying ops cost)
+- Secondary: GitHub Actions (included with GitHub, low friction to try)
+- Key switching trigger: After a major Jenkins outage or failed upgrade derails a sprint
 
-Campaign Lead presents at Sprint 1 checkpoint. Human approves angle. Then asset creation begins.
+**Mechanism (Discovery type):**
+- Failure: Jenkins teams spend 15-25% of DevOps capacity on pipeline maintenance instead of shipping
+- Shift: Acme discovered that pipeline reliability is an infrastructure problem, not a configuration problem
+- Result: Teams reclaim DevOps hours permanently because managed infrastructure removes the root cause
+- Named: "Pipeline Ownership Shift"
+- Thiel test: Most CI tools say "we're faster" — Acme is saying "the configuration model is the problem." Competitors would disagree. Strong candidate.
+
+**Top Qualifying Angle:**
+
+**Angle 1: Against the Status Quo — Score: 13/15**
+Positioning statement: "Stop maintaining CI infrastructure. Acme handles pipeline reliability so mid-market engineering teams ship faster without a dedicated DevOps hire."
+Against: Self-managed Jenkins
+Mechanism: Pipeline Ownership Shift
+Scores: Defensibility 4/5 [E] | ICP Resonance 5/5 [E] | Provability 4/5 [I]
+Laja test: Clarity ✓ | Relevance ✓ | Value ✓ | Differentiation ✓
 
 ---
 

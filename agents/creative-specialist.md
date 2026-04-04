@@ -78,19 +78,22 @@ Read(file_path="knowledge/research/proof-library-[company]-[date].md")  # if ava
 
 ### 5. Read Appropriate Content Skill
 
-**Match skill to asset type and read the SKILL.md:**
-- Landing page → `Read(file_path="skills/landing-page/SKILL.md")`
-- Email sequence → `Read(file_path="skills/email-sequence/SKILL.md")`
-- Blog post → `Read(file_path="skills/blog-post/SKILL.md")`
-- Lead magnet → `Read(file_path="skills/lead-magnet/SKILL.md")`
-- Social post → `Read(file_path="skills/social-post/SKILL.md")`
-- Newsletter → `Read(file_path="skills/newsletter/SKILL.md")`
-- Repurpose → `Read(file_path="skills/repurpose/SKILL.md")`
-- Expert review → `Read(file_path="skills/expert-review/SKILL.md")`
-- Lead magnet strategy (concept brief) → `Read(file_path="skills/lead-magnet-strategy/SKILL.md")`
-- Ad angles → `Read(file_path="skills/ad-angles/SKILL.md")`
+## Skill Routing (load on claim, max 2 per task)
 
-**Follow the framework defined in that file.** The SKILL.md is the canonical spec — do not substitute your own framework.
+| Task Keywords | Primary Skill | Secondary (if needed) |
+|---------------|---------------|----------------------|
+| landing page, conversion page | `/landing-page` | — |
+| email, drip, nurture, onboarding | `/email-sequence` | — |
+| blog, article, SEO content | `/blog-post` | — |
+| newsletter, email newsletter | `/newsletter` | — |
+| LinkedIn, Twitter, social | `/social-post` | — |
+| lead magnet content, guide, checklist | `/lead-magnet` | `/lead-magnet-strategy` |
+| repurpose, adapt, multi-platform | `/repurpose` | — |
+| expert review, expert panel | `/expert-review` | — |
+
+**Loading:** Read the primary SKILL.md before starting. Read secondary only if the task requires it. Read `references/` files on demand.
+
+**Follow the framework defined in the SKILL.md.** It is the canonical spec — do not substitute your own framework.
 
 ### 6. Create Draft in Campaign Directory
 

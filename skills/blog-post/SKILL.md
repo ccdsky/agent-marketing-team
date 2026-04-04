@@ -5,7 +5,7 @@ description: Write SEO-optimized articles with Schwartz awareness-matched intros
 
 # Blog Post Skill
 
-## Purpose
+## When to Use
 
 Write SEO-optimized articles that rank for target keywords and convert readers into leads or subscribers. Produces complete, publication-ready blog posts with all SEO elements.
 
@@ -142,6 +142,15 @@ Save to: `output/campaigns/[campaign-slug]/drafts/blog-[topic-slug]-draft.md`
 
 For standalone posts (Simple Mode): Return output inline. Do not create a file unless the user asks.
 
+**Mark complete:**
+```
+TaskUpdate(taskId="[ID]", status="completed", metadata={
+  "deliverable": "output/campaigns/[campaign-slug]/drafts/blog-[topic-slug]-draft.md",
+  "assessment": "[1-line: voice X/10, clarity X/10, craft X/10]",
+  "ready_for": "quality-gate"
+})
+```
+
 **File format:**
 ```markdown
 # Blog Post Draft: [Title]
@@ -175,6 +184,71 @@ For standalone posts (Simple Mode): Return output inline. Do not create a file u
 - Reader value (would they bookmark this?): [1-10]
 - CTA integration: [1-10]
 - Estimated word count: [X]
+```
+
+---
+
+## Example
+
+**Product:** Acme CI/CD — CI/CD platform for mid-market engineering teams
+**Primary keyword:** replace Jenkins mid-market
+**Funnel stage:** Consideration (Solution Aware readers comparing options)
+
+---
+
+**File:** `output/campaigns/acme-cicd-launch/drafts/blog-replace-jenkins-draft.md`
+
+```
+## SEO Elements
+
+**Meta title:** Why Mid-Market Teams Are Ditching Jenkins (58 chars)
+**Meta description:** Jenkins made sense at 5 engineers. At 20+, it becomes a
+full-time job to maintain. Here's what mid-market teams are switching to —
+and why. (156 chars)
+
+---
+
+## Full Article
+
+# Why Mid-Market Teams Are Ditching Jenkins
+
+You didn't hire a DevOps engineer. You inherited a Jenkins setup.
+
+That works fine when three engineers share one pipeline. It stops working when
+you have 20 engineers, 4 product lines, and a Friday deploy that broke prod
+last month.
+
+Jenkins was designed for teams with a dedicated pipeline engineer. If that's
+not you, you're spending engineering hours maintaining infrastructure instead
+of shipping product.
+
+## The Real Cost of "Free" CI/CD
+
+Most teams calculate Jenkins cost as $0 (open source, self-hosted). The real
+cost is 5-10 engineer-hours per week in maintenance, incident response, and
+plugin compatibility fixes...
+
+## What Mid-Market Teams Actually Need
+
+[H2: Pipeline speed that scales with team size]
+[H2: Branch protection without custom scripting]
+[H2: Rollback that works on the first try]
+
+## How Teams Are Making the Switch
+
+[Case study: 60% reduction in deploy incidents, 3-week migration]
+
+## FAQ
+
+**Q: We have too much custom pipeline logic to switch.**
+[Answer: 150 words]
+
+**Q: How long does migration actually take?**
+[Answer: 150 words]
+
+## Conclusion
+
+[Recap + CTA: Download the CI/CD Migration Checklist]
 ```
 
 ---
