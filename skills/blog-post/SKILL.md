@@ -72,67 +72,15 @@ Conclusion: Recap + actionable next step + CTA
 
 ### Step 3: Write the Article
 
-#### Title Options (write 3, choose strongest)
-**Formulas:**
-- How-to: "How to [achieve outcome] in [timeframe]"
-- List: "[Number] [Adjective] Ways to [Achieve Goal]"
-- Question: "Why Does [Common Problem] Happen? (And How to Fix It)"
-- Power word: "The [Adjective] Guide to [Topic]"
+Write 3 title options (under 60 chars, primary keyword near front). Include meta description (150-160 chars).
 
-**Title rules:**
-- Include primary keyword near the front
-- Under 60 characters (prevents truncation in SERPs)
-- Specific beats vague
+Apply the **Masterson Lead Type from Step 1** to the introduction — this is the most important structural decision. The intro strategy differs completely by funnel stage.
 
-#### Meta Description (150-160 characters)
-- Include primary keyword
-- Include a benefit or hook
-- End with implicit or explicit CTA
-- Not truncated — test the length
+**Structure:** H2 sections (each answering a reader question) → FAQ section (3-5 Qs using secondary keywords) → Conclusion with CTA.
 
-#### Introduction (150-200 words)
-Structure:
-1. Hook — stat, story, or bold claim that creates urgency
-2. Empathy — show you understand the reader's situation
-3. Promise — what they'll learn or be able to do
-4. Brief credibility signal (optional)
+### Step 4: Voice Pass
 
-Avoid: "In this article, we will explore..." — readers already know that.
-
-#### Body Sections (300-500 words each)
-Each H2 section:
-1. State the point clearly in the first sentence
-2. Explain with examples, data, or story
-3. Give the reader something actionable
-4. Transition naturally to the next section
-
-**Formatting rules:**
-- Short paragraphs (2-4 sentences max)
-- Bullet lists for 3+ parallel items
-- Bold key phrases (not random words)
-- Include at least one concrete example per H2
-
-#### FAQ Section
-3-5 questions using secondary keywords and common ICP questions. Answers: 50-150 words each, direct and specific.
-
-#### Conclusion (100-150 words)
-1. Recap the key insight (not a list of everything covered)
-2. Actionable next step — what to do right now
-3. CTA — connect to the campaign goal
-
-### Step 4: SEO Elements
-
-- **Keyword density:** Primary keyword appears 2-3x per 1000 words (natural, not forced)
-- **Internal links:** 2-3 links to related content on the same site (if available)
-- **External links:** 1-2 authoritative sources for factual claims
-- **Image alt text:** Descriptive, includes keyword where natural
-- **Featured snippet target:** If applicable, format one section as a direct answer to the primary question
-
-### Step 5: Voice and ICP Pass
-
-Read against voice-dna.md. The article should sound like the owner wrote it — not like SEO content. Replace any generic phrases with authentic voice patterns.
-
-Verify ICP fit: Would the target reader find this genuinely useful? Does it treat them as intelligent adults?
+Verify against `voice-dna.md` and `icp.md`. The article should sound like the owner, not SEO content.
 
 ---
 
