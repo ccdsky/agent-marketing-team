@@ -1,12 +1,15 @@
 {
   "name": "agent-marketing-team",
+  "metadata": {
+    "description": "AI-powered marketing team plugin for Claude Code"
+  },
   "owner": {
     "name": "ccdsky"
   },
   "plugins": [
     {
       "name": "agent-marketing-team",
-      "source": ".",
+      "source": { "source": "url", "url": "https://github.com/ccdsky/agent-marketing-team.git" },
       "description": "AI-powered marketing team that executes full-funnel B2B campaigns — from market research through conversion optimization. 5 specialized agents coordinate through shared task lists with 14 skill frameworks.",
       "version": "1.0.0"
     }
