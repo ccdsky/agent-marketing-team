@@ -9,7 +9,7 @@
   "plugins": [
     {
       "name": "agent-marketing-team",
-      "source": { "source": "url", "url": "https://github.com/ccdsky/agent-marketing-team.git" },
+      "source": "./",
       "description": "AI-powered marketing team that executes full-funnel B2B campaigns — from market research through conversion optimization. 5 specialized agents coordinate through shared task lists with 14 skill frameworks.",
       "version": "1.0.0"
     }
