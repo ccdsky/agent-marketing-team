@@ -18,6 +18,7 @@ Invoke this skill when creating any social content — standalone posts, campaig
 Before writing, always read:
 - `context/voice-dna.md` — Your voice patterns and anti-patterns
 - `context/icp.md` — Who you're speaking to and what language resonates
+- **Named personas from the brief** — Load the primary and secondary persona dossiers named in the Campaign Brief's `Primary Persona(s)` / `Secondary Persona(s)` fields. The draft addresses the primary persona by name; secondary personas inform but do not drive the lead type or hook. **Skip if no personas are defined** (project does not use the persona convention) — fall back to `context/icp.md` only.
 - `context/business-profile.md` — What you offer and your content pillars
 - Campaign brief (if part of a campaign): `output/campaigns/[slug]/campaign-brief.md`
 - Past learnings (if any): search `knowledge/learnings/` for relevant patterns
@@ -43,6 +44,8 @@ Before writing, answer:
   | Shared / reposted | Problem/Solution Aware | The sharer's credibility carries you. Lead with the mechanism or result. |
 
   When in doubt, assume the audience is **Problem Aware** — they feel the pain but haven't found you yet. This is the most common state for organic reach on LinkedIn and Twitter/X.
+
+  *Diagnose awareness stage and select lead type per the **primary persona's** profile (read `context/personas/[primary-persona-slug].md` for their awareness state, hot buttons, and red flags). Different personas may sit at different awareness stages for the same offering. Fall back to `context/icp.md` aggregate if no primary persona is defined.*
 
 ### Step 2: Choose a Hook Pattern
 
@@ -173,3 +176,4 @@ Before marking complete:
 - [ ] No corporate speak or generic AI phrasing
 - [ ] Self-assessment scores recorded
 - [ ] File saved to correct output path
+- [ ] **Persona match:** Does the draft address the named primary persona specifically? Would they recognize themselves in the language, pains named, proof selected, and CTA framing? (If no personas are defined, this check does not apply — leave unchecked.)

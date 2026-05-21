@@ -18,6 +18,7 @@ Invoke when: Regular newsletter issue needed, or campaign includes a newsletter 
 Before writing, always read:
 - `context/voice-dna.md` — Voice, tone, and the personal writing style that makes newsletters feel human
 - `context/icp.md` — Reader profile — their context, questions, and what makes them feel understood
+- **Named personas from the brief** — Load the primary and secondary persona dossiers named in the Campaign Brief's `Primary Persona(s)` / `Secondary Persona(s)` fields. The draft addresses the primary persona by name; secondary personas inform but do not drive the lead type or hook. **Skip if no personas are defined** (project does not use the persona convention) — fall back to `context/icp.md` only.
 - `context/business-profile.md` — Content pillars and offerings to connect to (lightly)
 - Past issues (if any): search `output/campaigns/` for previous newsletter drafts
 
@@ -41,6 +42,8 @@ Clarify before writing:
   | Re-engagement (lapsed) | Problem Aware | Remind them why they subscribed — surface the pain point your content addresses |
 
   Newsletters rarely serve Unaware audiences (they opted in). Don't over-explain who you are or what you do — your subscribers already know.
+
+  *Diagnose awareness stage and select lead type per the **primary persona's** profile (read `context/personas/[primary-persona-slug].md` for their awareness state, hot buttons, and red flags). Different personas may sit at different awareness stages for the same offering. Fall back to `context/icp.md` aggregate if no primary persona is defined.*
 
 **Rule:** One issue, one main idea. If you have two ideas, write two issues.
 
@@ -240,3 +243,4 @@ Before marking complete:
 - [ ] ICP would find this genuinely valuable (not just informational)
 - [ ] Self-assessment complete
 - [ ] File saved to correct output path
+- [ ] **Persona match:** Does the draft address the named primary persona specifically? Would they recognize themselves in the language, pains named, proof selected, and CTA framing? (If no personas are defined, this check does not apply — leave unchecked.)

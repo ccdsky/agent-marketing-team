@@ -18,6 +18,7 @@ Invoke when: A newsletter, blog post, or long-form piece needs to be adapted for
 Before repurposing, read:
 - `context/voice-dna.md` — Voice (especially platform-specific tone notes)
 - `context/icp.md` — Who reads/watches on each target platform
+- **Named personas from the brief** — Load the primary and secondary persona dossiers named in the Campaign Brief's `Primary Persona(s)` / `Secondary Persona(s)` fields. The draft addresses the primary persona by name; secondary personas inform but do not drive the lead type or hook. **Skip if no personas are defined** (project does not use the persona convention) — fall back to `context/icp.md` only.
 - `context/business-profile.md` — Content pillars and brand consistency
 - **The source content** — Read the full original piece
 - **Brand guide** (optional): `context/brand-guide.md` — Platform-specific tone adjustments. Skip if file doesn't exist.
@@ -59,6 +60,8 @@ For each target platform, define:
   | Newsletter → Blog | Most Aware → Solution Aware | Expand the insight into a full argument. Add evidence and structure the newsletter didn't need. |
 
   **Rule:** Never copy the source opening into the repurposed version. Every platform gets a native hook matched to its audience's awareness level.
+
+  *Diagnose awareness stage and select lead type per the **primary persona's** profile (read `context/personas/[primary-persona-slug].md` for their awareness state, hot buttons, and red flags). Different personas may sit at different awareness stages for the same offering. Fall back to `context/icp.md` aggregate if no primary persona is defined.*
 
 | Platform | Native Format | Optimal Length | Best For |
 |----------|--------------|----------------|---------|
@@ -214,3 +217,4 @@ Before marking complete:
 - [ ] Overview file created with platform map
 - [ ] All files saved to repurposed/ folder
 - [ ] Self-assessment complete for each version
+- [ ] **Persona match:** Does the draft address the named primary persona specifically? Would they recognize themselves in the language, pains named, proof selected, and CTA framing? (If no personas are defined, this check does not apply — leave unchecked.)
