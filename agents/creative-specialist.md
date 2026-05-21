@@ -90,6 +90,7 @@ Read(file_path="knowledge/research/proof-library-[company]-[date].md")  # if ava
 | lead magnet content, guide, checklist | `/lead-magnet` | `/lead-magnet-strategy` |
 | repurpose, adapt, multi-platform | `/repurpose` | — |
 | expert review, expert panel | `/expert-review` | — |
+| buyer panel, persona panel, audience signal, synthetic audience | `/buyer-panel` | — |
 
 **Loading:** Read the primary SKILL.md before starting. Read secondary only if the task requires it. Read `references/` files on demand.
 
