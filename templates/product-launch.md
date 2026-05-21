@@ -37,6 +37,12 @@ Fill out and copy to `output/campaigns/[slug]/campaign-brief.md`.
 
 **Who it's for:** [ICP segment — be specific]
 
+**Primary Persona(s):** [Slug(s) from `context/personas/`. Drives sales-page hook, launch-email voice, and primary CTA. Product launches often have dual primaries — existing customers + new prospects. Optional — leave blank if the project does not use the persona convention.]
+- `[persona-slug]`
+
+**Secondary Persona(s):** [Optional. Informs objection handling and post-launch sequence framing.]
+- `[persona-slug]`
+
 **Core transformation:** [Where the customer starts → where they end up]
 
 **Launch window:** [Date range — e.g., "Open Feb 24-28, 5-day launch"]

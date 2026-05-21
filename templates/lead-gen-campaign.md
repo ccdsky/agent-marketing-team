@@ -31,6 +31,12 @@ Fill out this template when starting a lead gen campaign, then copy to `output/c
 
 **ICP segment:** [Which ICP persona is this campaign for?]
 
+**Primary Persona(s):** [Slug(s) from `context/personas/`. Drives the lead-magnet hook, sequence voice, and primary CTA. Optional — leave blank if the project does not use the persona convention.]
+- `[persona-slug]`
+
+**Secondary Persona(s):** [Optional. Informs proof selection and sequence framing.]
+- `[persona-slug]`
+
 **Pain this lead magnet solves:** [Specific, one sentence]
 
 **Why they'd give their email:** [The value exchange — be specific]

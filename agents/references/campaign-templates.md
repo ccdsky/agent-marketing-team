@@ -17,6 +17,12 @@ Used by Campaign Lead. Read this file when creating campaign briefs, sprint task
 ## Target Audience
 [ICP segment, specific pain points]
 
+## Primary Persona(s)
+[Slug(s) from `context/personas/`. Drives lead type, voice, primary CTA. Optional — omit if the project does not use the persona convention.]
+
+## Secondary Persona(s)
+[Optional. Informs proof selection and secondary CTAs.]
+
 ## Timeline
 - Sprint 1: [dates] - Plan & Sketch
 - Sprint 2: [dates] - Refine & Deepen
