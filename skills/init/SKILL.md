@@ -21,6 +21,7 @@ Create these directories in the current working directory:
 
 ```
 mkdir -p context
+mkdir -p context/personas
 mkdir -p knowledge/research
 mkdir -p knowledge/learnings/campaigns/timing
 mkdir -p knowledge/learnings/campaigns/asset-mix
@@ -150,6 +151,16 @@ Analyze 3-5 of your writing samples and document your voice profile here.
 - [Anything that must appear in all content — disclaimers, CTAs, etc.]
 ```
 
+#### `context/personas/README.md` (persona library index)
+
+Write the contents of `skills/init/references/persona-index-template.md` (from this plugin) to `context/personas/README.md` in the working directory. **Skip if the file already exists** — do not overwrite.
+
+#### `context/personas/example-persona.template.md` (reference persona)
+
+Write the contents of `skills/init/references/example-persona.template.md` (from this plugin) to `context/personas/example-persona.template.md` in the working directory. **Skip if the file already exists** — do not overwrite.
+
+The `.template.md` suffix is load-bearing: the persona-discovery glob excludes `*.template.md`, so this file is visible to humans as a reference but never selectable as a real persona.
+
 ### Step 3: Create .gitignore for User Data
 
 If no `.gitignore` exists in the working directory, create one:
@@ -160,6 +171,11 @@ context/voice-dna.md
 context/icp.md
 context/business-profile.md
 context/brand-guide.md
+
+# Personas — user-supplied; preserve README + template
+context/personas/*.md
+!context/personas/README.md
+!context/personas/example-persona.template.md
 
 # Campaign outputs (generated content, often large)
 output/
@@ -172,7 +188,16 @@ knowledge/feedback/
 .DS_Store
 ```
 
-If `.gitignore` already exists, append only the lines that aren't already present.
+If `.gitignore` already exists, append only the lines that aren't already present — **with one exception**: the persona block must be written as a contiguous group (broad pattern first, then negations). If any line in the persona block is missing, write the entire block together at the end of the file as a single unit. Do not interleave the negations elsewhere — `.gitignore` negation ordering depends on the broad pattern appearing first.
+
+Block to write as a unit:
+
+```
+# Personas — user-supplied; preserve README + template
+context/personas/*.md
+!context/personas/README.md
+!context/personas/example-persona.template.md
+```
 
 ### Step 4: Report Setup Status
 
@@ -183,6 +208,7 @@ After creating all directories and templates, report:
 
 **Created:**
 - `context/` — 4 template files (voice-dna, icp, business-profile, brand-guide)
+- `context/personas/` — persona library scaffolding (README index + `example-persona.template.md` reference)
 - `knowledge/` — research, learnings, archive, and analytics directories
 - `output/campaigns/` — campaign output directory
 
@@ -192,6 +218,8 @@ After creating all directories and templates, report:
 3. `context/business-profile.md` — Document your products, positioning, and customer results
 
 `context/brand-guide.md` is optional — fill it in if you have established brand standards.
+
+`context/personas/` is also optional. To populate it, read `context/personas/README.md` and copy `example-persona.template.md` to your own `<slug>.md` files (one per persona). A thin persona is better than no persona; iterate over time.
 
 **Then try:** "Write a LinkedIn post about [topic you know well]" to test voice matching.
 ```
