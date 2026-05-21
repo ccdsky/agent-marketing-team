@@ -112,6 +112,7 @@ Before claiming any task, read:
 - `context/voice-dna.md`
 - `context/icp.md`
 - `context/business-profile.md`
+- `context/personas/README.md` — read if it exists, skip if missing. If present, do not pre-load individual dossiers — see "Identify target personas for this task" below.
 - Campaign brief: `output/campaigns/[slug]/campaign-brief.md` (if in a campaign)
 - Relevant research: `knowledge/research/[topic]-[date].md` (if available)
 - Past learnings: `knowledge/learnings/campaigns/` (Grep for relevant patterns — skip if directory doesn't exist yet; it's created after the first campaign completes)
@@ -120,7 +121,17 @@ If context files may be unpopulated, run System Pre-Flight first.
 
 **Validation step (Campaign Lead and specialists):** Before claiming your first task in a session, confirm you have loaded each required file. If a file hasn't been read in this session, read it now. Do not proceed on cached assumptions — context may have changed since the last campaign.
 
+**Identify target personas for this task:** After loading the persona index (if present), determine which personas (1-3 maximum) this task targets, in priority order:
+
+1. Explicit user instruction in the task description (e.g., "for the CFO persona").
+2. `Primary Persona(s)` / `Secondary Persona(s)` fields in the Campaign Brief, if in a campaign.
+3. Inference from the index plus task keywords.
+
+Load only the dossiers for the identified personas — do not load every persona in the library. If targets are uncertain, ask the user rather than guess. If no personas are defined (directory absent or empty), proceed with `icp.md`-only behavior — this is normal, not an error.
+
 **Brand guide note:** If `context/brand-guide.md` exists, read it before any content work. It contains banned phrases that can disqualify otherwise excellent content. Its "optional" status means "skip if missing," not "skip if it exists."
+
+**Persona note:** If `context/personas/` contains user-authored personas, drafts can address named buyers specifically and `/buyer-panel` can convene synthetic-audience signal on completed drafts. See `context/personas/README.md` for the library index and `skills/buyer-panel/references/recipes.md` for panel-composition recipes. Like the brand guide, persona consultation is optional — absence of the directory is not a failure.
 
 ---
 
