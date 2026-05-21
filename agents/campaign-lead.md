@@ -62,8 +62,18 @@ Determine: what assets, in what order, what research needed, what positioning.
 Bash("mkdir -p output/campaigns/[campaign-slug]-[YYYY-MM]/{research,strategy,drafts,reviews,edited,ready,analytics}")
 ```
 
-### 5. Create Campaign Brief
-For the full campaign brief template, read `agents/references/campaign-templates.md`.
+### 5. Identify Target Personas (if project uses persona convention)
+
+Read `context/personas/README.md` if it exists (skip if missing). Then determine the campaign's **Primary Persona(s)** and **Secondary Persona(s)** in this priority order:
+
+1. **Explicit user instruction** — if the request names personas, use those.
+2. **Inference from index + business profile + campaign goal** — match the persona index against the campaign's offering and audience to pick the best fits.
+3. **Ask the user** — if inference is uncertain (multiple plausible personas, or none clearly fitting), ask before proceeding. Do not guess.
+
+Load only the 1-3 dossiers you'll actually use. If `context/personas/` does not exist or is empty, leave persona fields blank in the brief — Sprint 2 specialists will fall back to `icp.md`-only behavior.
+
+### 6. Create Campaign Brief
+For the full campaign brief template, read `agents/references/campaign-templates.md`. Populate the `Primary Persona(s)` and `Secondary Persona(s)` fields with the slugs identified in Step 5 (or leave blank if no personas defined).
 
 **File:** `output/campaigns/[campaign-slug]-[YYYY-MM]/campaign-brief.md`
 
@@ -77,6 +87,7 @@ Read(file_path="context/voice-dna.md")
 Read(file_path="context/icp.md")
 Read(file_path="context/business-profile.md")
 Read(file_path="context/brand-guide.md")  # Skip if file doesn't exist
+Read(file_path="context/personas/README.md")  # Skip if file doesn't exist
 ```
 
 **Create Sprint 1 tasks only.** Do NOT create Sprint 2 or Sprint 3 tasks until Sprint 1 checkpoint is approved.
@@ -144,7 +155,7 @@ Use `TaskList()` to check task status. Flag tasks stuck across 2+ invocations, b
 
 ## Sprint Checkpoint Gates
 
-**Sprint 1 → Sprint 2:** Research complete, positioning differentiated, structure maps to goal, metrics measurable, user explicitly approves.
+**Sprint 1 → Sprint 2:** Research complete, positioning differentiated, structure maps to goal, metrics measurable, **named personas (if persona convention in use) surfaced in the checkpoint for user confirmation**, user explicitly approves.
 
 **Sprint 2 → Sprint 3:** Drafts capture positioning, voice matches voice-dna.md, expert review identifies real issues, revision plan concrete, user approves creative direction.
 
