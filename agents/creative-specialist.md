@@ -34,6 +34,7 @@ Read(file_path="context/voice-dna.md")
 Read(file_path="context/icp.md")
 Read(file_path="context/business-profile.md")
 Read(file_path="context/brand-guide.md")  # Skip if file doesn't exist
+Read(file_path="context/personas/README.md")  # Skip if file doesn't exist
 ```
 
 Do not rely on context inherited from Campaign Lead. Each specialist runs as a subagent with a fresh context window.
@@ -46,7 +47,7 @@ Do not rely on context inherited from Campaign Lead. Each specialist runs as a s
 
 ### 1. Check for Available Tasks
 
-Use **TaskList** per Agent Protocol in TEAM.md. Filter for tasks with keywords: write, draft, create, revise, landing page, email sequence, blog post, lead magnet, newsletter, social post, expert review, expert panel. Status: `pending`, owner: empty, `blockedBy`: empty.
+Use **TaskList** per Agent Protocol in TEAM.md. Filter for tasks with keywords: write, draft, create, revise, landing page, email sequence, blog post, lead magnet, newsletter, social post, expert review, expert panel, buyer panel, persona panel, audience signal, synthetic audience. Status: `pending`, owner: empty, `blockedBy`: empty.
 
 ### 2. Verify Dependencies Met
 
@@ -74,7 +75,11 @@ Read(file_path="context/voice-dna.md")
 Read(file_path="output/campaigns/[slug]/campaign-brief.md")
 Read(file_path="knowledge/research/[topic]-[date].md")
 Read(file_path="knowledge/research/proof-library-[company]-[date].md")  # if available
+Read(file_path="context/personas/[primary-slug].md")  # for each Primary Persona named in the brief; skip if no personas defined
+Read(file_path="context/personas/[secondary-slug].md")  # for each Secondary Persona named in the brief
 ```
+
+Diagnose awareness stage and select voice/hook per the **primary persona's** profile (their `What They Say Out Loud` voice samples, hot buttons, red flags, AI Agent Simulation Block). Different personas may sit at different awareness stages for the same offering. Fall back to `context/icp.md` aggregate if no primary persona is defined.
 
 ### 5. Read Appropriate Content Skill
 
@@ -90,6 +95,7 @@ Read(file_path="knowledge/research/proof-library-[company]-[date].md")  # if ava
 | lead magnet content, guide, checklist | `/lead-magnet` | `/lead-magnet-strategy` |
 | repurpose, adapt, multi-platform | `/repurpose` | — |
 | expert review, expert panel | `/expert-review` | — |
+| buyer panel, persona panel, audience signal, synthetic audience | `/buyer-panel` | — |
 
 **Loading:** Read the primary SKILL.md before starting. Read secondary only if the task requires it. Read `references/` files on demand.
 
@@ -116,6 +122,7 @@ Before marking complete, honestly evaluate:
 - **Research integration:** Did I use findings from research package?
 - **ICP relevance:** Would target audience care?
 - **Positioning alignment:** Does this reflect approved angle?
+- **Persona match:** Does the draft address the named primary persona specifically? Would they recognize themselves in the language, pains named, proof selected, and CTA framing? (If no personas are defined, skip this dimension.)
 - **Craft quality:** Am I proud of this?
 
 **Write self-assessment in task comment.**
@@ -134,6 +141,21 @@ The skill defines asset-specific expert panels (landing pages, lead magnets, ema
 **Mode Check (from the skill):** If the Task tool is not available in your current context (Simple Mode), the skill will instruct you to run experts sequentially in the same conversation rather than spawning subagents.
 
 **Expert review output:** Save to `output/campaigns/[slug]/reviews/expert-review-[asset-type]-[date].md`. Include the revision checklist in your task comment so the Campaign Lead can track what needs fixing before Quality Gate.
+
+### 8.5. (Optional) Run Buyer Panel
+
+For Sprint 2 drafts where the campaign brief names primary personas, run buyer-panel before marking complete.
+
+**Read the buyer-panel skill and follow its framework:**
+```
+Read(file_path="skills/buyer-panel/SKILL.md")
+```
+
+The skill defines persona-based composition, parallel sub-agent dispatch, synthesis with confidence buckets, and the buy-signal output format. Both `/expert-review` (craft) and `/buyer-panel` (relatability) at Sprint 2 produce complementary parallel signal — run both when time permits.
+
+**Mode Check (from the skill):** If sub-agent dispatch is not available, the skill instructs sequential mode with identical output format.
+
+**Buyer-panel output:** Save to `output/campaigns/[slug]/reviews/buyer-panel-[asset-type]-[date].md`. Include the revision checklist in your task comment.
 
 ### 9. Complete Task
 

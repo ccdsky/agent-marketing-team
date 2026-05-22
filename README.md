@@ -138,9 +138,9 @@ Sprint 3 executes the approved direction without a checkpoint.
 
 | Agent | Role | What They Do |
 |-------|------|-------------|
-| **Campaign Lead** | Coordinator | Designs strategy, creates task breakdowns, manages sprint checkpoints. Does NOT write content. |
+| **Campaign Lead** | Coordinator | Designs strategy, creates task breakdowns, manages sprint checkpoints. Does NOT write content. Identifies primary/secondary personas during Sprint 1 when the project uses the persona convention. |
 | **Research Specialist** | Market Intelligence | Competitor analysis, customer language mining, keyword research, positioning gap identification. 6 skills, loaded on-demand (max 2 per task). |
-| **Creative Specialist** | Content Creator | Writes all assets (landing pages, emails, blogs, lead magnets, social posts) in your voice. 8 skills, loaded on-demand (max 2 per task). |
+| **Creative Specialist** | Content Creator | Writes all assets (landing pages, emails, blogs, lead magnets, social posts) in your voice. 9 skills, loaded on-demand (max 2 per task). |
 | **Quality Gate** | Editorial Review | Evaluates drafts: voice fidelity (40%), clarity (25%), craft (25%), positioning (10%). Approves or requests revisions. |
 | **Distribution Specialist** | Publishing & Analytics | Formats for platforms, publishes, tracks performance with outcomes-first reporting (revenue → demand signals → diagnostics), assesses incrementality. |
 
@@ -269,6 +269,97 @@ This exercises the complete pipeline: research → strategy checkpoint → draft
 
 ---
 
+## Personas as First-Class Context
+
+### Why Personas (Not Just One ICP)
+
+`context/icp.md` treats the audience as a single composite buyer. That works for direct-response offers selling one product to one buyer type — the composite IS the audience. It breaks the moment you have a buying committee, mixed direct-response segments with different pains, or a service business whose assets pass through intermediaries before reaching the end buyer.
+
+The persona convention represents the audience as a panel of named buyers instead of one composite. Each persona is a dossier under `context/personas/` with an OCEAN psychographic profile, an empathy map of verbatim quotes, hot buttons, red flags, and a YAML block consumed by `/buyer-panel` when that persona reacts to a draft as a sub-agent. Synthetic-audience panels of this shape have been validated against real focus groups at 85-92% accuracy in Harvard and Stanford research.
+
+This does **not** replace the Schwartz awareness framework. It enriches it. Different personas may sit at different awareness stages for the same offering — the CFO sitting next to the founder is often two stages further back on the same page. With personas defined, content skills diagnose awareness per persona instead of averaging across the audience. Without personas, everything works exactly as before: `icp.md`-only behavior, no Schwartz changes.
+
+### Set Up Your Persona Library
+
+The first-time workflow:
+
+1. Run `/agent-marketing-team:init`. The init skill scaffolds `context/personas/README.md` (the library index) and `context/personas/example-persona.template.md` (a rich reference template you can study).
+2. **Copy the template to your own `<slug>.md` file** — do not edit the template in place. The `.template.md` suffix is load-bearing: the agent glob excludes `*.template.md`, so the template is visible to humans but never selectable as a real persona. This prevents the failure mode where users edit the template directly and commit client content to a public repo.
+3. Each persona is a `.md` file under `context/personas/` with the structure shown in the template. Slug = filename without `.md` (`morgan-founder.md` → slug `morgan-founder`).
+4. Update `context/personas/README.md` each time you add or rename a persona. The index is what agents read in the Pre-Task Protocol to discover what personas exist — orphan dossiers are invisible to the system. The v1 convention places this maintenance burden on user discipline; v1.1 may ship a sync skill that regenerates the index from dossier frontmatter (known v1 limitation).
+
+### Anatomy of a Good Persona
+
+The reference template at `context/personas/example-persona.template.md` shows the full shape. What each section does:
+
+- **At a Glance** — the summary card. Hot buttons, red flags, default CTA response. This is what the panel orchestrator scans when deciding which personas to convene for an asset.
+- **OCEAN Psychographic Profile** — numeric scores (0-100) on Openness, Conscientiousness, Extraversion, Agreeableness, Neuroticism. The numbers anchor agent reasoning about voice, risk tolerance, persuasion style. A persona at Conscientiousness 81 reacts differently to a vague pricing page than one at 38.
+- **What They Say Out Loud** — verbatim quotes from sales calls, support tickets, interviews. **This is where voice samples for downstream voice matching come from.** The Creative Specialist mines these for headlines and objection handling.
+- **Buying Triggers and Hot Buttons** — what to lead with. The specific moments when this persona starts looking for a solution, and the levers that move them.
+- **Red Flags** — what makes them disengage. The Quality Gate's persona-match check fails when red flags appear in a draft ("transformation" without specifics, hidden pricing, agency jargon).
+- **AI Agent Simulation Block** — YAML payload consumed by `/buyer-panel`. Voice style, hot buttons, red flags, common questions, default objections — everything a sub-agent needs to react in character.
+
+**Three-tier quality ladder.** Personas are work; not every project warrants the same depth.
+
+| Tier | Effort | Contents | When |
+|------|--------|----------|------|
+| **Thin** | 15 minutes | Role, one pain point, one verbatim quote, one objection | Just starting; want some persona signal before investing in research |
+| **Standard** | Few hours | Full OCEAN + empathy map + AI Agent Simulation Block + voice samples + red flags | The template's level. Default for serious campaigns. |
+| **Deep** | Sourced from sales-call transcripts, support tickets, win/loss interviews | 1,400+ words; quotes traceable to real customers | High-stakes offers — flagship sales pages, major launches |
+
+**A thin persona is better than no persona; iterate over time.** Don't let perfect be the enemy of good. A persona with one verbatim quote and one objection produces better `/buyer-panel` signal than an empty `context/personas/` directory.
+
+### The `/buyer-panel` Skill and Panel-Composition Recipes
+
+**When to use it:** Sprint 2 drafts that are complete enough to react to; ad-variant scoring across persona segments; sales-page testing; any standalone "test this against my audience" request.
+
+**When NOT to use it:** Sprint 1 sketches (the content isn't there to react to yet); no personas defined (the skill stops cleanly and recommends `/expert-review`); single-line content like a headline in isolation (too narrow — bundle into the parent asset first).
+
+**`/buyer-panel` vs `/expert-review`** — the framing that matters most:
+
+> `/expert-review` catches **craft problems** — weak headlines, voice drift, structural issues. It's a panel of craft experts asking *"is this asset well-crafted?"*
+>
+> `/buyer-panel` catches **relatability problems** — the headline names the wrong pain, the proof doesn't match this persona's concerns, the CTA assumes the wrong awareness stage. It's a panel of prospect personas asking *"would I, the persona, buy this?"*
+>
+> Both at Sprint 2 is the rigorous play — they produce complementary, parallel signal. Either alone is the time-boxed play.
+
+**Three invocation patterns:**
+
+1. **Explicit personas** — *"Run buyer-panel against drafts/sales-page-v1.md using sarah-first-timer and cfo-skeptic."*
+2. **Recipe-based** — *"Run buyer-panel using the buying-committee recipe against drafts/sales-page-v1.md."*
+3. **Implicit during a campaign** — Creative Specialist invokes `/buyer-panel` automatically after a Sprint 2 draft, using the brief's named primary/secondary personas.
+
+**Five named recipes** (one-line each; full details in `skills/buyer-panel/references/recipes.md`):
+
+| Recipe | Use case |
+|--------|----------|
+| `full-prospect-panel` | Broad ad review with mixed audience; direct-response variant scoring |
+| `buying-committee` | Multi-stakeholder B2B decision; proposal review; complex sales pages |
+| `channel-gatekeeper-review` | Service businesses with referral channels — "will this asset survive a referral conversation?" |
+| `single-segment-deep` | One persona, multiple angles of the same asset; optimize for one ICP without committee noise |
+| `platform-specific` | Personas filtered by a custom tag for a specific platform or vertical |
+
+### Decision Guide and Backward Compatibility
+
+The persona convention is optional. Here's when it earns its keep, and when it's overhead you don't need.
+
+| Your situation | Personas worth it? |
+|----------------|--------------------|
+| Solo founder + single offer + one buyer type | Probably not — `icp.md` is enough |
+| Direct-response, one buyer type, but doing ad-variant scoring | Optional — `/buyer-panel` for variant scoring is worth trying |
+| B2B with a buying committee | **Yes — highest-value scenario.** Use the `buying-committee` recipe |
+| Mixed direct-response segments (different segments with different pain) | Yes — segment-specific drafts will outperform a composite |
+| Service business with strong referral channels | Yes — including `audience_role: intermediary` personas for the `channel-gatekeeper-review` recipe |
+| Multi-product or multi-vertical | Yes — tag personas per product/vertical |
+
+**Backward compatibility:**
+
+- The system works without personas. `icp.md`-only remains a valid first-class input. No migration deadline, no deprecation path.
+- `/buyer-panel` refuses to run when `context/personas/` is absent or empty, and points users to `/expert-review` for craft-level review.
+- All seven content skills check for `context/personas/` and fall back to `icp.md`-only behavior when it's absent or empty. No code path is gated on the persona convention.
+
+---
+
 ## Available Skills
 
 ### Content Creation
@@ -289,6 +380,7 @@ This exercises the complete pipeline: research → strategy checkpoint → draft
 | `/keyword-research` | Prioritized keyword map scored by business potential, not just volume |
 | `/market-research` | Structured competitive intelligence with desk research + primary research flags |
 | `/expert-review` | Multi-agent review from 3-5 specialist perspectives |
+| `/buyer-panel` | Synthetic-audience signal — does this draft connect with the target buyer(s)? Panel of persona sub-agents react in character |
 | `/lead-magnet-strategy` | Scored lead magnet concepts before any content creation begins |
 | `/ad-angles` | 10-15 creative variants of an approved angle across Pain, Desire, Proof, Identity, Contrarian, Urgency |
 | `/proof-harvesting` | Scored proof library (testimonials, case studies, data) with Cialdini persuasion tags and gap analysis |
@@ -449,6 +541,14 @@ Inventories every available proof asset (testimonials, case studies, data, crede
 
 Run during Sprint 1. The output is a reusable proof library that Creative Specialist loads before writing anything that needs evidence.
 
+### Persona-Based Audience Modeling
+
+**Used in:** All content skills (when personas are defined) + `/buyer-panel`
+
+When the project populates `context/personas/`, the audience is represented as a panel of named buyers rather than one composite ICP. Each persona dossier carries an OCEAN psychographic profile (numeric scores anchor agent reasoning about voice and risk tolerance), an empathy map of verbatim quotes (mined for voice matching and headlines), and an AI Agent Simulation Block (the YAML payload `/buyer-panel` consumes when the persona reacts to a draft as a sub-agent). Synthetic-audience panels of this shape have been validated against real focus groups at 85-92% accuracy in Harvard and Stanford studies.
+
+This enriches the Schwartz awareness framework rather than replacing it — different personas may sit at different awareness stages for the same offering, and the skill diagnoses per persona instead of treating the audience as one block. See the "Personas as First-Class Context" section above for setup and usage.
+
 ### How They Chain Together
 
 ```
@@ -460,9 +560,12 @@ Sprint 1:
 
 Sprint 2:
   /ad-angles              → 10-15 creative variants from approved angle
+  [persona consultation]  → load named personas from brief; drafts address primary persona
   /landing-page           → awareness stage drives messaging and lead type
   /email-sequence         → awareness arc maps each email's transition
   /blog-post              → funnel stage → awareness level → intro strategy
+  /buyer-panel (optional) → persona-buyer signal on complete drafts
+  /expert-review          → craft critique on complete drafts (complementary to /buyer-panel)
   [You approve]           → approve drafts, give revision notes
 
 Sprint 3:

@@ -32,7 +32,7 @@ Before starting, always read:
 
 ## Procedure
 
-**Mode Check first:** If Task tool is available, spawn experts as parallel subagents (Steps 1-4). If Task tool is unavailable, run each expert sequentially inline — open with "As a [Expert Name], I'm evaluating this [asset type]..." and apply their criteria. Output format is identical either way.
+**Mode Check first:** If Task tool is available, spawn experts as parallel subagents (Steps 1-4). If Task tool is unavailable, run each expert sequentially inline — open with "I am embodying a [Expert Role], evaluating this [asset type]..." and apply their criteria. Output format is identical either way.
 
 1. **Select expert panel** based on asset type. Each asset type has a predefined panel of 3-5 specialists. For full panel definitions and scored dimensions per expert, see `references/methodology.md`.
 

@@ -45,7 +45,7 @@
 When building the prompt for each expert, replace `[your specific evaluation criteria]` with 4-6 scored dimensions from the expert's role description.
 
 ```
-You are a [Expert Role from panel] evaluating a B2B marketing [asset type].
+You are embodying a [Expert Role from panel] evaluating a B2B marketing [asset type].
 
 Read the asset: [asset file path]
 Read the ICP profile: context/icp.md

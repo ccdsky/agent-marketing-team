@@ -32,6 +32,14 @@ Example: Generate 500 email signups in 2 weeks
 **ICP Segment:**
 [Which segment of ICP are we targeting?]
 
+**Primary Persona(s):**
+[Slug(s) from `context/personas/`, one per line. Drives lead type, voice, primary CTA. Optional — leave blank if the project does not use the persona convention.]
+- `[persona-slug]`
+
+**Secondary Persona(s):**
+[Optional. Informs proof selection, secondary CTAs, channel diversity. Does not drive lead type.]
+- `[persona-slug]`
+
 **Specific Pain Points:**
 1. [Pain point 1]
 2. [Pain point 2]

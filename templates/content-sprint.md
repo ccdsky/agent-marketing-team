@@ -35,16 +35,19 @@ Define which content pillars you'll focus on this month. Usually 2-3 max to main
 
 **Pillar 1:** [Topic]
 - Core angle: [Your unique take]
+- Target persona(s): [Slug(s) from `context/personas/`. Optional — one pillar may target Sarah, another the CFO. Leave blank if the project does not use the persona convention.]
 - Content types: [LinkedIn | Newsletter | Blog]
 - Volume: [X pieces]
 
 **Pillar 2:** [Topic]
 - Core angle: [Your unique take]
+- Target persona(s): [Slug(s) from `context/personas/`]
 - Content types: [LinkedIn | Newsletter | Blog]
 - Volume: [X pieces]
 
 **Pillar 3 (optional):** [Topic]
 - Core angle: [Your unique take]
+- Target persona(s): [Slug(s) from `context/personas/`]
 - Content types: [LinkedIn | Newsletter | Blog]
 - Volume: [X pieces]
 

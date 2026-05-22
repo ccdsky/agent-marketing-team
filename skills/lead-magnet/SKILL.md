@@ -18,6 +18,7 @@ Invoke when: Campaign needs a lead generation asset — checklist, guide, templa
 Before writing, always read:
 - `context/voice-dna.md` — Voice and tone
 - `context/icp.md` — The specific pain point this lead magnet solves and the ICP's language
+- **Named personas from the brief** — Load the primary and secondary persona dossiers named in the Campaign Brief's `Primary Persona(s)` / `Secondary Persona(s)` fields. The draft addresses the primary persona by name; secondary personas inform but do not drive the lead type or hook. **Skip if no personas are defined** (project does not use the persona convention) — fall back to `context/icp.md` only.
 - `context/business-profile.md` — How this lead magnet connects to the paid offering
 - Campaign brief: `output/campaigns/[slug]/campaign-brief.md`
 - Lead magnet concept (if available): from `/lead-magnet-strategy` output
@@ -40,6 +41,8 @@ Lead magnets serve people who are **Problem Aware or Solution Aware** — they f
 | Solution Aware | "Here's how to evaluate solutions" — the lead magnet helps them compare approaches and naturally favors your mechanism |
 
 Lead magnets should **not** target Unaware audiences (they don't know they have the problem yet — use blog posts) or Most Aware audiences (they already want your product — use a direct offer).
+
+*Diagnose awareness stage and select lead type per the **primary persona's** profile (read `context/personas/[primary-persona-slug].md` for their awareness state, hot buttons, and red flags). Different personas may sit at different awareness stages for the same offering. Fall back to `context/icp.md` aggregate if no primary persona is defined.*
 
 **Value density test:**
 "Can someone implement this and get a result in under 30 minutes?"
@@ -216,3 +219,4 @@ Before marking complete:
 - [ ] "Would they share this?" self-test passed
 - [ ] Self-assessment complete
 - [ ] File saved to correct output path
+- [ ] **Persona match:** Name one hot button from the primary persona dossier that appears in the draft (cite the section). Name one red flag from the dossier that the draft avoids. (If no personas are defined, leave unchecked.)

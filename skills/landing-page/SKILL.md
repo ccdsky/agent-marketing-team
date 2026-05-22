@@ -18,6 +18,7 @@ Invoke when: Campaign Lead assigns a landing page task, or user requests "write 
 Before writing, always read:
 - `context/voice-dna.md` — Voice and tone for all copy
 - `context/icp.md` — Who the page targets (pain points, language, objections)
+- **Named personas from the brief** — Load the primary and secondary persona dossiers named in the Campaign Brief's `Primary Persona(s)` / `Secondary Persona(s)` fields. The draft addresses the primary persona by name; secondary personas inform but do not drive the lead type or hook. **Skip if no personas are defined** (project does not use the persona convention) — fall back to `context/icp.md` only.
 - `context/business-profile.md` — Offer details, proof points, differentiators
 - Research package: `knowledge/research/[relevant]-[date].md` (if available)
 - Proof library (if available): `knowledge/research/proof-library-[company]-[date].md`
@@ -40,6 +41,8 @@ Diagnose before writing — this determines your entire messaging approach:
 | **Most Aware** | Direct Offer Lead | Lead with offer. Skip education. |
 
 Also define: **One conversion action** and **primary objection to overcome** (from icp.md).
+
+*Diagnose awareness stage and select lead type per the **primary persona's** profile (read `context/personas/[primary-persona-slug].md` for their awareness state, hot buttons, and red flags). Different personas may sit at different awareness stages for the same offering. Fall back to `context/icp.md` aggregate if no primary persona is defined.*
 
 ### Step 2: Build the 7-Section Structure
 
@@ -242,3 +245,4 @@ Before marking complete:
 - [ ] No corporate speak, no hype, no empty promises
 - [ ] Self-assessment completed with honest scores
 - [ ] File saved to correct output path
+- [ ] **Persona match:** Name one hot button from the primary persona dossier that appears in the draft (cite the section). Name one red flag from the dossier that the draft avoids. (If no personas are defined, leave unchecked.)
