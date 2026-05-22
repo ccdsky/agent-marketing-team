@@ -49,8 +49,12 @@ Before starting, always read:
 2. **Select panel composition.** Resolve in this priority order:
    - Explicit user instruction (named persona slugs in the request)
    - Primary/Secondary persona fields from the campaign brief
-   - Recipe applied from `references/recipes.md` (e.g., `recipe:buying-committee`)
-   - Fallback: all personas with `audience_role: prospect` in `context/personas/`
+   - Recipe applied from `references/recipes.md` (e.g., `recipe:buying-committee`). Recipes filter on the `Audience Role` column of `context/personas/README.md` — the README index is the trusted source for panel composition. The agent reads only the dossiers identified by the filter, never the full library. If the README is out of sync with dossier frontmatter, recipe composition will be wrong — keep the index current.
+   - Fallback: all personas with `audience_role: prospect` in `context/personas/`, excluding `*.template.md` files
+
+   The `platform-specific` recipe requires a custom frontmatter tag (e.g., `platform: shopify`, `vertical: healthcare`) that users add outside the v1 contract. If no personas carry the named tag, stop and recommend a different recipe rather than falling back silently.
+
+   If `single-segment-deep` is named without a specific persona slug, ask the user which persona to use before dispatching. Do not fall back to the audience_role filter — `single-segment-deep`'s value is the explicit single-persona focus.
 
 3. **Dispatch sub-agents.** Each sub-agent receives: the asset path, its assigned persona dossier *path* (not the dossier content inline — **pass paths, not content**), the standardized question set, and the structured output format. For the per-persona prompt template and question set, see `references/methodology.md`.
 
@@ -133,3 +137,4 @@ Before marking complete:
 - [ ] Conflicting reactions surfaced explicitly (not averaged away)
 - [ ] Revision list prioritized into three tiers (Must Fix / Should Fix / Nice to Have), not a flat list
 - [ ] Each revision item names the personas who flagged it and the expected impact
+- [ ] If fewer than 60% of personas responded, the output flags "Buyer panel incomplete" and does NOT contain a synthesis section. Task metadata sets buyer_panel_status: incomplete.

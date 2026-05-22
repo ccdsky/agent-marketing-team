@@ -142,6 +142,21 @@ The skill defines asset-specific expert panels (landing pages, lead magnets, ema
 
 **Expert review output:** Save to `output/campaigns/[slug]/reviews/expert-review-[asset-type]-[date].md`. Include the revision checklist in your task comment so the Campaign Lead can track what needs fixing before Quality Gate.
 
+### 8.5. (Optional) Run Buyer Panel
+
+For Sprint 2 drafts where the campaign brief names primary personas, run buyer-panel before marking complete.
+
+**Read the buyer-panel skill and follow its framework:**
+```
+Read(file_path="skills/buyer-panel/SKILL.md")
+```
+
+The skill defines persona-based composition, parallel sub-agent dispatch, synthesis with confidence buckets, and the buy-signal output format. Both `/expert-review` (craft) and `/buyer-panel` (relatability) at Sprint 2 produce complementary parallel signal — run both when time permits.
+
+**Mode Check (from the skill):** If sub-agent dispatch is not available, the skill instructs sequential mode with identical output format.
+
+**Buyer-panel output:** Save to `output/campaigns/[slug]/reviews/buyer-panel-[asset-type]-[date].md`. Include the revision checklist in your task comment.
+
 ### 9. Complete Task
 
 When done, update task with deliverable path and self-assessment in metadata:

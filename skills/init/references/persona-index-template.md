@@ -4,6 +4,8 @@ One Markdown file per buyer persona. The team reads this index during Pre-Task P
 
 `example-persona.template.md` is a reference template. **Copy it to your own `<slug>.md` before editing — never edit the template in place.**
 
+Files matching `*.template.md` are reference templates only — never selected as a persona by the agent.
+
 ## Persona Library
 
 | Slug | Name | Role | Audience Role | One-sentence Summary | Primary Use |
@@ -12,7 +14,7 @@ One Markdown file per buyer persona. The team reads this index during Pre-Task P
 
 ## Adding a Persona
 
-1. Copy `example-persona.template.md` to `<your-slug>.md` (kebab-case, no `.template.` suffix).
+1. Copy `example-persona.template.md` to `<your-slug>.md` (kebab-case, no `.template.` suffix). The filename is the authoritative slug — frontmatter `slug:` must match the filename exactly.
 2. Fill out the frontmatter: `name`, `slug`, `role`, `summary`, `primary_use`, `audience_role` (`prospect` | `intermediary` | `internal-stakeholder`), `description`.
 3. Replace each section with content grounded in real research — sales calls, interviews, support tickets, win/loss data. Invented personas underperform.
 4. Add a row to the table above.

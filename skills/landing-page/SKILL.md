@@ -245,4 +245,4 @@ Before marking complete:
 - [ ] No corporate speak, no hype, no empty promises
 - [ ] Self-assessment completed with honest scores
 - [ ] File saved to correct output path
-- [ ] **Persona match:** Does the draft address the named primary persona specifically? Would they recognize themselves in the language, pains named, proof selected, and CTA framing? (If no personas are defined, this check does not apply — leave unchecked.)
+- [ ] **Persona match:** Name one hot button from the primary persona dossier that appears in the draft (cite the section). Name one red flag from the dossier that the draft avoids. (If no personas are defined, leave unchecked.)

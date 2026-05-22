@@ -129,6 +129,8 @@ If context files may be unpopulated, run System Pre-Flight first.
 
 Load only the dossiers for the identified personas — do not load every persona in the library. If targets are uncertain, ask the user rather than guess. If no personas are defined (directory absent or empty), proceed with `icp.md`-only behavior — this is normal, not an error.
 
+Persona discovery globs `context/personas/*.md` excluding `*.template.md` files (templates are reference material, not selectable personas).
+
 **Brand guide note:** If `context/brand-guide.md` exists, read it before any content work. It contains banned phrases that can disqualify otherwise excellent content. Its "optional" status means "skip if missing," not "skip if it exists."
 
 **Persona note:** If `context/personas/` contains user-authored personas, drafts can address named buyers specifically and `/buyer-panel` can convene synthetic-audience signal on completed drafts. See `context/personas/README.md` for the library index and `skills/buyer-panel/references/recipes.md` for panel-composition recipes. Like the brand guide, persona consultation is optional — absence of the directory is not a failure.

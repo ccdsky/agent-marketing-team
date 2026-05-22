@@ -157,7 +157,7 @@ Use `TaskList()` to check task status. Flag tasks stuck across 2+ invocations, b
 
 **Sprint 1 → Sprint 2:** Research complete, positioning differentiated, structure maps to goal, metrics measurable, **named personas (if persona convention in use) surfaced in the checkpoint for user confirmation**, user explicitly approves.
 
-**Sprint 2 → Sprint 3:** Drafts capture positioning, voice matches voice-dna.md, expert review identifies real issues, revision plan concrete, user approves creative direction.
+**Sprint 2 → Sprint 3:** Drafts capture positioning, voice matches voice-dna.md, expert review identifies real issues, **buyer-panel signal (if convened) surfaces consensus objections for revision**, revision plan concrete, user approves creative direction.
 
 **Sprint 3 → Launch:** All assets pass editorial review, platform formatting correct, analytics tracking configured, user gives final launch approval.
 

@@ -232,3 +232,4 @@ After creating all directories and templates, report:
 - [ ] Template files created only where they didn't already exist
 - [ ] User informed which files need population
 - [ ] No existing files were overwritten
+- [ ] .gitignore persona block written as a contiguous unit — context/personas/*.md appears before the two ! negation lines, never interleaved with other entries.

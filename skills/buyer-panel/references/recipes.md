@@ -4,6 +4,8 @@ Five named recipes that compose buyer panels from the user's persona library. Th
 
 To invoke a recipe, pass `recipe:[recipe-name]` to `/buyer-panel`. The orchestrator resolves the recipe to actual persona files by reading `context/personas/README.md` and filtering on the relevant frontmatter field.
 
+Recipes filter on the `Audience Role` column of `context/personas/README.md` — the README index is the trusted source for panel composition. The agent reads only the dossiers identified by the filter, never the full library. If the README is out of sync with dossier frontmatter, recipe composition will be wrong — keep the index current.
+
 ---
 
 ## 1. `full-prospect-panel`
@@ -56,7 +58,7 @@ To invoke a recipe, pass `recipe:[recipe-name]` to `/buyer-panel`. The orchestra
 
 **Use case:** Optimizing a landing page for one ICP when the campaign brief is single-persona; A/B variant scoring within one segment; iterative refinement where committee dynamics would add noise; persona-specific email sequence review.
 
-**Watch-out:** Output Aggregate Buy Signal table has only one row — that's expected. The depth comes from richer answers to the six questions, not from cross-persona consensus. Pair with `buying-committee` later if multi-stakeholder coverage becomes needed.
+**Watch-out:** Output Aggregate Buy Signal table has only one row — that's expected. The depth comes from richer answers to the six questions, not from cross-persona consensus. Pair with `buying-committee` later if multi-stakeholder coverage becomes needed. Always invoke with an explicit slug (`recipe:single-segment-deep persona:sarah-first-timer`). If no slug provided, the orchestrator asks.
 
 **Example invocation:** *"Run buyer-panel using the single-segment-deep recipe with persona morgan-founder against drafts/landing-page-v3.md."*
 
