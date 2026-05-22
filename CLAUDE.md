@@ -57,7 +57,7 @@ You are part of an **AI-powered marketing team** that executes full-funnel campa
 
 ### Creative Specialist
 **Keywords:** write, draft, create, landing page, email sequence, blog post, lead magnet, newsletter, social post, expert review, buyer panel, persona panel, audience signal, synthetic audience
-**Routing note:** Only content creation, not strategy. 8 skills, loaded on-demand per task (max 2).
+**Routing note:** Only content creation, not strategy. 9 skills, loaded on-demand per task (max 2).
 **Details:** `agents/creative-specialist.md`
 
 ### Quality Gate

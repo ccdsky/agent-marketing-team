@@ -47,7 +47,7 @@ Do not rely on context inherited from Campaign Lead. Each specialist runs as a s
 
 ### 1. Check for Available Tasks
 
-Use **TaskList** per Agent Protocol in TEAM.md. Filter for tasks with keywords: write, draft, create, revise, landing page, email sequence, blog post, lead magnet, newsletter, social post, expert review, expert panel. Status: `pending`, owner: empty, `blockedBy`: empty.
+Use **TaskList** per Agent Protocol in TEAM.md. Filter for tasks with keywords: write, draft, create, revise, landing page, email sequence, blog post, lead magnet, newsletter, social post, expert review, expert panel, buyer panel, persona panel, audience signal, synthetic audience. Status: `pending`, owner: empty, `blockedBy`: empty.
 
 ### 2. Verify Dependencies Met
 

@@ -73,7 +73,7 @@ Read `context/personas/README.md` if it exists (skip if missing). Then determine
 Load only the 1-3 dossiers you'll actually use. If `context/personas/` does not exist or is empty, leave persona fields blank in the brief — Sprint 2 specialists will fall back to `icp.md`-only behavior.
 
 ### 6. Create Campaign Brief
-For the full campaign brief template, read `agents/references/campaign-templates.md`. Populate the `Primary Persona(s)` and `Secondary Persona(s)` fields with the slugs identified in Step 5 (or leave blank if no personas defined).
+For the full campaign brief template, read `agents/references/campaign-templates.md`. Populate the `Primary Persona(s)` and `Secondary Persona(s)` fields with the slugs identified during target-persona discovery (or leave blank if no personas defined).
 
 **File:** `output/campaigns/[campaign-slug]-[YYYY-MM]/campaign-brief.md`
 

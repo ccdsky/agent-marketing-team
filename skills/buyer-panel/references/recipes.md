@@ -1,6 +1,6 @@
 # Buyer Panel — Composition Recipes
 
-Five named recipes that filter the user's persona library by `audience_role` (and, for one recipe, a custom tag). Recipes are **role-based**, not slug-based — they adapt to whatever personas the user has authored without naming specific files.
+Five named recipes that compose buyer panels from the user's persona library. Three recipes filter on `audience_role` (`full-prospect-panel`, `buying-committee`, `channel-gatekeeper-review`). `single-segment-deep` takes an explicit persona slug. `platform-specific` filters on a custom tag that users add outside the v1 frontmatter contract. The role-filtered recipes adapt to whatever personas the user has authored without naming specific files.
 
 To invoke a recipe, pass `recipe:[recipe-name]` to `/buyer-panel`. The orchestrator resolves the recipe to actual persona files by reading `context/personas/README.md` and filtering on the relevant frontmatter field.
 

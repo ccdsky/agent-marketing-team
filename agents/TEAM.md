@@ -185,7 +185,7 @@ Look for: Status `pending`, owner empty, `blockedBy` empty.
 | Role | Claim tasks containing these keywords |
 |------|--------------------------------------|
 | Research Specialist | research, market research, competitor analysis, customer language, positioning gaps, keyword research, positioning angles, differentiation angles, lead magnet strategy, lead magnet concept, proof harvesting, proof audit, ad angles, angle multiplication |
-| Creative Specialist | draft, write, revise, create, blog post, email sequence, landing page, lead magnet, newsletter, social post, expert review, expert panel |
+| Creative Specialist | draft, write, revise, create, blog post, email sequence, landing page, lead magnet, newsletter, social post, expert review, expert panel, buyer panel, persona panel, audience signal, synthetic audience |
 | Quality Gate | edit, editing, review, quality check, approve, feedback, editorial |
 | Distribution Specialist | format, formatting, publish, publishing, distribution, distribute, analytics, performance, metrics, track |
 

@@ -65,7 +65,7 @@ Confirm response count before synthesizing. Apply these thresholds:
 | Personas Responded | Action |
 |--------------------|--------|
 | 100% (full panel) | Full confidence. Synthesize directly. |
-| 60-80% | Normalize across responding personas. Label header: "REDUCED CONFIDENCE — [N]/[total] personas responded." Note which personas did not respond and why if known. |
+| 60% to <100% | Normalize across responding personas. Label header: "REDUCED CONFIDENCE — [N]/[total] personas responded." Note which personas did not respond and why if known. |
 | <60% | Do not synthesize. Note: "Buyer panel incomplete — [N]/[total] personas responded. Re-run before relying on this signal." Set task metadata `{"buyer_panel_status": "incomplete", "personas_responded": N}`. |
 
 **Identifying consensus vs. split:**

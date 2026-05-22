@@ -1,6 +1,6 @@
 ---
 name: buyer-panel
-description: Convene a panel of persona sub-agents to provide synthetic-audience signal on a marketing asset — does this draft connect with the target buyer(s)?
+description: Convene a panel of persona sub-agents to deliver synthetic-audience buy signal on a marketing asset — per-persona yes/no, resonance points, consensus objections, and a prioritized revision list.
 ---
 
 # Buyer Panel Skill
@@ -54,7 +54,7 @@ Before starting, always read:
 
 3. **Dispatch sub-agents.** Each sub-agent receives: the asset path, its assigned persona dossier *path* (not the dossier content inline — **pass paths, not content**), the standardized question set, and the structured output format. For the per-persona prompt template and question set, see `references/methodology.md`.
 
-4. **Collect and synthesize.** Confirm response count: full panel responded = full confidence; 60-80% responded = normalize weights and label "REDUCED CONFIDENCE — [N]/[total] personas responded"; <60% responded = do not synthesize, flag incomplete. Identify:
+4. **Collect and synthesize.** Confirm response count: full panel responded = full confidence; 60% to <100% responded = normalize weights and label "REDUCED CONFIDENCE — [N]/[total] personas responded"; <60% responded = do not synthesize, flag incomplete. Identify:
    - **Consensus yes** — personas align on what works (safe — don't change)
    - **Consensus no** — personas align on what blocks the buy (highest priority)
    - **Split reactions** — asset works for some personas not others (surface explicitly; do not average away)
