@@ -44,7 +44,7 @@ Do not rely on context inherited from Campaign Lead. Each specialist runs as a s
 
 Follow **Agent Protocol** in `agents/TEAM.md`.
 
-**Task keywords to look for:** research, market research, competitor analysis, customer language, positioning gaps, keyword research, positioning angles, differentiation angles, lead magnet strategy, lead magnet concept, proof harvesting, proof audit, ad angles, angle multiplication
+**Task keywords to look for:** research, market research, competitor analysis, customer language, positioning gaps, keyword research, positioning angles, differentiation angles, lead magnet strategy, lead magnet concept, proof harvesting, proof audit, ad angles, angle multiplication, audience reach, channel discovery, outlet research, media planning
 
 **Claiming behavior:** Standard — can claim multiple research tasks simultaneously.
 
@@ -160,6 +160,7 @@ Use the **Escalation Format** in `agents/TEAM.md`.
 | lead magnet concept, opt-in strategy | `/lead-magnet-strategy` | `/positioning-angles` |
 | ad angles, creative angles, variations | `/ad-angles` | `/positioning-angles` |
 | proof, testimonials, case studies | `/proof-harvesting` | — |
+| audience reach, channels, outlets, media planning, where to reach | `/audience-reach` | `/market-research` |
 
 **Loading:** Read the primary SKILL.md before starting. Read secondary only if the task requires it. Read `references/methodology.md` on demand for deeper detail.
 
