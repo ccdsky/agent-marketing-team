@@ -36,7 +36,7 @@ Define scope before starting: which personas to reach (1–3, per Pre-Task Proto
 2. For each persona, extract the media/behavior signal *already in the dossier*: publications read, communities, events attended, influencers followed, search habits, platform presence, trust sources. Record what's present and what's missing.
 
 **Phase 3: RESEARCH** (Web)
-3. For each persona, research outward to name **specific, current outlets — not categories** — across five medium types: Earned/organic, Paid, Events, Influence/intermediary, Outbound. For the per-type checklist, see `references/methodology.md`. Each outlet carries: why it fits this persona, evidence/source, and a reachability note.
+3. For each persona, research outward to name **specific, current outlets — not categories** — across five medium types: Earned/Organic, Paid, Events, Influence/Intermediary, Outbound. For the per-type checklist, see `references/methodology.md`. Each outlet carries: why it fits this persona, evidence/source, and a reachability note.
 
 **Phase 4: SCORE & ENRICH**
 4. Score each outlet 1–5 on Persona fit, Reachability, Intent/signal quality, Cost-to-access efficiency, Effort/feasibility. Attach a cost band ($/$$/$$$) and an intent read (Awareness / Consideration / Decision). Rank per persona. For the scoring guide, see `references/methodology.md`.
@@ -91,11 +91,21 @@ Dossier shows they live in `r/devops`, follow two named SRE creators on LinkedIn
 
 | Outlet | Medium | Persona-fit | Reachability | Intent | Cost | Effort |
 |--------|--------|-------------|--------------|--------|------|--------|
-| r/devops | Earned/organic | 5 | 3 (no overt selling) | Consideration | $ | High (credibility build) |
-| KubeCon | Event | 4 | 4 | Consideration | $$$ | High |
+| r/devops | Earned/Organic | 5 | 3 (no overt selling) | Consideration | $ | High (credibility build) |
+| KubeCon | Events | 4 | 4 | Consideration | $$$ | High |
 | DevOps Weekly placement | Paid | 4 | 5 | Awareness | $$ | Low |
+| Gartner DevOps analyst | Influence/Intermediary | 4 | 3 | Consideration | $$$ | High |
+| LinkedIn outreach to Platform leads | Outbound | 3 | 4 | Decision | $ | Medium |
 
 **Phase 5 excerpt — ROLL UP:**
+Coverage matrix:
+
+| Outlet | VP Engineering | Director of Platform |
+|--------|----------------|----------------------|
+| KubeCon | ✓ | ✓ |
+| r/devops |  | ✓ |
+| Gartner DevOps analyst | ✓ |  |
+
 Shared outlet: KubeCon reaches both the VP (keynote/exec track) and the Director (technical sessions) — efficiency play. Timing flag for Campaign Lead: *paid awareness in DevOps Weekly should lead the trial-nurture email motion by ~2 weeks and ramp ahead of KubeCon (early Nov), the market-timing anchor.*
 
 ---

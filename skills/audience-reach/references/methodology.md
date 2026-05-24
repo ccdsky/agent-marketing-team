@@ -16,7 +16,7 @@ Adapted from the `channel-discovery` framework (superamped/ai-marketing-skills),
 
 For each persona, name **specific outlets, not categories**. A source/evidence note is required for each named outlet.
 
-### Earned / Organic
+### Earned/Organic
 - Publications & blogs the persona actually reads (check who their influencers cite)
 - Podcasts that recur in their discussions
 - Newsletters they subscribe to
@@ -34,7 +34,7 @@ For each persona, name **specific outlets, not categories**. A source/evidence n
 - Webinars / virtual events in their orbit
 - Professional associations and local chapters
 
-### Influence / Intermediary
+### Influence/Intermediary
 - Industry analysts the persona trusts (seed from `icp.md`'s intermediary-influence map)
 - Consultants / advisors / system integrators who shape their shortlist
 - Creators / thought-leaders with real pull
@@ -47,7 +47,7 @@ For each persona, name **specific outlets, not categories**. A source/evidence n
 
 ---
 
-## Phase 4: SCORE — Reach-Fit Guide
+## Phase 4: SCORE & ENRICH — Reach-Fit Guide
 
 Score each outlet 1–5:
 
@@ -103,9 +103,11 @@ Score each outlet 1–5:
 
 ### [Persona name]
 
+_(rows sorted by composite score, highest first)_
+
 | Outlet | Medium type | Persona-fit | Reachability | Intent | Cost | Effort | Source |
 |--------|-------------|-------------|--------------|--------|------|--------|--------|
-| [named outlet] | Earned/Paid/Event/Influence/Outbound | [1-5] | [1-5] | A/C/D | $/$$/$$$ | [1-5] | [evidence] |
+| [named outlet] | Earned/Organic / Paid / Events / Influence/Intermediary / Outbound | [1-5] | [1-5] | A/C/D | $/$$/$$$ | [1-5] | [evidence] |
 
 [Repeat table per persona]
 
