@@ -121,6 +121,12 @@ You can invoke any skill directly without a campaign.
 → Spawns 3-5 specialist reviewers (conversion optimizer, copywriter, ICP advocate, design strategist) who evaluate in parallel, score independently, then synthesize into a prioritized revision list.
 
 ```
+"Where and how do we actually reach the VP of Engineering and the
+ Director of Platform on the Acme CI/CD buying committee?"
+```
+→ Runs `/audience-reach`: mines each persona dossier for existing media signal, then researches outward to name *specific* outlets — `r/devops`, the "DevOps Weekly" newsletter, KubeCon, a LinkedIn targeting definition — scores each on persona-fit, reachability, intent, cost band, and effort, then rolls up across both buyers into a coverage matrix and flags timing dependencies (e.g. paid awareness should lead the email motion and ramp ahead of KubeCon). Produces a dated Channel Reach Map.
+
+```
 "Repurpose our latest blog post for LinkedIn, Twitter thread,
  and newsletter"
 ```
@@ -180,6 +186,7 @@ agent-marketing-team/
 │   ├── positioning-angles/
 │   ├── keyword-research/
 │   ├── market-research/
+│   ├── audience-reach/
 │   ├── expert-review/
 │   ├── lead-magnet-strategy/
 │   ├── ad-angles/
@@ -379,6 +386,7 @@ The persona convention is optional. Here's when it earns its keep, and when it's
 | `/positioning-angles` | 5-8 scored differentiation angles based on competitive analysis |
 | `/keyword-research` | Prioritized keyword map scored by business potential, not just volume |
 | `/market-research` | Structured competitive intelligence with desk research + primary research flags |
+| `/audience-reach` | Per-persona Channel Reach Map — named outlets/mediums scored by reach-fit, rolled up across the buying committee |
 | `/expert-review` | Multi-agent review from 3-5 specialist perspectives |
 | `/buyer-panel` | Synthetic-audience signal — does this draft connect with the target buyer(s)? Panel of persona sub-agents react in character |
 | `/lead-magnet-strategy` | Scored lead magnet concepts before any content creation begins |
@@ -554,6 +562,7 @@ This enriches the Schwartz awareness framework rather than replacing it — diff
 ```
 Sprint 1:
   /market-research        → competitive landscape, customer language
+  /audience-reach         → named outlets per persona, reach plan, timing flags
   /proof-harvesting       → scored proof library with gap analysis
   /positioning-angles     → mechanisms built, angles scored, Laja-tested
   [You approve]           → select positioning angle
