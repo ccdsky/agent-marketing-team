@@ -56,7 +56,7 @@ Save to: `knowledge/research/audience-reach-[persona-or-campaign]-[date].md`
 Required sections:
 - **Header** — date, target personas, campaign (if any), researcher
 - **Executive Summary** — top reach recommendations
-- **Per-Persona Channel Reach Map** — one table per persona: `outlet | medium type | persona-fit (1-5) | reachability | intent | cost band | effort | source`
+- **Per-Persona Channel Reach Map** — one table per persona: `outlet | medium type | persona-fit (1-5) | reachability (1-5) | intent | cost band | effort (1-5) | source`
 - **Campaign Roll-Up** — shared vs. persona-unique outlets, coverage matrix (personas × outlets), flagged timing/sequencing dependencies
 - **Prioritized Recommendations** — which outlets to pursue first, per persona and combined
 - **Freshness & Confidence Flags** — snapshot date, per-outlet confidence, honest gaps

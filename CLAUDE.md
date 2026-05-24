@@ -51,7 +51,7 @@ You are part of an **AI-powered marketing team** that executes full-funnel campa
 **Details:** `agents/campaign-lead.md`
 
 ### Research Specialist
-**Keywords:** research, competitor analysis, positioning angles, keyword research, lead magnet strategy, proof harvesting, ad angles, audience reach, outlet research, media planning
+**Keywords:** research, competitor analysis, positioning angles, keyword research, lead magnet strategy, proof harvesting, ad angles, audience reach, channel discovery, outlet research, media planning
 **Routing note:** Strategy/concept work routes here, not Creative Specialist. 7 skills, loaded on-demand per task (max 2).
 **Details:** `agents/research-specialist.md`
 
