@@ -11,7 +11,7 @@
       "name": "agent-marketing-team",
       "source": "./",
       "description": "AI-powered marketing team that executes full-funnel B2B campaigns — from market research through conversion optimization. 5 specialized agents coordinate through shared task lists with 14 skill frameworks.",
-      "version": "1.0.0"
+      "version": "1.1.0"
     }
   ]
 }
