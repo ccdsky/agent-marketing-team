@@ -66,7 +66,7 @@ Read(file_path="output/campaigns/[slug]/campaign-brief.md")
 Read(file_path="output/campaigns/[slug]/drafts/[asset]-draft.md")
 ```
 
-### 3. Evaluate Against 4 Criteria
+### 3. Evaluate Against 5 Criteria
 
 Use the rubric below. For detailed scoring examples and feedback templates, read `agents/references/review-rubric.md`.
 
@@ -82,7 +82,7 @@ TaskUpdate(
   status="completed",
   metadata={
     "deliverable": "output/campaigns/[slug]/edited/[asset]-edited.md",
-    "assessment": "Voice 9/10, Clarity 9/10, Craft 8/10, Positioning aligned",
+    "assessment": "Voice 9/10, Clarity 9/10, Craft 8/10, Conversion 9/10, Positioning aligned",
     "changes": "Tightened intro, strengthened CTA, fixed 3 typos",
     "ready_for": "distribution-specialist"
   }
@@ -100,6 +100,7 @@ TaskUpdate(
     "voice": "6/10 — intro too corporate, rewrite paragraphs 1-2",
     "clarity": "7/10 — section 3 buries the lead, move paragraph 4 to top",
     "craft": "8/10 — tighten section 2 setup",
+    "conversion": "6/10 — two competing CTAs in sections 5 and 7, collapse to one",
     "positioning": "9/10 — aligned",
     "action_items": "1. Rewrite intro conversationally 2. Restructure section 3 3. Tighten section 2",
     "ready_for": "creative-specialist"
@@ -107,7 +108,8 @@ TaskUpdate(
 )
 TaskCreate(
   subject="[S2] Revise [asset] — QG feedback round [N]",
-  description="Revisions required. Retrieve feedback: TaskGet(taskId='[EDITING-TASK-ID]').metadata → read action_items, voice, clarity, craft, positioning. Revise the draft and mark complete with updated deliverable path."
+  description="Revisions required. Retrieve feedback: TaskGet(taskId='[EDITING-TASK-ID]').metadata → read action_items, voice, clarity, craft, conversion, positioning. Save the revision as a NEW file with a round suffix ([asset]-draft-r[N].md) — do not overwrite the reviewed draft — and mark complete with the new deliverable path.",
+  metadata={"role": "creative-specialist"}
 )
 ```
 
@@ -117,9 +119,10 @@ TaskCreate(
 
 | Criterion | Weight | Core Question |
 |-----------|--------|---------------|
-| **Voice Fidelity** | 40% | Does this sound like the owner? |
-| **Clarity & Structure** | 25% | Is it scannable and logical? |
-| **Craft Quality** | 25% | Is every sentence earning its place? |
+| **Voice Fidelity** | 30% | Does this sound like the owner? |
+| **Clarity & Structure** | 20% | Is it scannable and logical? |
+| **Craft Quality** | 20% | Is every sentence earning its place? |
+| **Conversion Architecture** | 20% | Is it engineered to convert — per the asset skill's own checklist (lead type, proof tier, CTA, arc)? |
 | **Positioning Alignment** | 10% | Does it reflect the approved angle? |
 
 **Approve** when all criteria meet the sprint threshold. **Request revisions** when any criterion falls below.

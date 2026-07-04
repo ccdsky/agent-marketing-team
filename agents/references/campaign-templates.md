@@ -62,8 +62,14 @@ Used by Campaign Lead. Read this file when creating campaign briefs, sprint task
 TaskCreate(
   subject="[S1] Research: Target audience pain points",
   description="Interview research + forum mining for developer pain points with CLI tools. Focus on: discoverability, onboarding, learning curve. Deliverable: knowledge/research/dev-cli-pain-points-[YYYY-MM-DD].md",
-  activeForm="Researching developer pain points"
+  activeForm="Researching developer pain points",
+  metadata={"role": "research-specialist"}
 )
+```
+
+Every task gets `metadata={"role": "[agent-name]"}` — specialists claim by exact role match (keywords are only the fallback for tasks without it).
+
+```
 ```
 
 ### Sprint 1 Dependency Wiring
@@ -79,14 +85,15 @@ TaskUpdate(taskId="[S1-6]", addBlockedBy=["[S1-5]"])              # checkpoint n
 
 ```
 # 1. Create the drafting task — note the real ID returned
-TaskCreate(subject="[S2] Draft lead magnet: [title]", description="...")
+TaskCreate(subject="[S2] Draft lead magnet: [title]", description="...", metadata={"role": "creative-specialist"})
 # → returns taskId: 42
 
 # 2. Embed the real ID in the expert review task description
 TaskCreate(
   subject="[S2] Expert review: Lead magnet",
   description="Review the lead magnet draft. Drafting task ID: 42. Read skills/expert-review/SKILL.md for the framework.",
-  activeForm="Running expert review"
+  activeForm="Running expert review",
+  metadata={"role": "creative-specialist"}
 )
 ```
 

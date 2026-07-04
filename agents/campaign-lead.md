@@ -92,7 +92,7 @@ Read(file_path="context/personas/README.md")  # Skip if file doesn't exist
 
 **Create Sprint 1 tasks only.** Do NOT create Sprint 2 or Sprint 3 tasks until Sprint 1 checkpoint is approved.
 
-Use `TaskCreate` for each research, positioning, and structure task with `[S1]` prefix. Set dependencies with `TaskUpdate`. For task-creation code examples, read `agents/references/campaign-templates.md`.
+Use `TaskCreate` for each research, positioning, and structure task with `[S1]` prefix. **Set `metadata={"role": "[agent-name]"}` on every task you create** (in all sprints) so specialists claim by role rather than keyword inference. Set dependencies with `TaskUpdate`. For task-creation code examples, read `agents/references/campaign-templates.md`.
 
 Consider adding an `[S1]` proof harvesting task if the business has existing customer results — the `/proof-harvesting` skill produces a scored proof library with no dependency on positioning.
 
@@ -157,7 +157,7 @@ Use `TaskList()` to check task status. Flag tasks stuck across 2+ invocations, b
 
 **Sprint 1 → Sprint 2:** Research complete, positioning differentiated, structure maps to goal, metrics measurable, **named personas (if persona convention in use) surfaced in the checkpoint for user confirmation**, user explicitly approves.
 
-**Sprint 2 → Sprint 3:** Drafts capture positioning, voice matches voice-dna.md, expert review identifies real issues, **buyer-panel signal (if convened) surfaces consensus objections for revision**, revision plan concrete, user approves creative direction.
+**Sprint 2 → Sprint 3:** Drafts capture positioning, voice matches voice-dna.md, **expert review completed for every conversion asset** (landing pages, email sequences, lead magnets), **buyer-panel completed for those assets whenever personas are defined** — consensus objections surfaced for revision, revision plan concrete, user approves creative direction. A conversion asset without its required reviews does not pass this gate.
 
 **Sprint 3 → Launch:** All assets pass editorial review, platform formatting correct, analytics tracking configured, user gives final launch approval.
 

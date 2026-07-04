@@ -2,9 +2,11 @@
 
 Used by Quality Gate. Read this file for detailed scoring guidance, feedback templates, and approval thresholds.
 
+**Weights:** Voice Fidelity 30% | Clarity & Structure 20% | Craft Quality 20% | Conversion Architecture 20% | Positioning Alignment 10%
+
 ---
 
-## Voice Fidelity — Detailed Scoring (Weight: 40%)
+## Voice Fidelity — Detailed Scoring (Weight: 30%)
 
 **Reference:** `context/voice-dna.md`
 
@@ -37,7 +39,7 @@ Used by Quality Gate. Read this file for detailed scoring guidance, feedback tem
 
 ---
 
-## Clarity & Structure — Detailed Scoring (Weight: 25%)
+## Clarity & Structure — Detailed Scoring (Weight: 20%)
 
 **Scoring:**
 - **10/10:** Perfect structure — effortless to scan and understand
@@ -69,7 +71,7 @@ Used by Quality Gate. Read this file for detailed scoring guidance, feedback tem
 
 ---
 
-## Craft Quality — Detailed Scoring (Weight: 25%)
+## Craft Quality — Detailed Scoring (Weight: 20%)
 
 **Scoring:**
 - **10/10:** Zero fluff — every word adds value
@@ -98,6 +100,53 @@ Used by Quality Gate. Read this file for detailed scoring guidance, feedback tem
 - Convert passive to active voice
 - Replace weak verbs with strong ones
 - Run spell check, proofread carefully
+
+---
+
+## Conversion Architecture — Detailed Scoring (Weight: 20%)
+
+**Reference:** The asset's own SKILL.md quality checklist. This criterion verifies the asset is *engineered to convert*, not just well-written. The items below are objective — each either holds or it doesn't. Do not score from vibes; check the draft against the list for its asset type.
+
+**Scoring:**
+- **10/10:** Every checklist item for the asset type holds
+- **8-9/10:** One minor item soft (e.g. proof present but one asset below Tier 1)
+- **6-7/10:** One structural item broken (wrong lead type, competing CTAs)
+- **4-5/10:** Multiple structural items broken
+- **1-3/10:** No conversion architecture — prose without a job
+
+**Per-asset checklists:**
+
+**Landing page** (from `/landing-page`):
+- Lead type matches the diagnosed awareness stage (Schwartz → Masterson table)
+- Proof block has Tier 1 assets (13/15+) covering 2+ Cialdini dimensions
+- Mechanism passes both System 1 (intuitive nod) and System 2 (defensible) checks
+- Exactly one conversion action — no competing CTAs
+- Objection section covers the top 3 objections from icp.md
+
+**Email sequence** (from `/email-sequence`):
+- Arc never skips more than one awareness stage per email
+- One CTA per email; intensity escalates soft → medium → hard across the sequence
+- Subject lines under 50 chars, 3 options per email, no spam triggers
+- Each email's hook matches the lead type for its TARGET stage
+
+**Lead magnet** (from `/lead-magnet`):
+- Value density holds: implementable result in under 30 minutes
+- Title has outcome + audience + specificity marker
+- Bridge to the paid offering is natural, one-line, not a hard sell
+- Framing matches Problem Aware or Solution Aware (not Unaware/Most Aware)
+
+**Blog post** (from `/blog-post`):
+- Intro strategy matches the funnel stage's lead type (the table in Step 1)
+- Title under 60 chars with primary keyword near front; meta 150-160 chars
+- H2s read as answers to reader questions; FAQ uses secondary keywords
+- CTA matches the journey stage (soft for awareness, direct for decision)
+
+**Social post / newsletter** (from `/social-post`, `/newsletter`):
+- Hook matches the traffic-source or subscriber-relationship awareness level
+- One main idea, one CTA
+- Platform constraints per the Quick Constraints Table in `platform-formats.md`
+
+**How to fix:** Cite the specific checklist item that fails and the skill section that defines it — the Creative Specialist has the same list.
 
 ---
 
@@ -138,17 +187,19 @@ Used by Quality Gate. Read this file for detailed scoring guidance, feedback tem
 - Voice: 7/10 minimum
 - Clarity: 7/10 minimum
 - Craft: 6/10 minimum (expected to polish in Sprint 3)
+- Conversion Architecture: 7/10 minimum (structural items must hold now — they don't improve with polish)
 - Positioning: 8/10 minimum
 
 **For Sprint 3 final drafts:**
 - Voice: 8/10 minimum
 - Clarity: 8/10 minimum
 - Craft: 8/10 minimum
+- Conversion Architecture: 8/10 minimum
 - Positioning: 9/10 minimum
 
 **Sprint focus:**
 - Sprint 1: Structure and positioning only — do not evaluate polish or voice
-- Sprint 2: Voice and positioning must be right — don't block on minor craft issues
+- Sprint 2: Voice, positioning, and conversion architecture must be right — don't block on minor craft issues
 - Sprint 3: All criteria at full bar — this ships
 
 **If below thresholds, request revisions.**
@@ -202,6 +253,18 @@ Used by Quality Gate. Read this file for detailed scoring guidance, feedback tem
 
 **What needs work:**
 - [Specific craft issue]
+
+**How to fix:**
+- [Concrete action]
+
+---
+
+### Conversion Architecture: [Score]/10
+
+**Checklist items verified:** [which per-asset items hold]
+
+**What needs work:**
+- [Failed checklist item + the skill section that defines it]
 
 **How to fix:**
 - [Concrete action]

@@ -113,21 +113,22 @@ tags: [relevant-tags]
 [When this pattern might not apply]
 ```
 
-### Step 4: Flag Agent Improvements for Human Review
+### Step 4: Flag Agent and Skill Improvements for Human Review
 
-If the retrospective reveals a consistent issue with how an agent operates, **do not edit agent files directly**. Document the suggested improvement in the retrospective file and flag it for human review:
+If the retrospective reveals a consistent issue with how an agent operates — **or evidence that a skill's framework should change** (e.g. a checklist item that repeatedly gets flagged wrong, a format that underperforms for this ICP, a threshold that proved miscalibrated) — **do not edit agent or skill files directly**. Document the suggested improvement in the retrospective file and flag it for human review:
 
 ```markdown
-## Recommended Agent Updates
+## Recommended Agent & Skill Updates
 
 **human_review_required: true**
 
-| Agent File | Section | Suggested Change | Evidence |
-|------------|---------|-----------------|----------|
-| [agent-name].md | [Section name] | [What to add/change] | [Data or observation from this campaign] |
+| File | Section | Suggested Change | Evidence |
+|------|---------|-----------------|----------|
+| agents/[agent-name].md | [Section name] | [What to add/change] | [Data or observation from this campaign] |
+| skills/[skill-name]/SKILL.md | [Section name] | [What to add/change] | [Performance data from this campaign] |
 ```
 
-The human reviews these suggestions and applies approved changes. This prevents incorrect edits from compounding into systemic issues.
+The human reviews these suggestions and applies approved changes. This prevents incorrect edits from compounding into systemic issues — and it's how campaign evidence reaches the content frameworks, not just the coordination layer.
 
 ### Step 5: Create Archive Entry
 

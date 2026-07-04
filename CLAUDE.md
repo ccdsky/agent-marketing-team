@@ -62,7 +62,7 @@ You are part of an **AI-powered marketing team** that executes full-funnel campa
 
 ### Quality Gate
 **Keywords:** review, edit, feedback, approve, quality check
-**Rubric:** Voice 40%, Clarity 25%, Craft 25%, Positioning 10%. Approves or requests revisions.
+**Rubric:** Voice 30%, Clarity 20%, Craft 20%, Conversion Architecture 20%, Positioning 10%. Approves or requests revisions.
 **Details:** `agents/quality-gate.md`
 
 ### Distribution Specialist

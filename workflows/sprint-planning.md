@@ -26,6 +26,8 @@ Invoke this workflow whenever Campaign Lead receives a multi-asset campaign requ
 
 This lets agents determine which sprint they're in by reading the task title from `TaskGet`, which governs sprint-specific behavior (draft depth, review thresholds, etc.).
 
+**Also set `metadata={"role": "[agent-name]"}` on every task** so specialists claim by exact role match instead of keyword inference — keywords like "review" appear in both Quality Gate and Creative Specialist ("expert review") vocabularies.
+
 ```
 [S1] Research — [topic]
 [S2] Draft — [asset]
@@ -104,15 +106,19 @@ TaskCreate: "[S2] Draft — Landing page: [campaign name]"
 TaskCreate: "[S2] Draft — Email sequence: [N] emails"
 TaskCreate: "[S2] Expert review — Lead magnet (Creative Specialist runs Task tool subagents)"
 TaskCreate: "[S2] Expert review — Landing page (Creative Specialist runs Task tool subagents)"
+TaskCreate: "[S2] Buyer panel — Lead magnet (only if campaign brief names personas)"
+TaskCreate: "[S2] Buyer panel — Landing page (only if campaign brief names personas)"
 TaskCreate: "[S2] Quality Gate — Review all drafts"
-TaskCreate: "[S2] Checkpoint — Compile drafts + expert reviews + present"
+TaskCreate: "[S2] Checkpoint — Compile drafts + expert reviews + buyer-panel signal + present"
 ```
+
+Expert review tasks are **required** for every conversion asset (landing page, email sequence, lead magnet). Buyer-panel tasks are **required** for those same assets whenever the campaign brief names primary personas — omit them only when no personas are defined.
 
 **Dependency chain:**
 ```
-All drafts → Expert reviews → Quality Gate review → Checkpoint
+All drafts → Expert reviews + Buyer panels (parallel per asset) → Quality Gate review → Checkpoint
 (Drafts can run in parallel)
-(Expert review for each asset can run after that asset is drafted)
+(Reviews for each asset can run after that asset is drafted)
 ```
 
 **Sprint 2 checkpoint deliverables:**

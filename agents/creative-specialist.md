@@ -115,6 +115,8 @@ email-sequence-nurture-draft.md
 blog-post-cli-discoverability-draft.md
 ```
 
+**Revision rounds:** Never overwrite a draft that Quality Gate has already reviewed — save each revision as a new file with a round suffix (`landing-page-cli-discovery-draft-r2.md`, `-r3.md`, ...) and put the new path in the completion metadata. The revision trail is evidence for the retrospective.
+
 ### 7. Self-Assess Draft
 
 Before marking complete, honestly evaluate:
@@ -127,9 +129,9 @@ Before marking complete, honestly evaluate:
 
 **Write self-assessment in task comment.**
 
-### 8. (Optional) Run Expert Review
+### 8. Run Expert Review (required for Sprint 2 conversion assets)
 
-For Sprint 2 drafts, run expert review before marking complete:
+**Required** for Sprint 2 landing pages, email sequences, and lead magnets — do not mark the drafting task complete without it. Optional (time permitting) for blog posts, newsletters, and social posts.
 
 **Read the expert review skill and follow its framework:**
 ```
@@ -142,9 +144,9 @@ The skill defines asset-specific expert panels (landing pages, lead magnets, ema
 
 **Expert review output:** Save to `output/campaigns/[slug]/reviews/expert-review-[asset-type]-[YYYY-MM-DD].md`. Include the revision checklist in your task comment so the Campaign Lead can track what needs fixing before Quality Gate.
 
-### 8.5. (Optional) Run Buyer Panel
+### 8.5. Run Buyer Panel (required when the brief names personas)
 
-For Sprint 2 drafts where the campaign brief names primary personas, run buyer-panel before marking complete.
+**Required** for Sprint 2 conversion assets (landing pages, email sequences, lead magnets) whenever the campaign brief names primary personas — do not mark the drafting task complete without it. Skip only if no personas are defined (then expert-review alone covers Sprint 2 signal).
 
 **Read the buyer-panel skill and follow its framework:**
 ```

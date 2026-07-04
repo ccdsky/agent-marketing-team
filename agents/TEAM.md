@@ -157,7 +157,8 @@ Load skills **on-demand per task**, not all skills for your role.
 1. Claim a task from TaskList()
 2. Identify the 1-2 most relevant skills from your routing table
 3. Read the SKILL.md for the primary skill
-4. If needed during execution, read the skill's `references/` files on demand
+4. Grep `knowledge/learnings/` for the skill name and asset type (e.g. `landing-page`, `lead magnet`) — apply any codified learnings on top of the skill's framework. Skip silently if the directory doesn't exist yet.
+5. If needed during execution, read the skill's `references/` files on demand
 
 **Do NOT pre-read all skills before claiming tasks.**
 
@@ -192,7 +193,9 @@ TaskList()
 ```
 Look for: Status `pending`, owner empty, `blockedBy` empty.
 
-**Filter by role keywords before claiming:**
+**Filter by role before claiming — metadata first, keywords as fallback:**
+
+If `task.metadata["role"]` is set, claim only tasks where it matches your agent name exactly (e.g. `"creative-specialist"`). The keyword table below applies only to tasks **without** a `role` field. Never claim a task whose `role` names another agent, even if its subject matches your keywords.
 
 | Role | Claim tasks containing these keywords |
 |------|--------------------------------------|
