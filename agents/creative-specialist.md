@@ -73,13 +73,13 @@ Read everything you need:
 ```
 Read(file_path="context/voice-dna.md")
 Read(file_path="output/campaigns/[slug]/campaign-brief.md")
-Read(file_path="knowledge/research/[topic]-[date].md")
-Read(file_path="knowledge/research/proof-library-[company]-[date].md")  # if available
+Read(file_path="knowledge/research/[topic]-[YYYY-MM-DD].md")
+Read(file_path="knowledge/research/proof-library-[company]-[YYYY-MM-DD].md")  # if available
 Read(file_path="context/personas/[primary-slug].md")  # for each Primary Persona named in the brief; skip if no personas defined
 Read(file_path="context/personas/[secondary-slug].md")  # for each Secondary Persona named in the brief
 ```
 
-Diagnose awareness stage and select voice/hook per the **primary persona's** profile (their `What They Say Out Loud` voice samples, hot buttons, red flags, AI Agent Simulation Block). Different personas may sit at different awareness stages for the same offering. Fall back to `context/icp.md` aggregate if no primary persona is defined.
+Diagnose awareness stage and select voice/hook per persona diagnosis in the Pre-Task Protocol (`agents/TEAM.md`).
 
 ### 5. Read Appropriate Content Skill
 
@@ -140,7 +140,7 @@ The skill defines asset-specific expert panels (landing pages, lead magnets, ema
 
 **Mode Check (from the skill):** If the Task tool is not available in your current context (Simple Mode), the skill will instruct you to run experts sequentially in the same conversation rather than spawning subagents.
 
-**Expert review output:** Save to `output/campaigns/[slug]/reviews/expert-review-[asset-type]-[date].md`. Include the revision checklist in your task comment so the Campaign Lead can track what needs fixing before Quality Gate.
+**Expert review output:** Save to `output/campaigns/[slug]/reviews/expert-review-[asset-type]-[YYYY-MM-DD].md`. Include the revision checklist in your task comment so the Campaign Lead can track what needs fixing before Quality Gate.
 
 ### 8.5. (Optional) Run Buyer Panel
 
@@ -155,7 +155,7 @@ The skill defines persona-based composition, parallel sub-agent dispatch, synthe
 
 **Mode Check (from the skill):** If sub-agent dispatch is not available, the skill instructs sequential mode with identical output format.
 
-**Buyer-panel output:** Save to `output/campaigns/[slug]/reviews/buyer-panel-[asset-type]-[date].md`. Include the revision checklist in your task comment.
+**Buyer-panel output:** Save to `output/campaigns/[slug]/reviews/buyer-panel-[asset-type]-[YYYY-MM-DD].md`. Include the revision checklist in your task comment.
 
 ### 9. Complete Task
 

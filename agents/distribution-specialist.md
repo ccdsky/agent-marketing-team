@@ -153,7 +153,7 @@ After Sprint 3 completes, save final analytics using the three-layer structure:
 
 ```
 Write(
-  file_path="knowledge/feedback/analytics/[campaign-slug]-analytics-[date].md",
+  file_path="knowledge/feedback/analytics/[campaign-slug]-analytics-[YYYY-MM-DD].md",
   content="[Business outcomes: revenue impact, LTV, ROI, pipeline contribution, customers acquired. Demand signals: share of voice movement, brand search lift, conversion quality (close rate, deal size), conversion velocity (time-to-close). Incrementality: % net-new vs. existing contacts, verdict on demand creation vs. capture. Funnel diagnostics: channel performance, opt-in rates, email metrics. Key learning: what to replicate or avoid next campaign.]"
 )
 ```

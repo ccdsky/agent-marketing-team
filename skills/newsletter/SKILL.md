@@ -43,7 +43,7 @@ Clarify before writing:
 
   Newsletters rarely serve Unaware audiences (they opted in). Don't over-explain who you are or what you do — your subscribers already know.
 
-  *Diagnose awareness stage and select lead type per the **primary persona's** profile (read `context/personas/[primary-persona-slug].md` for their awareness state, hot buttons, and red flags). Different personas may sit at different awareness stages for the same offering. Fall back to `context/icp.md` aggregate if no primary persona is defined.*
+  *Diagnose awareness stage per persona diagnosis in the Pre-Task Protocol (`agents/TEAM.md`).*
 
 **Rule:** One issue, one main idea. If you have two ideas, write two issues.
 
@@ -103,7 +103,13 @@ Lighter issue, great for busy weeks or building habits.
 
 #### Subject Line (write 3 options)
 
-Test: Would you open this email from a friend?
+**Formulas:**
+- Curiosity gap: "The one thing most [ICP] get wrong about [topic]"
+- Story: "What happened when I tried [approach]"
+- Question: "Are you making this mistake?"
+- Specific: "[Number] [timeframe] from now, you could [outcome]"
+
+Test: Would you open this email from a friend? Under 50 characters for mobile.
 
 #### Body + Closing
 

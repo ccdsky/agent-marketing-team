@@ -38,6 +38,14 @@ output/campaigns/dev-cli-launch-2026-02/
 
 ---
 
+## File Naming
+
+All generated files follow one grammar: `[type]-[slug]-[YYYY-MM-DD].md`. Slugs are kebab-case with no slashes — a "[company-or-topic]" placeholder means *company or topic*, rendered as a single kebab-case token (e.g. `market-research-acme-cicd-2026-07-04.md`). Dates are always ISO `YYYY-MM-DD`. Downstream agents Glob by these patterns; deviating breaks handoffs.
+
+**Scoring scales note:** Skills deliberately use different scoring scales because each follows its methodology source (1-5 × 3 dimensions for positioning/proof, 0-3 Business Potential for keywords, 1-10 Value Equation for lead magnet concepts, X/10 expert panels, binary buyer-panel votes). Do not normalize scores across skills — compare only within a skill's own scale.
+
+---
+
 ## Communication Protocols
 
 ### Task Handoffs (Primary)
@@ -114,7 +122,7 @@ Before claiming any task, read:
 - `context/business-profile.md`
 - `context/personas/README.md` — read if it exists, skip if missing. If present, do not pre-load individual dossiers — see "Identify target personas for this task" below.
 - Campaign brief: `output/campaigns/[slug]/campaign-brief.md` (if in a campaign)
-- Relevant research: `knowledge/research/[topic]-[date].md` (if available)
+- Relevant research: `knowledge/research/[topic]-[YYYY-MM-DD].md` (if available)
 - Past learnings: `knowledge/learnings/campaigns/` (Grep for relevant patterns — skip if directory doesn't exist yet; it's created after the first campaign completes)
 
 If context files may be unpopulated, run System Pre-Flight first.
@@ -130,6 +138,8 @@ If context files may be unpopulated, run System Pre-Flight first.
 Load only the dossiers for the identified personas — do not load every persona in the library. If targets are uncertain, ask the user rather than guess. If no personas are defined (directory absent or empty), proceed with `icp.md`-only behavior — this is normal, not an error.
 
 Persona discovery globs `context/personas/*.md` excluding `*.template.md` files (templates are reference material, not selectable personas).
+
+**Awareness diagnosis (content work):** Diagnose the awareness stage — and select the lead type, where the skill defines lead types — per the **primary persona's** profile (their `What They Say Out Loud` voice samples, hot buttons, red flags, AI Agent Simulation Block). Different personas may sit at different awareness stages for the same offering. Fall back to the `context/icp.md` aggregate if no primary persona is defined. Skills reference this rule as "persona diagnosis per Pre-Task Protocol."
 
 **Brand guide note:** If `context/brand-guide.md` exists, read it before any content work. It contains banned phrases that can disqualify otherwise excellent content. Its "optional" status means "skip if missing," not "skip if it exists."
 

@@ -61,15 +61,9 @@ For each target platform, define:
 
   **Rule:** Never copy the source opening into the repurposed version. Every platform gets a native hook matched to its audience's awareness level.
 
-  *Diagnose awareness stage and select lead type per the **primary persona's** profile (read `context/personas/[primary-persona-slug].md` for their awareness state, hot buttons, and red flags). Different personas may sit at different awareness stages for the same offering. Fall back to `context/icp.md` aggregate if no primary persona is defined.*
+  *Diagnose awareness stage per persona diagnosis in the Pre-Task Protocol (`agents/TEAM.md`).*
 
-| Platform | Native Format | Optimal Length | Best For |
-|----------|--------------|----------------|---------|
-| LinkedIn | Text post or article | 150-300 words | Insight + professional angle |
-| Twitter/X | Thread | 3-8 tweets | Punchy breakdown of key points |
-| Substack Notes | Short observation | 100-300 words | Personal, conversational |
-| Instagram | Caption | 125-150 chars (first line) | Visual hook + story |
-| YouTube description | Summary | 200-300 words | SEO + context |
+For native formats and length constraints per platform, use the Quick Constraints Table in `agents/references/platform-formats.md` — the single source of truth for platform numbers.
 
 ### Step 3: Write Platform-Specific Versions
 
@@ -83,7 +77,9 @@ The derivative test: if someone saw this without context, would they know which 
 
 ## Output Format
 
-Create one folder per repurpose project:
+**Simple Mode (no active campaign):** Return the platform versions inline. Do not create files unless the user asks. If saving to disk makes sense, use `output/drafts/repurposed-[topic-slug]/`.
+
+**Campaign Mode:** Create one folder per repurpose project:
 `output/campaigns/[slug]/drafts/repurposed/`
 
 **Mark complete:**
@@ -213,7 +209,7 @@ Before marking complete:
 - [ ] None of the versions sound like they were obviously adapted from the original
 - [ ] Hooks are platform-appropriate
 - [ ] CTAs link back to original where appropriate
-- [ ] Voice matches platform-specific tone from brand-guide.md (optional — skip if file doesn't exist)
+- [ ] Voice matches voice-dna.md (plus platform-specific tone notes from brand-guide.md if it exists)
 - [ ] Overview file created with platform map
 - [ ] All files saved to repurposed/ folder
 - [ ] Self-assessment complete for each version

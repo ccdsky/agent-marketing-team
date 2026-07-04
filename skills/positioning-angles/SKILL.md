@@ -17,7 +17,8 @@ Before starting, always read:
 - `context/voice-dna.md` — Owner's voice and positioning instincts
 - `context/icp.md` — Target buyer's pain points, current alternatives, decision language
 - `context/business-profile.md` — Unique attributes, proof points, offer details
-- Research package: `knowledge/research/[relevant]-[date].md` (if available — run `/market-research` first if not)
+- Target persona dossiers (if `context/personas/` exists) — identify per the Pre-Task Protocol in `agents/TEAM.md`; score ICP Resonance against the primary persona's stated pains
+- Research package: `knowledge/research/[relevant]-[YYYY-MM-DD].md` (if available — run `/market-research` first if not)
 - Campaign brief: `output/campaigns/[slug]/campaign-brief.md` (if this is for a specific campaign)
 
 ---
@@ -42,10 +43,10 @@ Before starting, always read:
 
 ## Output
 
-Save to: `output/campaigns/[campaign-slug]/strategy/positioning-angles-[date].md`
-For standalone research: `knowledge/research/positioning-angles-[company]-[date].md`
+Save to: `output/campaigns/[campaign-slug]/strategy/positioning-angles-[YYYY-MM-DD].md`
+For standalone research: `knowledge/research/positioning-angles-[company]-[YYYY-MM-DD].md`
 
-Required sections: Competitive Landscape, Qualifying Angles (score ≥ 9, ranked), Below Threshold table, Recommended Direction, Handoff Notes for Campaign Lead.
+Required sections: Competitive Landscape, Mechanism (full Failure/Shift/Result decomposition — `/ad-angles` reads this section downstream), Qualifying Angles (score ≥ 9, ranked), Below Threshold table, Recommended Direction, Handoff Notes for Campaign Lead.
 
 For full markdown template, see `references/methodology.md`.
 
@@ -53,7 +54,7 @@ For full markdown template, see `references/methodology.md`.
 ```
 TaskUpdate(taskId="[ID]", status="completed", metadata={
   "deliverable": "output/campaigns/[campaign-slug]/strategy/positioning-angles-[YYYY-MM-DD].md",
-  "assessment": "[1-line: voice X/10, clarity X/10, craft X/10]",
+  "assessment": "[1-line: N qualifying angles, top score X/15, [I]-tagged assumptions needing validation]",
   "ready_for": "campaign-lead"
 })
 ```

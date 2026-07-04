@@ -119,6 +119,20 @@ When handing off to Campaign Lead, include:
 
 ---
 
+## Mechanism
+
+This section is read downstream by `/ad-angles` — include the full decomposition, not just the name.
+
+**Name:** [2-4 word ownable name]
+**Type:** [Process | Discovery | System | Timing]
+**Failure:** [why prior solutions failed]
+**Shift:** [what's different about this approach]
+**Result:** [what becomes possible]
+**Thiel secret test:** [pass/fail — what non-obvious truth it encodes]
+**Kahneman dual-process test:** [System 1 and System 2 verdicts]
+
+---
+
 ## Qualifying Angles (Score ≥ 9, ranked highest to lowest)
 
 ### Angle 1: [Short name] — Score: [X/15]

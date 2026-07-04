@@ -96,7 +96,7 @@ Include in output so Campaign Lead can create the email sequence task:
 ```
 TaskCreate(
   subject="[S2] Draft — Email sequence nurturing [lead magnet topic] opt-ins",
-  description="Design email nurture sequence for [lead magnet name] opt-ins. Read nurture goals from lead magnet concept brief: output/campaigns/[slug]/strategy/lead-magnet-concept-[date].md → section 'Nurture Sequence Goals'. Use /email-sequence skill to determine arc, count, and structure from those goals."
+  description="Design email nurture sequence for [lead magnet name] opt-ins. Read nurture goals from lead magnet concept brief: output/campaigns/[slug]/strategy/lead-magnet-concept-[YYYY-MM-DD].md → section 'Nurture Sequence Goals'. Use /email-sequence skill to determine arc, count, and structure from those goals."
 )
 ```
 

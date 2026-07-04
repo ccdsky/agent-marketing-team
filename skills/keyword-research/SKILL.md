@@ -17,7 +17,7 @@ Before starting, always read:
 - `context/icp.md` — ICP roles, pain points, vocabulary, where they spend time
 - `context/business-profile.md` — Products/services, use cases, competitive differentiators
 - `context/voice-dna.md` — Topic areas the owner has authority to speak about
-- Research package: `knowledge/research/[relevant]-[date].md` (prior market research if available)
+- Research package: `knowledge/research/[relevant]-[YYYY-MM-DD].md` (prior market research if available)
 
 If `context/icp.md` is sparse on ICP vocabulary and hangouts, run `/market-research` first.
 
@@ -29,7 +29,7 @@ If `context/icp.md` is sparse on ICP vocabulary and hangouts, run `/market-resea
 
 2. **Mine customer language.** Pull phrases from sales transcripts, support tickets, G2/Capterra reviews, Reddit/LinkedIn communities, job postings. For source priority ranking and quality guidance, see `references/methodology.md`.
 
-3. **Map audience attention channels.** If prior market research exists, extract the Audience Behavior Map from `knowledge/research/market-research-[topic]-[date].md` Phase 2c — skip independent research. If no prior research: map communities, newsletters, podcasts, creators, and trade publications the ICP uses.
+3. **Map audience attention channels.** If prior market research exists, extract the Audience Behavior Map from `knowledge/research/market-research-[company-or-topic]-[YYYY-MM-DD].md` Phase 2c — skip independent research. If no prior research: map communities, newsletters, podcasts, creators, and trade publications the ICP uses.
 
 4. **Generate 15-25 topic hypotheses.** Map each to a specific ICP problem. Format: `[ICP problem/goal] → [topic hypothesis] → [likely search intent]`.
 
@@ -53,7 +53,7 @@ If `context/icp.md` is sparse on ICP vocabulary and hangouts, run `/market-resea
 
 ## Output
 
-Save to: `knowledge/research/keyword-research-[company/topic]-[date].md`
+Save to: `knowledge/research/keyword-research-[company-or-topic]-[YYYY-MM-DD].md` (single kebab-case slug — see File Naming in `agents/TEAM.md`)
 
 Required sections: Customer Language Mining, Track A: Money Phrases, Track B: Content Keywords, Watch List, Editorial Calendar Suggestions, Pipeline Impact Estimate (Track A), Audience Attention Map, Research Gaps.
 
@@ -62,8 +62,8 @@ For full markdown template, see `references/methodology.md`.
 **Mark complete:**
 ```
 TaskUpdate(taskId="[ID]", status="completed", metadata={
-  "deliverable": "knowledge/research/keyword-research-[company/topic]-[YYYY-MM-DD].md",
-  "assessment": "[1-line: voice X/10, clarity X/10, craft X/10]",
+  "deliverable": "knowledge/research/keyword-research-[company-or-topic]-[YYYY-MM-DD].md",
+  "assessment": "[1-line: N P1 keywords, Track A/B split, biggest SERP risk]",
   "ready_for": "research-specialist or campaign-lead"
 })
 ```

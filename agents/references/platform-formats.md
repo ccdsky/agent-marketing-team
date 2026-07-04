@@ -1,6 +1,18 @@
 # Platform Formatting Reference
 
-Used by Distribution Specialist. Read this file when formatting assets for any platform.
+Used by Distribution Specialist when formatting assets, and by content skills (`/social-post`, `/repurpose`) as the single source of truth for platform constraints. Do not restate these numbers in skill files — cite this file.
+
+---
+
+## Quick Constraints Table (Content Creation)
+
+| Platform | Native Format | Optimal Length | Notes |
+|----------|--------------|----------------|-------|
+| LinkedIn | Text post or article | 800-1300 characters (~150-300 words) | Hook in first 3 lines (before "see more"); 3-5 hashtags at end; link in first comment |
+| Twitter/X | Thread | 3-8 tweets, each < 280 chars | First tweet must stop the scroll; each tweet standalone; no hashtags |
+| Substack Notes | Short observation | 100-300 words | Personal, conversational |
+| Instagram | Caption | 125-150 chars first line | Visual hook + story |
+| YouTube description | Summary | 200-300 words | SEO + context |
 
 ---
 

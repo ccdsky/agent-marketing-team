@@ -24,11 +24,12 @@ Cialdini (Influence) — 6 persuasion principles mapped to angle dimensions. Dix
 ## Required Inputs
 
 Before starting, always read:
-- Approved positioning angle from Sprint 1: `output/campaigns/[slug]/strategy/positioning-angles-[date].md`
-- Mechanism from `/positioning-angles` Step 3.5 output
+- Approved positioning angle from Sprint 1: `output/campaigns/[slug]/strategy/positioning-angles-[YYYY-MM-DD].md`
+- The Mechanism section of that file (built in `/positioning-angles` Step 4 — Failure → Shift → Result)
 - `context/icp.md` — Pain points, language, objections
+- Target persona dossiers (if `context/personas/` exists) — identify per the Pre-Task Protocol in `agents/TEAM.md` and write hooks in the primary persona's language
 - `context/voice-dna.md` — Voice and tone
-- Proof library (if available): `knowledge/research/proof-library-[company]-[date].md`
+- Proof library (if available): `knowledge/research/proof-library-[company]-[YYYY-MM-DD].md`
 
 ---
 
@@ -38,7 +39,7 @@ Before starting, always read:
 
 Extract from the approved positioning angle:
 - **The positioning statement** (one sentence)
-- **The mechanism** (from Step 3.5 — Failure → Shift → Result)
+- **The mechanism** (from the Mechanism section — Failure → Shift → Result)
 - **The primary ICP pain point** it addresses
 - **The strongest available proof** (from proof library if available)
 
@@ -121,7 +122,7 @@ For standalone use: `output/drafts/ad-angles-[topic]-[YYYY-MM-DD].md`
 ```
 TaskUpdate(taskId="[ID]", status="completed", metadata={
   "deliverable": "output/campaigns/[campaign-slug]/strategy/ad-angles-[YYYY-MM-DD].md",
-  "assessment": "[1-line: voice X/10, clarity X/10, craft X/10]",
+  "assessment": "[1-line: N angles across 6 dimensions, strongest #s, proof gaps flagged]",
   "ready_for": "creative-specialist"
 })
 ```
@@ -131,7 +132,7 @@ TaskUpdate(taskId="[ID]", status="completed", metadata={
 
 **Date:** [YYYY-MM-DD]
 **Core positioning angle:** [The approved angle this expands]
-**Mechanism:** [Named mechanism from Step 3.5]
+**Mechanism:** [Named mechanism from the positioning-angles Mechanism section]
 **Campaign:** [slug if applicable]
 
 ---

@@ -32,7 +32,10 @@ mkdir -p knowledge/learnings/campaigns/retrospectives
 mkdir -p knowledge/archive
 mkdir -p knowledge/feedback/analytics
 mkdir -p output/campaigns
+mkdir -p output/drafts
 ```
+
+(`output/drafts/` holds standalone Simple Mode outputs — skills like `/ad-angles` and `/lead-magnet-strategy` save there when no campaign is active.)
 
 ### Step 2: Create Context Templates
 
@@ -96,7 +99,14 @@ Analyze 3-5 of your writing samples and document your voice profile here.
 ## Common Objections
 - [What stops them from buying?]
 - [What concerns come up in sales conversations?]
+
+## Buying Committee & Intermediary Influence Map
+- [Who else is involved in the buying decision? (economic buyer, technical champion, procurement, end users)]
+- [Which intermediaries influence them? (analysts, consultants, resellers, respected practitioners)]
+- [Who do they trust for recommendations, and where does that trust get built?]
 ```
+
+*(The Buying Committee & Intermediary Influence Map section is read by `/audience-reach` — leave the headers in place even if sparse.)*
 
 #### `context/business-profile.md`
 
@@ -211,6 +221,7 @@ After creating all directories and templates, report:
 - `context/personas/` — persona library scaffolding (README index + `example-persona.template.md` reference)
 - `knowledge/` — research, learnings, archive, and analytics directories
 - `output/campaigns/` — campaign output directory
+- `output/drafts/` — standalone (Simple Mode) output directory
 
 **Next step:** Populate the 3 required context files before running any campaign:
 1. `context/voice-dna.md` — Paste 3-5 writing samples and document your voice patterns

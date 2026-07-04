@@ -21,6 +21,8 @@ Before starting, always read:
 - `context/business-profile.md` — category, offerings, geography (bounds which outlets are plausible)
 - `context/brand-guide.md` — if present (platform tones); skip silently if absent
 
+**If `context/personas/` doesn't exist or is empty:** do not invent personas. Fall back to `context/icp.md` as a single aggregate pseudo-persona, state that explicitly in the output header, and mark all persona-fit scores [I] (inferred). Recommend creating persona dossiers for a higher-confidence rerun.
+
 Define scope before starting: which personas to reach (1–3, per Pre-Task Protocol — infer from task/brief, or ask)? Tied to a campaign? Any market-timing events (trade show, fiscal cycle, buying season)?
 
 **Budget is NOT an input** — cost-to-access appears as a per-outlet output band, because real prices vary by outlet and are knowable only once the outlet is identified.
@@ -39,7 +41,7 @@ Define scope before starting: which personas to reach (1–3, per Pre-Task Proto
 3. For each persona, research outward to name **specific, current outlets — not categories** — across five medium types: Earned/Organic, Paid, Events, Influence/Intermediary, Outbound. For the per-type checklist, see `references/methodology.md`. Each outlet carries: why it fits this persona, evidence/source, and a reachability note.
 
 **Phase 4: SCORE & ENRICH**
-4. Score each outlet 1–5 on Persona fit, Reachability, Intent/signal quality, Cost-to-access efficiency, Effort/feasibility. Attach a cost band ($/$$/$$$) and an intent read (Awareness / Consideration / Decision). Rank per persona. For the scoring guide, see `references/methodology.md`.
+4. Score each outlet 1–5 on Persona fit, Reachability, Intent/signal quality, Cost-to-access efficiency, Effort/feasibility. Tag each score **[E]** evidence-based (dossier signal or cited source) or **[I]** inferred — no bare scores. Attach a cost band ($/$$/$$$) and an intent read (Awareness / Consideration / Decision). Rank per persona. For the scoring guide, see `references/methodology.md`.
 
 **Phase 5: ROLL UP**
 5. Across the buying committee: separate shared outlets (multi-persona efficiency) from persona-unique outlets (precision reach); build a coverage matrix; and flag timing/sequencing dependencies tied to editorial calendar + market timing. Hand these to the Campaign Lead — flag, do not orchestrate.
@@ -51,7 +53,7 @@ Define scope before starting: which personas to reach (1–3, per Pre-Task Proto
 
 ## Output
 
-Save to: `knowledge/research/audience-reach-[persona-or-campaign]-[date].md`
+Save to: `knowledge/research/audience-reach-[persona-or-campaign]-[YYYY-MM-DD].md`
 
 Required sections:
 - **Header** — date, target personas, campaign (if any), researcher
@@ -91,11 +93,11 @@ Dossier shows they live in `r/devops`, follow two named SRE creators on LinkedIn
 
 | Outlet | Medium | Persona-fit | Reachability | Intent | Cost | Effort |
 |--------|--------|-------------|--------------|--------|------|--------|
-| r/devops | Earned/Organic | 5 | 3 (no overt selling) | Consideration | $ | High (credibility build) |
-| KubeCon | Events | 4 | 4 | Consideration | $$$ | High |
-| DevOps Weekly placement | Paid | 4 | 5 | Awareness | $$ | Low |
-| Gartner DevOps analyst | Influence/Intermediary | 4 | 3 | Consideration | $$$ | High |
-| LinkedIn outreach to Platform leads | Outbound | 3 | 4 | Decision | $ | Medium |
+| r/devops | Earned/Organic | 5 [E] | 3 [E] (no overt selling) | Consideration | $ | 2 (credibility build) |
+| KubeCon | Events | 4 [E] | 4 [I] | Consideration | $$$ | 2 |
+| DevOps Weekly placement | Paid | 4 [E] | 5 [E] | Awareness | $$ | 5 |
+| Gartner DevOps analyst | Influence/Intermediary | 4 [I] | 3 [I] | Consideration | $$$ | 2 |
+| LinkedIn outreach to Platform leads | Outbound | 3 [I] | 4 [E] | Decision | $ | 3 |
 
 **Phase 5 excerpt — ROLL UP:**
 Coverage matrix:

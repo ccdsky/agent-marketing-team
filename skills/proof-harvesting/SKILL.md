@@ -24,7 +24,8 @@ Cialdini (Influence) — 6 persuasion principles for proof classification: socia
 Before starting, always read:
 - `context/business-profile.md` — What the proof should support (offers, claims, differentiators)
 - `context/icp.md` — What outcomes and evidence the ICP values most
-- Research package (if available): `knowledge/research/[relevant]-[date].md`
+- Target persona dossiers (if `context/personas/` exists) — identify per the Pre-Task Protocol in `agents/TEAM.md`; score Relevance against the primary persona's #1 pain
+- Research package (if available): `knowledge/research/[relevant]-[YYYY-MM-DD].md`
 - Ask the user for access to: customer testimonials, case studies, sales decks, review site profiles, media mentions
 
 ---
@@ -65,6 +66,8 @@ Rate each asset on three dimensions (1-5 each):
 | **Relevance** | Tangential outcome | Related to ICP need | Directly addresses ICP's #1 pain point |
 
 **Score = Specificity + Credibility + Relevance (max 15)**
+
+Tag each dimension score **[E]** evidence-based (verifiable source in hand) or **[I]** inferred — no bare scores. [I]-tagged scores are hypotheses; flag them in the gap analysis for verification.
 
 **Minimum threshold:** 9+ to include in proof library. Below 9 → note in gaps section but don't include in main library.
 
@@ -117,7 +120,7 @@ Save to: `knowledge/research/proof-library-[company]-[YYYY-MM-DD].md`
 ```
 TaskUpdate(taskId="[ID]", status="completed", metadata={
   "deliverable": "knowledge/research/proof-library-[company]-[YYYY-MM-DD].md",
-  "assessment": "[1-line: voice X/10, clarity X/10, craft X/10]",
+  "assessment": "[1-line: N assets harvested, N Tier 1, biggest gap]",
   "ready_for": "creative-specialist or campaign-lead"
 })
 ```
@@ -140,7 +143,7 @@ TaskUpdate(taskId="[ID]", status="completed", metadata={
 **Source:** [Where from, URL]
 **Attribution:** [Name, Title, Company]
 **Date:** [YYYY-MM-DD]
-**Score:** Specificity [X/5] + Credibility [X/5] + Relevance [X/5] = **[Total/15]**
+**Score:** Specificity [X/5] [E/I] + Credibility [X/5] [E/I] + Relevance [X/5] [E/I] = **[Total/15]**
 **Cialdini tags:** [Social Proof / Authority / Consistency / etc.]
 **Best use:** [Landing page hero / Email proof email / Ad creative]
 
@@ -207,7 +210,7 @@ TaskUpdate(taskId="[ID]", status="completed", metadata={
 | "Love this tool!" — G2 review | Testimonial | 1/5 | 3/5 | 2/5 | 6/15 | BELOW THRESHOLD |
 
 **Gap analysis excerpt:**
-- Landing page needs 3+ proof assets at 12/15+. Have: 2 qualifying. Gap: 1 more case study or specific testimonial needed.
+- Landing page needs 3+ proof assets at 13/15+ (Tier 1). Have: 2 qualifying. Gap: 1 more case study or specific testimonial needed.
 - Email sequence needs proof per email for Product Aware → Most Aware transitions. Current library covers 3 of 5 emails.
 
 ---

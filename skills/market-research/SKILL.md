@@ -50,7 +50,7 @@ Define scope before starting: full market analysis or competitor deep-dive? New 
 
 ## Output
 
-Save to: `knowledge/research/market-research-[company/topic]-[date].md`
+Save to: `knowledge/research/market-research-[company-or-topic]-[YYYY-MM-DD].md` (single kebab-case slug — see File Naming in `agents/TEAM.md`)
 
 Required sections:
 - Phase 1: Market Landscape (Market Overview, Competitive Map, Positioning Clusters and Gaps)
@@ -64,8 +64,8 @@ For full markdown template, see `references/methodology.md`.
 **Mark complete:**
 ```
 TaskUpdate(taskId="[ID]", status="completed", metadata={
-  "deliverable": "knowledge/research/market-research-[company/topic]-[YYYY-MM-DD].md",
-  "assessment": "[1-line: voice X/10, clarity X/10, craft X/10]",
+  "deliverable": "knowledge/research/market-research-[company-or-topic]-[YYYY-MM-DD].md",
+  "assessment": "[1-line: N findings, confidence spread, strongest positioning hypothesis]",
   "ready_for": "research-specialist or campaign-lead"
 })
 ```

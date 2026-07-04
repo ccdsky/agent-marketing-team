@@ -51,7 +51,7 @@ Follow **Agent Protocol** in `agents/TEAM.md`.
 **Completion metadata:**
 ```
 metadata={
-  "deliverable": "knowledge/research/[topic]-[date].md",
+  "deliverable": "knowledge/research/[topic]-[YYYY-MM-DD].md",
   "key_findings": "1. [Finding] 2. [Finding] 3. [Finding]",
   "recommended_angle": "[specific angle]",
   "ready_for": "campaign-lead"

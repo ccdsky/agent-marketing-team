@@ -61,7 +61,7 @@ Used by Campaign Lead. Read this file when creating campaign briefs, sprint task
 ```
 TaskCreate(
   subject="[S1] Research: Target audience pain points",
-  description="Interview research + forum mining for developer pain points with CLI tools. Focus on: discoverability, onboarding, learning curve. Deliverable: knowledge/research/dev-cli-pain-points-[date].md",
+  description="Interview research + forum mining for developer pain points with CLI tools. Focus on: discoverability, onboarding, learning curve. Deliverable: knowledge/research/dev-cli-pain-points-[YYYY-MM-DD].md",
   activeForm="Researching developer pain points"
 )
 ```

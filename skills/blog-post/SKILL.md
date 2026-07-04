@@ -21,8 +21,8 @@ Before writing, always read:
 - **Named personas from the brief** — Load the primary and secondary persona dossiers named in the Campaign Brief's `Primary Persona(s)` / `Secondary Persona(s)` fields. The draft addresses the primary persona by name; secondary personas inform but do not drive the lead type or hook. **Skip if no personas are defined** (project does not use the persona convention) — fall back to `context/icp.md` only.
 - `context/business-profile.md` — Content pillars, offerings to connect to
 - Campaign brief (if applicable): `output/campaigns/[slug]/campaign-brief.md`
-- Keyword research (if available): from research package in `knowledge/research/`
-- Proof library (if available): `knowledge/research/proof-library-[company]-[date].md`
+- Keyword research (if available): `knowledge/research/keyword-research-[company-or-topic]-[YYYY-MM-DD].md` — pull the primary keyword, journey stage, and SERP flags for this topic from Track A/B
+- Proof library (if available): `knowledge/research/proof-library-[company]-[YYYY-MM-DD].md`
 
 ---
 
@@ -46,7 +46,7 @@ Clarify before writing:
 
   This determines your opening paragraph strategy — not just the CTA.
 
-  *Diagnose awareness stage and select lead type per the **primary persona's** profile (read `context/personas/[primary-persona-slug].md` for their awareness state, hot buttons, and red flags). Different personas may sit at different awareness stages for the same offering. Fall back to `context/icp.md` aggregate if no primary persona is defined.*
+  *Diagnose awareness stage and select lead type per persona diagnosis in the Pre-Task Protocol (`agents/TEAM.md`).*
 - **CTA:** What should the reader do after reading?
 
 ### Step 2: Plan the Structure
@@ -76,6 +76,12 @@ Conclusion: Recap + actionable next step + CTA
 ### Step 3: Write the Article
 
 Write 3 title options (under 60 chars, primary keyword near front). Include meta description (150-160 chars).
+
+**Title formulas:**
+- How-to: "How to [outcome] (Without [common obstacle])"
+- Number: "[N] [things] That [outcome/mistake]"
+- Question: "Why Do [ICP plural] [struggle with X]?"
+- Specific result: "[Outcome] in [timeframe]: [what made it work]"
 
 Apply the **Masterson Lead Type from Step 1** to the introduction — this is the most important structural decision. The intro strategy differs completely by funnel stage.
 

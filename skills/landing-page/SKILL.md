@@ -20,8 +20,8 @@ Before writing, always read:
 - `context/icp.md` — Who the page targets (pain points, language, objections)
 - **Named personas from the brief** — Load the primary and secondary persona dossiers named in the Campaign Brief's `Primary Persona(s)` / `Secondary Persona(s)` fields. The draft addresses the primary persona by name; secondary personas inform but do not drive the lead type or hook. **Skip if no personas are defined** (project does not use the persona convention) — fall back to `context/icp.md` only.
 - `context/business-profile.md` — Offer details, proof points, differentiators
-- Research package: `knowledge/research/[relevant]-[date].md` (if available)
-- Proof library (if available): `knowledge/research/proof-library-[company]-[date].md`
+- Research package: `knowledge/research/[relevant]-[YYYY-MM-DD].md` (if available)
+- Proof library (if available): `knowledge/research/proof-library-[company]-[YYYY-MM-DD].md`
 - Campaign brief: `output/campaigns/[slug]/campaign-brief.md`
 
 ---
@@ -42,7 +42,7 @@ Diagnose before writing — this determines your entire messaging approach:
 
 Also define: **One conversion action** and **primary objection to overcome** (from icp.md).
 
-*Diagnose awareness stage and select lead type per the **primary persona's** profile (read `context/personas/[primary-persona-slug].md` for their awareness state, hot buttons, and red flags). Different personas may sit at different awareness stages for the same offering. Fall back to `context/icp.md` aggregate if no primary persona is defined.*
+*Diagnose awareness stage and select lead type per persona diagnosis in the Pre-Task Protocol (`agents/TEAM.md`).*
 
 ### Step 2: Build the 7-Section Structure
 
@@ -52,7 +52,11 @@ Write sections in this order. Each section has one job.
 
 Headline + subheadline + CTA button. Apply the Lead Type from Step 1. CTA label = the outcome, not the action.
 
-*(See `skills/landing-page/references/headline-formulas.md` for formula options)*
+**Headline formulas:**
+- `[Specific outcome] without [biggest fear]`
+- `How [ICP] can [achieve goal] in [timeframe]`
+- `The [ICP's] guide to [desired transformation]`
+- `Stop [painful thing]. Start [desired thing].`
 
 #### Section 2: Problem Agitation
 
@@ -66,7 +70,15 @@ Name the solution and its core mechanism. Explain WHY it works.
 
 #### Section 4: Proof Block
 
-Cover at least **two Cialdini dimensions** (Social Proof, Authority, Consistency, Liking, Reciprocity, Scarcity). Mix System 1 proof (emotional story) with System 2 proof (specific numbers) in sequence. *(See `references/proof-hierarchy.md` for the 6-tier list)*
+Cover at least **two Cialdini dimensions** (Social Proof, Authority, Consistency, Liking, Reciprocity, Scarcity). Mix System 1 proof (emotional story) with System 2 proof (specific numbers) in sequence.
+
+**Proof hierarchy** (use the strongest available, most persuasive first):
+1. Specific customer results with numbers ("helped X achieve Y in Z weeks")
+2. Testimonials with full name and specific outcomes
+3. Case studies or before/after stories
+4. Social proof numbers (subscribers, customers, revenue)
+5. Media logos or expert endorsements
+6. Your own credentials (years of experience, past results)
 
 #### Section 5: Offer Stack / What You Get
 
@@ -88,7 +100,9 @@ Verify against `voice-dna.md` (voice match) and `icp.md` (pain points use their 
 
 ## Output Format
 
-Save to: `output/campaigns/[campaign-slug]/drafts/landing-page-draft.md`
+**Simple Mode (no active campaign):** Return the draft inline. Do not create a file unless the user asks for one. If saving to disk makes sense, use `output/drafts/[YYYY-MM-DD]-landing-page.md`.
+
+**Campaign Mode:** Save to `output/campaigns/[campaign-slug]/drafts/landing-page-draft.md`
 
 **Mark complete:**
 ```

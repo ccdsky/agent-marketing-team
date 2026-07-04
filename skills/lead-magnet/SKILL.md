@@ -21,8 +21,8 @@ Before writing, always read:
 - **Named personas from the brief** — Load the primary and secondary persona dossiers named in the Campaign Brief's `Primary Persona(s)` / `Secondary Persona(s)` fields. The draft addresses the primary persona by name; secondary personas inform but do not drive the lead type or hook. **Skip if no personas are defined** (project does not use the persona convention) — fall back to `context/icp.md` only.
 - `context/business-profile.md` — How this lead magnet connects to the paid offering
 - Campaign brief: `output/campaigns/[slug]/campaign-brief.md`
-- Lead magnet concept (if available): from `/lead-magnet-strategy` output
-- Proof library (if available): `knowledge/research/proof-library-[company]-[date].md`
+- Lead magnet concept: `output/campaigns/[slug]/strategy/lead-magnet-concept-[YYYY-MM-DD].md` (or `output/drafts/lead-magnet-concept-[topic]-[YYYY-MM-DD].md` standalone). `/lead-magnet-strategy` should run first — if no concept file exists, flag it to Campaign Lead before writing, or validate the concept yourself in Step 1.
+- Proof library (if available): `knowledge/research/proof-library-[company]-[YYYY-MM-DD].md`
 
 ---
 
@@ -42,7 +42,7 @@ Lead magnets serve people who are **Problem Aware or Solution Aware** — they f
 
 Lead magnets should **not** target Unaware audiences (they don't know they have the problem yet — use blog posts) or Most Aware audiences (they already want your product — use a direct offer).
 
-*Diagnose awareness stage and select lead type per the **primary persona's** profile (read `context/personas/[primary-persona-slug].md` for their awareness state, hot buttons, and red flags). Different personas may sit at different awareness stages for the same offering. Fall back to `context/icp.md` aggregate if no primary persona is defined.*
+*Diagnose awareness stage per persona diagnosis in the Pre-Task Protocol (`agents/TEAM.md`).*
 
 **Value density test:**
 "Can someone implement this and get a result in under 30 minutes?"
@@ -97,9 +97,11 @@ Verify against `voice-dna.md` and `icp.md`. The share test: would the reader sen
 
 ## Output Format
 
-Save to: `output/campaigns/[campaign-slug]/drafts/lead-magnet-[title-slug]-draft.md`
+**Simple Mode (no active campaign):** Return the lead magnet inline. Do not create a file unless the user asks for one. If saving to disk makes sense, use `output/drafts/[YYYY-MM-DD]-lead-magnet.md`.
 
-*This single file contains both the lead magnet content and the delivery email template. No separate delivery email file is created.*
+**Campaign Mode:** Save to `output/campaigns/[campaign-slug]/drafts/lead-magnet-[title-slug]-draft.md`
+
+*This single file contains both the lead magnet content and the delivery email template. No separate delivery email file is created. If the campaign also includes an `/email-sequence` lead-magnet-delivery sequence, that sequence's email 1 supersedes this delivery email template — note it in your completion metadata so only one ships.*
 
 **Mark complete:**
 ```

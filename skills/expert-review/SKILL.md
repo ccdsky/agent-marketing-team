@@ -46,7 +46,7 @@ Before starting, always read:
 
 ## Output
 
-Save to: `output/campaigns/[campaign-slug]/reviews/expert-review-[asset-type]-[date].md`
+Save to: `output/campaigns/[campaign-slug]/reviews/expert-review-[asset-type]-[YYYY-MM-DD].md`
 
 Required sections: Aggregate Score table, Consensus Strengths, Must Fix Before Quality Gate, Should Fix, Nice to Have, Conflicting Opinions table, Creative Specialist Revision Checklist.
 

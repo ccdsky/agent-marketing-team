@@ -19,7 +19,8 @@ Before starting, always read:
 - `context/business-profile.md` — Core offer, target deal, unique mechanism
 - `context/icp.md` — Pain points, vocabulary, content preferences, current alternatives
 - `context/voice-dna.md` — Owner's positioning and areas of expertise
-- Research package: `knowledge/research/[relevant]-[date].md` (if available — especially market research and positioning angles)
+- Target persona dossiers (if `context/personas/` exists) — identify per the Pre-Task Protocol in `agents/TEAM.md`; score the Value Equation against the primary persona's dream outcome
+- Research package: `knowledge/research/[relevant]-[YYYY-MM-DD].md` (if available — especially market research and positioning angles)
 - Campaign brief: `output/campaigns/[slug]/campaign-brief.md` (if this is for a specific campaign)
 
 ---
@@ -48,8 +49,8 @@ Before starting, always read:
 
 ## Output
 
-Save to: `output/campaigns/[campaign-slug]/strategy/lead-magnet-concept-[date].md`
-For standalone use: `output/drafts/lead-magnet-concept-[topic]-[date].md`
+Save to: `output/campaigns/[campaign-slug]/strategy/lead-magnet-concept-[YYYY-MM-DD].md`
+For standalone use: `output/drafts/lead-magnet-concept-[topic]-[YYYY-MM-DD].md`
 
 Required sections: The Bridge, Lead Magnet Type and Format, Value Equation Score, Three Pillars Test, Name Options, Delivery Design, Nurture Sequence Goals, Distribution Channels, Quality Gate Results, Brief for Creative Specialist.
 
@@ -59,7 +60,7 @@ For full markdown template, see `references/methodology.md`.
 ```
 TaskUpdate(taskId="[ID]", status="completed", metadata={
   "deliverable": "output/campaigns/[campaign-slug]/strategy/lead-magnet-concept-[YYYY-MM-DD].md",
-  "assessment": "[1-line: voice X/10, clarity X/10, craft X/10]",
+  "assessment": "[1-line: concept name, Value Equation score, pillar results]",
   "ready_for": "campaign-lead"
 })
 ```

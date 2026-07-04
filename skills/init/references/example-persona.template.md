@@ -15,7 +15,7 @@ description: Rich reference persona showing the structure of a panel-ready dossi
 
 > *This is a reference template. Copy to your own `<slug>.md` file before editing — do not edit this template in place. The structure matters more than the specific content.*
 
-**Slug rule:** the filename (without `.md`) is the authoritative slug. The frontmatter `slug:` field must match the filename — v1.1 sync tooling validates this and surfaces drift.
+**Slug rule:** the filename (without `.md`) is the authoritative slug. The frontmatter `slug:` field must match the filename — check this manually when creating or renaming a persona; agents resolve personas by filename and a mismatched `slug:` breaks the README index.
 
 > *The content below illustrates a generic mid-market B2B founder/CEO archetype. Use it as a structural model. Your real personas should be grounded in actual sales calls, customer interviews, support tickets, and win/loss data — not invented.*
 

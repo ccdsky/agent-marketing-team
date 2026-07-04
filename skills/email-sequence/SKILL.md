@@ -21,8 +21,8 @@ Before writing, always read:
 - **Named personas from the brief** — Load the primary and secondary persona dossiers named in the Campaign Brief's `Primary Persona(s)` / `Secondary Persona(s)` fields. The draft addresses the primary persona by name; secondary personas inform but do not drive the lead type or hook. **Skip if no personas are defined** (project does not use the persona convention) — fall back to `context/icp.md` only.
 - `context/business-profile.md` — Offering details and positioning
 - Campaign brief: `output/campaigns/[slug]/campaign-brief.md`
-- Research package (if available): `knowledge/research/[relevant]-[date].md`
-- Proof library (if available): `knowledge/research/proof-library-[company]-[date].md`
+- Research package (if available): `knowledge/research/[relevant]-[YYYY-MM-DD].md`
+- Proof library (if available): `knowledge/research/proof-library-[company]-[YYYY-MM-DD].md`
 
 ---
 
@@ -70,18 +70,21 @@ In addition to the emotional arc above, map each email to an awareness-stage tra
 
 Each email’s subject line and opening hook should match the Masterson lead type for its TARGET awareness stage (the stage you’re moving the reader toward, not where they start).
 
-*Diagnose awareness stage and select lead type per the **primary persona's** profile (read `context/personas/[primary-persona-slug].md` for their awareness state, hot buttons, and red flags). Different personas may sit at different awareness stages for the same offering. Fall back to `context/icp.md` aggregate if no primary persona is defined.*
+*Diagnose awareness stage and select lead type per persona diagnosis in the Pre-Task Protocol (`agents/TEAM.md`).*
+
+**Delivery-email ownership:** For lead-magnet-delivery sequences, email 1 IS the delivery email. If `/lead-magnet` also produced a standalone delivery email for this campaign, this sequence supersedes it — note that in your completion metadata so Distribution Specialist ships only one.
 
 ### Step 2: Write Each Email
 
 For each email, complete in this order:
 
 #### 1. Subject Line (write 3 options, choose the strongest)
-**Formulas (top 2):**
+**Formulas:**
 - Curiosity gap: "The one thing most [ICP] get wrong about [topic]"
 - Direct benefit: "Your [lead magnet name] is inside"
-
-*(See `skills/email-sequence/references/subject-line-formulas.md` for full list)*
+- Story: "What happened when I tried [approach]"
+- Question: "Are you making this mistake?"
+- Specific: "[Number] [timeframe] from now, you could [outcome]"
 
 **Rules:**
 - Under 50 characters for mobile (9 words max)
@@ -103,7 +106,9 @@ Read full sequence end-to-end. Verify CTA escalation is gradual and voice matche
 
 ## Output Format
 
-Save the complete sequence as a **single file** so Quality Gate and Distribution Specialist can read and hand off a single `metadata["deliverable"]` path:
+**Simple Mode (no active campaign):** Return the sequence inline. Do not create a file unless the user asks for one. If saving to disk makes sense, use `output/drafts/[YYYY-MM-DD]-email-sequence.md`.
+
+**Campaign Mode:** Save the complete sequence as a **single file** so Quality Gate and Distribution Specialist can read and hand off a single `metadata["deliverable"]` path:
 
 `output/campaigns/[campaign-slug]/drafts/email-sequence-[slug]-draft.md`
 
@@ -111,7 +116,7 @@ Save the complete sequence as a **single file** so Quality Gate and Distribution
 ```
 TaskUpdate(taskId="[ID]", status="completed", metadata={
   "deliverable": "output/campaigns/[campaign-slug]/drafts/email-sequence-[slug]-draft.md",
-  "assessment": "[1-line: voice X/10, clarity X/10, craft X/10]",
+  "assessment": "[1-line: voice X/10, subject strength X/10, arc coherence X/10]",
   "ready_for": "quality-gate"
 })
 ```
