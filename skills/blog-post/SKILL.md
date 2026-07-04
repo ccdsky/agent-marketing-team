@@ -46,7 +46,7 @@ Clarify before writing:
 
   This determines your opening paragraph strategy — not just the CTA.
 
-  *Diagnose awareness stage and select lead type per persona diagnosis in the Pre-Task Protocol (`agents/TEAM.md`).*
+  *Diagnose awareness stage and select lead type per persona diagnosis in the Pre-Task Protocol (`TEAM.md`).*
 - **CTA:** What should the reader do after reading?
 
 ### Step 2: Plan the Structure

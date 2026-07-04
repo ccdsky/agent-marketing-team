@@ -50,7 +50,7 @@ Define scope before starting: full market analysis or competitor deep-dive? New 
 
 ## Output
 
-Save to: `knowledge/research/market-research-[company-or-topic]-[YYYY-MM-DD].md` (single kebab-case slug — see File Naming in `agents/TEAM.md`)
+Save to: `knowledge/research/market-research-[company-or-topic]-[YYYY-MM-DD].md` (single kebab-case slug — see File Naming in `TEAM.md`)
 
 Required sections:
 - Phase 1: Market Landscape (Market Overview, Competitive Map, Positioning Clusters and Gaps)

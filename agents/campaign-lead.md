@@ -35,7 +35,7 @@ If no specialist is available, spawn one using the Campaign Mode pattern in TEAM
 
 ## Before You Start
 
-Follow **Pre-Task Protocol** in `agents/TEAM.md`.
+Follow **Pre-Task Protocol** in `TEAM.md`.
 
 **Also search past learnings before creating tasks:**
 ```
@@ -73,7 +73,7 @@ Read `context/personas/README.md` if it exists (skip if missing). Then determine
 Load only the 1-3 dossiers you'll actually use. If `context/personas/` does not exist or is empty, leave persona fields blank in the brief — Sprint 2 specialists will fall back to `icp.md`-only behavior.
 
 ### 6. Create Campaign Brief
-For the full campaign brief template, read `agents/references/campaign-templates.md`. Populate the `Primary Persona(s)` and `Secondary Persona(s)` fields with the slugs identified during target-persona discovery (or leave blank if no personas defined).
+For the full campaign brief template, read `references/campaign-templates.md`. Populate the `Primary Persona(s)` and `Secondary Persona(s)` fields with the slugs identified during target-persona discovery (or leave blank if no personas defined).
 
 **File:** `output/campaigns/[campaign-slug]-[YYYY-MM]/campaign-brief.md`
 
@@ -92,7 +92,7 @@ Read(file_path="context/personas/README.md")  # Skip if file doesn't exist
 
 **Create Sprint 1 tasks only.** Do NOT create Sprint 2 or Sprint 3 tasks until Sprint 1 checkpoint is approved.
 
-Use `TaskCreate` for each research, positioning, and structure task with `[S1]` prefix. **Set `metadata={"role": "[agent-name]"}` on every task you create** (in all sprints) so specialists claim by role rather than keyword inference. Set dependencies with `TaskUpdate`. For task-creation code examples, read `agents/references/campaign-templates.md`.
+Use `TaskCreate` for each research, positioning, and structure task with `[S1]` prefix. **Set `metadata={"role": "[agent-name]"}` on every task you create** (in all sprints) so specialists claim by role rather than keyword inference. Set dependencies with `TaskUpdate`. For task-creation code examples, read `references/campaign-templates.md`.
 
 Consider adding an `[S1]` proof harvesting task if the business has existing customer results — the `/proof-harvesting` skill produces a scored proof library with no dependency on positioning.
 
@@ -105,7 +105,7 @@ Agent(
 )
 ```
 
-Wait for Research Specialist to complete before presenting the Sprint 1 checkpoint. For the checkpoint presentation format, read `agents/references/campaign-templates.md`.
+Wait for Research Specialist to complete before presenting the Sprint 1 checkpoint. For the checkpoint presentation format, read `references/campaign-templates.md`.
 
 ---
 
@@ -123,7 +123,7 @@ When the user approves Sprint 2:
 
 **STOP CHECK:** Before claiming any task, verify its subject doesn't contain: draft, write, revise, create, blog post, email, newsletter, edit, review, quality check, format, publish, distribute. Those keywords belong to specialists.
 
-For checkpoint presentation format, read `agents/references/campaign-templates.md`.
+For checkpoint presentation format, read `references/campaign-templates.md`.
 
 ---
 
@@ -139,7 +139,7 @@ When the user approves Sprint 3:
 
 **No strategy checkpoint** — Sprint 3 is execution of approved direction.
 
-For pre-launch summary format, read `agents/references/campaign-templates.md`.
+For pre-launch summary format, read `references/campaign-templates.md`.
 
 **STOP CHECK:** Same as Sprint 2 — do not claim specialist tasks.
 
@@ -167,7 +167,7 @@ Use `TaskList()` to check task status. Flag tasks stuck across 2+ invocations, b
 
 **Immediately escalate when:** Strategic conflict with user brief, resource constraints, timeline miss >3 days, quality issues after 2 revision cycles, agent conflicts, scope creep mid-campaign.
 
-Use the **Escalation Format** in `agents/TEAM.md`.
+Use the **Escalation Format** in `TEAM.md`.
 
 ---
 

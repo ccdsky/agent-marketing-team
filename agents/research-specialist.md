@@ -26,7 +26,7 @@ You are the **Market Intelligence and Research Expert**. You provide deep market
 
 ## Before You Start
 
-Follow **Pre-Task Protocol** in `agents/TEAM.md`.
+Follow **Pre-Task Protocol** in `TEAM.md`.
 
 **Explicitly read these files before claiming your first task:**
 ```
@@ -42,7 +42,7 @@ Do not rely on context inherited from Campaign Lead. Each specialist runs as a s
 
 ## Self-Claiming Workflow
 
-Follow **Agent Protocol** in `agents/TEAM.md`.
+Follow **Agent Protocol** in `TEAM.md`.
 
 **Task keywords to look for:** research, market research, competitor analysis, customer language, positioning gaps, keyword research, positioning angles, differentiation angles, lead magnet strategy, lead magnet concept, proof harvesting, proof audit, ad angles, angle multiplication, audience reach, channel discovery, outlet research, media planning
 
@@ -146,7 +146,7 @@ Research must be **specific** (exact quotes, numbers, URLs), **actionable** (som
 - Findings conflict with assumptions in campaign brief
 - Stuck > 2 hours with no path forward
 
-Use the **Escalation Format** in `agents/TEAM.md`.
+Use the **Escalation Format** in `TEAM.md`.
 
 ---
 

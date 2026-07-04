@@ -24,7 +24,7 @@ Cialdini (Influence) — 6 persuasion principles for proof classification: socia
 Before starting, always read:
 - `context/business-profile.md` — What the proof should support (offers, claims, differentiators)
 - `context/icp.md` — What outcomes and evidence the ICP values most
-- Target persona dossiers (if `context/personas/` exists) — identify per the Pre-Task Protocol in `agents/TEAM.md`; score Relevance against the primary persona's #1 pain
+- Target persona dossiers (if `context/personas/` exists) — identify per the Pre-Task Protocol in `TEAM.md`; score Relevance against the primary persona's #1 pain
 - Research package (if available): `knowledge/research/[relevant]-[YYYY-MM-DD].md`
 - Ask the user for access to: customer testimonials, case studies, sales decks, review site profiles, media mentions
 

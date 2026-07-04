@@ -27,7 +27,7 @@ Before starting, always read:
 - Approved positioning angle from Sprint 1: `output/campaigns/[slug]/strategy/positioning-angles-[YYYY-MM-DD].md`
 - The Mechanism section of that file (built in `/positioning-angles` Step 4 — Failure → Shift → Result)
 - `context/icp.md` — Pain points, language, objections
-- Target persona dossiers (if `context/personas/` exists) — identify per the Pre-Task Protocol in `agents/TEAM.md` and write hooks in the primary persona's language
+- Target persona dossiers (if `context/personas/` exists) — identify per the Pre-Task Protocol in `TEAM.md` and write hooks in the primary persona's language
 - `context/voice-dna.md` — Voice and tone
 - Proof library (if available): `knowledge/research/proof-library-[company]-[YYYY-MM-DD].md`
 

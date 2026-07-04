@@ -145,12 +145,12 @@ Sprint 3 executes the approved direction without a checkpoint.
 | Agent | Role | What They Do |
 |-------|------|-------------|
 | **Campaign Lead** | Coordinator | Designs strategy, creates task breakdowns, manages sprint checkpoints. Does NOT write content. Identifies primary/secondary personas during Sprint 1 when the project uses the persona convention. |
-| **Research Specialist** | Market Intelligence | Competitor analysis, customer language mining, keyword research, positioning gap identification. 6 skills, loaded on-demand (max 2 per task). |
+| **Research Specialist** | Market Intelligence | Competitor analysis, customer language mining, keyword research, positioning gap identification. 7 skills, loaded on-demand (max 2 per task). |
 | **Creative Specialist** | Content Creator | Writes all assets (landing pages, emails, blogs, lead magnets, social posts) in your voice. 9 skills, loaded on-demand (max 2 per task). |
 | **Quality Gate** | Editorial Review | Evaluates drafts: voice fidelity (40%), clarity (25%), craft (25%), positioning (10%). Approves or requests revisions. |
 | **Distribution Specialist** | Publishing & Analytics | Formats for platforms, publishes, tracks performance with outcomes-first reporting (revenue → demand signals → diagnostics), assesses incrementality. |
 
-Agent definitions live in `agents/`. Team-wide protocols (task coordination, sprint model, escalation, skill loading) are in `agents/TEAM.md`.
+Agent definitions live in `agents/`. Team-wide protocols (task coordination, sprint model, escalation, skill loading) are in `TEAM.md`.
 
 ---
 
@@ -162,16 +162,16 @@ agent-marketing-team/
 │   └── plugin.json             # Plugin manifest (name, version, description)
 │
 ├── agents/                     # Agent definitions (auto-discovered by Claude Code)
-│   ├── TEAM.md                 # Shared protocols, coordination model, sprint framework
 │   ├── campaign-lead.md        # Campaign orchestration workflow
 │   ├── research-specialist.md
 │   ├── creative-specialist.md
 │   ├── quality-gate.md
-│   ├── distribution-specialist.md
-│   └── references/             # Extracted detail (loaded on-demand, not always)
-│       ├── platform-formats.md     # Platform-specific formatting guidelines
-│       ├── campaign-templates.md   # Campaign brief + sprint task templates
-│       └── review-rubric.md        # Detailed scoring examples + thresholds
+│   └── distribution-specialist.md
+│
+├── references/                 # Extracted detail (loaded on-demand, not always)
+│   ├── platform-formats.md     # Platform-specific formatting guidelines
+│   ├── campaign-templates.md   # Campaign brief + sprint task templates
+│   └── review-rubric.md        # Detailed scoring examples + thresholds
 │
 ├── skills/                     # Skill frameworks (auto-discovered, invoked via /agent-marketing-team:skill-name)
 │   ├── landing-page/           # Each skill contains:
@@ -187,6 +187,7 @@ agent-marketing-team/
 │   ├── keyword-research/
 │   ├── market-research/
 │   ├── audience-reach/
+│   ├── buyer-panel/
 │   ├── expert-review/
 │   ├── lead-magnet-strategy/
 │   ├── ad-angles/
@@ -204,6 +205,7 @@ agent-marketing-team/
 │   └── retrospective.md
 │
 ├── CLAUDE.md                   # Routing rules (loaded into every conversation)
+├── TEAM.md                     # Shared protocols, coordination model, sprint framework
 └── README.md                   # This file
 ```
 

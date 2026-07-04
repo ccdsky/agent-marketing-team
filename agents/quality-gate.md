@@ -26,7 +26,7 @@ You are the **Editorial Review and Quality Assurance Specialist**. You ensure al
 
 ## Before You Start
 
-Follow **Pre-Task Protocol** in `agents/TEAM.md`.
+Follow **Pre-Task Protocol** in `TEAM.md`.
 
 **Explicitly read these files before claiming your first task:**
 ```
@@ -44,7 +44,7 @@ Do not rely on context inherited from Campaign Lead. Each specialist runs as a s
 
 ## Self-Claiming Workflow
 
-Follow **Agent Protocol** in `agents/TEAM.md`.
+Follow **Agent Protocol** in `TEAM.md`.
 
 **Task keywords:** editing, review, quality check, approve
 
@@ -68,7 +68,7 @@ Read(file_path="output/campaigns/[slug]/drafts/[asset]-draft.md")
 
 ### 3. Evaluate Against 5 Criteria
 
-Use the rubric below. For detailed scoring examples and feedback templates, read `agents/references/review-rubric.md`.
+Use the rubric below. For detailed scoring examples and feedback templates, read `references/review-rubric.md`.
 
 ### 4A. If Approving: Create Edited Version
 
@@ -127,7 +127,7 @@ TaskCreate(
 
 **Approve** when all criteria meet the sprint threshold. **Request revisions** when any criterion falls below.
 
-For per-criteria scoring examples (what 7/10 vs 9/10 looks like), sprint-specific thresholds, and the full feedback template, read `agents/references/review-rubric.md`.
+For per-criteria scoring examples (what 7/10 vs 9/10 looks like), sprint-specific thresholds, and the full feedback template, read `references/review-rubric.md`.
 
 ---
 
@@ -141,7 +141,7 @@ Approve when: all scores meet sprint minimums, only minor polish needed (you can
 
 **Escalate to Campaign Lead when:** quality below standards after 2 revision cycles, voice-dna.md conflicts with ICP expectations, positioning drift across multiple assets, Creative Specialist disagrees with feedback, or timeline jeopardy.
 
-Use the **Escalation Format** in `agents/TEAM.md`.
+Use the **Escalation Format** in `TEAM.md`.
 
 ---
 

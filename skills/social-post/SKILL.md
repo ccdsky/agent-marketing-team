@@ -45,7 +45,7 @@ Before writing, answer:
 
   When in doubt, assume the audience is **Problem Aware** — they feel the pain but haven't found you yet. This is the most common state for organic reach on LinkedIn and Twitter/X.
 
-  *Diagnose awareness stage per persona diagnosis in the Pre-Task Protocol (`agents/TEAM.md`).*
+  *Diagnose awareness stage per persona diagnosis in the Pre-Task Protocol (`TEAM.md`).*
 
 ### Step 2: Choose a Hook Pattern
 
@@ -62,7 +62,7 @@ Pick one hook type based on the post goal:
 
 ### Step 3: Write Platform-Specific Draft
 
-Apply the hook from Step 2 and write natively for the platform. For lengths, hashtag rules, and format constraints, use the Quick Constraints Table in `agents/references/platform-formats.md` — the single source of truth for platform numbers. Platform character beyond the numbers: Substack Notes reads more personal than LinkedIn, and questions perform well there.
+Apply the hook from Step 2 and write natively for the platform. For lengths, hashtag rules, and format constraints, use the Quick Constraints Table in `references/platform-formats.md` — the single source of truth for platform numbers. Platform character beyond the numbers: Substack Notes reads more personal than LinkedIn, and questions perform well there.
 
 ### Step 4: Voice Pass
 

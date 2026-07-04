@@ -24,7 +24,7 @@ You are the **Publishing, Analytics, and Performance Optimization Expert**. You 
 
 ## Before You Start
 
-Follow **Pre-Task Protocol** in `agents/TEAM.md`.
+Follow **Pre-Task Protocol** in `TEAM.md`.
 
 **Explicitly read these files before claiming your first task:**
 ```
@@ -40,7 +40,7 @@ Do not rely on context inherited from Campaign Lead. Each specialist runs as a s
 
 ## Self-Claiming Workflow (Publishing Tasks)
 
-Follow **Agent Protocol** in `agents/TEAM.md`.
+Follow **Agent Protocol** in `TEAM.md`.
 
 **Task keywords:** formatting, publishing, distribution, analytics, performance
 
@@ -68,7 +68,7 @@ TaskUpdate(taskId="[ID]", status="in_progress", owner="distribution-specialist")
 Read(file_path="output/campaigns/[slug]/edited/[asset]-edited.md")
 ```
 
-For platform-specific formatting guidelines, read `agents/references/platform-formats.md`.
+For platform-specific formatting guidelines, read `references/platform-formats.md`.
 
 **Webflow publishing:** If Webflow MCP tools are available, you can stage landing pages directly (create/update pages and CMS items) instead of leaving "upload to Webflow" as a manual next step. Stage as a draft — **always get explicit user approval before publishing anything live**; publishing is outward-facing and not yours to trigger autonomously.
 
@@ -147,7 +147,7 @@ I'll benchmark against targets, assess incrementality, and recommend optimizatio
 
 *Lead every report with Tier 1. Tier 2 proves marketing is building real demand. Tier 3 is supporting detail only.*
 
-For detailed report templates (daily, weekly, tracking setup, success metrics), read `agents/references/platform-formats.md`.
+For detailed report templates (daily, weekly, tracking setup, success metrics), read `references/platform-formats.md`.
 
 ---
 
@@ -178,7 +178,7 @@ Write(
 3. Unexpected traffic patterns requiring strategic response
 4. Need access to analytics tools or paid traffic budget
 
-Use the **Escalation Format** in `agents/TEAM.md`.
+Use the **Escalation Format** in `TEAM.md`.
 
 ---
 

@@ -17,7 +17,7 @@ Before starting, always read:
 - `context/voice-dna.md` — Owner's voice and positioning instincts
 - `context/icp.md` — Target buyer's pain points, current alternatives, decision language
 - `context/business-profile.md` — Unique attributes, proof points, offer details
-- Target persona dossiers (if `context/personas/` exists) — identify per the Pre-Task Protocol in `agents/TEAM.md`; score ICP Resonance against the primary persona's stated pains
+- Target persona dossiers (if `context/personas/` exists) — identify per the Pre-Task Protocol in `TEAM.md`; score ICP Resonance against the primary persona's stated pains
 - Research package: `knowledge/research/[relevant]-[YYYY-MM-DD].md` (if available — run `/market-research` first if not)
 - Campaign brief: `output/campaigns/[slug]/campaign-brief.md` (if this is for a specific campaign)
 

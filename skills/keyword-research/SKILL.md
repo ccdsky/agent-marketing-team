@@ -53,7 +53,7 @@ If `context/icp.md` is sparse on ICP vocabulary and hangouts, run `/market-resea
 
 ## Output
 
-Save to: `knowledge/research/keyword-research-[company-or-topic]-[YYYY-MM-DD].md` (single kebab-case slug — see File Naming in `agents/TEAM.md`)
+Save to: `knowledge/research/keyword-research-[company-or-topic]-[YYYY-MM-DD].md` (single kebab-case slug — see File Naming in `TEAM.md`)
 
 Required sections: Customer Language Mining, Track A: Money Phrases, Track B: Content Keywords, Watch List, Editorial Calendar Suggestions, Pipeline Impact Estimate (Track A), Audience Attention Map, Research Gaps.
 

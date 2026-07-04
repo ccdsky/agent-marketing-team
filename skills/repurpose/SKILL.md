@@ -61,13 +61,13 @@ For each target platform, define:
 
   **Rule:** Never copy the source opening into the repurposed version. Every platform gets a native hook matched to its audience's awareness level.
 
-  *Diagnose awareness stage per persona diagnosis in the Pre-Task Protocol (`agents/TEAM.md`).*
+  *Diagnose awareness stage per persona diagnosis in the Pre-Task Protocol (`TEAM.md`).*
 
-For native formats and length constraints per platform, use the Quick Constraints Table in `agents/references/platform-formats.md` — the single source of truth for platform numbers.
+For native formats and length constraints per platform, use the Quick Constraints Table in `references/platform-formats.md` — the single source of truth for platform numbers.
 
 ### Step 3: Write Platform-Specific Versions
 
-For each platform, rebuild natively around the anchor idea. Never copy the source opening. Never reference the original ("As I wrote in my newsletter...") — just deliver the value. For platform formatting constraints, see `agents/references/platform-formats.md`.
+For each platform, rebuild natively around the anchor idea. Never copy the source opening. Never reference the original ("As I wrote in my newsletter...") — just deliver the value. For platform formatting constraints, see `references/platform-formats.md`.
 
 ### Step 4: Voice Check
 

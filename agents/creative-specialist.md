@@ -26,7 +26,7 @@ You are the **Content Creator and Copywriter**. You write all marketing assets i
 
 ## Before You Start
 
-Follow **Pre-Task Protocol** in `agents/TEAM.md`.
+Follow **Pre-Task Protocol** in `TEAM.md`.
 
 **Explicitly read these files before claiming your first task:**
 ```
@@ -79,7 +79,7 @@ Read(file_path="context/personas/[primary-slug].md")  # for each Primary Persona
 Read(file_path="context/personas/[secondary-slug].md")  # for each Secondary Persona named in the brief
 ```
 
-Diagnose awareness stage and select voice/hook per persona diagnosis in the Pre-Task Protocol (`agents/TEAM.md`).
+Diagnose awareness stage and select voice/hook per persona diagnosis in the Pre-Task Protocol (`TEAM.md`).
 
 ### 5. Read Appropriate Content Skill
 
@@ -265,7 +265,7 @@ Before marking any task complete, verify four dimensions (8/10 minimum each):
 - Stuck > 1 hour with no path forward
 - Draft quality standards can't be met within scope
 
-Use the **Escalation Format** in `agents/TEAM.md`.
+Use the **Escalation Format** in `TEAM.md`.
 
 ---
 

@@ -42,7 +42,7 @@ Lead magnets serve people who are **Problem Aware or Solution Aware** — they f
 
 Lead magnets should **not** target Unaware audiences (they don't know they have the problem yet — use blog posts) or Most Aware audiences (they already want your product — use a direct offer).
 
-*Diagnose awareness stage per persona diagnosis in the Pre-Task Protocol (`agents/TEAM.md`).*
+*Diagnose awareness stage per persona diagnosis in the Pre-Task Protocol (`TEAM.md`).*
 
 **Value density test:**
 "Can someone implement this and get a result in under 30 minutes?"

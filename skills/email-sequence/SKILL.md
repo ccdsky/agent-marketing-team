@@ -70,7 +70,7 @@ In addition to the emotional arc above, map each email to an awareness-stage tra
 
 Each email’s subject line and opening hook should match the Masterson lead type for its TARGET awareness stage (the stage you’re moving the reader toward, not where they start).
 
-*Diagnose awareness stage and select lead type per persona diagnosis in the Pre-Task Protocol (`agents/TEAM.md`).*
+*Diagnose awareness stage and select lead type per persona diagnosis in the Pre-Task Protocol (`TEAM.md`).*
 
 **Delivery-email ownership:** For lead-magnet-delivery sequences, email 1 IS the delivery email. If `/lead-magnet` also produced a standalone delivery email for this campaign, this sequence supersedes it — note that in your completion metadata so Distribution Specialist ships only one.
 

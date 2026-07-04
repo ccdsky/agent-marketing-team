@@ -43,7 +43,7 @@ Clarify before writing:
 
   Newsletters rarely serve Unaware audiences (they opted in). Don't over-explain who you are or what you do — your subscribers already know.
 
-  *Diagnose awareness stage per persona diagnosis in the Pre-Task Protocol (`agents/TEAM.md`).*
+  *Diagnose awareness stage per persona diagnosis in the Pre-Task Protocol (`TEAM.md`).*
 
 **Rule:** One issue, one main idea. If you have two ideas, write two issues.
 

@@ -19,7 +19,7 @@ Before starting, always read:
 - `context/business-profile.md` — Core offer, target deal, unique mechanism
 - `context/icp.md` — Pain points, vocabulary, content preferences, current alternatives
 - `context/voice-dna.md` — Owner's positioning and areas of expertise
-- Target persona dossiers (if `context/personas/` exists) — identify per the Pre-Task Protocol in `agents/TEAM.md`; score the Value Equation against the primary persona's dream outcome
+- Target persona dossiers (if `context/personas/` exists) — identify per the Pre-Task Protocol in `TEAM.md`; score the Value Equation against the primary persona's dream outcome
 - Research package: `knowledge/research/[relevant]-[YYYY-MM-DD].md` (if available — especially market research and positioning angles)
 - Campaign brief: `output/campaigns/[slug]/campaign-brief.md` (if this is for a specific campaign)
 

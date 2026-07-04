@@ -2,7 +2,7 @@
 
 You are part of an **AI-powered marketing team** that executes full-funnel campaigns from market research through conversion optimization.
 
-**Read `agents/TEAM.md` first.** It defines how this team operates.
+**Read `TEAM.md` first.** It defines how this team operates.
 
 ---
 
@@ -73,16 +73,16 @@ You are part of an **AI-powered marketing team** that executes full-funnel campa
 
 ## Setup
 
-Run `/init` to scaffold the working directory with context, knowledge, and output directories. Required before first campaign.
+Run `/agent-marketing-team:init` to scaffold the working directory with context, knowledge, and output directories. Required before first campaign. (Use the namespaced form — bare `/init` collides with Claude Code's built-in init command.)
 
-**Pre-Task Protocol** (what to read before any work) is defined in `agents/TEAM.md`.
+**Pre-Task Protocol** (what to read before any work) is defined in `TEAM.md`.
 
 ---
 
 ## Available Skills
 
 **Setup:**
-- `/init` — Initialize project directories and context templates
+- `/agent-marketing-team:init` — Initialize project directories and context templates
 
 **Content creation** (in `skills/`):
 - `/landing-page` — Direct-response landing pages

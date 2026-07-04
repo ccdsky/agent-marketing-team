@@ -42,7 +42,7 @@ Diagnose before writing — this determines your entire messaging approach:
 
 Also define: **One conversion action** and **primary objection to overcome** (from icp.md).
 
-*Diagnose awareness stage and select lead type per persona diagnosis in the Pre-Task Protocol (`agents/TEAM.md`).*
+*Diagnose awareness stage and select lead type per persona diagnosis in the Pre-Task Protocol (`TEAM.md`).*
 
 ### Step 2: Build the 7-Section Structure
 
