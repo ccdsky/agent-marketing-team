@@ -252,7 +252,26 @@ This creates `context/`, `knowledge/`, and `output/` directories with template f
 
 **The system will stop and ask you to populate these if it finds placeholder content.**
 
-### 3. Run a Simple Test
+### 3. (Optional) Connect DataForSEO for real search data
+
+The `/keyword-research` and `/market-research` skills work out of the box using WebSearch — search volumes and difficulty are labeled as estimates. Connecting [DataForSEO](https://dataforseo.com/) upgrades those estimates to real data and enables live SERP reality checks (AI Overview / zero-click detection, enterprise dominance, People Also Ask extraction) and competitor keyword-gap analysis.
+
+**This is optional.** If you skip it, every skill falls back to WebSearch automatically — nothing breaks.
+
+To enable it:
+
+1. Create a [DataForSEO account](https://dataforseo.com/) (pay-as-you-go, $50 minimum prepaid deposit that rolls over indefinitely; low-volume usage runs a few dollars/month).
+2. Base64-encode your `login:password` credentials and export the result as an environment variable so the committed `.mcp.json` can read it (never commit credentials):
+
+   ```
+   export DATAFORSEO_AUTH_B64="$(printf 'YOUR_LOGIN:YOUR_PASSWORD' | base64)"
+   ```
+
+3. Restart Claude Code. The `dataforseo` MCP server in `.mcp.json` connects via hosted HTTP transport — no local install. If `DATAFORSEO_AUTH_B64` is unset, the server simply fails to authenticate and the skills fall back to WebSearch.
+
+**Cost discipline is baked into the skills** (Standard queue by default, minimal `depth`, batched lookups). See `TEAM.md` → *Optional Data Integrations* for the conventions and `docs/plans/2026-07-10-001-feat-dataforseo-integration-decision-plan.md` for the full rationale, deferred capabilities, and open questions.
+
+### 4. Run a Simple Test
 
 Start with a single asset to validate voice matching:
 
@@ -262,7 +281,7 @@ Start with a single asset to validate voice matching:
 
 Check: Does it sound like you? Does it reference your ICP? Is the craft quality high?
 
-### 4. Run a Full Campaign
+### 5. Run a Full Campaign
 
 Once voice matching works, test the full sprint model:
 

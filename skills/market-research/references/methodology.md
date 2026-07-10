@@ -93,6 +93,16 @@ Low scores = positioning opportunity.
 - What's the quality bar? (Room to create something 10x better?)
 - What formats work? (Long-form guides, tools, calculators, data reports, case studies)
 
+**Competitor keyword-gap query (if the `dataforseo` MCP server is connected):**
+
+Turns "what topics do competitors own" from qualitative reading into a ranked list of keywords a competitor ranks for that the client does not — objective demand data competitors can't spin. Runs once per competitor, costs pennies.
+
+- **Endpoint:** DataForSEO Labs Domain Intersection (`POST /v3/dataforseo_labs/google/domain_intersection/live`).
+- **Parameters:** `target1` = competitor domain, `target2` = client domain (both without `https://` or `www`), plus `location_name` and `language_name`. Set `intersections=false` → returns keywords `target1` (competitor) ranks for but `target2` (client) does not — the gap.
+- **Cost discipline:** one Live call per competitor; do not loop per keyword. See `TEAM.md` → *Optional Data Integrations*.
+- **Use the output** to populate "Topics competitors own" and to seed `/keyword-research` topic hypotheses. Cross-reference against Business Potential — a competitor ranking for a keyword only matters if it scores BP 2-3 for the client.
+- **Fallback (no DataForSEO):** infer gaps qualitatively from competitor site navigation, blog categories, and `WebSearch(query="site:[competitor.com] [topic]")` coverage checks. Label as inference (LOW confidence per the source-confidence table).
+
 ---
 
 ## Phase 4: PRIMARY RESEARCH INSTRUMENTS

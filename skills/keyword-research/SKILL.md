@@ -33,11 +33,11 @@ If `context/icp.md` is sparse on ICP vocabulary and hangouts, run `/market-resea
 
 4. **Generate 15-25 topic hypotheses.** Map each to a specific ICP problem. Format: `[ICP problem/goal] → [topic hypothesis] → [likely search intent]`.
 
-5. **Validate with keyword data.** For each hypothesis: search volume, traffic potential, keyword difficulty, SERP features. Use Ahrefs/Semrush if available; fallback to WebSearch autocomplete and `site:reddit.com OR site:quora.com` queries. For data source options, see `references/methodology.md`.
+5. **Validate with keyword data.** For each hypothesis: search volume, traffic potential, keyword difficulty, monthly trend, SERP features. Use DataForSEO (Standard queue, `depth=10`, batched) if the `dataforseo` MCP server is connected; fallback to WebSearch autocomplete and `site:reddit.com OR site:quora.com` queries. For the full data-source ladder and cost discipline, see `references/methodology.md`.
 
 6. **Score Business Potential (0-3 scale).** 3 = product is the irreplaceable solution; 2 = product is very helpful; 1 = tangentially relevant; 0 = no connection. Only BP 2-3 enter the final map. BP 1 goes to watch list. BP 0 excluded. For full scoring table, see `references/methodology.md`.
 
-7. **Check SERP reality** for top candidates. Flag zero-click risk, enterprise dominance (Gartner/Forbes/Wikipedia), and format mismatch. For full checklist, see `references/methodology.md`.
+7. **Check SERP reality** for top candidates. Flag AI Overview / zero-click risk, enterprise dominance (Gartner/Forbes/Wikipedia), and format mismatch. This is the veto step — it decides whether a keyword is worth an article's cost. Use the DataForSEO live SERP (Live queue, P1 candidates only) if connected; otherwise read the WebSearch results page. While there, harvest People Also Ask questions. For the full checklist and PAA extraction, see `references/methodology.md`.
 
 8. **Split into two tracks.** Track A — Money Phrases (commercial intent, product/landing pages). Track B — Content Keywords (informational intent, blog/guides).
 
@@ -55,7 +55,7 @@ If `context/icp.md` is sparse on ICP vocabulary and hangouts, run `/market-resea
 
 Save to: `knowledge/research/keyword-research-[company-or-topic]-[YYYY-MM-DD].md` (single kebab-case slug — see File Naming in `TEAM.md`)
 
-Required sections: Customer Language Mining, Track A: Money Phrases, Track B: Content Keywords, Watch List, Editorial Calendar Suggestions, Pipeline Impact Estimate (Track A), Audience Attention Map, Research Gaps.
+Required sections: Customer Language Mining, Track A: Money Phrases, Track B: Content Keywords, Buyer Questions (People Also Ask), Watch List, Editorial Calendar Suggestions, Pipeline Impact Estimate (Track A), Audience Attention Map, Research Gaps.
 
 For full markdown template, see `references/methodology.md`.
 
