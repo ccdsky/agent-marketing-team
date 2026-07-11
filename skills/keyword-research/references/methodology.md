@@ -33,25 +33,46 @@ Ahrefs/Soulo — Business Potential Score (0-3), Traffic Potential over volume. 
 
 ## SERP Reality Check — What to Flag
 
+This is the step that decides whether a keyword is worth the cost of a full article (draft + review + owner checkpoint). Do not skip it for Priority 1 candidates.
+
 For top candidates (highest Business Potential × Traffic Potential):
 - **Who ranks?** DA90+ enterprise sites? Niche specialists? User forums?
 - **Content format:** Long-form guides? Short answers? Tool pages? Product pages?
-- **AI Overviews / Featured Snippets:** Is this fully answered in the SERP? (Zero-click risk)
+- **AI Overviews / Featured Snippets:** Is this fully answered in the SERP? (Zero-click risk — in 2026 an AI Overview is the single biggest click thief. Flag its presence explicitly.)
 - **Freshness signals:** Are old pages ranking, or is Google rewarding recent content?
 
 **Flag keywords where:**
 - Top results are from Gartner, Forbes, or Wikipedia (very hard to compete)
-- Google answers the query completely in the SERP (zero-click, low value)
+- An AI Overview or featured snippet answers the query completely in the SERP (zero-click, low value)
 - Top results require video or interactive content (format mismatch)
+
+**How to run it — data source ladder** (see *Keyword Data Sources* below for the same ladder):
+- **DataForSEO available (preferred):** Query the live SERP for each P1 candidate. Use the **Live** queue here — this is an interactive, on-demand check where accuracy matters and volume is small. Capture: presence of AI Overview, featured snippet + its source domain, top-10 organic domains (for enterprise-dominance flag), and SERP features present. One request per candidate; batch the P1 list, do not query the whole map.
+- **Fallback (always executable):** Run the query in WebSearch and read the results page — note whether an AI answer box / featured snippet appears and which domains hold the top spots.
+
+### People Also Ask (PAA) extraction
+
+While checking the SERP, harvest the **People Also Ask** questions for each P1 candidate — these are real buyer questions in Google's own words and are high-value inputs for both customer-language mining and blog outlines.
+- **DataForSEO available:** The SERP response returns structured PAA elements (question text, answer snippet, source domain, source URL). Extract them alongside the reality check — no extra request.
+- **Fallback:** `WebSearch(query="[keyword]")` and read the "People also ask" box, or `WebSearch(query="[topic] site:reddit.com OR site:quora.com")` for forum-sourced questions.
+
+Feed harvested PAA questions into the FAQ sections of the editorial calendar and pass them to `/blog-post` as outline input.
 
 ---
 
 ## Keyword Data Sources
 
-- If MCP/browser tools available: Use Ahrefs, Semrush, or Moz APIs
-- Fallback (always executable): Use WebSearch — type the keyword, observe autocomplete and related searches
-- Question-format keywords: `WebSearch(query="how to [topic] site:reddit.com OR site:quora.com")` — forums surface actual buyer questions
-- Google Keyword Planner (free with Google Ads account) for volume estimates
+Use the highest available rung; fall through silently when a tool is absent (mirrors the data-access ladder the Distribution Specialist uses).
+
+1. **DataForSEO (preferred, if the `dataforseo` MCP server is connected):**
+   - **Volume, CPC, competition:** Keywords Data / Google Ads endpoints.
+   - **Related & suggested keywords, difficulty, search-intent, monthly trend:** DataForSEO Labs (Related Keywords for semantic expansion).
+   - **Cost discipline (required):** default to the **Standard** queue ($0.0006/req) for all keyword and batch lookups — reserve the Live queue (~3.3× cost) for the interactive SERP reality check only. Keep `depth=10` (deeper SERPs bill as a multiple). Batch keyword lookups rather than querying one term at a time. See `TEAM.md` → *Optional Data Integrations*.
+2. **Fallback (always executable):** WebSearch — type the keyword, observe autocomplete and related searches.
+   - Question-format keywords: `WebSearch(query="how to [topic] site:reddit.com OR site:quora.com")` — forums surface actual buyer questions.
+   - Google Keyword Planner (free with a Google Ads account) for volume estimates.
+
+**Labeling rule:** When numbers come from DataForSEO, present them as measured (cite the source). When they come from the WebSearch fallback, keep the "(est.)" label per the Pipeline Impact rules below — do not present fallback estimates as measured data.
 
 ---
 
@@ -127,19 +148,31 @@ Strong content strategy creates one piece that distributes in 5+ ways (Simmonds)
 
 ## Track A: Money Phrases
 
-| Keyword | Monthly Volume | Traffic Potential | KD | Business Potential | Priority |
-|---------|---------------|-------------------|----|--------------------|----------|
-| [keyword] | [~X/mo] | [X/mo] | [X] | [3] | P1 |
+| Keyword | Monthly Volume | Trend | Traffic Potential | KD | Business Potential | Priority |
+|---------|---------------|-------|-------------------|----|--------------------|----------|
+| [keyword] | [~X/mo] | [↑/→/↓ or %YoY] | [X/mo] | [X] | [3] | P1 |
 
-**SERP notes:** [Any flags from SERP check for specific keywords]
+*Trend: 12-month direction from DataForSEO Labs where available (a keyword growing YoY is a different bet than a flat one). Leave blank if using the WebSearch fallback.*
+
+**SERP notes:** [Per-keyword flags from the SERP reality check — AI Overview present? featured-snippet source? enterprise-dominated top 10?]
 
 ---
 
 ## Track B: Content Keywords
 
-| Keyword | Monthly Volume | Traffic Potential | KD | Business Potential | Journey Stage | ICP Role | Priority |
-|---------|---------------|-------------------|----|--------------------|---------| ---------|----------|
-| [keyword] | [~X/mo] | [X/mo] | [X] | [2-3] | [Awareness/Consideration] | [role] | P1 |
+| Keyword | Monthly Volume | Trend | Traffic Potential | KD | Business Potential | Journey Stage | ICP Role | Priority |
+|---------|---------------|-------|-------------------|----|--------------------|---------------|----------|----------|
+| [keyword] | [~X/mo] | [↑/→/↓] | [X/mo] | [X] | [2-3] | [Awareness/Consideration] | [role] | P1 |
+
+---
+
+## Buyer Questions (People Also Ask)
+
+Real questions harvested from the SERP for P1 keywords — feed these into blog FAQ sections and pass to `/blog-post`.
+
+| Question | Source keyword | Source domain (if from DataForSEO) |
+|----------|---------------|-------------------------------------|
+| [PAA question] | [keyword it appeared under] | [domain / "WebSearch fallback"] |
 
 ---
 

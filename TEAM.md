@@ -147,6 +147,30 @@ Persona discovery globs `context/personas/*.md` excluding `*.template.md` files 
 
 ---
 
+## Optional Data Integrations
+
+Some skills produce sharper output when an external data source is connected, and degrade gracefully to WebSearch when it is not. Treat these as **rungs on a ladder**: use the highest available rung, fall through silently when a tool is absent. Never block on a missing integration.
+
+### DataForSEO (`dataforseo` MCP server)
+
+Real search data for `/keyword-research` and `/market-research`. Optional — see README → *Getting Started* for setup. When absent, both skills fall back to WebSearch and label numbers "(est.)".
+
+**What it provides:** real search volume / difficulty / CPC (Keywords Data + Labs), 12-month keyword trend, live SERP inspection (AI Overview / featured-snippet / enterprise-dominance detection + People Also Ask extraction), and competitor keyword-gap analysis (Labs Domain Intersection).
+
+**Cost discipline (required whenever the server is used — pay-per-call):**
+
+| Rule | Why |
+|------|-----|
+| Default to the **Standard** queue ($0.0006/req) for all keyword and batch lookups | The **Live** queue costs ~3.3× — reserve it for the interactive SERP reality check only, where a human is waiting |
+| Keep `depth=10` | Depth bills as a multiple of the base unit; `depth=100` costs ~10× for results we don't use |
+| **Batch** keyword lookups; don't query one term at a time | Fewer requests, same data |
+| One Live SERP call per P1 candidate; one Domain Intersection call per competitor | Never loop per keyword |
+| When numbers come from DataForSEO, cite them as measured; when from the WebSearch fallback, keep the "(est.)" label | Honesty — don't present estimates as data, especially in client deliverables |
+
+Full rationale, deferred capabilities (rank tracking, LLM Mentions / AI-visibility), and open questions: `docs/plans/2026-07-10-001-feat-dataforseo-integration-decision-plan.md`.
+
+---
+
 ## Skill Loading Protocol
 
 Load skills **on-demand per task**, not all skills for your role.

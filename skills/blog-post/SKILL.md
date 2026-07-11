@@ -21,7 +21,7 @@ Before writing, always read:
 - **Named personas from the brief** — Load the primary and secondary persona dossiers named in the Campaign Brief's `Primary Persona(s)` / `Secondary Persona(s)` fields. The draft addresses the primary persona by name; secondary personas inform but do not drive the lead type or hook. **Skip if no personas are defined** (project does not use the persona convention) — fall back to `context/icp.md` only.
 - `context/business-profile.md` — Content pillars, offerings to connect to
 - Campaign brief (if applicable): `output/campaigns/[slug]/campaign-brief.md`
-- Keyword research (if available): `knowledge/research/keyword-research-[company-or-topic]-[YYYY-MM-DD].md` — pull the primary keyword, journey stage, and SERP flags for this topic from Track A/B
+- Keyword research (if available): `knowledge/research/keyword-research-[company-or-topic]-[YYYY-MM-DD].md` — pull the primary keyword, journey stage, and SERP flags for this topic from Track A/B, and the **Buyer Questions (People Also Ask)** relevant to this topic to seed the FAQ section (see Step 2)
 - Proof library (if available): `knowledge/research/proof-library-[company]-[YYYY-MM-DD].md`
 
 ---
@@ -72,6 +72,8 @@ Conclusion: Recap + actionable next step + CTA
 ```
 
 **Rule:** H2 headings should read as answers to questions the reader has.
+
+**FAQ sourcing:** If the keyword research supplies **Buyer Questions (People Also Ask)** for this topic, use those verbatim (lightly edited for voice) as the FAQ questions — they are real queries buyers typed, and matching them is the strongest featured-snippet play. Fall back to inventing plausible questions from `icp.md` only when no PAA data exists.
 
 ### Step 3: Write the Article
 
