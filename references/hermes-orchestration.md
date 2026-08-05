@@ -44,20 +44,37 @@ That `assignee=-` is the only signal. An unassigned task is skipped by the dispa
 it never runs, and nothing reports it. **Read the output of every create and confirm the assignee
 is not `-`.**
 
-### 2. Every task carries a `--body`
+### 2. Every task carries a `--body`, and the body carries the SUBJECT
 
 A bare title is not a task specification. The specialist receives only what you put in the body,
 and its working directory is empty, so anything you omit it must go hunting for — or invent.
 
 A body must state:
 
-- **Brief** — absolute path to the campaign brief
+- **Subject** — what this asset is actually about, in the requester's own words. Not the asset
+  *category*, the specific thing.
+- **Brief** — absolute path to the campaign brief (which must already exist — see rule 4)
 - **Inputs** — absolute paths to the specific files this specialist should read
 - **Output** — the absolute path its deliverable must be written to
 - **Acceptance** — what "done" means for this task
 
+**The Subject line is the one people drop, and dropping it is expensive.** A request for "a
+20-second video of me making a full sheet of stickers with print-and-cut" was written into a body
+as "clear demonstration of the print-and-cut feature." The word *stickers* never reached the
+writer. Having no subject and no brief, it searched for the nearest prior campaign, found one
+about Christmas ornaments, and wrote a script about ornaments. Every structural field was correct
+and the deliverable was still wrong.
+
+Copy the requester's own nouns into the Subject line. If the request says stickers, the body says
+stickers.
+
 Omitting the brief path is how a reviewer once loaded an unrelated campaign's brief, scored the
 wrong asset against it, and passed it — with no error anywhere.
+
+**Never use another campaign's files as a template.** If your inputs are missing, that is a
+blocker to raise (`hermes kanban block <id> --kind needs_input "<what is missing>"`), not a gap to
+fill from whatever similar work you can find. Two agents did exactly that on the sticker run —
+`search_files "*ornament*"` — and produced a confidently wrong asset.
 
 ### 3. Set the workspace explicitly: `--workspace dir:<absolute path>`
 
@@ -75,19 +92,40 @@ The path must be absolute; relative paths are rejected. Setting the board's `def
 is not sufficient on its own — it is inherited only by tasks already created with a `dir` or
 `worktree` workspace, never by scratch tasks.
 
-### 4. Write the campaign brief before you create specialist tasks
+### 4. Write the campaign brief BEFORE the first task exists — and verify it
 
-The brief is the shared context every downstream task points at. If it does not exist when the
-tasks are created, the bodies reference a path that is not there and specialists improvise.
-Write it first, then create tasks that cite it.
+This is a hard gate, not a preference. The brief is the shared context every downstream body
+points at.
+
+```bash
+# write it, then prove it exists before going further
+ls -l /Users/hermes/marketing/output/campaigns/<slug>/campaign-brief.md
+```
+
+If that `ls` fails, **stop and write the brief.** Do not create tasks whose bodies say
+"(to be created)" — that phrase appeared in all three bodies on the sticker run, the brief was
+never written, and both specialists went hunting through old campaigns to fill the void.
 
 ---
 
-## Sequencing
+## Sequencing — use `--parent`, not create-then-link
 
-`hermes kanban link <parent> <child>` makes the child wait for the parent. A task created with no
-parent starts as `ready` and is dispatchable immediately; linking it to an unfinished parent
-demotes it to `todo` until that parent is `done`.
+**Set the dependency at creation time:**
+
+```bash
+hermes kanban create "<title>" --assignee creative --parent <research-task-id> ...
+```
+
+A task created with `--parent` starts as `todo` and cannot be dispatched until the parent is
+`done`. That is the safe form.
+
+**`hermes kanban link <parent> <child>` after the fact is racy.** A task created without a parent
+starts as `ready` and the dispatcher polls every 60 seconds — so if you create three tasks and
+then link them, the dispatcher can claim task two before your link lands. That happened on the
+sticker run: the writer started drafting while its research task was still running, so it had no
+research at all. `link` demotes a `ready` child to `todo` only if it gets there first.
+
+Use `link` only to add a dependency to a task that already exists and has not started.
 
 **You do not run specialists.** The dispatcher polls the board and spawns the assigned profile
 once a task's dependencies are satisfied. Do not @-mention the specialists to wake them and do not
@@ -101,36 +139,36 @@ Build the chain, then stop. The board runs itself.
 
 ## Worked example
 
-A three-stage asset, correctly specified:
+A three-stage asset, correctly specified. Note the order: brief first, then each task created
+with its parent already set.
 
 ```bash
-# 0. Brief first.
-#    Written to /Users/hermes/marketing/output/campaigns/<slug>/campaign-brief.md
+# 0. BRIEF FIRST — write it, then prove it exists.
+ls -l /Users/hermes/marketing/output/campaigns/<slug>/campaign-brief.md   # must succeed
 
-# 1. Research
-hermes kanban create "Research: platform specs and audience style" \
+# 1. Research — no parent, starts ready
+R=$(hermes kanban create "Research: platform specs and audience style" \
   --assignee researcher \
   --workspace dir:/Users/hermes/marketing/output/campaigns/<slug> \
-  --body "Brief: /Users/hermes/marketing/output/campaigns/<slug>/campaign-brief.md
+  --body "Subject: <the specific thing, in the requester's words>
+Brief: /Users/hermes/marketing/output/campaigns/<slug>/campaign-brief.md
 Inputs: context/icp.md, context/voice-dna.md
 Output: /Users/hermes/marketing/output/campaigns/<slug>/research/specs.md
-Acceptance: platform specs verified against a primary source; audience style patterns named with examples."
+Acceptance: platform specs verified against a primary source; audience style patterns named.")
 
-# 2. Draft — depends on research
+# 2. Draft — --parent set AT CREATION so it starts todo, never ready
 hermes kanban create "Draft: 20-second script" \
-  --assignee creative \
+  --assignee creative --parent <research-id> \
   --workspace dir:/Users/hermes/marketing/output/campaigns/<slug> \
-  --body "Brief: .../campaign-brief.md
+  --body "Subject: <the same specific thing — do not generalise it away>
+Brief: .../campaign-brief.md
 Inputs: .../research/specs.md, context/voice-dna.md, context/brand-guide.md
 Output: /Users/hermes/marketing/output/campaigns/<slug>/drafts/script-draft.md
 Acceptance: matches the research brief's format constraints; owner voice; no filler."
 
-hermes kanban link <research-id> <draft-id>
+# 3. Review — --parent set to the draft task, same pattern
 
-# 3. Review — depends on draft
-#    ... same shape ...
-
-hermes kanban list   # confirm: every row shows a real assignee, not "-"
+hermes kanban list   # every row: real assignee, and only stage one is ready
 ```
 
 ---
