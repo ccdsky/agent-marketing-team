@@ -17,7 +17,7 @@ this file wins on the Hermes fleet.
 |---|---|
 | `TaskCreate(subject=...)` | `hermes kanban create "<title>" --assignee <profile> --body "<spec>"` |
 | `metadata={"role": "creative"}` | `--assignee creative` |
-| `TaskUpdate(dependencies=[...])` | `hermes kanban link <parent-id> <child-id>` |
+| `TaskUpdate(dependencies=[...])` | `--parent <parent-id>` at creation (preferred) — `hermes kanban link <parent-id> <child-id>` only for a task that has not started |
 | `Agent(subagent_type="research-specialist")` | nothing — the dispatcher spawns the assignee itself |
 | `TaskList` / `TaskGet` | `hermes kanban list` / `hermes kanban show <id>` |
 
