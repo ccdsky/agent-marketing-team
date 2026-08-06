@@ -173,6 +173,72 @@ hermes kanban list   # every row: real assignee, and only stage one is ready
 
 ---
 
+## Closing the loop — you must report back
+
+**A finished board is not a finished job.** The person who asked for the work is not watching
+the kanban. If nobody tells them it is done, the run silently ends and they find out by
+checking. Buzz's own agent guidance names a missing completion callback as *the single biggest
+cause of stalled collaboration*, and it is the easiest thing in this whole flow to forget,
+because by the time the work finishes your original turn ended long ago.
+
+### Own an umbrella task
+
+Create one task **assigned to yourself**, and make every specialist task a child of it:
+
+```bash
+# 1. Umbrella task — you own this one
+U=$(hermes kanban create "Campaign: <name>" --assignee campaignlead \
+      --workspace dir:/Users/hermes/marketing/output/campaigns/<slug> \
+      --body "Subject: <what the requester asked for, their words>
+Requester: <who to report back to, and on which surface>
+Acceptance: all child tasks done; deliverables verified at their absolute paths; result
+reported back to the requester.")
+
+# 2. Every specialist task hangs off it
+hermes kanban create "Research: ..."  --assignee researcher --parent $U ...
+hermes kanban create "Draft: ..."     --assignee creative   --parent <research-id> ...
+```
+
+The umbrella stays open while its children run. When they all finish, the dispatcher **wakes
+you back up** on that task to judge the result — that wake-up is the only reason you get a
+turn after the work completes. Without a parent task you own, there is no wake-up and no
+report. A single standalone task is a dead end, even when it succeeds.
+
+Requires `kanban.orchestrator_profile` to name a profile in `config.yaml`. If it is empty,
+nothing wakes.
+
+### What to do when you wake
+
+1. **Check the deliverables on disk**, at the absolute paths in each child's Output line. A
+   `done` status is a claim, not proof. `ls -l` them.
+2. **Report to the requester** on the surface they asked from — the Buzz channel or DM the
+   request arrived in. On Buzz you **must `@mention` them** in that message, with an explicit
+   `--mention <hex|npub>`. A report they are not mentioned in does not notify them.
+3. **Say what was produced and where.** Absolute paths, one line each.
+4. **Say what did not get done, and why.** A blocked or refused task is part of the result,
+   not an omission to quietly drop. If you refused something, say what you refused and what
+   would unblock it.
+5. **Then complete the umbrella task.**
+
+Never format an @mention in bold, italics, or backticks — it breaks notification delivery.
+
+### Refusals count as completion
+
+If a requested asset cannot be honestly produced — the hardware has not arrived, the source
+material does not exist, a claim cannot be supported — do not invent it and do not silently
+drop it. Block that task with a reason:
+
+```bash
+hermes kanban block <id> --kind needs_input "<what is missing and what would unblock it>"
+```
+
+Then report the refusal alongside the work that did land. A run that delivers three assets and
+names the fourth as blocked is a successful run. A run that delivers four assets where one was
+fabricated is a failure that looks like success — and that is the more expensive outcome,
+because nobody catches it until it ships.
+
+---
+
 ## Simple Mode
 
 For a **single-asset** request, `TEAM.md` specifies Simple Mode: the relevant specialist works
