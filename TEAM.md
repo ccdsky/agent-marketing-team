@@ -85,6 +85,26 @@ Before marking any task complete, verify:
 
 **If standards can't be met, escalate rather than ship subpar work.**
 
+### Quality Gate: mechanical checklist first (2026-08-08)
+
+The Quality Gate runs the deterministic checker BEFORE editorial review — a model eval
+showed holistic LLM quality-judging is coin-flip-unreliable on the local stack, while
+these checks are not:
+
+```
+/usr/bin/python3 /Users/hermes/marketing/scripts/qg-check.py <draft files>
+```
+
+- FAIL findings (fabricated proof/handles/quotes, banned voice phrases, calendar-date
+  arithmetic) are automatic revision requests, quoted verbatim with file:line.
+- WARN findings ([hardware] feasibility, unsourced outcome stats) are itemized as
+  "verify before shoot" — never silently approved, never guessed at.
+- Editorial judgment (voice, clarity, craft, positioning) applies only on top of a
+  clean or fully-itemized script result.
+
+The checker lives agora-side (unsynced): `~/marketing/scripts/qg-check.py`, with optional
+pattern overrides in `~/marketing/context/qg-checklist.json`.
+
 ---
 
 ## Escalation Triggers
