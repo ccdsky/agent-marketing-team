@@ -1,11 +1,19 @@
 {
   "name": "agent-marketing-team",
-  "version": "1.3.0",
-  "description": "AI-powered marketing team that executes full-funnel B2B campaigns — from market research through conversion optimization. 5 specialized agents coordinate through shared task lists with 17 skills encoding direct-response theory (Schwartz, Cialdini, Masterson, Hormozi, Dunford).",
+  "version": "1.4.0",
+  "description": "AI-powered marketing team that executes full-funnel B2B campaigns \u2014 from market research through conversion optimization. 5 specialized agents coordinate through shared task lists with 17 skills encoding direct-response theory (Schwartz, Cialdini, Masterson, Hormozi, Dunford).",
   "author": {
     "name": "ccdsky"
   },
   "repository": "https://github.com/ccdsky/agent-marketing-team",
   "license": "MIT",
-  "keywords": ["marketing", "campaigns", "b2b", "lead-generation", "direct-response", "content-marketing", "agents"]
+  "keywords": [
+    "marketing",
+    "campaigns",
+    "b2b",
+    "lead-generation",
+    "direct-response",
+    "content-marketing",
+    "agents"
+  ]
 }
