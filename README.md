@@ -146,7 +146,7 @@ Sprint 3 executes the approved direction without a checkpoint.
 |-------|------|-------------|
 | **Campaign Lead** | Coordinator | Designs strategy, creates task breakdowns, manages sprint checkpoints. Does NOT write content. Identifies primary/secondary personas during Sprint 1 when the project uses the persona convention. |
 | **Research Specialist** | Market Intelligence | Competitor analysis, customer language mining, keyword research, positioning gap identification. 7 skills, loaded on-demand (max 2 per task). |
-| **Creative Specialist** | Content Creator | Writes all assets (landing pages, emails, blogs, lead magnets, social posts) in your voice. 9 skills, loaded on-demand (max 2 per task). |
+| **Creative Specialist** | Content Creator | Writes all assets (landing pages, emails, blogs, lead magnets, social posts, video scripts) in your voice. 10 skills, loaded on-demand (max 2 per task). |
 | **Quality Gate** | Editorial Review | Evaluates drafts: voice fidelity (40%), clarity (25%), craft (25%), positioning (10%). Approves or requests revisions. |
 | **Distribution Specialist** | Publishing & Analytics | Formats for platforms, publishes, tracks performance with outcomes-first reporting (revenue → demand signals → diagnostics), assesses incrementality. |
 
@@ -181,6 +181,7 @@ agent-marketing-team/
 │   ├── blog-post/
 │   ├── newsletter/
 │   ├── social-post/
+│   ├── video-script/
 │   ├── lead-magnet/
 │   ├── repurpose/
 │   ├── positioning-angles/
@@ -400,6 +401,7 @@ The persona convention is optional. Here's when it earns its keep, and when it's
 | `/social-post` | LinkedIn (150-300 words), Twitter (threads), Substack Notes |
 | `/lead-magnet` | High-value opt-in content (PDFs, checklists, templates, guides) |
 | `/repurpose` | Adapt one piece for multiple platforms with native formatting |
+| `/video-script` | Short-form video scripts (TikTok, Reels, Shorts) — timed shot tables with visual hooks and audio-track decisions |
 
 ### Marketing Strategy
 | Skill | What It Produces |
