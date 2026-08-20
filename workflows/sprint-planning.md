@@ -52,6 +52,8 @@ TaskCreate: "[S1] Metrics — Define success criteria"
 TaskCreate: "[S1] Checkpoint — Compile and present to user"
 ```
 
+**Acceptance criteria for research tasks must accept prior team research.** Phrase them as "verified against a primary source *or* covered by an existing `knowledge/research/` file that passed Quality Gate" — never in a way that forces re-deriving facts the team already holds (see `agents/research-specialist.md` › Reuse Before Research).
+
 **Dependency chain:**
 ```
 Research tasks → (all must complete) → Positioning → Campaign Structure → Checkpoint
