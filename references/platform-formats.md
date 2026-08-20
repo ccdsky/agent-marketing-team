@@ -13,6 +13,9 @@ Used by Distribution Specialist when formatting assets, and by content skills (`
 | Substack Notes | Short observation | 100-300 words | Personal, conversational |
 | Instagram | Caption | 125-150 chars first line | Visual hook + story |
 | YouTube description | Summary | 200-300 words | SEO + context |
+| TikTok | Vertical video | 15-30s for product demo | 9:16 only; hook in <2s; diegetic audio |
+| Instagram Reels | Vertical video | 15-30s | 9:16; same safe-zone rules as TikTok; native captions outperform burned-in |
+| YouTube Shorts | Vertical video | 15-60s (3 min hard cap) | 9:16; title carries more discovery weight than on TikTok |
 
 ---
 
@@ -74,6 +77,57 @@ URL Slug: /[keyword-slug]
 - Heatmaps: [Tool if applicable]
 - Email platform: [Platform name]
 ```
+
+---
+
+## Short-Form Video (TikTok / Reels / Shorts)
+
+Vertical video is a distinct asset class from social text posts. Scripts are written by the
+Creative Specialist; these are the constraints they and the Distribution Specialist work within.
+
+### Technical Specifications
+
+| Property | Value |
+|----------|-------|
+| Aspect ratio | **9:16 only.** Non-9:16 uploads are cropped or letterboxed on the viewer side |
+| Resolution | 1080 x 1920 px (max 2160 x 3840; 1080p is standard and sufficient for mobile-first) |
+| Frame rate | 24-30 fps. 60 fps is supported but rarely necessary |
+| Video codec | H.264 |
+| Audio codec | AAC |
+| Keyframe interval | <= 2 seconds |
+| Duration cap | Per platform — TikTok: 10 min in-app recording (longer uploads rolling out per account); Reels: 20 min, but **the algorithm stops promoting Reels over 3 min**; Shorts: **3 min hard cap** (longer publishes as a regular video) |
+
+### Text-Safe Zone
+
+- Keep text and captions inside the **center 2/3** of the frame.
+- The **bottom 20%** is covered by the platform's own caption/UI overlay.
+- Usable safe area is roughly the center 70% of the frame.
+
+### Script Constraints
+
+| Constraint | Value | Why |
+|------------|-------|-----|
+| Proven duration, product demo | **15-30 seconds** | Retention sweet spot for "watch a thing get made" content |
+| Hook | **Under 2 seconds** | Completion rate drops sharply after 2-3s |
+| Hook form | **Visual, mid-action** | Start with the thing already happening. Never "hi everyone, today we're..." |
+| Spoken word budget | ~50-60 words per 20 seconds | Read-aloud pacing, not written pacing |
+| Audio | **Diegetic sound is the default.** Trending audio is optional | Process sound is the payoff for maker/technical audiences |
+| Technical detail placement | Captions and on-screen overlays, **not voiceover** | Viewers absorb settings/materials visually while watching the transformation |
+
+### Publishing Checklist
+
+- [ ] Exported 9:16 at 1080 x 1920, H.264/AAC
+- [ ] Hook lands in the first 2 seconds and is visual, not verbal
+- [ ] All text inside the center 2/3; nothing critical in the bottom 20%
+- [ ] Duration within the target platform's cap (Shorts: 3 min; Reels: under 3 min for algorithmic reach)
+- [ ] Audio is diegetic unless a trending sound was deliberately chosen
+- [ ] Spoken word count checked against the duration budget
+
+### Performance Tracking
+
+**Business outcomes:** Leads/demo requests attributed to video (target: X), video-to-landing-page conversion rate
+**Demand signals:** Saves (intent to reference later — the strongest signal for technical audiences), follows per view (attention converted into audience), rewatches (process content earning a second look — strong for demo assets)
+**Diagnostics:** 2-second retention (whether the hook worked — the single most diagnostic number), completion rate (whether the length matched the payoff)
 
 ---
 
