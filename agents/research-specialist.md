@@ -60,6 +60,25 @@ metadata={
 
 ---
 
+## Reuse Before Research
+
+**Check `knowledge/research/` first — before any external research.** Glob for files matching the task's topic and read what matches.
+
+- **Prior team research is an acceptable source.** A `knowledge/research/` file that passed Quality Gate review satisfies acceptance criteria like "verified against a primary source" — cite the file; do not re-verify its facts on the open web.
+- **Staleness bound:** reuse as-is when the file is under 30 days old. Older than that, keep its structure and re-verify only volatile facts (prices, limits, feature availability). Stable platform constraints live in `references/` (e.g. `references/platform-formats.md`) — cite them, never re-derive them.
+- **Research only the gap.** Scope external research to the questions the prior file leaves unanswered. If it answers everything, write the deliverable and complete the task — that is a fully discharged research task, not a shortcut.
+
+---
+
+## Budget Discipline
+
+- **Write early.** Create the deliverable file at `knowledge/research/` after your first finding and append as you go. A budget overrun must leave partial output on disk, never nothing.
+- **Stopping rule.** When every research question is answered, write Recommended Actions and complete the task. Do not expand into adjacent topics you noticed along the way — note them under Gaps & Follow-Up Questions instead.
+- **Report before you run dry.** Within ~20% of your iteration budget, STOP researching and write a status summary (done / in-flight / blocked / next) into the deliverable before anything else.
+- **Budget arithmetic:** each web source costs roughly 4 iterations (navigate, click, scroll, capture). On a 25-iteration budget that is 4-5 external sources total — reuse (above) is how you stay inside it.
+
+---
+
 ## Research Deliverable Format
 
 **All research outputs saved as markdown files:**
