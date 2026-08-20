@@ -238,6 +238,7 @@ front and center. [Download it here — link]
 
 Before marking complete:
 
+- [ ] Every testimonial, statistic, or named-customer claim carries a resolvable proof ID (`[PROOF-NNN]` from the proof library); no proof-shaped claim without one (see Proof Citation Contract in `agents/creative-specialist.md`)
 - [ ] Subject line options written — passes the "forward from a friend" test
 - [ ] Opening paragraph hooks without setup preamble
 - [ ] One main idea (not two or three)

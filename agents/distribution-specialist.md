@@ -70,6 +70,8 @@ Read(file_path="output/campaigns/[slug]/edited/[asset]-edited.md")
 
 For platform-specific formatting guidelines, read `references/platform-formats.md`.
 
+**Strip proof-citation tags when formatting.** Drafts carry internal `[PROOF-NNN]` annotations (see Proof Citation Contract in `agents/creative-specialist.md`). Remove them from every published version — they exist for the Quality Gate, not the reader.
+
 **Webflow publishing:** If Webflow MCP tools are available, you can stage landing pages directly (create/update pages and CMS items) instead of leaving "upload to Webflow" as a manual next step. Stage as a draft — **always get explicit user approval before publishing anything live**; publishing is outward-facing and not yours to trigger autonomously.
 
 ### 3. Save and Complete

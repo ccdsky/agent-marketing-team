@@ -92,18 +92,23 @@ showed holistic LLM quality-judging is coin-flip-unreliable on the local stack, 
 these checks are not:
 
 ```
-/usr/bin/python3 /Users/hermes/marketing/scripts/qg-check.py <draft files>
+python3 scripts/qg-check.py <draft files>
 ```
 
-- FAIL findings (fabricated proof/handles/quotes, banned voice phrases, calendar-date
-  arithmetic) are automatic revision requests, quoted verbatim with file:line.
-- WARN findings ([hardware] feasibility, unsourced outcome stats) are itemized as
-  "verify before shoot" — never silently approved, never guessed at.
+- FAIL findings are automatic revision requests, quoted verbatim with file:line:
+  a proof-shaped claim (@handle, `Quote:` line, quoted testimonial with attribution)
+  without a resolvable `[PROOF-NNN]` ID, a cited ID missing from the proof library,
+  or a banned voice phrase. The gate asks "does the evidence exist?", not
+  "does it look fabricated?" — see the Proof Citation Contract in
+  `agents/creative-specialist.md`.
+- WARN findings (unsourced outcome stats) are itemized as "verify before ship" —
+  never silently approved, never guessed at.
 - Editorial judgment (voice, clarity, craft, positioning) applies only on top of a
-  clean or fully-itemized script result.
+  clean or fully-itemized checker result.
 
-The checker lives agora-side (unsynced): `~/marketing/scripts/qg-check.py`, with optional
-pattern overrides in `~/marketing/context/qg-checklist.json`.
+The checker lives in this repo at `scripts/qg-check.py` (regression tests:
+`scripts/test_qg_check.py`), with optional pattern overrides in
+`context/qg-checklist.json`.
 
 ---
 

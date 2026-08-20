@@ -209,6 +209,7 @@ before you migrate — not after.
 
 Before marking complete:
 
+- [ ] Every testimonial, statistic, or named-customer claim carries a resolvable proof ID (`[PROOF-NNN]` from the proof library); no proof-shaped claim without one (see Proof Citation Contract in `agents/creative-specialist.md`)
 - [ ] Title passes the specificity test (outcome + audience + timeframe)
 - [ ] Value density test passed (implementable in <30 minutes)
 - [ ] Format chosen matches ICP consumption preference (icp.md Content Preferences)
