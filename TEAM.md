@@ -85,6 +85,26 @@ Before marking any task complete, verify:
 
 **If standards can't be met, escalate rather than ship subpar work.**
 
+### Quality Gate: mechanical checklist first (2026-08-08)
+
+The Quality Gate runs the deterministic checker BEFORE editorial review — a model eval
+showed holistic LLM quality-judging is coin-flip-unreliable on the local stack, while
+these checks are not:
+
+```
+/usr/bin/python3 /Users/hermes/marketing/scripts/qg-check.py <draft files>
+```
+
+- FAIL findings (fabricated proof/handles/quotes, banned voice phrases, calendar-date
+  arithmetic) are automatic revision requests, quoted verbatim with file:line.
+- WARN findings ([hardware] feasibility, unsourced outcome stats) are itemized as
+  "verify before shoot" — never silently approved, never guessed at.
+- Editorial judgment (voice, clarity, craft, positioning) applies only on top of a
+  clean or fully-itemized script result.
+
+The checker lives agora-side (unsynced): `~/marketing/scripts/qg-check.py`, with optional
+pattern overrides in `~/marketing/context/qg-checklist.json`.
+
 ---
 
 ## Escalation Triggers
@@ -191,6 +211,19 @@ Load skills **on-demand per task**, not all skills for your role.
 ## Execution Model
 
 **Simple Mode (single asset):** The activated specialist operates directly within the conversation. No subagents. Sequential execution. Use for single-asset tasks like "Write a LinkedIn post."
+
+**Routing:** the Campaign Lead applies the asset-count test at kickoff (see `agents/campaign-lead.md` › Routing Test): one asset → Simple Mode, more → Campaign Mode. Worked example — "Write me a single LinkedIn post announcing feature X": the Lead routes to Creative Specialist in-conversation, the draft passes the quality gate, done; no sprint, no campaign directory, no task board.
+
+### Reporting mechanics (Hermes deployment, 2026-08-19)
+
+On the Hermes/agora deployment, task-completion visibility is opt-in per task:
+
+```
+hermes kanban notify-subscribe --platform buzz --chat-id <owner-chat> \
+  --chat-type dm --notifier-profile campaignlead <task-id>
+```
+
+The Campaign Lead runs this for **every task it creates**, immediately after creation, using the chat it is conversing with the owner in. An empty `kanban_notify_subs` table means every completion fires into the void — that is how a full 7-asset campaign once completed without the owner learning any of it (agent-marketing-team#17).
 
 **Campaign Mode (multi-asset sprint):** Campaign Lead uses the `Task` tool to spawn specialists as subagents. Each subagent accesses the shared project file system. "Parallel" execution only applies here.
 
