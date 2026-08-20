@@ -1,6 +1,6 @@
 # Platform Formatting Reference
 
-Used by Distribution Specialist when formatting assets, and by content skills (`/social-post`, `/repurpose`) as the single source of truth for platform constraints. Do not restate these numbers in skill files — cite this file.
+Used by Distribution Specialist when formatting assets, and by content skills (`/social-post`, `/repurpose`, `/video-script`) as the single source of truth for platform constraints. Do not restate these numbers in skill files — cite this file.
 
 ---
 

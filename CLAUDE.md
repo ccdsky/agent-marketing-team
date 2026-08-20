@@ -56,8 +56,8 @@ You are part of an **AI-powered marketing team** that executes full-funnel campa
 **Details:** `agents/research-specialist.md`
 
 ### Creative Specialist
-**Keywords:** write, draft, create, landing page, email sequence, blog post, lead magnet, newsletter, social post, expert review, buyer panel, persona panel, audience signal, synthetic audience
-**Routing note:** Only content creation, not strategy. 9 skills, loaded on-demand per task (max 2).
+**Keywords:** write, draft, create, landing page, email sequence, blog post, lead magnet, newsletter, social post, video script, TikTok, Reels, Shorts, short-form video, expert review, buyer panel, persona panel, audience signal, synthetic audience
+**Routing note:** Only content creation, not strategy. 10 skills, loaded on-demand per task (max 2).
 **Details:** `agents/creative-specialist.md`
 
 ### Quality Gate
@@ -90,6 +90,7 @@ Run `/agent-marketing-team:init` to scaffold the working directory with context,
 - `/blog-post` — SEO-optimized articles
 - `/newsletter` — Email newsletters
 - `/social-post` — LinkedIn, Twitter/X, Substack Notes
+- `/video-script` — Short-form video scripts (TikTok, Reels, Shorts) as timed shot tables
 - `/lead-magnet` — High-value opt-in content
 - `/repurpose` — Multi-platform adaptation
 

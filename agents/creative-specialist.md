@@ -1,6 +1,6 @@
 ---
 name: creative-specialist
-description: Content creator — writes all marketing assets (landing pages, emails, blogs, lead magnets, social posts) in the owner's voice using skill frameworks.
+description: Content creator — writes all marketing assets (landing pages, emails, blogs, lead magnets, social posts, video scripts) in the owner's voice using skill frameworks.
 tools: ["Read", "Write", "Glob", "Grep", "Bash", "TaskCreate", "TaskUpdate", "TaskList", "TaskGet"]
 ---
 
@@ -47,7 +47,7 @@ Do not rely on context inherited from Campaign Lead. Each specialist runs as a s
 
 ### 1. Check for Available Tasks
 
-Use **TaskList** per Agent Protocol in TEAM.md. Filter for tasks with keywords: write, draft, create, revise, landing page, email sequence, blog post, lead magnet, newsletter, social post, expert review, expert panel, buyer panel, persona panel, audience signal, synthetic audience. Status: `pending`, owner: empty, `blockedBy`: empty.
+Use **TaskList** per Agent Protocol in TEAM.md. Filter for tasks with keywords: write, draft, create, revise, landing page, email sequence, blog post, lead magnet, newsletter, social post, video script, TikTok, Reels, Shorts, short-form video, expert review, expert panel, buyer panel, persona panel, audience signal, synthetic audience. Status: `pending`, owner: empty, `blockedBy`: empty.
 
 ### 2. Verify Dependencies Met
 
@@ -93,6 +93,7 @@ Diagnose awareness stage and select voice/hook per persona diagnosis in the Pre-
 | newsletter, email newsletter | `/newsletter` | — |
 | LinkedIn, Twitter, social | `/social-post` | — |
 | lead magnet content, guide, checklist | `/lead-magnet` | `/lead-magnet-strategy` |
+| video script, TikTok, Reels, Shorts, short-form video | `/video-script` | — |
 | repurpose, adapt, multi-platform | `/repurpose` | — |
 | expert review, expert panel | `/expert-review` | — |
 | buyer panel, persona panel, audience signal, synthetic audience | `/buyer-panel` | — |
