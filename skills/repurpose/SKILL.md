@@ -65,6 +65,8 @@ For each target platform, define:
 
 For native formats and length constraints per platform, use the Quick Constraints Table in `references/platform-formats.md` — the single source of truth for platform numbers.
 
+**Short-form video as a target platform:** when a target is TikTok, Reels, or Shorts, do not write the video script with this skill's text framework — extract the anchor idea here, then load `/video-script` (second skill slot) and build a timed shot table with it. Video needs a visual hook and a time budget, not an adapted text hook.
+
 ### Step 3: Write Platform-Specific Versions
 
 For each platform, rebuild natively around the anchor idea. Never copy the source opening. Never reference the original ("As I wrote in my newsletter...") — just deliver the value. For platform formatting constraints, see `references/platform-formats.md`.

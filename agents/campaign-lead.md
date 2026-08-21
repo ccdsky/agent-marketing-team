@@ -78,6 +78,8 @@ Lead Generation / Product Launch / Content Marketing Sprint / Re-engagement / Pa
 ### 3. Design Campaign Structure
 Determine: what assets, in what order, what research needed, what positioning.
 
+Asset classes available: landing pages, email sequences, blog posts, newsletters, social posts, lead magnets, short-form video scripts (TikTok/Reels/Shorts — Creative Specialist via `/video-script`). Video is a distinct class with its own constraints (`references/platform-formats.md` › Short-Form Video), not a variant of social posts.
+
 ### 4. Create Campaign Directory
 ```bash
 Bash("mkdir -p output/campaigns/[campaign-slug]-[YYYY-MM]/{research,strategy,drafts,reviews,edited,ready,analytics}")
