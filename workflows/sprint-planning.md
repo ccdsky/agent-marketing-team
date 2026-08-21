@@ -106,6 +106,7 @@ Which positioning angle? Any adjustments to asset plan?
 TaskCreate: "[S2] Draft — Lead magnet: [title]"
 TaskCreate: "[S2] Draft — Landing page: [campaign name]"
 TaskCreate: "[S2] Draft — Email sequence: [N] emails"
+TaskCreate: "[S2] Draft — Video script: [platform], [duration]"  # if the campaign includes short-form video
 TaskCreate: "[S2] Expert review — Lead magnet (Creative Specialist runs Task tool subagents)"
 TaskCreate: "[S2] Expert review — Landing page (Creative Specialist runs Task tool subagents)"
 TaskCreate: "[S2] Buyer panel — Lead magnet (only if campaign brief names personas)"

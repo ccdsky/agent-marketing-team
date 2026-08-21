@@ -147,7 +147,7 @@ Sprint 3 executes the approved direction without a checkpoint.
 | **Campaign Lead** | Coordinator | Designs strategy, creates task breakdowns, manages sprint checkpoints. Does NOT write content. Identifies primary/secondary personas during Sprint 1 when the project uses the persona convention. |
 | **Research Specialist** | Market Intelligence | Competitor analysis, customer language mining, keyword research, positioning gap identification. 7 skills, loaded on-demand (max 2 per task). |
 | **Creative Specialist** | Content Creator | Writes all assets (landing pages, emails, blogs, lead magnets, social posts, video scripts) in your voice. 10 skills, loaded on-demand (max 2 per task). |
-| **Quality Gate** | Editorial Review | Evaluates drafts: voice fidelity (40%), clarity (25%), craft (25%), positioning (10%). Approves or requests revisions. |
+| **Quality Gate** | Editorial Review | Runs the mechanical checker first (proof-citation resolution via `scripts/qg-check.py`), then evaluates drafts: voice fidelity (30%), clarity (20%), craft (20%), conversion architecture (20%), positioning (10%). Approves or requests revisions. |
 | **Distribution Specialist** | Publishing & Analytics | Formats for platforms, publishes, tracks performance with outcomes-first reporting (revenue → demand signals → diagnostics), assesses incrementality. |
 
 Agent definitions live in `agents/`. Team-wide protocols (task coordination, sprint model, escalation, skill loading) are in `TEAM.md`.
@@ -172,6 +172,10 @@ agent-marketing-team/
 │   ├── platform-formats.md     # Platform-specific formatting guidelines
 │   ├── campaign-templates.md   # Campaign brief + sprint task templates
 │   └── review-rubric.md        # Detailed scoring examples + thresholds
+│
+├── scripts/                    # Mechanical checks run by agents
+│   ├── qg-check.py             # Quality Gate checker: proof-ID resolution, proof shapes, banned phrases
+│   └── test_qg_check.py        # Regression tests for the checker
 │
 ├── skills/                     # Skill frameworks (auto-discovered, invoked via /agent-marketing-team:skill-name)
 │   ├── landing-page/           # Each skill contains:
@@ -414,7 +418,7 @@ The persona convention is optional. Here's when it earns its keep, and when it's
 | `/buyer-panel` | Synthetic-audience signal — does this draft connect with the target buyer(s)? Panel of persona sub-agents react in character |
 | `/lead-magnet-strategy` | Scored lead magnet concepts before any content creation begins |
 | `/ad-angles` | 10-15 creative variants of an approved angle across Pain, Desire, Proof, Identity, Contrarian, Urgency |
-| `/proof-harvesting` | Scored proof library (testimonials, case studies, data) with Cialdini persuasion tags and gap analysis |
+| `/proof-harvesting` | Scored proof library (testimonials, case studies, data) with stable `PROOF-NNN` IDs that drafts must cite, Cialdini persuasion tags, and gap analysis |
 
 Each skill's `SKILL.md` contains the focused procedure and a worked example. Extended methodology and templates live in `references/` and are loaded only when needed.
 
