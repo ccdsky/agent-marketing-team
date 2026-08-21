@@ -14,5 +14,6 @@ Thumbs.db
 
 # Local docs
 docs/
+CONCEPTS.md
 __pycache__/
 *.pyc
