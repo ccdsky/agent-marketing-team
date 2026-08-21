@@ -249,6 +249,7 @@ common mid-market stacks, zero-config branch protection, one-click rollback]
 
 Before marking complete:
 
+- [ ] Every testimonial, statistic, or named-customer claim carries a resolvable proof ID (`[PROOF-NNN]` from the proof library); no proof-shaped claim without one (see Proof Citation Contract in `agents/creative-specialist.md`)
 - [ ] Headline addresses ICP's real pain or desire (not generic benefit)
 - [ ] "Problem agitation" uses language from icp.md Language Patterns
 - [ ] Solution section explains the mechanism, not just the outcome

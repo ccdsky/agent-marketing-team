@@ -125,6 +125,8 @@ TaskUpdate(taskId="[ID]", status="completed", metadata={
 })
 ```
 
+**Stable IDs:** every asset gets a `PROOF-NNN` ID (three digits, sequential, assigned once, never reused or renumbered — even when an asset is retired or re-tiered). Drafts cite these IDs, and the Quality Gate checker resolves them against this file, so an ID that changes breaks the citation chain.
+
 ```markdown
 # Proof Library: [Company/Product]
 
@@ -137,7 +139,7 @@ TaskUpdate(taskId="[ID]", status="completed", metadata={
 
 ## Tier 1 Proof (Score 13-15) — Lead With These
 
-### [Proof Asset Name]
+### [PROOF-001] [Proof Asset Name]
 
 **Proof:** "[Exact quote or data point]"
 **Source:** [Where from, URL]
@@ -166,13 +168,13 @@ TaskUpdate(taskId="[ID]", status="completed", metadata={
 ## Proof by Cialdini Dimension
 
 ### Social Proof
-- [Asset name] — [one-line summary] (Tier [X])
+- [PROOF-NNN] [Asset name] — [one-line summary] (Tier [X])
 
 ### Authority
-- [Asset name] — [one-line summary] (Tier [X])
+- [PROOF-NNN] [Asset name] — [one-line summary] (Tier [X])
 
 ### Consistency
-- [Asset name] — [one-line summary] (Tier [X])
+- [PROOF-NNN] [Asset name] — [one-line summary] (Tier [X])
 
 [Continue for Liking, Reciprocity, Scarcity — only include dimensions that have assets]
 
@@ -219,6 +221,7 @@ TaskUpdate(taskId="[ID]", status="completed", metadata={
 
 Before marking complete:
 
+- [ ] Every asset has a unique, sequential `PROOF-NNN` ID that is never reused or renumbered
 - [ ] All accessible proof sources audited (not just the obvious ones — check sales decks, support emails, review sites)
 - [ ] Every asset scored on Specificity + Credibility + Relevance with specific rationale
 - [ ] Every asset tagged with 1-2 Cialdini persuasion dimensions

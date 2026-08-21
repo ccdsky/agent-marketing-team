@@ -245,6 +245,7 @@ to your stack, just reply. I read every response.
 
 Before marking complete:
 
+- [ ] Every testimonial, statistic, or named-customer claim carries a resolvable proof ID (`[PROOF-NNN]` from the proof library); no proof-shaped claim without one (see Proof Citation Contract in `agents/creative-specialist.md`)
 - [ ] Sequence arc defined (beginning → middle → end)
 - [ ] Each email has 3 subject line options
 - [ ] Subject lines under 50 characters, no spam triggers

@@ -162,6 +162,7 @@ Link in comments.
 
 Before marking complete:
 
+- [ ] Every testimonial, statistic, or named-customer claim carries a resolvable proof ID (`[PROOF-NNN]` from the proof library); no proof-shaped claim without one (see Proof Citation Contract in `agents/creative-specialist.md`)
 - [ ] Hook stops the scroll in first 2 lines
 - [ ] Voice matches `voice-dna.md` patterns (read aloud test)
 - [ ] No anti-patterns from voice-dna.md present

@@ -81,6 +81,11 @@ Read(file_path="context/personas/[secondary-slug].md")  # for each Secondary Per
 
 Diagnose awareness stage and select voice/hook per persona diagnosis in the Pre-Task Protocol (`TEAM.md`).
 
+**Proof Citation Contract.** Every testimonial, statistic, or named-customer claim in a draft carries the proof-library ID of the entry that backs it, inline: `[PROOF-NNN]`. The Quality Gate checker FAILs any proof-shaped claim without a resolvable ID.
+
+- **No library entry → no claim.** If the proof library has nothing that supports the point, do not write a testimonial, quote, @handle, or outcome number for it — name the gap in your self-assessment and escalate to Campaign Lead for `/proof-harvesting`. Inventing plausible proof is the one unrecoverable failure in this role.
+- IDs are internal review annotations: the Distribution Specialist strips them when formatting for publication.
+
 ### 5. Read Appropriate Content Skill
 
 ## Skill Routing (load on claim, max 2 per task)

@@ -1,7 +1,7 @@
 ---
 name: quality-gate
 description: Editorial review — evaluates drafts on voice fidelity, clarity, craft, and positioning. Approves or requests revisions.
-tools: ["Read", "Write", "Glob", "Grep", "TaskCreate", "TaskUpdate", "TaskList", "TaskGet"]
+tools: ["Read", "Write", "Glob", "Grep", "Bash", "TaskCreate", "TaskUpdate", "TaskList", "TaskGet"]
 ---
 
 # Quality Gate Agent
@@ -66,11 +66,19 @@ Read(file_path="output/campaigns/[slug]/campaign-brief.md")
 Read(file_path="output/campaigns/[slug]/drafts/[asset]-draft.md")
 ```
 
-### 3. Evaluate Against 5 Criteria
+### 3. Run the Mechanical Checker FIRST
+
+```
+Bash(command="python3 scripts/qg-check.py output/campaigns/[slug]/drafts/[asset]-draft.md")
+```
+
+Per `TEAM.md` › Quality Gate: mechanical checklist first. Any FAIL (proof-shaped claim without a resolvable `[PROOF-NNN]` ID, ID missing from the proof library, banned phrase) is an automatic revision request — quote the checker's file:line output verbatim in your feedback. WARN findings are itemized as "verify before ship". Editorial review applies only on top of a clean or fully-itemized checker result.
+
+### 4. Evaluate Against 5 Criteria
 
 Use the rubric below. For detailed scoring examples and feedback templates, read `references/review-rubric.md`.
 
-### 4A. If Approving: Create Edited Version
+### 5A. If Approving: Create Edited Version
 
 ```
 Write(
@@ -89,7 +97,7 @@ TaskUpdate(
 )
 ```
 
-### 4B. If Requesting Revisions
+### 5B. If Requesting Revisions
 
 ```
 TaskUpdate(
