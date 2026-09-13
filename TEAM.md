@@ -96,19 +96,25 @@ python3 scripts/qg-check.py <draft files>
 ```
 
 - FAIL findings are automatic revision requests, quoted verbatim with file:line:
-  a proof-shaped claim (@handle, `Quote:` line, quoted testimonial with attribution)
-  without a resolvable `[PROOF-NNN]` ID, a cited ID missing from the proof library,
-  or a banned voice phrase. The gate asks "does the evidence exist?", not
-  "does it look fabricated?" — see the Proof Citation Contract in
-  `agents/creative-specialist.md`.
-- WARN findings (unsourced outcome stats) are itemized as "verify before ship" —
-  never silently approved, never guessed at.
+  `[proof]` — a proof-shaped claim (@handle, `Quote:`/`Testimonial:` line, quoted
+  testimonial with attribution, `— *Name, role*` attribution) with neither a resolvable
+  `[PROOF-NNN]` ID nor an explicit `[PROOF NEEDED: ...]` marker, or a cited ID missing
+  from the proof library; `[banned]` — a built-in AI-tell phrase or a configured voice
+  phrase; `[dates]` — a weekday that disagrees with the calendar or a date outside its
+  week header. The gate asks "does the evidence exist?", not "does it look fabricated?"
+  — see the Proof Citation Contract in `agents/creative-specialist.md`. The marker is the
+  honest unsourced state: no library entry → mark it or delete it, never invent it.
+- WARN findings (unsourced outcome stats `[proof]`, bench-feasibility patterns
+  `[hardware]` from config) are itemized as "verify before ship" — never silently
+  approved, never guessed at.
 - Editorial judgment (voice, clarity, craft, positioning) applies only on top of a
   clean or fully-itemized checker result.
 
 The checker lives in this repo at `scripts/qg-check.py` (regression tests:
-`scripts/test_qg_check.py`), with optional pattern overrides in
-`context/qg-checklist.json`.
+`scripts/test_qg_check.py`). One program for every deployment since 2026-09-12; per-project
+settings live in `context/qg-checklist.json` (`library_glob`, `banned_phrases`,
+`banned_extra`, `hardware_patterns`, `campaign_year`) — Hermes deployments keep theirs at
+`~/marketing/context/qg-checklist.json`.
 
 Distribution has its own mechanical gate: `scripts/platform-check.py` counts X (<= 280, no
 hashtags) and LinkedIn (<= 1300) post bodies, because no model counts characters reliably

@@ -72,7 +72,7 @@ Read(file_path="output/campaigns/[slug]/drafts/[asset]-draft.md")
 Bash(command="python3 scripts/qg-check.py output/campaigns/[slug]/drafts/[asset]-draft.md")
 ```
 
-Per `TEAM.md` › Quality Gate: mechanical checklist first. Any FAIL (proof-shaped claim without a resolvable `[PROOF-NNN]` ID, ID missing from the proof library, banned phrase) is an automatic revision request — quote the checker's file:line output verbatim in your feedback. WARN findings are itemized as "verify before ship". Editorial review applies only on top of a clean or fully-itemized checker result.
+Per `TEAM.md` › Quality Gate: mechanical checklist first. Any FAIL — `[proof]` (proof-shaped claim with neither a resolvable `[PROOF-NNN]` ID nor a `[PROOF NEEDED: ...]` marker, or an ID missing from the proof library), `[banned]` (AI-tell or configured phrase), `[dates]` (calendar arithmetic) — is an automatic revision request: quote the checker's file:line output verbatim in your feedback and never soften it. WARN findings (`[proof]` unsourced stats, `[hardware]` bench-feasibility items) are itemized as "verify before ship". Editorial review applies only on top of a clean or fully-itemized checker result. Never approve a draft whose checker output you have not pasted into the review.
 
 ### 4. Evaluate Against 5 Criteria
 
