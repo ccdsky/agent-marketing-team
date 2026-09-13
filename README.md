@@ -173,7 +173,7 @@ agent-marketing-team/
 │   ├── campaign-templates.md   # Campaign brief + sprint task templates
 │   └── review-rubric.md        # Detailed scoring examples + thresholds
 │
-├── scripts/                    # Mechanical checks run by agents
+├── scripts/                    # Mechanical checks run by agents (qg-check.py, platform-check.py)
 │   ├── qg-check.py             # Quality Gate checker: proof-ID resolution, proof shapes, banned phrases
 │   └── test_qg_check.py        # Regression tests for the checker
 │

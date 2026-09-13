@@ -74,13 +74,27 @@ For platform-specific formatting guidelines, read `references/platform-formats.m
 
 **Webflow publishing:** If Webflow MCP tools are available, you can stage landing pages directly (create/update pages and CMS items) instead of leaving "upload to Webflow" as a manual next step. Stage as a draft — **always get explicit user approval before publishing anything live**; publishing is outward-facing and not yours to trigger autonomously.
 
-### 3. Save and Complete
+### 3. Save, Run the Platform Gate, Complete
+
+Name the file with the platform prefix (`x-`, `twitter-`, `linkedin-`) so the gate knows the limit.
 
 ```
 Write(
   file_path="output/campaigns/[slug]/ready/[platform]-[asset].md",
   content="[Platform-optimized version]"
 )
+Bash(command="python3 scripts/platform-check.py output/campaigns/[slug]/ready/[platform]-[asset].md")
+```
+
+**You cannot count characters — run the gate, do not count by hand.** Measured 2026-09-12: a
+post the model labeled 278 chars was 289. `scripts/platform-check.py` counts each X post
+(<= 280 chars, no hashtags) and LinkedIn post (<= 1300 chars) with `len()` and exits 1 on any
+FAIL. Any FAIL = the asset is NOT ready: cut the post, save, re-run until it prints
+`platform-check: OK`, and quote that line in the completion metadata. Never mark
+`launch_ready: true` without it. (Hermes deployments: the profile's own instructions name
+the synced path of the same script.)
+
+```
 TaskUpdate(
   taskId="[ID]",
   status="completed",
@@ -89,6 +103,7 @@ TaskUpdate(
     "assets_ready": ["web-landing-page.md", "email-lead-magnet-delivery.md"],
     "platform": "[Where this will be published]",
     "next_steps": "Upload to Webflow, configure in ConvertKit",
+    "platform_gate": "platform-check: OK",
     "launch_ready": true
   }
 )

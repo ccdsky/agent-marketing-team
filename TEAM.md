@@ -110,6 +110,10 @@ The checker lives in this repo at `scripts/qg-check.py` (regression tests:
 `scripts/test_qg_check.py`), with optional pattern overrides in
 `context/qg-checklist.json`.
 
+Distribution has its own mechanical gate: `scripts/platform-check.py` counts X (<= 280, no
+hashtags) and LinkedIn (<= 1300) post bodies, because no model counts characters reliably
+(measured 2026-09-12). A ready file is not ready until it prints `platform-check: OK`.
+
 ---
 
 ## Escalation Triggers
