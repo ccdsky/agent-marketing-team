@@ -71,4 +71,48 @@ assert code == 0, out
 code, out = run(STAT_ONLY)
 assert code == 0 and "WARN" in out, out
 
+# ── cases unified from the Hermes deployment's checker (2026-09-12) ──────────────
+# Case 6: an explicit [PROOF NEEDED] marker is the honest unsourced state -> no FAIL
+MARKED = '"This tool completely transformed how our team ships software every week" — Alex Rivera, CTO [PROOF NEEDED: no testimonial in library]\n'
+code, out = run(MARKED)
+assert code == 0, out
+
+# Case 7: "— *Name, role*" attribution shape (the agora fabricated-testimonial signature) -> FAIL
+NAMED = 'Best purchase this year.\n— *Sarah K., woodturning hobbyist*\n'
+code, out = run(NAMED)
+assert code == 1 and "named-person attribution" in out, out
+
+# Case 8: built-in AI-tell phrase -> FAIL [banned], no config needed
+TELL = "This is a game-changer for small shops.\n"
+code, out = run(TELL)
+assert code == 1 and "[banned]" in out, out
+
+# Case 9: weekday that disagrees with the calendar -> FAIL [dates] (Aug 27 2026 is a Thursday)
+BADDATE = "Day 5 — Wed, Aug 27: post the speed run.\n"
+code, out = run(BADDATE)
+assert code == 1 and "[dates]" in out and "Thu" in out, out
+code, out = run("Day 5 — Thu, Aug 27: post the speed run.\n")
+assert code == 0, out
+
+# Case 10: hardware pattern from config -> WARN only
+def run_cfg(draft_text, cfg):
+    import json
+    with tempfile.TemporaryDirectory() as d:
+        (Path(d) / "lib.md").write_text(LIBRARY)
+        (Path(d) / "cfg.json").write_text(json.dumps(dict(cfg, library_glob=str(Path(d) / "lib.md"))))
+        draft = Path(d) / "draft.md"; draft.write_text(draft_text)
+        out = io.StringIO()
+        with redirect_stdout(out):
+            code = qg.main([str(draft), "--config", str(Path(d) / "cfg.json")])
+        return code, out.getvalue()
+code, out = run_cfg("Engrave the clear acrylic tumbler.\n", {"hardware_extra": ["clear acrylic"], "campaign_year": 2026})
+assert code == 0 and "[hardware]" in out, out
+
+# Case 11: wrapper API contract (qg-langfuse.py): load_overrides() no-arg, check_file(path) one-arg, 5-tuples
+with tempfile.TemporaryDirectory() as d:
+    draft = Path(d) / "draft.md"; draft.write_text(FABRICATED)
+    qg.load_overrides()
+    f = qg.check_file(str(draft))
+    assert f and len(f[0]) == 5 and f[0][0] == "FAIL", f
+
 print("all qg-check regression tests passed")
